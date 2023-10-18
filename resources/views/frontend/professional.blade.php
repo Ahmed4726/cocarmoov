@@ -25,7 +25,7 @@
 <section class="section find-section mb-1">
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-lg-6">  
+			<div class="col-lg-6">   
 				<div class="section-title text-center">
                 <p class="services-p fw-bold mb-3"><b>Tarification sur demande</b></p>
                 <h4>Proposition de Tarif de Convoyage Personnalisé (HT) pour Votre Flotte</h4>
