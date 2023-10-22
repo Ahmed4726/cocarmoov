@@ -1,7 +1,7 @@
 @extends('frontend.frontend_main_layout')
 @section('content')
 <section class="section blog-header">
-	<div class="container">
+	<div class="container mt-4 mb-4">
 		<div class="row">
 			<div class="col-8 mx-auto text-center">
                 <div><img src="{{asset('images/wallet/blog.png')}}" class="blog-header-img"  style="max-width: 40%; height:auto;" /></div>

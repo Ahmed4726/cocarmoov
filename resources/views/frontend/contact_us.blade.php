@@ -2,27 +2,27 @@
 @section('content')
 <section class="page-header contact-header">
 	<div class="container">
-		<div class="row">
+		<div class="row mt-4 mb-5">
 			<div class="col-8 mx-auto text-center">
-          <div><img src="{{asset('images/wallet/QA-banner.png')}}" class="qa-header-img"  style="max-width: 40%; height:auto;" /></div>
+          <div><img src="{{asset('images/wallet/QA-banner.png')}}" class="qa-header-img img-fluid"  style="max-width: 40%; height:auto;" /></div>
 				<!-- <div><h2 class="mb-2 text-capitalize qa-banner-text">Contact Us</h2></div> -->
                 <h2 class="mb-2 qa-banner-h">A toute question, une réponse</h2>
-                <p class="mb-3 qa-banner-p">Un renseignement, besoin d’aide, ou simplement nous faire part de vos remarques?</p>
+                <p class="qa-banner-p">Un renseignement, besoin d’aide, ou simplement nous faire part de vos remarques?</p>
 			</div>
 		</div>
 	</div>
 </section>
-<section class="section find-section mb-1">
-	<div class="container">
+<section class="section find-section pt-4">
+	<div class="container pb-5">
 		<div class="row justify-content-center">
 			<div class="col-lg-6">
 				<div class="section-title text-center">
-                <img src="{{asset('images/wallet/find-contact.png')}}" class="qa-find-img"  style="max-width: 40%; height:auto;" />
-					<h2 class="mb-3 qa-find-h text-dark">Trouvez votre réponse</h2>
+                <img src="{{asset('images/wallet/find-contact.png')}}" class="qa-find-img img-fluid"  style="max-width: 40%; height:auto;" />
+					<h2 class="qa-find-h text-dark">Trouvez votre réponse</h2>
 				</div>
 			</div>
 		</div>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-lg-6 col-md-12 find-row-1" >
         <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
@@ -44,7 +44,7 @@
         <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
-    <img src="{{asset('images/wallet/rent-car.png')}}" class="qa-find-img img-fluid mt-1"  style="max-width: 100%; height:auto;" />
+    <img src="{{asset('images/wallet/rent-car.png')}}" class="qa-find-img img-fluid mt-1"  style="width: 100%; height:auto;" />
 
     </div>
     <div class="col-md-8">
@@ -59,7 +59,7 @@
 </div>
 </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-lg-6 col-md-12" >
         <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
@@ -97,12 +97,10 @@
 </div>
 </div>
         </div>
-        
         </div>
-
 </section>
 <section class="section mail-section">
-	<div class="container">
+	<div class="container mt-5">
 		<div class="row justify-content-center">
 			<div class="col-lg-6">
 				<div class="section-title text-center">

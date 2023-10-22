@@ -7,7 +7,7 @@
           <!-- <div><h2>banner image</h2></div> -->
 				<!-- <div><h2 class="mb-2 text-capitalize qa-banner-text">Contact Us</h2></div> -->
                 <p class="mb-3 professionall-p text-center mt-5"><span class="fw-bold">Nous vous</span>, constructeurs, loueurs, concessionnaires, marchand, gestionnaires de parc, <span class="fw-bold">apportons le chaînon manquant de la logistique automobile</span></p>
-                <p class="text-light mx-4"><i class="fas fa-arrow-right font-icon-color"></i>Co-convoyage économique, écologique pour rééquilibrer vos parcs : 49€ + 9 c€/km HT <br>
+                <p class="text-light banner-p mx-4"><i class="fas fa-arrow-right font-icon-color"></i>Co-convoyage économique, écologique pour rééquilibrer vos parcs : 49€ + 9 c€/km HT <br>
                 <i class="fas fa-arrow-right font-icon-color mx-1"></i>Convoyage rapide et personnalisé pour livrer vos clients, en 72 heures toute la France<br>
                 <i class="fas fa-arrow-right font-icon-color mx-1"></i>Transport par camion porte-voiture individuel de véhicule tout état, de porte à porte
 </p>
@@ -183,7 +183,6 @@ Support e-mail & téléphonique
 				</div>
 			</div>
 		</div>
-		
     </div>
 </section>   
 <section class="section pt-5 pb-5 services-section">
@@ -291,16 +290,16 @@ Support e-mail & téléphonique
 	  </div>
 	</div>
 	
-<div class="container mt-5">
+<div class="container overflow-hidden mt-5">
 <div class="section-title">
           <p class="fw-bold mb-3 services-p text-center">Témoignages</p>
           <h4 class="text-center">Des Voix du Monde Professionnel</h4>
           <!-- <p>Lorem ipsum dolor sit amet, consectetur adipreiscing elit. Lacus penatibus tincidunt</p> -->
         </div>
 		<div id="carousel-container">
-		<div id="carouselExampleControls" class="carousel" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
+		<div id="carouselExampleControls" class="test-carousel">
+  <div class="carousel-inner-test">
+    <div class="carousel-item-test active">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -317,7 +316,7 @@ Support e-mail & téléphonique
   </div>
 </div>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -334,7 +333,7 @@ Support e-mail & téléphonique
   </div>
 </div>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -351,7 +350,7 @@ Support e-mail & téléphonique
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -368,7 +367,7 @@ Support e-mail & téléphonique
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -385,7 +384,7 @@ Support e-mail & téléphonique
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -402,7 +401,7 @@ Support e-mail & téléphonique
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -419,7 +418,7 @@ Support e-mail & téléphonique
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -436,7 +435,7 @@ Support e-mail & téléphonique
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -453,7 +452,7 @@ Support e-mail & téléphonique
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -470,7 +469,7 @@ Support e-mail & téléphonique
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>

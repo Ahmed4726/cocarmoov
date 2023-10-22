@@ -42,9 +42,11 @@
 						</li>
 						<li class="mb-2 text-center footer-links"><a href="{{('blog')}}">Blog</a>
 						</li>
-						<li class="mb-2 text-center footer-links"><a href="{{ route('testimonials') }}">CGU</a>
+						<li class="mb-2 text-center footer-links">
+						<a href="{{ route('generate-cgu', ['filename' => 'CGU-CoCarmoov-Vf.pdf']) }}">CGU</a>
 						</li>
-						<li class="mb-2 text-center footer-links"><a href="{{('blog')}}">CGV</a>
+						<li class="mb-2 text-center footer-links">
+						<a href="{{ route('generate-cgv', ['filename' => 'CGV-CoCarmoov-Vf.pdf']) }}">CGV</a>
 						</li>
 					</ul>
 				</div>

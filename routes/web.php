@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PDFController;
+use Illuminate\Support\Facades\Storage;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -64,5 +65,8 @@ Route::get('/professionnel', function () {
 Route::get('/co-drive', function () {
     return view('frontend.co-drive');
 })->name('co-drive');
-Route::get('/generate-pdf', 'PDFController@generatePDF');
-
+Route::get('/generate-cgv', [PDFController::class, 'generateCGVPDF'])->name('generate-cgv');
+Route::get('/generate-cgy', [PDFController::class, 'generateCGUPDF'])->name('generate-cgu');
+// Route::get('/download/{filename}', [FileDownloadController::class, 'downloadFileByName'])->name('download-by-name');
+// Route::get('/download-cgv', [FileDownloadController::class, 'downloadCGV'])->name('download-cgv');
+// Route::get('/view-pdf-design', [PDFController::class,'viewPDFDesign'])->name('view-pdf-design');

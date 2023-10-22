@@ -19,8 +19,8 @@
 		</div>
 	
 	<div id="carouselExampleControls" class="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
+  <div class="carousel-inner-test">
+    <div class="carousel-item-test active">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -37,7 +37,7 @@
   </div>
 </div>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -54,7 +54,7 @@
   </div>
 </div>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -71,7 +71,7 @@
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -88,7 +88,7 @@
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -105,7 +105,7 @@
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -122,7 +122,7 @@
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -139,7 +139,7 @@
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -156,7 +156,7 @@
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -173,7 +173,7 @@
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -190,7 +190,7 @@
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -216,7 +216,6 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-  
 	</div>
 	<div class="row">
 			<div class="col-lg-12 mt-3">
@@ -429,4 +428,50 @@ Souvent même.
 
 </div>	
 </section>
+
+<div id="carouselExampleControls" class="carousel">
+        <div class="carousel-inner-test">
+            <div class="carousel-item-test">
+			<div class="card">
+  	<div class="card-body text-center">
+	<i class="fas fa-star checked"></i>
+	<i class="fas fa-star checked"></i>
+	<i class="fas fa-star checked"></i>
+	<i class="fas fa-star checked"></i>
+	<i class="fas fa-star checked"></i>
+    <p class="card-text">Bonne formule, à savoir la disponibilité !</p>
+    <p class="card-text testimonial-text">Trajet rentabilisé entre amis.</p>
+	<p class="card-text"><b>Djabir</b></p>
+	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
+	<p class="card-text testimonial-text-2">Colmar -> Valenciennes</p>
+	<p class="card-text testimonial-text">Il y a 1 semaine</p>
+  </div>
+</div>
+            </div>
+            <div class="carousel-item-test">
+                <div class="card">Card 2</div>
+            </div>
+            <div class="carousel-item-test">
+                <div class="card">Card 3</div>
+            </div>
+            <div class="carousel-item-test">
+                <div class="card">Card 4</div>
+            </div>
+            <div class="carousel-item-test">
+                <div class="card">Card 5</div>
+            </div>
+            <div class="carousel-item-test">
+                <div class="card">Card 6</div>
+            </div>
+			<div class="carousel-item-test">
+                <div class="card">Card 7</div>
+            </div>
+			<div class="carousel-item-test">
+                <div class="card">Card 8</div>
+            </div>
+			<div class="carousel-item-test">
+                <div class="card">Card 9</div>
+            </div>
+        </div>
+    </div>
 @endsection

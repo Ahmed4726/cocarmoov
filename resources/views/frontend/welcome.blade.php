@@ -56,7 +56,7 @@
       <div class="col-lg-6 mb-5 mb-lg-0">
         <div class="block text-center text-lg-start pe-xl-5">
           <h2 class="mb-5 banner-text text-center">Enfin… déplacer un véhicule revient à poster un colis</h2>
-          <h4 class="mb-4 banner-text-2 text-center mb-5">Des partenaires, convoyeurs et transporteurs de voitures professionnels, partout en France s'engagent à déplacer vos véhicules.</h4> 
+          <h4 class="mb-4 banner-text-2 mb-5">Des partenaires, convoyeurs et transporteurs de voitures professionnels, partout en France s'engagent à déplacer vos véhicules.</h4> 
           <div class="text-center">
           <a type="button" 
             class="btn banner-button text-light banner-button-hover rounded-pill" href="#">
@@ -68,13 +68,13 @@
         <div class="ps-lg-5 text-center">
           <img  
             src="{{ asset('images/wallet/banner/banner_main.png') }}"
-            alt="banner image" class="w-100" style="max-width: 100%; height:auto;">
+            alt="banner image" class="w-100 img-fluid" style="max-width: 100%; height:auto;">
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="section section-2 pt-5 pb-5">
+<section class="section section-2 pt-5">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-6">
@@ -102,12 +102,12 @@
   </div>
 </section>
 
-<section class="section section-3">
+<section class="section section-3 pt-5">
   <div class="container">
     <div class="row align-items-center justify-content-between">
       <div class="col-lg-5">
         <div class="section-title">
-          <p class="services-p text-uppercase fw-bold mb-3"><b>Nos atouts</b></p>
+          <p class="services-p fw-bold mb-3 nos-atouts-mobile"><b>Nos Atouts</b></p>
           <h2 class="text-dark differnce-section">Qu'est-ce qui différencie CoCarmoov ?</h2>
           <div class="content mb-0 mt-4">
             <h4 class="text-dark text-bold differnce-section">CoCarmoov est plus qu'un lien entre l'automobile et l'humain</h4>
@@ -161,14 +161,14 @@
 <section class="position-relative section-4">
   <div class="section container">
     <div class="row justify-content-center">
-      <div class="col-lg-8 mb-5">
+      <div class="col-lg-8 pt-3">
         <div class="section-title text-center differnce-section mt-5">
-          <p class="services-p text-uppercase fw-bold mb-3 differnce-section"><b>Nos formules</b></p>
+          <p class="services-p fw-bold differnce-section"><b>Nos formules</b></p>
           <h3 class='text-light'>Des centaines de véhicules déplacés chaque année d’un point A à un point B par …</h3>
         </div>
       </div>
     
-        <div class="container">
+        <div class="container pb-5">
         <div class="row align-items-center">
             <div class="col-lg-4 differnce-section text-center mt-4">
                 <h2 class="text-center eco-h">Voie économique</h2>
@@ -222,18 +222,15 @@
             </div>
         </div>
         </div>
-    
     </div>
   </div>
 </section>
-<section class="section section-2 overflow-hidden">
+<section class="section section-2 overflow-hidden pt-5">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10">
         <div class="section-title text-center">
-       
-        <p class="services-p text-uppercase fw-bold mb-3"><b>Top des commandes</b></p>
-
+        <p class="services-p fw-bold mb-3"><b>Top des commandes</b></p>
           <!-- <p class="text-primary text-uppercase fw-bold mb-3">Our Service Holders</p> -->
           <h3 class="mb-4 frequently-h">Véhicules fréquemment déplacés avec CoCarmoov</h3>
           <!-- <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing. egestas cursus pellentesque dignissim
@@ -241,7 +238,7 @@
         </div>
       </div>
     </div>
-    <div class="row position-relative">
+    <div class="row position-relative pb-5">
       <div class="col-lg-6 col-md-12 pt-1">
         <div class="rounded p-4">
           <div class="d-block d-sm-flex align-items-center mb-3">
@@ -325,7 +322,7 @@
         <div class="rounded p-4">
         <div class="d-block d-sm-flex align-items-center mb-3">
             <img 
-              src="{{ asset('images/wallet/test6.jpg') }}"
+              src="{{ asset('images/wallet/test6.jpg')}}"
               alt="Leslie Alexander" class="img-fluid" width="450" height="100">
             <div class="mt-sm-0 ms-0 ms-sm-3">
               <h3 class="mb-1">Vacances</h3>
@@ -339,22 +336,21 @@
   </div>
 </section>
 <section class="section section-blog">
-	<div class="container">
+	<div class="container overflow-hidden mb-4">
 		<!-- <div class="row">
 			<div class="col-lg-12">
 				<h4 class="text-center">Avis des propriétaires</h4>
 				</div>
 		</div> -->
-	
-	
 	<div class="row">
-			<div class="col-lg-12 mt-3">
-				<h4 class="text-center">Avis des particuliers</h4>
+			<div class="col-lg-12 mb-4">
+      <p class="fw-bold mb-3 services-p text-center">Témoignages</p>
+				<h4 class="text-center">Les Voix de la Communauté</h4>
 				</div>
 		</div>
-		<div id="carouselExampleControls" class="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
+		<div id="carouselExampleControls " class="test-carousel">
+  <div class="carousel-inner-test">
+    <div class="carousel-item-test active">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -371,7 +367,7 @@
   </div>
 </div>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -389,7 +385,7 @@
   </div>
 </div>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -406,7 +402,7 @@
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -425,7 +421,7 @@ Souvent même.
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -442,7 +438,7 @@ Souvent même.
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -459,7 +455,7 @@ Souvent même.
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -476,7 +472,7 @@ Souvent même.
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -493,7 +489,7 @@ Souvent même.
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -510,7 +506,7 @@ Souvent même.
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -527,7 +523,7 @@ Souvent même.
   </div>
 </div>
     </div>
-	<div class="carousel-item">
+	<div class="carousel-item-test">
 	<div class="card">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
@@ -545,24 +541,14 @@ Souvent même.
 </div>
     </div>
 	</div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-  
 	</div>
-
 </div>	
 </section>
 <section class="section testimonial-header">
 	<div class="container">
 		<div class="row">
 			<div class="col-8 mx-auto text-center mt-5">
-                <div><p class="formulas-section"><b>Guide des formules</b></p></div>
+                <div><p class="formulas-section fw-bold"><b>Guide des formules</b></p></div>
                 <h3 class="text-light text-center "><b>Informations utiles pour chaque type de transport</b></h3>
             </div>
 	  </div>

@@ -1,10 +1,10 @@
 @extends('frontend.frontend_main_layout')
 @section('content')
 <section class="page-header insurance-header">
-  <div class="container">
+  <div class="container mt-5 mb-4">
     <div class="row">
       <div class="col-8 mx-auto text-center">
-        <img src="{{asset('images/wallet/insurance_head_img2.png')}}" class="insurance-header-img"  style="max-width: 100%; height:auto;" />
+        <img src="{{asset('images/wallet/insurance_head_img2.png')}}" class="insurance-header-img img-fluid"  style="max-width: 100%; height:auto;" />
         <h2 class="mb-3 text-capitalize insurance-header-text insurance-header-h2">Assurance Wakam</h2>
         <h4 class="insurance-header-text mb-3 text-capitalize">100% tous risques</h4>
         <!-- <ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
@@ -18,13 +18,12 @@
   </div>
 </section>
 
-<section class="section insurance-section-2">
+<section class="section insurance-section-2 mt-5 mb-5">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 mx-auto">
         <div class="content text-center">
-       
-        <img src="{{asset('images/wallet/assurance-wakam-cocarmoov.png')}}" class="insurance-header-img"  style="max-width: 60%; height:auto;" />
+        <img src="{{asset('images/wallet/assurance-wakam-cocarmoov.png')}}" class="insurance-header-img img-fluid"  style="max-width: 60%; height:auto;" />
           <p class="text-center section-2-text insuarnce-text-2 text-dark">Assurance Wakam avec assistance AXA pour toute la durée du transport.</p>
             <p class="text-center section-2-text text-dark insuarnce-text-3">Votre véhicule est automatiquement assuré.</p>
         </div>
@@ -33,11 +32,11 @@
   </div>
 </section>
 <section class="section insurance-section-3">
-  <div class="container">
+  <div class="container pt-5 pb-4">
     <div class="row">
       <div class="col-lg-10 mx-auto text-center">
         <div class="content">
-        <img src="{{asset('images/wallet/insurance-section-3.png')}}"  style="max-width: 30%; height:auto;" />
+        <img src="{{asset('images/wallet/insurance-section-3.png')}}" class="img-fluid"  style="max-width: 30%; height:auto;" />
         <h3 class="text-center section-3-h text-light mb-5">Comment fonctionne l’assurance ?</h3>
           <p class="text-center section-2-text text-light">En partenariat avec le groupe d'assurance Wakam, CoCarmoov vous offre une assurance automobile. </p>
             <p class="text-center section-2-text text-light">Pendant la réalisation de chaque Co-convoyage ou Convoyage sur CoCarmoov, l'assurance Wakam remplace automatiquement l'assurance du propriétaire.</p>
@@ -49,11 +48,11 @@
   </div>
 </section>
 <section class="section insurance-section-4">
-  <div class="container">
+  <div class="container mt-5 mb-4">
     <div class="row">
       <div class="col-lg-10 mx-auto text-center">
         <div class="content">
-        <img src="{{asset('images/wallet/insurance-section-4.png')}}" class="insurance-4-section-img"  style="max-width: 40%; height:auto;" />
+        <img src="{{asset('images/wallet/insurance-section-4.png')}}" class="insurance-4-section-img img-fluid"  style="max-width: 40%; height:auto;" />
           <h3 class="text-center section-4-h text-dark mb-5">Quelles sont les garanties de l’assurance ?</h3>
             <h4 class="text-center  text-dark">Dommages aux biens</h4>
             <div class="row">
@@ -187,11 +186,11 @@
   </div>
 </section>
 <section class="section section-5">
-  <div class="container">
+  <div class="container mt-5">
     <div class="row">
       <div class="col-lg-10 mx-auto">
         <div class="content">
-        <img src="{{asset('images/wallet/insurance-section-5.png')}}" class="insurance-5-section-img mx-auto d-block"  style="max-width: 35%; height:auto;" />
+        <img src="{{asset('images/wallet/insurance-section-5.png')}}" class="insurance-5-section-img mx-auto d-block img-fluid"  style="max-width: 35%; height:auto;" />
 
           <h3 id="application-processing" class="section-5-h text-center">Quelles sont les conditions d’assurance ?</h3>
           <h4 id="intellectual-property-rights">Pour le conducteur du véhicule</h4>
@@ -212,11 +211,11 @@
   </div>
 </section>
 <section class="section insurance-section-6">
-  <div class="container">
+  <div class="container mt-5 mb-4">
     <div class="row">
       <div class="col-lg-10 mx-auto text-center">
         <div class="content">
-        <img src="{{asset('images/wallet/insurance-section-6.png')}}" class="insurance-6-section-img"  style="max-width: 30%; height:auto;" />
+        <img src="{{asset('images/wallet/insurance-section-6.png')}}" class="insurance-6-section-img img-fluid"  style="max-width: 30%; height:auto;" />
           <h3 class="text-center section-6-h text-light mb-5">Contrat d’assurance</h3>
             <p class="text-center section-2-text text-light">Consulter l’intégralité des termes contractuelles d’assurance à l’adresse suivante</p>
             <a type="button" 
