@@ -64,7 +64,7 @@
         <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
-    <img src="{{asset('images/wallet/pro-driver.png')}}" class="qa-find-img img-fluid mt-1"  style="max-width: 100%; height:auto;" />
+    <img src="{{asset('images/wallet/pro-driver.png')}}" class="qa-find-img img-fluid mt-1"  style="width: 100%; height:auto;" />
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -81,7 +81,7 @@
         <div class="card mb-3 find-card" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
-    <img src="{{asset('images/wallet/transporter.png')}}" class="qa-find-img img-fluid mt-1"  style="max-width: 100%; height:auto;" />
+    <img src="{{asset('images/wallet/transporter.png')}}" class="qa-find-img img-fluid mt-1"  style="width: 100%; height:auto;" />
 
     </div>
     <div class="col-md-8">
@@ -104,7 +104,7 @@
 		<div class="row justify-content-center">
 			<div class="col-lg-6">
 				<div class="section-title text-center">
-                <img src="{{asset('images/wallet/mail.png')}}" class="qa-find-img"  style="max-width: 40%; height:auto;" />
+                <img src="{{asset('images/wallet/mail.png')}}" class="qa-find-img img-fluid"  style="width: 40%; height:auto;" />
 					<h2 class="mb-3 qa-find-h text-light">Contactez CoCarmoov</h2>
                     <p class="mb-3 qa-banner-p text-light">Une question à laquelle nous n’y avons pas répondu,<br> 
 écrivez-nous en remplissant le formulaire ci-dessous.

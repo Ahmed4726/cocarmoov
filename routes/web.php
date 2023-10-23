@@ -65,6 +65,9 @@ Route::get('/professionnel', function () {
 Route::get('/co-drive', function () {
     return view('frontend.co-drive');
 })->name('co-drive');
+Route::get('/convoyor', function () {
+    return view('frontend.convoyor');
+})->name('convoyor');
 Route::get('/generate-cgv', [PDFController::class, 'generateCGVPDF'])->name('generate-cgv');
 Route::get('/generate-cgy', [PDFController::class, 'generateCGUPDF'])->name('generate-cgu');
 // Route::get('/download/{filename}', [FileDownloadController::class, 'downloadFileByName'])->name('download-by-name');

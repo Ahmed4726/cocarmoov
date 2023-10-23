@@ -8809,9 +8809,7 @@ h6, .h6 {
   background-color: #FDCD02;
   border: none;
 }
-.formula-section-2{
-  margin-top: 90px;
-}
+
 .professionnel-header{
   background-color: #333132;
 }
@@ -10276,6 +10274,10 @@ select {
 .avantage-p{
   color: #FDCD02;
 }
+.d-benefits{
+  font-family: "Lato", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+}
 .section-avantage{
   background-color: #333132;
 }
@@ -10891,7 +10893,28 @@ margin-top: 10px;
   background-color: #FDCD02;
   font-size: 18px;
   font-family: "Lato", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
+}
+.text-align-faq{
+  margin-left: 100px !important;
+}
+@media (max-width: 768px) {
+  .text-align-faq {
+     margin-left: 90px !important;
+  }
+}
+.section-faq-co-drive{
+  background-color: #FFFAE7;
+}
+.section-faq-co{
+  
+}
+@media (max-width: 768px) {
+  .kilometer-gif {
+     text-align: center;
+  }
+}
+.find-text-button:hover{
+  background-color: #FDCD02;
 }
 .section-5{
   background-color: #FFFAE7;
