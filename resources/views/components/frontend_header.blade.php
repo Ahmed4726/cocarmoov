@@ -29,9 +29,9 @@
 					</li> -->
           <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" class="login-button" id="navbarDropdown"  data-bs-toggle="dropdown" aria-expanded="false">Partenaire</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item " href="{{('convoyor')}}">Convoyeur</a>
+							<li><a class="dropdown-item " href="{{route('convoyor')}}">Convoyeur</a>
 							</li>
-							<li><a class="dropdown-item " href="blog-details.html">Transporteur</a>
+							<li><a class="dropdown-item " href="{{route('transporteur')}}">Transporteur</a>
 							</li>
               </ul>
           </li>
