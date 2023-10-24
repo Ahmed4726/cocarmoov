@@ -10873,6 +10873,30 @@ margin-top: 10px;
 .font-icon-color{
   color: #FDCD02;
 }
+.convoyar-text-button{
+  background-color: #FDCD02;
+  font-size: 18px;
+  font-family: "Lato", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+@media (max-width: 768px) {
+  .convoyar-text-button {
+      font-size: 16px;
+  font-family: "Lato", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+}
+.formula-section-2{
+  margin-top: 90px;
+}
+@media (max-width: 768px) {
+  .formula-section-2 {
+      margin-top: 10px;
+      margin-right: 20px;
+  font-family: "Lato", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+}
+.convoyar-text-button:hover{
+  background-color: #FDCD02 !important;
+}
 .professionall-text-button{
   background-color: #FDCD02;
   font-size: 18px;
