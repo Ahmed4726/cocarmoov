@@ -14,18 +14,26 @@
 </p>
             </div>
             <form action="/action_page.php">
-  <div class="row">
-	<div class="col-lg-5 col-md-12">
-	<input type="text" class="form-control form-input-border mt-0" placeholder="Ville de départ"><br>
-	</div>
-	<div class="col-lg-5 col-md-12">
-	<input type="text" class="form-control form-input-border mt-0" placeholder="Ville d’arrivée"><br>
-	</div>
-    <div class="col-lg-2 col-md-12 header-button">
-    <a href="#"><img  class="rounded"  src="{{ asset('images/wallet/chercher-un-vehicule.png') }}" width="30%" height="auto" alt="Post Thumbnail"></a>
+    <div class="row">
+    <div class="col-lg-5 col-md-12">
+    <div class="backgroung-img-field">
+        <input type="text" class="form-control form-input-border" id="ville-de-depart" placeholder="Ville de départ">
     </div>
 </div>
+<div class="col-lg-5 col-md-12">
+    <div class="backgroung-img-field">
+        <input type="text" class="form-control form-input-border mt-0" id="ville-d-arrivee" placeholder="Ville d’arrivée">
+    </div>
+</div>
+
+        <div class="col-lg-2 col-md-12 header-button">
+            <label for="ville-de-depart">
+                <a href="#"><img class="rounded" src="{{ asset('images/wallet/chercher-un-vehicule.png') }}" width="43%" height="auto" alt="Post Thumbnail"></a>
+            </label>
+        </div>
+    </div>
 </form>
+
         </div>
      
     </div>  
@@ -435,26 +443,26 @@ Souvent même.
           <h3 class="mb-4 frequently-h">Le Co-convoyage en 4 étapes faciles</h3>
 				<div class="row mt-5">
 					<div class="col-lg-3 col-md-12">
-					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/choisir-son-type-de-vehicule.png')}}" style="width:70%;" height="auto"/>
-					<h3 class="mt-2">Choisissez un véhicule</h3>	
+					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/choisir-son-type-de-vehicule.png')}}" style="width:60%;" height="auto"/>
+					<h5 class="mt-2">Choisissez un véhicule</h5>	
 					<p class="text-dark">Filtrez nos offres de co-convoyage disponibles par type de véhicule (voiture, utilitaire ou van aménagé) qui vous convient le mieux pour votre besoin de déplacement.</p>
 				</div>
 					</div>
 					<div class="col-lg-3 col-md-12">
-					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/réserver-son-co-convoyage.png')}}" style="width: 70%;" height="auto"/>
-					<h3 class="mt-2">Réservez le trajet</h3>
+					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/réserver-son-co-convoyage.png')}}" style="width: 60%;" height="auto"/>
+					<h5 class="mt-2">Réservez le trajet</h5>
 					<p class="text-dark">Trouvez un trajet correspondant à votre itinéraire, sélectionnez-le et réservez-le en quelques clics. La durée de réservation sera de 24 ou 48 heures selon la distance à parcourir.</p>		
 				</div>
 					</div>
 					<div class="col-lg-3 col-md-12">
-					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/conduire-et-restituer-le-vehicule.png')}}" style="width: 70%;" height="auto"/>
-					<h3 class="mt-2">Conduisez et restituez</h3>	
+					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/conduire-et-restituer-le-vehicule.png')}}" style="width: 60%;" height="auto"/>
+					<h5 class="mt-2">Conduisez et restituez</h5>	
 					<p class="text-dark">Récupérez le véhicule, vous avez une assurance automobile comprise et 20% de kilomètres additionnels pour effectuer le trajet. Restituez le véhicule dans le même état à destination.</p>	
 				</div>
 					</div>
                     <div class="col-lg-3 col-md-12">
-					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/recevoir-la-comprensation.png')}}" style="width: 70%;" height="auto"/>
-					<h3 class="mt-2">Recevez votre</h3>	
+					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/recevoir-la-comprensation.png')}}" style="width: 60%;" height="auto"/>
+					<h5 class="mt-2">Recevez votre compensation </h5>	
 					<p class="text-dark">Clôturez votre co-convoyage via l’application CoCarmoov et recevez une compensation kilométrique en seulement 72 heures. C’est du gagnant-gagnant !</p>	
 				</div>
 					</div>
@@ -465,7 +473,8 @@ Souvent même.
         <div class="text-center">
         <a type="button" 
             class="btn find-text-button  text-dark mt-3 mb-2" href="#">
-            Suivant</a>
+            Des questions ?
+</a>
             </div>
     </div>
 </section>  
@@ -479,7 +488,7 @@ Souvent même.
 				<div class="row mt-5">
 					<div class="col-lg-3 col-md-12">
 					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/voyager-en-co-convoyant.jpg')}}" style="width:100%;" height="auto"/>
-					<h3 class="mt-2 avantage-p">Voyager en</h3>	
+					<h5 class="mt-2 avantage-p">Voyager en</h5>	
 					<p class="text-light d-benefits">Embarquez pour une évasion sans tracas en co-convoyage ! Dites adieu aux soucis de la route et partez en escapade spontanée à un prix imbattable. Chaque kilomètre rapproche encore plus de l'aventure.</p>
                     <div class="text-center">
         <a type="button" 
@@ -491,7 +500,7 @@ Souvent même.
 					</div>
 					<div class="col-lg-3 col-md-12">
 					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/partir-en-week-end.jpg')}}" style="width: 100%;" height="auto"/>
-					<h3 class="mt-2 avantage-p">Partir en week-end</h3>
+					<h5 class="mt-2 avantage-p">Partir en week-end</h5>
 					<p class="text-light d-benefits">Week-end Intelligent : Optez pour le co-convoyage ! Partagez votre voyage avec de nouveaux compagnons, économisez sur les frais de route et gagnez des récompenses à chaque kilomètre partagé.</p>		
                     <div class="text-center">
         <a type="button" 
@@ -503,7 +512,7 @@ Souvent même.
 					</div>
 					<div class="col-lg-3 col-md-12">
 					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color"><img src="{{asset('images/wallet/demenager.jpg')}}" style="width: 100%;" height="auto"/>
-					<h3 class="mt-2 avantage-p">Déménager</h3>	
+					<h5 class="mt-2 avantage-p">Déménager</h5>	
 					<p class="text-light d-benefits">Déménagez Malin grâce au co-convoyage ! Utilisez un utilitaire sans stress pour votre déménagement, économisez de l'argent et recevez une compensation kilomètre parcouru vers votre nouveau chez-vous.</p>	
                     <div class="text-center">
         <a type="button" 
@@ -515,7 +524,7 @@ Souvent même.
 					</div>
                     <div class="col-lg-3 col-md-12">
 					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color"><img src="{{asset('images/wallet/acceder-a-l-aeroport.jpg')}}" style="width: 100%;" height="auto"/>
-					<h3 class="mt-2 avantage-p">Accéder à l’aéroport</h3>	
+					<h5 class="mt-2 avantage-p">Accéder à l’aéroport</h5>	
 					<p class="text-light d-benefits">Envolez-vous vers de nouveaux horizons ! Co-convoyez une voiture et restituez-la directement auprès des loueurs au parking de l'aéroport, tout en gagnant des récompenses pour votre prochain vol.</p>	
 				</div>
                 <div class="text-center">

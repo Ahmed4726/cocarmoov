@@ -9,176 +9,49 @@
                 <h2 class="mb-3 text-center professionall-p text-center mt-5"><span class="fw-bold">Transformez votre conduite en source de revenus</span></h2>
                 <p class="text-light text-center banner-p mx-4">Devenez convoyeur partenaire de confiance pour des centaines d’entreprises à travers la France.
 </p>
+<p class="mb-3 banner-p text-light"><i class="fas fa-arrow-right mx-1 eligibility-section"></i>Rémunération compétitive et équitable<br>
+<span class="subscription-text mx-5">Augmentez considérablement vos revenus tout en travaillant à votre rythme.</span><br>
+</p>
+<p class="mb-3 banner-p text-light "><i class="fas fa-arrow-right mx-1 eligibility-section"></i>Flexibilité totale<br>
+<span class="subscription-text mx-5">Sélectionnez les missions qui correspondent à vos préférences en toute liberté.</span><br>
+</p>
+<p class="mb-3 banner-p text-light"><i class="fas fa-arrow-right mx-1 eligibility-section"></i>Paiements bimensuels<br>
+<span class="subscription-text mx-5">Recevez votre rémunération 2 fois par mois pour une gestion optimisée de votre trésorerie.</span><br>
+</p>
 <div class="text-center">
 <a type="button"
             class="btn convoyar-text-button text-light mt-3 mb-5" href="#">
             Devenir convoyeur partenaire
 </a>
 </div>
-<p class="mb-3 text-center banner-p text-light"><i class="fas fa-arrow"></i>Rémunération compétitive et équitable<br>
-                Week-ends Économiques : Vivez Malin<br>
-                Déménagez sans Stress ni Frais Excessifs<br>
-                Transformez vos Kilomètres vers l’Aéroport en Voyages Gratuits
-</p>
 			</div>
 		</div>
 	</div>
 </section>
-<section class="section find-section mb-1">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-6">   
-				<div class="section-title text-center">
-                <p class="services-p fw-bold mb-3"><b>Tarification sur demande</b></p>
-                <h4>Proposition de Tarif de Convoyage Personnalisé (HT) pour Votre Flotte</h4>
-				</div>
-			</div>
-		</div>
-		<div class="row mt-0">
-			<div class="col-lg-3 mt-3 mb-4 pricing-mobile">
-				<h5 class="text-dark pricing-text mt-5"><i class="fas fa-car mx-2"></i>Véhicules de tourisme</h5>
-				<h5 class="text-dark pricing-text mt-4"><i class="fas fa-shuttle-van mx-2"></i> Utilitaires inférieurs à 13m3</h5>
-				<h5 class="text-dark pricing-text mt-4"><i class="fas fa-truck  mx-2"></i>Utilitaires supérieurs à 13m3</h5>
-			</div>
-			<div class="col-lg-3 col-md-12">
-    <div class="card rounded text-center mb-4" style="width: 90%;">
-      <div class="card-body">
-        <h4 class="card-title pricing-text">Pack Prestige</h4>
-        <p class="card-text mt-3">59-60 c€/km</p>
-        <p class="card-text">63-69 c€/km</p>
-        <p class="card-text">76-85 c€/km</p>
-	
-        <a href="#" class="btn btn-primary text-dark">Découvrez le Pack</a>
-		
-      </div>
-    </div>
-			</div>
-			<div class="col-lg-3 col-md-12">
-    <div class="card rounded text-center mb-4" style="width: 90%;">
-      <div class="card-body">
-        <h4 class="card-title pricing-text">Forfait logistique</h4>
-		<p class="card-text mt-3">53-54 c€/km</p>
-        <p class="card-text">57-62 c€/km</p>
-        <p class="card-text">68-77 c€/km</p>
-        <a href="#" class="btn btn-primary text-dark">Découvrez le Forfait</a>
-      </div>
-    </div>
-			</div>
-			<div class="col-lg-3 col-md-12">
-    <div class="card rounded text-center" style="width: 90%;">
-      <div class="card-body">
-        <h4 class="card-title pricing-text">Plan économique</h4>
-        <p class="card-text mt-3">47-48 c€/km</p>
-        <p class="card-text">50-55 c€/km</p>
-        <p class="card-text">61-68 c€/km</p>
-        <a href="#" class="btn btn-primary text-dark">Découvrez le Plan</a>
-      </div>
-    </div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-3 col-md-12">
-			<h5 class="pricing-text mt-5 text-center">Gestion de la Flotte</h5>
-			<p class="text-dark  text-pricing-p fw-medium"><i class="fas fa-infinity mx-1"></i>Nombre de véhicules à déplacer par mois<br> 
-			<i class="fas fa-calculator mx-1"></i>Base forfaitaire par véhicule<br>
-			<i class="fas fa-address-book mx-1"></i>Gestion carnet d’adresses
-</p>
-			</div>
-			<div class="col-lg-3 col-md-12">
-				<br>
-				<br>
-				<br>
-			<p class="text-dark text-center text-pricing-p fw-medium">À partir de 10<br> 
-			59€<br>
-<i class="fas fa-check"></i>
-</p>
-			</div>
-			<div class="col-lg-3 col-md-12">
-				<br>
-				<br>
-				<br>
-			<p class="text-dark text-center text-pricing-p fw-medium">À partir de 20<br> 
-			49€<br>
-<i class="fas fa-check"></i>
-</p>
-			</div>
-			<div class="col-lg-3 col-md-12">
-				<br>
-				<br>
-				<br>
-			<p class="text-dark text-center text-pricing-p fw-medium">À partir de 30<br> 
-			39€<br>
-<i class="fas fa-check"></i>
-</p>
-			</div>
-		</div>
-			<div class="row">
-			<div class="col-lg-3 col-md-12">
-			<h5 class="pricing-text text-center mt-5">Services et Sécurité</h5>
-			<p class="text-dark  text-pricing-p fw-medium">Confidentialité des données<br> 
-			Espace client sécurisé<br>
-			Documents digitalisés<br>
-			Téléchargement de factures<br>
-Suivi en temps réel<br>
-Suivi d’indicateurs (tableau de bord)
-Support e-mail & téléphonique
-
-</p>
-			</div>
-			<div class="col-lg-3 col-md-12">
-				<br>
-				<br>
-				<br>
-				
-			<p class="text-dark text-center text-pricing-p fw-medium"><i class="fas fa-check"></i><br> 
-			<i class="fas fa-check"></i><br>
-<i class="fas fa-check"></i>
-</p>
-			</div>
-			<div class="col-lg-3 col-md-12">
-				<br>
-				<br>
-				<br>
-				<p class="text-dark text-center text-pricing-p fw-medium"><i class="fas fa-check"></i><br> 
-			<i class="fas fa-check"></i><br>
-<i class="fas fa-check"></i>
-</p>
-			</div>
-			<div class="col-lg-3 col-md-12">
-				<br>
-				<br>
-				<br>
-				<p class="text-dark text-center text-pricing-p fw-medium"><i class="fas fa-check"></i><br> 
-			<i class="fas fa-check"></i><br>
-<i class="fas fa-check"></i>
-</p>
-			</div>
-		</div>
-    </div>
-</section>
-<section class="section mt-5">
-	<div class="container">
+<section class="section convoyor-section">
+	<div class="container pt-5">
 		<div class="row justify-content-center">
 			<div class="col-lg-12">
 				<div class="section-title text-center">
-                <p class="services-p fw-bold mb-3"><b>Atouts professionnels</b></p>
+                <p class="services-p fw-bold mb-3"><b>Comment ça fonctionne ?</b></p>
+          <h3 class="mb-4 frequently-h">3 étapes pour devenir convoyeur professionnel sur CoCarmoov</h3>
 				<div class="row mt-5">
 					<div class="col-lg-4 col-md-12">
-					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color"><i class="fas fa-cogs mt-0" style="font-size:70px"></i>
-					<h3 class="mt-2">Solutions sur mesure</h3>	
-					<p class="text-dark">Offrez à votre entreprise des solutions de transport personnalisées qui s'adaptent à vos besoins spécifiques en matière de logistique automobile.</p>
+					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/inscription-profil.png')}}" style="width:50%;" height="auto"/>
+					<h5 class="mt-2">Inscription et Profil</h5>	
+					<p class="text-dark">Créez votre compte, complétez vos informations et téléchargez les documents requis.</p>
 				</div>
 					</div>
 					<div class="col-lg-4 col-md-12">
-					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color"><i class="fas fa-handshake mt-0" style="font-size:70px"></i>
-					<h3 class="mt-2">Partenaires engagés</h3>
-					<p class="text-dark"> Nos partenaires sont dévoués à votre succès, offrant un service exceptionnel à chaque étape du transport de vos véhicules.</p>		
+					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/connaissances.png')}}" style="width: 50%;" height="auto"/>
+					<h5 class="mt-2">Connaissances et Formations</h5>
+					<p class="text-dark">Répondez au questionnaire et suivez notre formation en ligne interactive.</p>		
 				</div>
 					</div>
 					<div class="col-lg-4 col-md-12">
-					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color"><i class="fas fa-file-invoice-dollar mt-0" style="font-size:70px"></i>
-					<h3 class="mt-2">Gestion budgétaire garantie</h3>	
-					<p class="text-dark">Soyez assuré de maîtriser vos coûts avec notre engagement envers une gestion budgétaire transparente et sans surprise.</p>	
+					<div class="icon me-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/validation-acces.png')}}" style="width:50%;" height="auto"/>
+					<h5 class="mt-2">Validation et Accès</h5>	
+					<p class="text-dark">Obtenez la validation de votre statut de convoyeur professionnel et accédez aux offres de convoyages.</p>	
 				</div>
 					</div>
 				</div>
@@ -186,403 +59,192 @@ Support e-mail & téléphonique
 			</div>
 		</div>
     </div>
-</section>   
-<section class="section pt-5 pb-5 services-section">
+</section>  
+<section class="section pt-5 pb-5">
 <div class="container">
-<div class="section-title">
-          <p class="fw-bold mb-3 services-p text-center">Solutions entreprises</p>
-          <h4 class="text-center">Formules et Services</h4>
+<div class="section-title text-center">
+<p class="services-p fw-bold mb-3"><b>Conditions d’éligibilité</b></p>
+          <h3 class="mb-4 frequently-h">Ce dont vous avez besoin pour rejoindre notre communauté de convoyeurs professionnels</h3>
           <!-- <p>Lorem ipsum dolor sit amet, consectetur adipreiscing elit. Lacus penatibus tincidunt</p> -->
         </div>
-     <div class="row">
-      <div class="col-lg-4 col-md-6 service-item">
-        <a class="text-black" href="service-details.html">
-          <div class="block"><img src="{{asset('images/wallet/co-convoyage-vehicule.jpg')}}" class="rounded-circle"/> 
-            <!-- <span class="colored-box text-center h3 mb-4">01</span> -->
-            <h3 class="mb-3 mt-3 text-center service-title">Co-convoyage</h3>
-			<p class="text-center  mt-3 h5 solution-price-eco">À 49€ + 9 c€/km</p>
-            <!-- <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-              eirmod</p> -->
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-md-6 service-item">
-        <a class="text-black" href="service-details.html">
-          <div class="block"> <img src="{{asset('images/wallet/VehicleDriving.jpg')}}" class="rounded-circle"/>
-            <!-- <span class="colored-box text-center h3 mb-4 rounded-pill">02</span> -->
-            <h3 class="mb-3 mt-3 text-center service-title">Convoyage</h3>
-			<p class="text-center h5 text-light mt-3 solution-price-exp">À 59€ + 59 c€/km</p>
-            <!-- <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-              eirmod</p> -->
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-md-6 service-item">
-        <a class="text-black" href="service-details.html">
-          <div class="block">
-          <img src="{{asset('images/wallet/VehicleTransport.jpg')}}" class="rounded-circle"/> 
-            <!-- <span class="colored-box text-center h3 mb-4">
-              
-            </span> -->
-            <h3 class="mb-3 service-title mt-3 text-center">Transport</h3>
-			<p class="text-center text-light h5 mt-3 solution-price-pre">À 149€ + 1,49€/km</p>
-            <!-- <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-              eirmod</p> -->
-          </div>
-        </a>
-      </div>
-	  </div>
-      <div>
         <div class="row">
-      <div class="col-lg-3 col-md-6 service-item">
-        <a class="text-black" href="service-details.html">
-       
-           <div class="block"> 
-           <img src="{{asset('images/wallet/Tradeplates.jpg')}}" class="rounded-circle"/>
-           <!-- <span class="colored-box text-center h3 mb-4">
-
-            </span>  -->
-            <h3 class="mb-3 service-title mt-3 text-center">Plaques WW</h3>
-            <!-- <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-              eirmod</p> -->
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-6 service-item">
-        <a class="text-black" href="service-details.html">
-       
-           <div class="block"> 
-           <img src="{{asset('images/wallet/CarCleaning.jpg')}}" class="rounded-circle"/>
-           <!-- <span class="colored-box text-center h3 mb-4">
-
-            </span>  -->
-            <h3 class="mb-2 service-title mt-3 text-center">Nettoyage</h3>
-            <!-- <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-              eirmod</p> -->
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-6 service-item">
-        <a class="text-black" href="service-details.html">
-           <div class="block"> 
-           <img src="{{asset('images/wallet/CarDemonstration.jpg')}}" class="rounded-circle"/>
-           <!-- <span class="colored-box text-center h3 mb-4">
-            </span>  -->
-            <h3 class="mb-3 text-center mt-3 service-title">Démonstration</h3>
-            <!-- <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-              eirmod</p> -->
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-3 col-md-6 service-item">
-        <a class="text-black" href="service-details.html">
-       
-           <div class="block"> 
-           <img src="{{asset('images/wallet/Documentssignature.jpg')}}" class="rounded-circle"/>
-           <!-- <span class="colored-box text-center h3 mb-4">
-
-            </span>  -->
-            <h3 class="mb-2 text-center mt-3 service-title">Signature documents</h3>
-            <!-- <p class="mb-0 service-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-              eirmod</p> -->
-          </div>
-        </a>
-      </div> 
-		</div>
-	  </div>
-	</div>
-	
-<div class="container overflow-hidden mt-5">
-<div class="section-title">
-          <p class="fw-bold mb-3 services-p text-center">Témoignages</p>
-          <h4 class="text-center">Des Voix du Monde Professionnel</h4>
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipreiscing elit. Lacus penatibus tincidunt</p> -->
+<div class="col-md-12">
+<p class="text-dark">
+<i class="fas fa-check eligibility-section mx-2"></i>Avoir <b>le droit de travailler en France</b><br>
+<i class="fas fa-check eligibility-section mx-2"></i>Disposer d’un <b>statut d’entrepreneur</b> ou de <b>société</b><br>
+<i class="fas fa-check eligibility-section mx-2"></i>Être <b>âgé d’au moins 21 ans</b><br>
+<i class="fas fa-check eligibility-section mx-2"></i>Posséder un <b>permis de conduire de catégorie B en cours de validité depuis au moins 3 ans</b><br>
+<i class="fas fa-check eligibility-section mx-2"></i>Souscrire une <b>assurance responsabilité civile professionnelle</b><br>
+<i class="fas fa-check eligibility-section mx-2"></i>Être équipé d’un <b>smartphone</b> avec <b>une version récente d’iOS ou Android</b>
+</p>
+</div>
         </div>
-		<div id="carousel-container">
-		<div id="carouselExampleControls" class="test-carousel">
-  <div class="carousel-inner-test">
-    <div class="carousel-item-test active">
-	<div class="card">
-  	<div class="card-body text-center">
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-    <p class="card-text">Je recommande le sérieux. </p>
-    <p class="card-text testimonial-text">Conducteur professionnel.</p>
-	<p class="card-text"><b>Professionnel</b></p>
-	<img  class="rounded"  src="{{ asset('images/wallet/profil-professionnel.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Marseille -> Paris</p>
-	<p class="card-text testimonial-text">Il y a 1 mois</p>
-  </div>
 </div>
-    </div>
-    <div class="carousel-item-test">
-	<div class="card">
-  	<div class="card-body text-center">
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-    <p class="card-text">Parfait pile à l’heure très agréable. </p>
-    <p class="card-text testimonial-text">C’est ce qu’on cherche en automobile.</p>
-	<p class="card-text"><b>Professionnel</b></p>
-	<img  class="rounded"  src="{{ asset('images/wallet/profil-professionnel.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Lyon -> Strasbourg</p>
-	<p class="card-text testimonial-text">Il y a 2 semaines</p>
-  </div>
-</div>
-    </div>
-    <div class="carousel-item-test">
-	<div class="card">
-  	<div class="card-body text-center">
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-    <p class="card-text">Convoyeur présentable et courtois.</p>
-    <p class="card-text testimonial-text">Je suis ravi du retour de mon client.</p>
-	<p class="card-text"><b>Professionnel</b></p>
-	<img  class="rounded"  src="{{ asset('images/wallet/profil-professionnel.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Pontarlier -> Toulouse</p>
-	<p class="card-text testimonial-text">Il y a 1 mois</p>
-  </div>
-</div>
-    </div>
-	<div class="carousel-item-test">
-	<div class="card">
-  	<div class="card-body text-center">
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-    <p class="card-text">Livraison parfaite et convoyeur communicatif</p>
-    <p class="card-text testimonial-text">Enfin, la restitution aussi a été ponctuelle.</p>
-	<p class="card-text"><b>Professionnel</b></p>
-	<img  class="rounded"  src="{{ asset('images/wallet/profil-professionnel.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Tours -> Perpignan</p>
-	<p class="card-text testimonial-text">Il y a 1 semaine</p>
-  </div>
-</div>
-    </div>
-	<div class="carousel-item-test">
-	<div class="card">
-  	<div class="card-body text-center">
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-    <p class="card-text">Je vais recommander voir la continuité.</p>
-    <p class="card-text testimonial-text">Nickel et prix ajustable. Top</p>
-	<p class="card-text"><b>Professionnel</b></p>
-	<img  class="rounded"  src="{{ asset('images/wallet/profil-professionnel.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Chambéry -> Reims</p>
-	<p class="card-text testimonial-text">Il y a 1 mois</p>
-  </div>
-</div>
-    </div>
-	<div class="carousel-item-test">
-	<div class="card">
-  	<div class="card-body text-center">
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-    <p class="card-text">Le conducteur est bien professionnel.</p>
-    <p class="card-text testimonial-text">Rien à dire du service client.</p>
-	<p class="card-text"><b>Professionnel</b></p>
-	<img  class="rounded"  src="{{ asset('images/wallet/profil-professionnel.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Arras -> Belfort</p>
-	<p class="card-text testimonial-text">Il y a 3 semaines</p>
-  </div>
-</div>
-    </div>
-	<div class="carousel-item-test">
-	<div class="card">
-  	<div class="card-body text-center">
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-    <p class="card-text">Bonne réactivité de la plateforme.</p>
-    <p class="card-text testimonial-text">Délais respectés. Bravo</p>
-	<p class="card-text"><b>Professionnel</b></p>
-	<img  class="rounded"  src="{{ asset('images/wallet/profil-professionnel.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Brest -> Rodez</p>
-	<p class="card-text testimonial-text">Il y a 1 mois</p>
-  </div>
-</div>
-    </div>
-	<div class="carousel-item-test">
-	<div class="card">
-  	<div class="card-body text-center">
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-    <p class="card-text">Bonne prestation, je viens de découvrir.</p>
-    <p class="card-text testimonial-text">Bonne communication surtout.</p>
-	<p class="card-text"><b>Professionnel</b></p>
-	<img  class="rounded"  src="{{ asset('images/wallet/profil-professionnel.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Grenoble -> Toulon</p>
-	<p class="card-text testimonial-text">Il y a 1 semaine</p>
-  </div>
-</div>
-    </div>
-	<div class="carousel-item-test">
-	<div class="card">
-  	<div class="card-body text-center">
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-    <p class="card-text">Une découverte pour notre garage</p>
-    <p class="card-text testimonial-text">Service réactif, je recommande.</p>
-	<p class="card-text"><b>Professionnel</b></p>
-	<img  class="rounded"  src="{{ asset('images/wallet/profil-professionnel.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Dijon -> Nîmes</p>
-	<p class="card-text testimonial-text">Il y a 2 semaines</p>
-  </div>
-</div>
-    </div>
-	<div class="carousel-item-test">
-	<div class="card">
-  	<div class="card-body text-center">
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-    <p class="card-text">Bonne réactivité, et conducteur à l’écoute.</p>
-    <p class="card-text testimonial-text">Cocarmoov, une découverte !</p>
-	<p class="card-text"><b>Professionnel</b></p>
-	<img  class="rounded"  src="{{ asset('images/wallet/profil-professionnel.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Villeurbanne -> Clermont-Ferrand</p>
-	<p class="card-text testimonial-text">Il y a 2 semaines</p>
-  </div>
-</div>
-    </div>
-	<div class="carousel-item-test">
-	<div class="card">
-  	<div class="card-body text-center">
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-	<i class="fas fa-star checked"></i>
-    <p class="card-text">Bon convoyage, contrat respecté.</p>
-    <p class="card-text testimonial-text">Services à la carte. Pas mal</p>
-	<p class="card-text"><b>Professionnel</b></p>
-	<img  class="rounded"  src="{{ asset('images/wallet/profil-professionnel.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">La Rochelle -> Saint-Maur-des-Fossés</p>
-	<p class="card-text testimonial-text">Il y a 3 semaines</p>
-  </div>
-</div>
-    </div>
-	</div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-		</div>
-		</div>	
-</div>
-</section>
-<section class="section professionall-header pt-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 d-flex justify-content-center align-items-center">
-        <div class="text-center">
-		<p class="fw-bold mb-3 services-p text-center">Ouvrez un compte</p>
-          <div class="card mt-4 rounded mx-auto card-register" style="width:60%;"> 
+</section>     
+<section class="section convoyor-section">
+	<div class="container pt-5">
+		<div class="row justify-content-center">
+			<div class="col-lg-12">
+				<div class="section-title text-center">
+                <p class="services-p fw-bold"><b>Inscription</b></p>
+				</div>
+			</div>
+            <div class="card rounded mx-auto card-register p-5" style="width:60%;"> 
+          <h4 class="frequently-h text-center">Commencez dès maintenant votre inscription en remplissant ce formulaire simple.</h4>
+
             <div class="card-body">
-              <h3 class="card-title p-complete-info py-2">Définissez votre Profil d’Entreprise et accédez à des solutions sur mesure</h3>
 			  <form action="/action_page.php">
-			  <div class="input-group">
-			  <div class="select-container">
-    <select name="cars" id="cars" class="form-control text-dropdown-form">
-      <option hidden selected><span class="">Nombre de véhicules à déplacer par mois</span></option>
-      <option value="1 à 9 véhicules par mois">1 à 9 véhicules par mois</option>
-      <option value="10 à 19 véhicules par mois">10 à 19 véhicules par mois</option>
-      <option value="20 à 29 véhicules par mois">20 à 29 véhicules par mois</option>
-      <option value="Plus de 30 véhicules par mois">Plus de 30 véhicules par mois</option>
-    </select>
-    <i class="fas fa-caret-down fa-dropdown-icon"></i> <!-- Font Awesome dropdown icon -->
-  </div>
-  </div>
   <br>
   <div class="row">
 	<div class="col-lg-6 col-md-12">
-	<input type="text" class="form-control form-input-border mt-0" placeholder="Raison social"><br>
-	</div>
-	<div class="col-lg-6 col-md-12">
-	<input type="text" class="form-control form-input-border mt-0" placeholder="Numéro de SIRET (si disponible)"><br>
-	</div>
-	<div class="col-lg-6 col-md-12">
-	<div class="input-group">
-			  <div class="select-container">
-    <select name="cars" id="cars" class="form-control">
-      <option hidden selected>Profil de l’entreprise</option>
-      <option value="Constructeur">Constructeur</option>
-      <option value="Société de location">Société de location</option>
-      <option value="Société de leasing">Société de leasing</option>
-	  <option value="Concessionnaire">Concessionnaire</option> 
-      <option value="Marchand">Marchand</option>
-	  <option value="Gestionnaire de parc">Gestionnaire de parc</option>
-	  <option value="Société de livraison">Société de livraison</option>
-	  <option value="Société d’assurance">Société d’assurance</option>
-	  <option value="Carrossier">Carrossier</option>
-	  <option value="Société de déménagement">Société de déménagement</option>
-	  <option value="Vente aux enchères">Vente aux enchères</option>
-	  <option value="Événementiel et spectacle">Événementiel et spectacle</option>
-	  <option value="Garagiste">Garagiste</option>
-	  <option value="Autre">Autre</option>
-    </select>
-    <i class="fas fa-caret-down fa-dropdown-icon"></i> <!-- Font Awesome dropdown icon -->
-  </div>
-  </div><br>
-	</div>
-	<div class="col-lg-6 col-md-12">
-	<input type="text" class="form-control form-input-border mt-0" placeholder="Adresse postale"><br>
-	</div>
-	<div class="col-lg-6 col-md-12">
-	<input type="text" class="form-control form-input-border mt-0" placeholder="Prénom"></i>
+	<input type="text" class="form-control form-input-border mt-0" placeholder="Prénom"></i><br>
 	</div>
 	<div class="col-lg-6 col-md-12">
 	<input type="text" class="form-control form-input-border mt-0" placeholder="Nom"><br>
 	</div>
 	<div class="col-lg-6 col-md-12">
-	<input type="text" class="form-control form-input-border mt-0" placeholder="Adresse e-mail"><br>
+	<input type="text" class="form-control form-input-border mt-0" placeholder="E-mail"><br>
 	</div>
 	<div class="col-lg-6 col-md-12">
-	<input type="text" class="form-control form-input-border mt-0" placeholder="Numéro de téléphone">
+	<input type="text" class="form-control form-input-border mt-0" placeholder="Téléphone">
 	</div>
   </div>
+  <div class="text-center">
   <a type="button" 
             class="btn professionall-button-register text-dark mt-3 mb-3" href="#">
-            Ouvrir un compte
+            S’inscrire
 </a>
+</div>
 </form>
             </div>
-          </div>	
-        </div>
-      </div>
+          </div>
+		</div>
     </div>
-  </div>
-</section>
+</section>  
+<section class="section convoyor-faq">
+	<div class="container pt-5 pb-2">
+		<div class="row justify-content-center">
+			<div class="col-lg-12">
+				<div class="section-title text-center">
+                <p class="services-p fw-bold mb-3">Des questions fréquentes</p>
+          <h3 class="mb-4 frequently-h text-light">Le plus important à savoir</h3>
+				</div>
+			</div>
+        </div>
+        <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-12">
+      <div class="rounded shadow bg-white p-5">
+      <div class="accordion accordion-border-bottom" id="accordionFAQ">
+          <div class="accordion-item">
+            <h2 class="accordion-header accordion-button h5 border-0 active"
+              id="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" aria-expanded="true"
+              aria-controls="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9">Qu’est ce qui est inclus dans le prix de la prestation ?
+            </h2>
+            <div id="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9"
+              class="accordion-collapse collapse border-0 show"
+              aria-labelledby="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body py-0 content"> <p>Le prix de la prestation englobe votre rémunération, les frais de rapprochement, les frais de route (carburant, péages), ainsi que les services optionnels (tels que les plaques W garage, le lavage extérieur ou complet, la remise de carburant, la démonstration au client et la signature de documents).
+                            </p>
+                    </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header accordion-button h5 border-0 "
+              id="heading-a443e01b4db47b3f4a1267e10594576d52730ec2" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec2" aria-expanded="false"
+              aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec2">Suis-je couvert par une assurance en tant que convoyeur pour CoCarmoov ?
+            </h2>
+            <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec2" class="accordion-collapse collapse border-0 "
+              aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec2" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body py-0 content"><p>Pour devenir convoyeur sur CoCarmoov, vous devez disposer d'une assurance responsabilité civile professionnelle.<br>
+CoCarmoov offre également une assurance pour couvrir les véhicules lors des missions de convoyage.<br>
+En cas de sinistre, une participation vous sera demandée, couvrant la moitié des frais de réparation ou la moitié de la franchise si les coûts de réparation excèdent cette franchise.<br>
+Pour plus de détails, vous pouvez consulter les conditions de notre assurance sur https://www.cocarmoov.fr/assurance<br>
+Dans les cas où le sinistre ne relève pas de la couverture de l'assurance CoCarmoov (par exemple, erreur de carburant ou passage dans une trémie sans considération de la hauteur du véhicule), les frais seront entièrement à votre charge, où vous pouvez faire intervenir votre propre assurance responsabilité civile professionnelle.<br>
+</p>
+            </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header accordion-button h5 border-0 "
+              id="heading-a443e01b4db47b3f4a1267e10594576d52730ec2" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec3" aria-expanded="false"
+              aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec3">Y a-t-il des frais si j’annule un convoyage après sa réservation ?
+            </h2>
+            <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec3" class="accordion-collapse collapse border-0 "
+              aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec3" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body py-0 content"><p>Oui, des frais d'annulation sont prévus :<br>
+25€ si l’annulation intervient avant 48 heures du départ.<br>
+50€ si l’annulation intervient à 48 heures ou moins du départ.
 
+              </p>
+            
+            </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header accordion-button h5 border-0 "
+              id="heading-a443e01b4db47b3f4a1267e10594576d52730ec4" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec4" aria-expanded="false"
+              aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec4">Comment se déroule le convoyage ?
+            </h2>
+            <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec4" class="accordion-collapse collapse border-0 "
+              aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec4" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body py-0 content"><p>Le processus de convoyage comprend les étapes suivantes :<br>
+Le convoyeur présente son permis de conduire le jour de l'enlèvement du véhicule.<br>
+Le convoyeur réalise un état des lieux en présence du contact de départ et prend en charge le véhicule.<br>
+Il conduit le véhicule jusqu'à destination et le restitue conformément aux conditions de la prestation.
+
+</p>
+            </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header accordion-button h5 border-0 "
+              id="heading-a443e01b4db47b3f4a1267e10594576d52730ec5" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec5" aria-expanded="false"
+              aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec5">Des frais à prévoir ?
+            </h2>
+            <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec5" class="accordion-collapse collapse border-0 "
+              aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec5" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body py-0 content"><p>Certaines situations peuvent entraîner des frais :<br>
+Absence au rendez-vous du convoyage : pénalité de 100€.<br>
+État des lieux de départ manquant : pénalité de 30%.<br>
+État des lieux d'arrivée manquant : pénalité de 30%.<br>
+Restitution tardive du véhicule : facturation de 10€ par heure.<br>
+Dépassement de l'enveloppe kilométrique autorisée : pénalité kilométrique de 0,5€.<br>
+Oubli de remise au même niveau de carburant : facturation de 2,50€ par litre manquant après passage du client à la station-service.
+</p>
+            </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header accordion-button h5 border-0 "
+              id="heading-a443e01b4db47b3f4a1267e10594576d52730ec6" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec6" aria-expanded="false"
+              aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec6">Je ne trouve pas le convoyage qui me correspond, que puis-je faire ?
+            </h2>
+            <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec6" class="accordion-collapse collapse border-0 "
+              aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec6" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body py-0 content"><p>Nous ajoutons régulièrement de nouvelles offres de convoyage sur le site.<br>
+Si vous ne trouvez pas le trajet qui vous convient, vous pouvez créer une alerte depuis votre espace convoyeur pour recevoir un e-mail dès qu'un trajet aux alentours est disponible.
+</p>
+            </div>
+            </div>
+          </div>
+        </div>
+				</div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+  <a type="button" 
+            class="btn professionall-button-register text-light mt-3 mb-3" href="#">
+            Devenir convoyeur partenaire
+
+</a>
+</div>
+    </div>
+</section>
     
 @endsection

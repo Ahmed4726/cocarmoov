@@ -77,26 +77,71 @@
 <section class="section section-2 pt-5">
   <div class="container">
     <div class="row">
+    <p class="fw-bold services-p text-center">1 clic = 1 devis</p>
       <div class="col-lg-12 col-md-6">
-      <h3 class="calculator-item">1 clic = 1 devis</h3>
-      <h5 class="text-dark text-center">Indiquez vos adresses</h5>
-      <div class="row">
-        <div class="col-lg-6 col-md-12">
-          <h4 class="calculator-item">Adresse d'enlevent</h4>
-        </div>
-        <div class="col-lg-6 col-md-12">
-          <h4 class="calculator-item">Adresse de livraison</h4>
-        </div>
-      </div>
-      <h5 class="text-dark text-center">Spécifiez votre véhicule</h5>
-      <div class="row">
-        <div class="col-lg-6 col-md-12">
-          <h4 class="calculator-item">Type de vehicule</h4>
-        </div>
-        <div class="col-lg-6 col-md-12">
-          <h4 class="calculator-item">Etat du vehicule</h4>
-        </div>
-      </div>
+      <div class="card mt-4 rounded mx-auto card-register p-2" style="width:60%;"> 
+            <div class="card-body">
+              <h4 class="card-title text-center p-complete-info py-2">Indiquez vos adresses</h4>
+			  <form action="/action_page.php">
+  <div class="row">
+	<div class="col-lg-6 col-md-12">
+	<input type="text" class="form-control form-input-border mt-0" placeholder="Adresse d’enlèvement"><br>
+	</div>
+	<div class="col-lg-6 col-md-12">
+	<input type="text" class="form-control form-input-border mt-0" placeholder="Adresse de livraison"><br>
+	</div>
+  <h4 class="card-title text-center p-complete-info py-2">Spécifiez votre véhicule</h4>
+	<div class="col-lg-6 col-md-12">
+	<div class="input-group">
+			  <div class="select-container">
+    <select name="cars" id="cars" class="form-control">
+      <option hidden selected>Type de véhicule</option>
+      <option value="Citadine">Citadine</option>
+      <option value="Berline">Berline</option>
+      <option value="Sportive">Sportive</option>
+	  <option value="Collection">Collection</option> 
+      <option value="Monospace">Monospace</option>
+	  <option value="SUV-ou-4×4">SUV ou 4×4</option>
+	  <option value="Utilitaire-3m3">Utilitaire 3m3</option>
+	  <option value="6m3">6m3</option>
+	  <option value="9m3">9m3</option>
+	  <option value="12m3">12m3</option>
+	  <option value="15m3">15m3</option>
+	  <option value="20m3">20m3</option>
+	  <option value="6m3">25m3</option>
+	  <option value="6m3">30m3</option>
+	  <option value="Camion-benne">Camion benne</option>
+	  <option value="Camping-car">Camping-car</option>
+	  <option value="Van-aménagé">Van-aménagé</option>
+
+    </select>
+    <i class="fas fa-caret-down fa-dropdown-icon"></i> <!-- Font Awesome dropdown icon -->
+  </div>
+  </div><br>
+	</div>
+  <div class="col-lg-6 col-md-12">
+	<div class="input-group">
+			  <div class="select-container">
+    <select name="cars" id="cars" class="form-control">
+      <option hidden selected>Etat du véhicule</option>
+      <option value="En-état-de-marche">En état de marche</option>
+      <option value="En-panne">En panne</option>
+      <option value="Accidenté">Accidenté</option>
+    </select>
+    <i class="fas fa-caret-down fa-dropdown-icon"></i> <!-- Font Awesome dropdown icon -->
+  </div>
+  </div><br>
+	</div>
+  </div>
+  <div class="text-center">
+  <a type="button" 
+            class="btn professionall-button-register text-dark mt-3 mb-3" href="#">
+            Calculer
+</a>
+</div>
+</form>
+            </div>
+          </div>
       </div>
     </div>
   </div>
@@ -225,14 +270,14 @@
     </div>
   </div>
 </section>
-<section class="section section-2 overflow-hidden pt-5">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="section-title text-center">
-        <p class="services-p fw-bold mb-3"><b>Top des commandes</b></p>
+<section class="section overflow-hidden bg-img">
+  <div class="container frequently-margin">
+    <div class="row justify-content-center overlay p-0 m-0">
+      <div class="col-lg-10 mb-5">
+        <div class="section-title text-center frequently-margin-2">
+        <p class="services-p fw-bold"><b>Top des commandes</b></p>
           <!-- <p class="text-primary text-uppercase fw-bold mb-3">Our Service Holders</p> -->
-          <h3 class="mb-4 frequently-h">Véhicules fréquemment déplacés avec CoCarmoov</h3>
+          <h3 class="frequently-h">Véhicules fréquemment déplacés avec CoCarmoov</h3>
           <!-- <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing. egestas cursus pellentesque dignissim
             dui, congue. Vel etiam ut</p> -->
         </div>
@@ -241,10 +286,10 @@
     <div class="row position-relative pb-5">
       <div class="col-lg-6 col-md-12 pt-1">
         <div class="rounded p-4">
-          <div class="d-block d-sm-flex align-items-center mb-3">
+          <div class="d-block d-sm-flex align-items-center mb-4">
             <img 
               src="{{ asset('images/wallet/test.jpg') }}"
-              alt="Leslie Alexander" class="img-fluid" width="600" height="100">
+              alt="Leslie Alexander" class="img-fluid rounded" width="600" height="100">
             <div class="mt-sm-0 ms-0 ms-sm-3">
               <h3 class="mb-1">Achat / Vente</h3>
               <p class="mb-0 text-dark frequently-move">Un véhicule d'occasion haut de gamme se trouve à Strasbourg ? Pas de souci, Alexandre peut vous le convoyer sans vous ruiner.</p>
@@ -254,15 +299,15 @@
             felis arcu. Vitae, turpisds tortr etiam faucibus ac suspendisse.</div> -->
         </div>
       </div>
-      <div class="col-lg-6 col-md-12 pt-1">
+      <div class="col-lg-6 col-md-12">
         <div class="rounded p-4">
-        <div class="d-block d-sm-flex align-items-center mb-3">
+        <div class="d-block d-sm-flex align-items-center">
             <img 
               src="{{ asset('images/wallet/test2.jpg') }}"
-              alt="Leslie Alexander" class="img-fluid" width="500" height="100">
+              alt="Leslie Alexander" class="img-fluid rounded" width="500" height="100">
             <div class="mt-sm-0 ms-0 ms-sm-3">
               <h3 class="mb-1">Réparation</h3>
-              <p class="mb-0 text-dark frequently-move ">Vous pouvez aller la chercher vous-même à Nice… ou la restituer via CoCarmoov pour 2× moins cher.</p>
+              <p class="mb-0 text-dark frequently-move repairation-margin">Vous pouvez aller la chercher vous-même à Nice… ou la restituer via CoCarmoov pour 2× moins cher.</p>
             </div>
           </div>
           <!-- <div class="content">Lorem ipsum dolor <a href="http://google.com">@reamansimond</a> demina egestas sit purus
@@ -271,14 +316,14 @@
       </div>
     </div>
     <div class="row position-relative">
-    <div class="col-lg-6 col-md-12 pt-1">
+    <div class="col-lg-6 col-md-12">
         <div class="rounded p-4">
           <div class="d-block d-sm-flex align-items-center mb-3">
             <img 
               src="{{ asset('images/wallet/test3.jpg') }}"
-              alt="Leslie Alexander" class="img-fluid" width="600" height="100">
+              alt="Leslie Alexander" class="img-fluid location-margin rounded" width="600" height="100">
             <div class="mt-sm-0 ms-0 ms-sm-3">
-              <h3 class="mb-1">Location</h3>
+              <h3 class="location-text">Location</h3>
               <p class="mb-0 text-dark frequently-move">Votre parc d’utilitaires sur Paris est désert parce que vous louez en aller simple ! Pensez à notre formule économique pour les rapatrier.</p>
             </div>
           </div>
@@ -291,8 +336,8 @@
         <div class="d-block d-sm-flex align-items-center mb-3">
             <img 
               src="{{ asset('images/wallet/test4.jpg') }}"
-              alt="Leslie Alexander" class="img-fluid" width="200" height="100">
-            <div class="mt-sm-0 ms-0 ms-sm-3">
+              alt="Leslie Alexander" class="img-fluid evenement rounded" width="200" height="200">
+            <div class="mt-sm-0 ms-0 ms-sm-3 evenment-text">
               <h3 class="mb-1">Evénement</h3>
               <p class="mb-0 text-dark frequently-move">Pas le temps de conduire ou l’habitude de faire un long trajet. Sinon, expédiez-le via CoCarmoov !</p>
             </div>
@@ -308,10 +353,10 @@
           <div class="d-block d-sm-flex align-items-center mb-3">
             <img 
               src="{{ asset('images/wallet/test5.jpg') }}"
-              alt="Leslie Alexander" class="img-fluid" width="700" height="100">
+              alt="Leslie Alexander" class="img-fluid rounded" width="700" height="100">
             <div class="mt-sm-0 ms-0 ms-sm-3">
               <h3 class="mb-1">Prestige</h3>
-              <p class="mb-0 text-dark frequently-move">Votre voiture de luxe, vous la préférez livrée dans un sale état ou être transportée par un camion et ne pas prendre un kilomètre de plus au compteur </p>
+              <p class="mb-0 text-dark frequently-move prestige-margin">Votre voiture de luxe, vous la préférez livrée dans un sale état ou être transportée par un camion et ne pas prendre un kilomètre de plus au compteur </p>
             </div>
           </div>
           <!-- <div class="content">Lorem ipsum dolor <a href="http://google.com">@reamansimond</a> demina egestas sit purus
@@ -323,7 +368,7 @@
         <div class="d-block d-sm-flex align-items-center mb-3">
             <img 
               src="{{ asset('images/wallet/test6.jpg')}}"
-              alt="Leslie Alexander" class="img-fluid" width="450" height="100">
+              alt="Leslie Alexander" class="img-fluid rounded" width="450" height="100">
             <div class="mt-sm-0 ms-0 ms-sm-3">
               <h3 class="mb-1">Vacances</h3>
               <p class="mb-0 text-dark frequently-move">Location de van aménagé, de camping-car… ! CoCarmoov assure son retour l’esprit tranquille.</p>

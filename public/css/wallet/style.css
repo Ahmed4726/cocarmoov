@@ -10591,9 +10591,9 @@ margin-top: 10px;
 .testimonial-header-img{
   margin-top: -110px;
 }
-.privacy-header-h2{
+/* .privacy-header-h2{
 
-}
+} */
 .insuarnce-text-2{
   margin-top: -60px;
 }
@@ -10715,8 +10715,59 @@ margin-top: 10px;
     overflow: hidden; /* Hide any overflow from child elements */
   }
 }
+
+@media (max-width: 768px) {
+  .evenement{
+   width: 170px !important;
+   margin-top: 50px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .prestige-margin{
+   margin-top: 10px !important;
+  }
+}
+.evenement{
+  margin-top: -50px !important;
+}
+@media (max-width: 768px) {
+  .repairation-margin{
+   margin: 10px !important;
+  }
+}
+@media (max-width: 768px) {
+  .repairation-margin{
+   margin-top: 10px !important;
+  }
+}
+.location-margin{
+  margin-top: -50px !important;
+}
+.location-text{
+  margin-top: -45px;
+}
+@media (max-width: 768px) {
+  .location-text{
+   margin-top: -90px !important;
+  }
+}
+.evenment-text{
+   margin-top: -80px !important;
+}
+@media (max-width: 768px) {
+  .evenment-text{
+   margin-top: -50px !important;
+  }
+}
+@media (max-width: 768px) {
+  .location-margin{
+   margin-top: -20px !important;
+   margin-bottom: 50px;
+  }
+}
 .bg-img{
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -10724,6 +10775,21 @@ margin-top: 10px;
   background-image: url('/images/wallet/frequently.jpg');
   background-size: cover;
   background-position: center;
+}
+.frequently-margin{
+ padding-top: 150px !important;
+}
+.frequently-margin-2{
+  padding-top: 70px 
+}
+.overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(	253,205,2, 0.3), rgba(253,205,2, 0.2)); /* Adjust gradient colors and transparency */
 }
 .frequently-move{
   font-size: 20px;
@@ -10887,12 +10953,40 @@ margin-top: 10px;
 .formula-section-2{
   margin-top: 90px;
 }
+
 @media (max-width: 768px) {
   .formula-section-2 {
       margin-top: 10px;
       margin-right: 20px;
   font-family: "Lato", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
+}
+.eligibility-section{
+  color: #FDCD02;
+}
+.convoyor-faq{
+  background-color: #333132;
+}
+.subscription-text{
+  font-size: 17px;
+}
+.convoyor-section{
+  background-color: #FFFAE7;
+}
+.backgroung-img-field{
+  display: flex;
+  align-items: center;
+  
+  background-image: url('/images/wallet/ville-depart.png');
+  background-position: left;
+  background-repeat: cover;
+  padding-left: 30px; /* Adjust the left padding as needed */
+}
+
+.input-with-image input {
+  flex: 1;
+  border: none; /* Remove the border from the input */
+  background-color: transparent; /* Make the input background transparent */
 }
 .convoyar-text-button:hover{
   background-color: #FDCD02 !important;

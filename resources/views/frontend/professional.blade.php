@@ -163,19 +163,19 @@ Support e-mail & téléphonique
 				<div class="row mt-5">
 					<div class="col-lg-4 col-md-12">
 					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color"><i class="fas fa-cogs mt-0" style="font-size:70px"></i>
-					<h3 class="mt-2">Solutions sur mesure</h3>	
+					<h5 class="mt-2">Solutions sur mesure</h5>	
 					<p class="text-dark">Offrez à votre entreprise des solutions de transport personnalisées qui s'adaptent à vos besoins spécifiques en matière de logistique automobile.</p>
 				</div>
 					</div>
 					<div class="col-lg-4 col-md-12">
 					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color"><i class="fas fa-handshake mt-0" style="font-size:70px"></i>
-					<h3 class="mt-2">Partenaires engagés</h3>
+					<h5 class="mt-2">Partenaires engagés</h5>
 					<p class="text-dark"> Nos partenaires sont dévoués à votre succès, offrant un service exceptionnel à chaque étape du transport de vos véhicules.</p>		
 				</div>
 					</div>
 					<div class="col-lg-4 col-md-12">
 					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color"><i class="fas fa-file-invoice-dollar mt-0" style="font-size:70px"></i>
-					<h3 class="mt-2">Gestion budgétaire garantie</h3>	
+					<h5 class="mt-2">Gestion budgétaire garantie</h5>	
 					<p class="text-dark">Soyez assuré de maîtriser vos coûts avec notre engagement envers une gestion budgétaire transparente et sans surprise.</p>	
 				</div>
 					</div>
@@ -557,7 +557,7 @@ Support e-mail & téléphonique
 	<input type="text" class="form-control form-input-border mt-0" placeholder="Adresse postale"><br>
 	</div>
 	<div class="col-lg-6 col-md-12">
-	<input type="text" class="form-control form-input-border mt-0" placeholder="Prénom"></i>
+	<input type="text" class="form-control form-input-border mt-0" placeholder="Prénom"></i><br>
 	</div>
 	<div class="col-lg-6 col-md-12">
 	<input type="text" class="form-control form-input-border mt-0" placeholder="Nom"><br>
