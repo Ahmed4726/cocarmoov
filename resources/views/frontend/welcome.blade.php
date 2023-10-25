@@ -166,7 +166,7 @@
             <div class="icon me-4 mb-4 mb-sm-0"><i class="fas fa-cogs mt-0" style="font-size:70px"></i> 
             </div>
             <div class="block differnce-section">
-              <h3 class="mb-3 text-dark ">Intuitive et sécurisée</h3>
+              <h5 class="mb-3 text-dark ">Intuitive et sécurisée</h5>
               <p class="mb-0 text-dark service-p">Commande en quelques clics</p>
                 <p class="text-dark service-p">Assurance automobile incluse</p>
                 <!-- <h5 class="mb-0 text-dark">Pas de frais cachés</h5>
@@ -179,7 +179,7 @@
             <div class="icon me-4 mb-4 mb-sm-0 align-items-center"> <i class="fa fa-handshake" style="font-size:70px"></i>
             </div>
             <div class="block differnce-section">
-              <h3 class="mb-3 text-dark ">Réactive et proche</h3>
+              <h5 class="mb-3 text-dark ">Réactive et proche</h5>
               <p class="mb-0 text-dark service-p">Pas de robots, des vrais interlocuteurs</p>
                 <p class="text-dark service-p">Suivi et accompagnement régulier</p>
                 <!-- <h5 class="mb-0 text-dark">Livraison sans attente</h5>
@@ -192,7 +192,7 @@
             <div class="icon me-4 mb-4 mb-sm-0"> <i class="fas fa-file-invoice-dollar" style="font-size:70px"></i>
             </div>
             <div class="block differnce-section">
-              <h3 class="mb-3 text-dark">Transparente et engagée</h3>
+              <h5 class="mb-3 text-dark">Transparente et engagée</h5>
               <p  class="mb-0 service-p text-dark">Pas de frais cachés (carburant, péages)</p>
               <p class="text-dark service-p">Tarif compétitif et indemnisation garantie</p>
             </div>

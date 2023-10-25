@@ -9625,7 +9625,7 @@ blockquote::before {
   background-color:#333132 ;
 }
 .service-p{
-  font-size: 20px;
+  font-size: 18px;
  font-family: "Lato", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 @media (max-width: 768px) {

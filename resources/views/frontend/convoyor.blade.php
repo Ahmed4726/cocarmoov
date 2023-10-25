@@ -51,7 +51,7 @@
 					<div class="col-lg-4 col-md-12">
 					<div class="icon me-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/validation-acces.png')}}" style="width:50%;" height="auto"/>
 					<h5 class="mt-2">Validation et Accès</h5>	
-					<p class="text-dark">Obtenez la validation de votre statut de convoyeur professionnel et accédez aux offres de convoyages.</p>	
+					<p class="text-dark">Faites valider votre statut de convoyeur professionnel et accédez aux offres de convoyage.</p>	
 				</div>
 					</div>
 				</div>
