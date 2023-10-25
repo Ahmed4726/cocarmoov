@@ -225,17 +225,16 @@
     </div>
 </section>
 <section class="section section-blog position-relative pt-5">
-	<div class="container overflow-hidden">
+	<div class="container mb-4 overflow-hidden">
 		<!-- <div class="row">
 			<div class="col-lg-12">
 				<h4 class="text-center">Avis des propriétaires</h4>
 				</div>
 		</div> -->
 	<div class="row">
-			<div class="col-lg-12 mt-3 mb-3">
+			<div class="col-lg-12 mt-3">
         <p class="services-p text-center fw-bold"><b>Témoignages</b></p>
-
-				<h4 class="text-center">Ils ont partagé leur aventure</h4>
+				<h4 class="text-center mb-4">Ils ont partagé leur aventure</h4>
 				</div>
 		</div>
 		<div id="carouselExampleControls " class="test-carousel">
@@ -435,7 +434,7 @@ Souvent même.
 </div>	
 </section>
 <section class="section">
-	<div class="container">
+	<div class="container mt-5">
 		<div class="row justify-content-center">
 			<div class="col-lg-12">
 				<div class="section-title text-center">
@@ -479,7 +478,7 @@ Souvent même.
     </div>
 </section>  
 <section class="section section-avantage">
-	<div class="container">
+	<div class="container mt-5">
 		<div class="row justify-content-center">
 			<div class="col-lg-12">
 				<div class="section-title text-center">
@@ -488,11 +487,11 @@ Souvent même.
 				<div class="row mt-5">
 					<div class="col-lg-3 col-md-12">
 					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/voyager-en-co-convoyant.jpg')}}" style="width:100%;" height="auto"/>
-					<h5 class="mt-2 avantage-p">Voyager en</h5>	
+					<h5 class="mt-2 avantage-p">Voyager en co-convoyant</h5>	
 					<p class="text-light d-benefits">Embarquez pour une évasion sans tracas en co-convoyage ! Dites adieu aux soucis de la route et partez en escapade spontanée à un prix imbattable. Chaque kilomètre rapproche encore plus de l'aventure.</p>
                     <div class="text-center">
         <a type="button" 
-            class="btn find-text-button  text-dark mt-1 mb-5" href="#">
+            class="btn find-text-button  text-dark mt-1" href="#">
             Découvrir les trajets
 </a>
             </div>
@@ -504,7 +503,7 @@ Souvent même.
 					<p class="text-light d-benefits">Week-end Intelligent : Optez pour le co-convoyage ! Partagez votre voyage avec de nouveaux compagnons, économisez sur les frais de route et gagnez des récompenses à chaque kilomètre partagé.</p>		
                     <div class="text-center">
         <a type="button" 
-            class="btn find-text-button  text-dark mt-1 mb-5" href="#">
+            class="btn find-text-button  text-dark mt-1" href="#">
             Rejoindre l’aventure
 </a>
             </div>
@@ -516,7 +515,7 @@ Souvent même.
 					<p class="text-light d-benefits">Déménagez Malin grâce au co-convoyage ! Utilisez un utilitaire sans stress pour votre déménagement, économisez de l'argent et recevez une compensation kilomètre parcouru vers votre nouveau chez-vous.</p>	
                     <div class="text-center">
         <a type="button" 
-            class="btn find-text-button  text-dark mt-1 mb-5" href="#">
+            class="btn find-text-button  text-dark mt-1" href="#">
             Réserver un utilitaire
 </a>
             </div>
@@ -529,7 +528,7 @@ Souvent même.
 				</div>
                 <div class="text-center">
         <a type="button" 
-            class="btn find-text-button  text-dark mt-1 mb-5" href="#">
+            class="btn find-text-button  text-dark mt-1" href="#">
             Embarquer une voiture
 </a>
             </div>
@@ -545,7 +544,7 @@ Souvent même.
 		<div class="row justify-content-center">
 			<div class="col-lg-12">
 				<div class="section-title text-center">
-                <p class="services-p fw-bold mb-3"><b>Économisez à chaque déplacement</b></p>
+                <p class="services-p fw-bold mb-3 mt-5"><b>Économisez à chaque déplacement</b></p>
                 <h3 class="mb-4 frequently-h">Comment fonctionnent les économies en Co-convoyage ?</h3>
 				</div>
 			</div>
@@ -559,14 +558,14 @@ Souvent même.
                 <p class="mb-4 frequently-h text-center fw-bold">Chez CoCarmoov, gagnez 10 centimes par kilomètre direct parcouru
 pour un déménagement ou un voyage gagnant !
 </p>
-<h5 class="text-center">Un cas pratique : Co-convoyage d'un utilitaire et d'une voiture</h5>
+<h5 class="text-center mb-3">Un cas pratique : Co-convoyage d'un utilitaire et d'une voiture</h5>
 
             </div>
 		</div>
     </div>
 </section>
 <section class="section section-faq-co-drive">
-	<div class="container">
+	<div class="container mt-5 mb-4">
 		<div class="row justify-content-center">
 			<div class="col-lg-8">
 				<div class="section-title text-center">
@@ -728,7 +727,7 @@ Je crée mon alerte sur https://www.cocarmoov.fr/co-convoyer/creer-une-alerte
   </div>
 </section> 
 <section class="section section-avantage">
-	<div class="container">
+	<div class="container mt-5">
 		<div class="row justify-content-center">
 			<div class="col-lg-12">
 				<div class="section-title text-center">
