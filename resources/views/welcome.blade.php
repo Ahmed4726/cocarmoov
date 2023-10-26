@@ -271,8 +271,8 @@
   </div>
 </section>
 <section class="section overflow-hidden bg-img">
-  <div class="container frequently-margin">
-    <div class="row justify-content-center overlay p-0 m-0">
+  <div class="container">
+    <div class="row justify-content-center p-0 m-0">
       <div class="col-lg-10 mb-5">
         <div class="section-title text-center frequently-margin-2">
         <p class="services-p fw-bold"><b>Top des commandes</b></p>
@@ -284,9 +284,9 @@
       </div>
     </div>
     <div class="row position-relative pb-5">
-      <div class="col-lg-6 col-md-12 pt-1">
+      <div class="col-lg-6 col-md-12  pt-1">
         <div class="rounded p-4">
-          <div class="d-block d-sm-flex align-items-center mb-4">
+          <div class="d-block d-sm-flex align-items-center  mb-4">
             <img 
               src="{{ asset('images/wallet/test.jpg') }}"
               alt="Leslie Alexander" class="img-fluid rounded" width="600" height="100">
