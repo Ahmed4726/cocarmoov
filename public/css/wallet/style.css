@@ -10566,6 +10566,25 @@ margin-top: 10px;
     max-width:40%;
   }
 }
+.bouncing-text {
+  font-size: 24px;
+  opacity: 0; /* Initially, text is invisible */
+  animation: fastBounce 1s linear infinite;
+}
+@media (max-width: 768px) {
+  .mobile-view{
+    display: flex !important;
+  }
+}
+
+@keyframes fastBounce {
+  0%, 100% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+}
 .banner-p{
   font-size: 20px;
   font-family: "Lato", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

@@ -23,13 +23,13 @@
 					<ul class="list-unstyled">
 						<li class="mb-2 text-center footer-links"><a href="service-details.html">Déplace un véhicule</a>
 						</li>
-						<li class="mb-2 text-center footer-links"><a href="service-details.html">Co-convoyer</a>
+						<li class="mb-2 text-center footer-links"><a href="{{ route('co-drive') }}">Co-convoyer</a>
 						</li>
 						<!-- <li class="mb-2 text-center footer-links"><a href="service-details.html">Student Loans</a>
 						</li> -->
-						<li class="mb-2 text-center footer-links"><a href="service-details.html">Convoyer</a>
+						<li class="mb-2 text-center footer-links"><a href="{{route('convoyor')}}">Convoyer</a>
 						</li>
-						<li class="mb-2 text-center footer-links"><a href="service-details.html">Transporter</a>
+						<li class="mb-2 text-center footer-links"><a href="{{route('transporteur')}}">Transporter</a>
 						</li>
 					</ul>
 				</div>

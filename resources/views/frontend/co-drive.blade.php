@@ -7,11 +7,10 @@
           <!-- <div><h2>banner image</h2></div> -->
 				<!-- <div><h2 class="mb-2 text-capitalize qa-banner-text">Contact Us</h2></div> -->
                 <h2 class="mb-3 text-center professionall-p text-center"><span class="fw-bold">Co-convoyez un véhicule et Recevez 10 c€ par km</h2>
-                <p class="mb-3 text-center banner-p text-light">Conducteurs Voyageurs : l'Aventure Commence Ici
-                Week-ends Économiques : Vivez Malin
-                Déménagez sans Stress ni Frais Excessifs
-                Transformez vos Kilomètres vers l’Aéroport en Voyages Gratuits
-</p>
+                <div class="bouncing-text banner-p text-center">Conducteurs Voyageurs : l'Aventure Commence Ici</div>
+        <div class="bouncing-text banner-p text-center">Week-ends Économiques : Vivez Malin</div>
+        <div class="bouncing-text banner-p text-center">Déménagez sans Stress ni Frais Excessifs</div>
+        <div class="bouncing-text banner-p text-center">Transformez vos Kilomètres vers l'Aéroport en Voyages Gratuits</div>
             </div>
             <form action="/action_page.php">
     <div class="row">
@@ -539,6 +538,7 @@ Souvent même.
 			</div>
 		</div>
 </section> 
+
 <section class="section">
 	<div class="container">
 		<div class="row justify-content-center">
@@ -561,6 +561,31 @@ pour un déménagement ou un voyage gagnant !
 <h5 class="text-center mb-3">Un cas pratique : Co-convoyage d'un utilitaire et d'une voiture</h5>
 
             </div>
+            <div class="row">
+          <div class="col-lg-4">
+          </div>
+          <div class="col-lg-4 col-sm-12 text-center">
+          <img src="{{asset('images/wallet/co-convoyage-utilitaire.png')}}" width="20%" height="auto"/>
+          </div>
+          <div class="col-lg-4 col-sm-12 text-center">
+          <img src="{{asset('images/wallet/co-convoyage-voiture.png')}}" width="20%" height="auto"/>
+          </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-6  text-center d-flex">
+          <img src="{{asset('images/wallet/co-convoyer.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold">Co-convoyage</p>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+          </div>
+          <div class="col-lg-4 d-flex d-none mobile-view col-sm-6">
+          <img src="{{asset('images/wallet/co-convoyer.png')}}" width="20%" height="auto"/>
+          <p class="text-dark  mt-4 fw-bold">Co-convoyage</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 text-center">
+            <h3>hello</h3>
+          </div>
+        </div>
+        </div>
 		</div>
     </div>
 </section>
@@ -784,4 +809,54 @@ Je crée mon alerte sur https://www.cocarmoov.fr/co-convoyer/creer-une-alerte
 			</div>
 		</div>
 </section>
+@endsection
+@section('js')
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const textElements = document.querySelectorAll(".bouncing-text");
+        let currentIndex = 0;
+    
+        function displayText(index) {
+            for (let i = 0; i < textElements.length; i++) {
+                if (i === index) {
+                    textElements[i].style.display = "block";
+                } else {
+                    textElements[i].style.display = "none";
+                }
+            }
+        }
+    
+        function displayNextText() {
+            displayText(currentIndex);
+    
+            currentIndex++;
+            if (currentIndex >= textElements.length) {
+                currentIndex = 0;
+            }
+        }
+    
+        setInterval(displayNextText, 2000); // Change text every 2 seconds (adjust the duration as needed)
+        displayText(0); // Show the first text initially
+    
+        // Create a bounce animation for the text using anime.js
+        const textElement = document.querySelector(".bouncing-text");
+        const bounceAnimation = anime({
+            targets: textElement,
+            translateY: [
+                { value: '0', duration: 0 },
+                { value: '-20px', duration: 500 },
+                { value: '0', duration: 500 }
+            ],
+            easing: 'easeInOutQuad',
+            autoplay: false,
+        });
+    
+        function startBounceAnimation() {
+            bounceAnimation.restart();
+            bounceAnimation.play();
+        }
+    
+        setInterval(startBounceAnimation, 2000); // Start bounce animation every 2 seconds
+    });
+    </script>
 @endsection
