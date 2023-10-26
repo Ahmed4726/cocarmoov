@@ -5,10 +5,10 @@
 			<a class="navbar-brand" href="{{ route('welcome') }}">
 				<img loading="prelaod" decoding="async" class="img-fluid" width="70%" height="100px" src="{{ asset('images/wallet/footer-2.png') }}" alt="Wallet">
 			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+			<button class="navbar-toggler p-1 m-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-				<ul class="navbar-nav mb-2 text-center mb-lg-0">
+				<ul class="navbar-nav mb-2 text-center">
 					<!-- <li class="nav-item"> <a class="nav-link" href="{{ route('welcome') }}">Accueil</a>
 					</li> -->
 					<li class="nav-item dropdown">

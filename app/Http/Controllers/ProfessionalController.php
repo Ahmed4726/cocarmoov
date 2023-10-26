@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CodriveController extends Controller
+class ProfessionalController extends Controller
 {
     public function index(){
-            return view("frontend.co-drive");
+        return view("frontend.professional");
     }
 }

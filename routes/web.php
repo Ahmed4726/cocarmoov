@@ -1,6 +1,17 @@
 <?php
 
+use App\Http\Controllers\InsuranceController;
+use App\Http\Controllers\ProfessionalController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PDFController;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CodriveController;
+use App\Http\Controllers\ConvoyorController;
+use App\Http\Controllers\TransporteurController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,21 +38,15 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
-Route::get('/insurance', function () {
-    return view('frontend.insurance');
-})->name('insurance');
-Route::get('/contact', function () {
-    return view('frontend.contact_us');
-})->name('contact_us');
-Route::get('/faq', function () {
-    return view('frontend.faq');
-})->name('faq');
-Route::get('/blog', function () {
-    return view('frontend.blog');
-})->name('blog');
+Route::get('/', [WelcomeController::class,'index'])->name('welcome');
+Route::get('/insurance', [InsuranceController::class,'index'])->name('insurance');
+Route::get('/contact', [ContactController::class,'index'])->name('contact_us');
+Route::get('/faq', [FaqController::class,'index'])->name('faq');
+Route::get('/blog', [BlogController::class,'index'])->name('blog');
+Route::get('/co-drive',[CodriveController::class,'index'])->name('co-drive');
+Route::get('/professionnel',[ProfessionalController::class,'index'])->name('professionall');
+Route::get('/convoyor', [ConvoyorController::class,'index'])->name('convoyor');
+Route::get('/transporteur', [TransporteurController::class,'index'])->name('transporteur');
 Route::get('/news', function () {
     return view('frontend.news');
 })->name('news');
@@ -72,15 +77,6 @@ Route::get('/privacy-policy', function () {
 Route::get('/legal-notice', function () {
     return view('frontend.legal-notice');
 })->name('legal-notice');
-Route::get('/professionnel', function () {
-    return view('frontend.professional');
-})->name('professionall');
-Route::get('/co-drive', function () {
-    return view('frontend.co-drive');
-})->name('co-drive');
-Route::get('/convoyor', function () {
-    return view('frontend.convoyor');
-})->name('convoyor');
 Route::get('/transporteur', function () {
     return view('frontend.transporteurs');
 })->name('transporteur');

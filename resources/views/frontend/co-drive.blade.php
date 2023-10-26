@@ -7,9 +7,9 @@
           <!-- <div><h2>banner image</h2></div> -->
 				<!-- <div><h2 class="mb-2 text-capitalize qa-banner-text">Contact Us</h2></div> -->
                 <h2 class="mb-3 text-center professionall-p text-center"><span class="fw-bold">Co-convoyez un véhicule et Recevez 10 c€ par km</h2>
-                <p class="mb-3 text-center banner-p text-light">Conducteurs Voyageurs : l'Aventure Commence Ici<br>
-                Week-ends Économiques : Vivez Malin<br>
-                Déménagez sans Stress ni Frais Excessifs<br>
+                <p class="mb-3 text-center banner-p text-light">Conducteurs Voyageurs : l'Aventure Commence Ici
+                Week-ends Économiques : Vivez Malin
+                Déménagez sans Stress ni Frais Excessifs
                 Transformez vos Kilomètres vers l’Aéroport en Voyages Gratuits
 </p>
             </div>
