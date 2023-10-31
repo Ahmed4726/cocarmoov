@@ -1,6 +1,6 @@
 @extends('frontend.frontend_main_layout')
 @section('content')
-<section class="page-header professionnel-header">
+<section class="page-header professionnel-header mobile-view-section">
 	<div class="container">
 		<div class="row mt-5 mb-5">
 			<div class="col-12 mx-auto">
@@ -17,12 +17,12 @@
     <div class="col-lg-5 col-md-12">
     <div class="backgroung-img-field">
         <input type="text" class="form-control form-input-border" id="ville-de-depart" placeholder="Ville de départ">
-    </div>
+    </div><br>
 </div>
 <div class="col-lg-5 col-md-12">
     <div class="backgroung-img-field">
         <input type="text" class="form-control form-input-border mt-0" id="ville-d-arrivee" placeholder="Ville d’arrivée">
-    </div>
+    </div><br>
 </div>
 
         <div class="col-lg-2 col-md-12 header-button">
@@ -485,49 +485,49 @@ Souvent même.
           <h3 class="mb-4 frequently-h text-light">Je suis récompensé 10 centimes par kilomètre pour</h3>
 				<div class="row mt-5">
 					<div class="col-lg-3 col-md-12">
-					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/voyager-en-co-convoyant.jpg')}}" style="width:100%;" height="auto"/>
+					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/voyager-en-co-convoyant.jpg')}}" class="rounded" style="width:100%;" height="auto"/>
 					<h5 class="mt-2 avantage-p">Voyager en co-convoyant</h5>	
 					<p class="text-light d-benefits">Embarquez pour une évasion sans tracas en co-convoyage ! Dites adieu aux soucis de la route et partez en escapade spontanée à un prix imbattable. Chaque kilomètre rapproche encore plus de l'aventure.</p>
                     <div class="text-center">
         <a type="button" 
-            class="btn find-text-button  text-dark mt-1" href="#">
+            class="btn find-text-button  text-dark mt-1 mb-4" href="#">
             Découvrir les trajets
 </a>
             </div>
                 </div>
 					</div>
 					<div class="col-lg-3 col-md-12">
-					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/partir-en-week-end.jpg')}}" style="width: 100%;" height="auto"/>
+					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/partir-en-week-end.jpg')}}" class="rounded" style="width: 100%;" height="auto"/>
 					<h5 class="mt-2 avantage-p">Partir en week-end</h5>
 					<p class="text-light d-benefits">Week-end Intelligent : Optez pour le co-convoyage ! Partagez votre voyage avec de nouveaux compagnons, économisez sur les frais de route et gagnez des récompenses à chaque kilomètre partagé.</p>		
                     <div class="text-center">
         <a type="button" 
-            class="btn find-text-button  text-dark mt-1" href="#">
+            class="btn find-text-button  text-dark mt-1 mb-4" href="#">
             Rejoindre l’aventure
 </a>
             </div>
                 </div>
 					</div>
 					<div class="col-lg-3 col-md-12">
-					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color"><img src="{{asset('images/wallet/demenager.jpg')}}" style="width: 100%;" height="auto"/>
+					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color"><img src="{{asset('images/wallet/demenager.jpg')}}" class="rounded" style="width: 100%;" height="auto"/>
 					<h5 class="mt-2 avantage-p">Déménager</h5>	
 					<p class="text-light d-benefits">Déménagez Malin grâce au co-convoyage ! Utilisez un utilitaire sans stress pour votre déménagement, économisez de l'argent et recevez une compensation kilomètre parcouru vers votre nouveau chez-vous.</p>	
                     <div class="text-center">
         <a type="button" 
-            class="btn find-text-button  text-dark mt-1" href="#">
+            class="btn find-text-button  text-dark mt-1 mb-4" href="#">
             Réserver un utilitaire
 </a>
             </div>
                 </div>
 					</div>
                     <div class="col-lg-3 col-md-12">
-					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color"><img src="{{asset('images/wallet/acceder-a-l-aeroport.jpg')}}" style="width: 100%;" height="auto"/>
+					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color"><img src="{{asset('images/wallet/acceder-a-l-aeroport.jpg')}}" class="rounded" style="width: 100%;" height="auto"/>
 					<h5 class="mt-2 avantage-p">Accéder à l’aéroport</h5>	
 					<p class="text-light d-benefits">Envolez-vous vers de nouveaux horizons ! Co-convoyez une voiture et restituez-la directement auprès des loueurs au parking de l'aéroport, tout en gagnant des récompenses pour votre prochain vol.</p>	
 				</div>
                 <div class="text-center">
         <a type="button" 
-            class="btn find-text-button  text-dark mt-1" href="#">
+            class="btn find-text-button  text-dark mt-1 mb-4" href="#">
             Embarquer une voiture
 </a>
             </div>
@@ -562,30 +562,296 @@ pour un déménagement ou un voyage gagnant !
 
             </div>
             <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-sm-6">
           </div>
-          <div class="col-lg-4 col-sm-12 text-center">
+          <div class="col-lg-4 col-sm-6 mobile-view-4 van-img text-center">
           <img src="{{asset('images/wallet/co-convoyage-utilitaire.png')}}" width="20%" height="auto"/>
           </div>
-          <div class="col-lg-4 col-sm-12 text-center">
+          <div class="col-lg-4 col-sm-6 mobile-view-9 d-none">
+          <img src="{{asset('images/wallet/co-convoyer.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold mobile-view-9-p">Co-convoyage</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-10 d-none">
+          <a type="button" 
+            class="btn find-text-button text-dark mt-3 mb-2" href="#">
+            Paris - Lyon</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-9 d-none">
+          <img src="{{asset('images/wallet/parcours.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold mobile-view-9-p">Parcours direct</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-10 d-none">
+          <a type="button" 
+            class="btn find-text-button text-light mt-3 mb-2" href="#">
+            463 km</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-9 d-none">
+          <img src="{{asset('images/wallet/distance-autorisee.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold mobile-view-9-p">Distance autorisée</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-10 d-none">
+          <a type="button" 
+            class="btn find-text-button text-light mt-3 mb-2" href="#">
+            556 km [463 x 1,2]</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-9 d-none">
+          <img src="{{asset('images/wallet/duree-maximale.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold mobile-view-9-p">Durée maximale</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-10 d-none">
+          <a type="button" 
+            class="btn find-text-button text-light mt-3 mb-2" href="#">
+             24 heures</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-9 d-none">
+          <img src="{{asset('images/wallet/compensation.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold mobile-view-9-p">Compensation</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-10 d-none">
+          <a type="button" 
+            class="btn find-text-button text-primary mt-3 mb-2" href="#">
+            46,30€ [463 x 0,10]</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-9 d-none">
+          <img src="{{asset('images/wallet/carburant-peages.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold mobile-view-9-p">Carburant + péages</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-10 d-none">
+          <a type="button" 
+            class="btn find-text-button text-danger mt-3 mb-2" href="#">
+            -84,40€</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-9 d-none">
+          <img src="{{asset('images/wallet/covoiturage.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold mobile-view-9-p">Covoiturage</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-10 d-none">
+          <a type="button" 
+            class="btn find-text-button text-primary mt-3 mb-2" href="#">
+            + 40€ [2 x 20€]</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-9 d-none">
+          <img src="{{asset('images/wallet/bilan.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold mobile-view-9-p">Bilan</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-10 d-none">
+          <a type="button" 
+            class="btn find-text-button text-dark mt-3 mb-2" href="#">
+            + 1,90€</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-3 text-center">
           <img src="{{asset('images/wallet/co-convoyage-voiture.png')}}" width="20%" height="auto"/>
           </div>
         <div class="row">
-          <div class="col-lg-4 col-sm-6  text-center d-flex">
+          <div class="col-lg-4 col-sm-6 mobile-view-5 d-flex">
           <img src="{{asset('images/wallet/co-convoyer.png')}}" width="20%" height="auto"/>
           <p class="text-dark mt-4 fw-bold">Co-convoyage</p>
           </div>
-          <div class="col-lg-4 col-sm-6">
+          <div class="col-lg-4 col-sm-6 d-none mobile-view-2 car-img text-end">
+          <img src="{{asset('images/wallet/co-convoyage-voiture.png')}}" width="20%" height="auto"/>
           </div>
           <div class="col-lg-4 d-flex d-none mobile-view col-sm-6">
           <img src="{{asset('images/wallet/co-convoyer.png')}}" width="20%" height="auto"/>
-          <p class="text-dark  mt-4 fw-bold">Co-convoyage</p>
+          <p class="text-dark mt-4 fw-bold">Co-convoyage</p>
           </div>
-          <div class="col-lg-4 col-sm-6 text-center">
-            <h3>hello</h3>
+          <div class="col-lg-4 col-sm-6 mobile-view-8 text-center d-none">
+          <a type="button" 
+            class="btn find-text-button text-dark mt-3 mb-2" href="#">
+            Lille - Marseille</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-7 text-center">
+          <a type="button" 
+            class="btn find-text-button text-dark mt-3 mb-2" href="#">
+            Paris - Lyon</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-6 text-center">
+          <a type="button" 
+            class="btn find-text-button text-dark mt-3 mb-2" href="#">
+            Lille - Marseille</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 mobile-view-5 d-flex">
+          <img src="{{asset('images/wallet/parcours.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold">Parcours direct</p>
+          </div>
+          <div class="col-lg-4 d-flex d-none mobile-view col-sm-6">
+          <img src="{{asset('images/wallet/parcours.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold">Parcours direct</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-8 text-center d-none">
+          <a type="button" 
+            class="btn find-text-button text-light mt-3 mb-2" href="#">
+            1001 km</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-7 text-center">
+          <a type="button" 
+            class="btn find-text-button text-light mt-3 mb-2" href="#">
+            463 km</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-6 text-center">
+          <a type="button" 
+            class="btn find-text-button text-light mt-3 mb-2" href="#">
+            1001 km</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 mobile-view-5 d-flex">
+          <img src="{{asset('images/wallet/distance-autorisee.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold">Distance autorisée</p>
+          </div>
+          <div class="col-lg-4 d-flex d-none mobile-view col-sm-6">
+          <img src="{{asset('images/wallet/distance-autorisee.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold">Distance autorisée</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-8 text-center d-none">
+          <a type="button" 
+            class="btn find-text-button text-light mt-3 mb-2" href="#">
+            1201 km[1001 x 1,2]</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-7 text-center">
+          <a type="button" 
+            class="btn find-text-button text-light mt-3 mb-2" href="#">
+            556 km [463 x 1,2]</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-6 text-center">
+          <a type="button" 
+            class="btn find-text-button text-light mt-3 mb-2" href="#">
+            1201 km [1001 x 1,2]</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 mobile-view-5 d-flex">
+          <img src="{{asset('images/wallet/duree-maximale.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold">Durée maximale</p>
+          </div>
+          <div class="col-lg-4 d-flex d-none mobile-view col-sm-6">
+          <img src="{{asset('images/wallet/duree-maximale.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold">Durée maximale</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-8 text-center d-none">
+          <a type="button" 
+            class="btn find-text-button text-light mt-3 mb-2" href="#">
+            48 heures</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-7 text-center">
+          <a type="button" 
+            class="btn find-text-button text-light mt-3 mb-2" href="#">
+            24 heures</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-6 text-center">
+          <a type="button" 
+            class="btn find-text-button text-light mt-3 mb-2" href="#">
+            48 heures</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 mobile-view-5 d-flex">
+          <img src="{{asset('images/wallet/compensation.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold">Compensation</p>
+          </div>
+          <div class="col-lg-4 d-flex d-none mobile-view col-sm-6">
+          <img src="{{asset('images/wallet/compensation.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold">Compensation</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-8 text-center d-none">
+          <a type="button" 
+            class="btn find-text-button text-primary mt-3 mb-2" href="#">
+            100,10€ [1001 x 0,10]</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-7 text-center">
+          <a type="button" 
+            class="btn find-text-button text-primary mt-3 mb-2" href="#">
+            46,30€ [463 x 0,10]</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-6 text-center">
+          <a type="button" 
+            class="btn find-text-button text-primary mt-3 mb-2" href="#">
+            100,10€ [1001 x 0,10]</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 mobile-view-5 d-flex">
+          <img src="{{asset('images/wallet/carburant-peages.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold">Carburant + péages</p>
+          </div>
+          <div class="col-lg-4 d-flex d-none mobile-view col-sm-6">
+          <img src="{{asset('images/wallet/carburant-peages.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold">Carburant + péages
+
+</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-8 text-center d-none">
+          <a type="button" 
+            class="btn find-text-button text-light mt-3 mb-2" href="#">
+            - 180,36€</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-7 text-center">
+          <a type="button" 
+            class="btn find-text-button text-danger mt-3 mb-2" href="#">
+            - 84,40€</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-6 text-center">
+          <a type="button" 
+            class="btn find-text-button text-danger mt-3 mb-2" href="#">
+            - 180,36€
+
+</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 mobile-view-5 d-flex">
+          <img src="{{asset('images/wallet/covoiturage.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold">Covoiturage</p>
+          </div>
+          <div class="col-lg-4 d-flex d-none mobile-view col-sm-6">
+          <img src="{{asset('images/wallet/covoiturage.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold">Covoiturage</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-8 text-center d-none">
+          <a type="button" 
+            class="btn find-text-button text-light mt-3 mb-2" href="#">
+            + 150€ [3 x 50€]</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-7 text-center">
+          <a type="button" 
+            class="btn find-text-button text-primary mt-3 mb-2" href="#">
+            + 40€ [2 x 20€]</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-6 text-center">
+          <a type="button" 
+            class="btn find-text-button text-primary mt-3 mb-2" href="#">
+            + 40€ [2 x 20€]</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 mobile-view-5 d-flex">
+          <img src="{{asset('images/wallet/bilan.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold">Bilan</p>
+          </div>
+          <div class="col-lg-4 d-flex d-none mobile-view col-sm-6">
+          <img src="{{asset('images/wallet/bilan.png')}}" width="20%" height="auto"/>
+          <p class="text-dark mt-4 fw-bold">Bilan</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-8 text-center d-none">
+          <a type="button" 
+            class="btn find-text-button text-dark mt-3 mb-2" href="#">
+            + 69,74€
+</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-7 text-center">
+          <a type="button" 
+            class="btn find-text-button text-dark mt-3 mb-2" href="#">
+            + 1,90€</a>
+          </div>
+          <div class="col-lg-4 col-sm-6 mobile-view-6 text-center">
+          <a type="button" 
+            class="btn find-text-button text-dark mt-3 mb-2" href="#">
+            + 69,74€</a>
           </div>
         </div>
         </div>
+  
 		</div>
     </div>
 </section>

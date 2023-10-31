@@ -10576,7 +10576,176 @@ margin-top: 10px;
     display: flex !important;
   }
 }
+@media (max-width: 768px) {
+  .mobile-view-5{
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .mobile-view-2{
+    display: block !important;
+  }
+}
+.van-img{
+  margin-left: -15px;
+}
+@media (max-width: 768px) {
+  .van-img{
+    margin-left: 210px !important;
+  }
+}
+@media (max-width: 768px) {
+  .car-img{
+    margin-left: 125px;
+  }
+}
+@media (max-width: 768px) {
+  .mobile-view-8{
+    display: block !important;
+    margin-left: 205px;
+    margin-top: -70px;
+  }
+}
+@media (max-width: 768px) {
+  .mobile-view-9{
+    display: flex !important;
+  }
+}
 
+@media (max-width: 768px) {
+  .mobile-view-9-p{
+   display : block !important;
+  }
+}
+@media (max-width: 768px) {
+  .mobile-view-7{
+    text-align: end !important;
+    margin-left: 130px;
+    margin-top: -70px;
+    display:none;
+  }
+}
+@media (max-width: 768px) {
+  .mobile-view-10{
+    text-align: center;
+    margin-left: -40px;
+   display: block !important;
+    
+  }
+}
+@media (max-width: 768px) {
+  .mobile-view-6{
+    text-align: end !important;
+    margin-left: 130px;
+    margin-top: -70px;
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .mobile-view-3{
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .mobile-view-4{
+    text-align: center !important;
+  }
+}
+@media (max-width: 480px) {
+  .mobile-view{
+    display: flex !important;
+  }
+}
+@media (max-width: 480px) {
+  .mobile-view-5{
+    display: none !important;
+  }
+}
+@media (max-width: 480px) {
+  .mobile-view-2{
+    display: block !important;
+    margin-left: 200px !important;
+  }
+}
+.mobile-view-section{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.van-img{
+  margin-left: -15px;
+}
+@media (max-width: 480px) {
+  .van-img{
+    margin-left: 90px !important;
+  }
+}
+@media (max-width: 480px) {
+  .car-img{
+    margin-left: 0px !important;
+    text-align: end !important;
+  }
+}
+@media (max-width: 480px) {
+  .mobile-view-8{
+    display: block !important;
+    margin-left: 115px;
+    margin-top: -70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-button{
+    display: block !important;
+  }
+}
+@media (max-width: 768px) {
+  .header-button{
+    margin-left: 30px !important;
+  }
+}
+@media (max-width: 480px) {
+  .mobile-view-9{
+    display: flex !important;
+  }
+}
+
+/* @media (max-width: 480px) {
+  .mobile-view-9-text{
+   display : block !important;
+  }
+} */
+@media (max-width: 480px) {
+  .mobile-view-7{
+    text-align: center !important;
+    margin-top: -70px;
+    display: none;
+
+  }
+}
+@media (max-width: 480px) {
+  .mobile-view-10{
+    text-align: end;
+    margin-top: -70px !important;
+   display: block !important;
+margin-left: -22px !important;
+  }
+}
+@media (max-width: 480px) {
+  .mobile-view-6{
+    text-align: end !important;
+    margin-top: -70px;
+  }
+}
+@media (max-width: 480px) {
+  .mobile-view-3{
+    display: none !important;
+  }
+}
+/* @media (max-width: 480px) {
+  .mobile-view-4{
+    text-align: center !important;
+  }
+} */
 @keyframes fastBounce {
   0%, 100% {
       opacity: 0;
