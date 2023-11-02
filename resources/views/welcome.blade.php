@@ -49,7 +49,6 @@
     </div>
   </div>
 </div> -->
-
 <section class="banner position-relative overflow-hidden">
   <div class="container-fluid m-0 p-0">
     <div class="row align-items-center justify-content-center back-ground pt-5 pb-5">
@@ -599,7 +598,7 @@ Souvent même.
 	  </div>
   <div class="section container">
     <div class="row justify-content-center">
-      <div class="col-lg-8">
+      <div class="col-lg-8 col-sm-12">
         <ul class="payment_info_tab nav nav-pills justify-content-center mb-4 " id="pills-tab" role="tablist">
           <li class="nav-item m-2" role="presentation"> <a
               class="nav-link btn btn-outline-primary effect-none text-light formula-nav-1 active" id="pills-how-much-can-i-recive-tab"
@@ -994,8 +993,8 @@ Attention, quel que soit l'état du véhicule, celui-ci ne doit pas avoir de rou
           </div>
   </div>  
         </div>
-        <div class="col-lg-4 formula-section-2">
-        <div class="card rounded px-2" style="width: 28rem;">
+        <div class="col-lg-4 col-sm-6 formula-section-2">
+        <div class="card rounded px-2" style="width: 19rem;">
   <div class="card-body">
     <h5 class="card-title text-center mt-5">Vous avez encore des questions ?</h5>
     <ul>

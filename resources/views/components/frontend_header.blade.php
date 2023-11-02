@@ -1,14 +1,17 @@
 <!-- navigation -->
 <header class="navigation bg-tertiary sticky-top">
-	<nav class="navbar navbar-expand-xl navbar-light py-3">
+	<nav class="navbar navbar-expand-lg navbar-light py-3">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="{{ route('welcome') }}">
-				<img loading="prelaod" decoding="async" class="img-fluid" width="70%" height="100px" src="{{ asset('images/wallet/footer-2.png') }}" alt="Wallet">
+		<div class="toggle-mobile-button">
+		<a class="navbar-brand" href="{{ route('welcome') }}">
+				<img loading="prelaod" decoding="async" class="img-fluid" width="70%" height="auto" src="{{ asset('images/wallet/footer-2.png') }}" alt="Wallet">
 			</a>
-			<button class="navbar-toggler p-1 m-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+		<button class="navbar-toggler p-1 m-0 toggle-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+				<span class="navbar-toggler-icon"></span>
 			</button>
+		</div>
 			<div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-				<ul class="navbar-nav mb-2 text-center">
+				<ul class="navbar-nav mb-2">
 					<!-- <li class="nav-item"> <a class="nav-link" href="{{ route('welcome') }}">Accueil</a>
 					</li> -->
 					<li class="nav-item dropdown">
@@ -18,7 +21,6 @@
         <li><a class="dropdown-item" href="{{ route('welcome') }}">Particulier</a></li>
     </ul>
 </li>
-
 					<li class="nav-item "> <a class="nav-link" href="about.html">Déplacer un véhicule</a>
 					</li>
 					<li class="nav-item "> <a class="nav-link" href="{{ route('co-drive') }}">Co-convoyer</a>
