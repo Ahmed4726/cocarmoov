@@ -300,7 +300,7 @@ Support e-mail & téléphonique
 		<div id="carouselExampleControls" class="test-carousel">
   <div class="carousel-inner-test">
     <div class="carousel-item-test active">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -317,7 +317,7 @@ Support e-mail & téléphonique
 </div>
     </div>
     <div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -334,7 +334,7 @@ Support e-mail & téléphonique
 </div>
     </div>
     <div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -351,7 +351,7 @@ Support e-mail & téléphonique
 </div>
     </div>
 	<div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -368,7 +368,7 @@ Support e-mail & téléphonique
 </div>
     </div>
 	<div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -385,7 +385,7 @@ Support e-mail & téléphonique
 </div>
     </div>
 	<div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -402,7 +402,7 @@ Support e-mail & téléphonique
 </div>
     </div>
 	<div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -419,7 +419,7 @@ Support e-mail & téléphonique
 </div>
     </div>
 	<div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -436,7 +436,7 @@ Support e-mail & téléphonique
 </div>
     </div>
 	<div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -453,7 +453,7 @@ Support e-mail & téléphonique
 </div>
     </div>
 	<div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -470,7 +470,7 @@ Support e-mail & téléphonique
 </div>
     </div>
 	<div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>

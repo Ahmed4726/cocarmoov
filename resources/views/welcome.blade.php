@@ -1078,5 +1078,4 @@ Attention, quel que soit l'état du véhicule, celui-ci ne doit pas avoir de rou
         </div>
 </div>  
 </section>
-
 @endsection

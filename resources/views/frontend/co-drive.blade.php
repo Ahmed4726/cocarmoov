@@ -239,7 +239,7 @@
 		<div id="carouselExampleControls " class="test-carousel">
   <div class="carousel-inner-test">
     <div class="carousel-item-test active">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -256,7 +256,7 @@
 </div>
     </div>
     <div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -274,7 +274,7 @@
 </div>
     </div>
     <div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -291,7 +291,7 @@
 </div>
     </div>
 	<div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -310,7 +310,7 @@ Souvent même.
 </div>
     </div>
 	<div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -327,7 +327,7 @@ Souvent même.
 </div>
     </div>
 	<div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -344,7 +344,7 @@ Souvent même.
 </div>
     </div>
 	<div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -361,7 +361,7 @@ Souvent même.
 </div>
     </div>
 	<div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -378,7 +378,7 @@ Souvent même.
 </div>
     </div>
 	<div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -395,7 +395,7 @@ Souvent même.
 </div>
     </div>
 	<div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -412,7 +412,7 @@ Souvent même.
 </div>
     </div>
 	<div class="carousel-item-test">
-	<div class="card">
+	<div class="card h-100">
   	<div class="card-body text-center">
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
@@ -870,14 +870,13 @@ pour un déménagement ou un voyage gagnant !
       <div class="rounded shadow bg-white p-5">
       <div class="accordion accordion-border-bottom" id="accordionFAQ">
           <div class="accordion-item">
-         
-            <h2 class="accordion-header accordion-button h5 border-0 active"
+            <h2 class="accordion-header accordion-button h5 border-0"
               id="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" aria-expanded="true"
               aria-controls="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9">Quelles sont les conditions pour co-convoyer un véhicule ?
             </h2>
             <div id="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9"
-              class="accordion-collapse collapse border-0 show"
+              class="accordion-collapse collapse border-0"
               aria-labelledby="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" data-bs-parent="#accordionFAQ">
               <div class="accordion-body py-0 content"> <p>Vous devez être âgé(e) de 25 ans minimum et posséder votre permis européen depuis au moins trois ans : ce sont des conditions imposées par notre assurance.
 Vous pouvez consulter les conditions de notre assurance sur https://www.cocarmoov.fr/assurance 
