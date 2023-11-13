@@ -95,24 +95,24 @@
 	<div class="input-group">
 			  <div class="select-container">
     <select name="cars" id="cars" class="form-control">
-      <option hidden selected>Type de véhicule</option>
-      <option value="Citadine">Citadine</option>
-      <option value="Berline">Berline</option>
-      <option value="Sportive">Sportive</option>
-	  <option value="Collection">Collection</option> 
-      <option value="Monospace">Monospace</option>
-	  <option value="4×4">SUV ou 4×4</option>
-	  <option value="3m3">Utilitaire 3m3</option>
-	  <option value="6m3">Utilitaire 6m3</option>
-	  <option value="9m3">Utilitaire 9m3</option>
-	  <option value="12m3">Utilitaire 12m3</option>
-	  <option value="15m3">Utilitaire 15m3</option>
-	  <option value="20m3">Utilitaire 20m3</option>
-	  <option value="25m3">Utilitaire 25m3</option>
-	  <option value="30m3">Utilitaire 30m3</option>
-	  <option value="Camion-benne">Camion benne</option>
-	  <option value="Camping-car">Camping-car</option>
-	  <option value="Van-aménagé">Van-aménagé</option>
+      <option hidden selected class="app-font-family">Type de véhicule</option>
+      <option value="Citadine" class="app-font-family">Citadine</option>
+      <option value="Berline" class="app-font-family">Berline</option>
+      <option value="Sportive" class="app-font-family">Sportive</option>
+	  <option value="Collection" class="app-font-family">Collection</option> 
+      <option value="Monospace" class="app-font-family">Monospace</option>
+	  <option value="4×4" class="app-font-family">SUV ou 4×4</option>
+	  <option value="3m3" class="app-font-family">Utilitaire 3m3</option>
+	  <option value="6m3" class="app-font-family">Utilitaire 6m3</option>
+	  <option value="9m3" class="app-font-family">Utilitaire 9m3</option>
+	  <option value="12m3" class="app-font-family">Utilitaire 12m3</option>
+	  <option value="15m3" class="app-font-family">Utilitaire 15m3</option>
+	  <option value="20m3" class="app-font-family">Utilitaire 20m3</option>
+	  <option value="25m3" class="app-font-family">Utilitaire 25m3</option>
+	  <option value="30m3" class="app-font-family">Utilitaire 30m3</option>
+	  <option value="Camion-benne" class="app-font-family">Camion benne</option>
+	  <option value="Camping-car" class="app-font-family">Camping-car</option>
+	  <option value="Van-aménagé" class="app-font-family">Van-aménagé</option>
 
     </select>
     <i class="fas fa-caret-down fa-dropdown-icon"></i> <!-- Font Awesome dropdown icon -->
@@ -123,10 +123,10 @@
 	<div class="input-group">
 			  <div class="select-container">
     <select name="cars" id="cars" class="form-control">
-      <option hidden selected>Etat du véhicule</option>
-      <option value="En-état-de-marche">En état de marche</option>
-      <option value="En-panne">En panne</option>
-      <option value="Accidenté">Accidenté</option>
+      <option hidden selected class="app-font-family">Etat du véhicule</option>
+      <option value="En-état-de-marche" class="app-font-family">En état de marche</option>
+      <option value="En-panne" class="app-font-family">En panne</option>
+      <option value="Accidenté" class="app-font-family">Accidenté</option>
     </select>
     <i class="fas fa-caret-down fa-dropdown-icon"></i> <!-- Font Awesome dropdown icon -->
   </div>
@@ -221,11 +221,11 @@
                 <p class="text-center text-light mt-3 solution-text"><b>Solution économique</b></p>
                 <h4 class="text-light text-center differnce-section">[Co-convoyage]</h4>
                 <p class="text-center text-light mt-3 solution-text-p"><b>Faites des économies en proposant vos véhicules à des co-convoyeurs particuliers pour les déplacer pendant qu'ils déménagent ou covoiturent.</b></p>
-                <p class="text-center text-light mt-3 solution-text-p">Sous 15 jours en moyenne</p>
-                <p class="text-center  mt-3 h5 solution-price-eco">À partir de 59€ TTC</p>
+                <p class="text-center text-light mt-3 solution-text-p app-font-family">Sous 15 jours en moyenne</p>
+                <p class="text-center  mt-3 h5 solution-price-eco app-font-family">À partir de 59€ TTC</p>
                 <div class="text-center">
           <a type="button" 
-            class="btn banner-button-1 text-light px-4 py-3 mt-4" href="#">
+            class="btn banner-button-1 text-light px-4 py-3 mt-4 app-font-family" href="#">
             <b>Rapatrier un véhicule</b></a>
             </div>
               </div>
@@ -239,11 +239,11 @@
               <p class="text-center text-light mt-3 solution-text-p"><b>Satisfaites  vos clients ou vous même en toute sérénité dans l'exécution opérationnelle en  louant les   services d'un convoyeur fiable sur CoCarmoov.</b></p>
               <p class="text-center text-light mt-3 solution-text-p">Sous 3 jours en moyenne</p>
                
-              <p class="text-center h5 text-light mt-3 solution-price-exp">À partir de 79€ TTC</p>
+              <p class="text-center h5 text-light mt-3 solution-price-exp app-font-family">À partir de 79€ TTC</p>
               
               <div class="text-center">
           <a type="button" 
-            class="btn banner-button-2 mt-4 px-4 py-3 text-light" href="#">
+            class="btn banner-button-2 mt-4 px-4 py-3 text-light app-font-family" href="#">
             <b>Déplacer un véhicule</b></a>
             </div>
             </div>
@@ -254,12 +254,12 @@
               <p class="text-center text-light mt-3 solution-text"><b>Solution premium</b></p>
                 <h4 class="text-center text-light differnce-section">[Transport]</h4>
               <p class="text-center text-light mt-3 solution-text-p"><b>Faites transporter vos véhicules, en marche, en panne ou accidenté, avec une solution à 0 km, de porte à porte, grâce aux camions transporteurs partenaires.</b></p>
-              <p class="text-center text-light mt-3 solution-text-p">Sous 10 jours en moyenne </p>
-              <p class="text-center text-light h5 mt-3 solution-price-pre">À partir de 179€ TTC</p>
+              <p class="text-center text-light mt-3 solution-text-p app-font-family">Sous 10 jours en moyenne </p>
+              <p class="text-center text-light h5 mt-3 solution-price-pre app-font-family">À partir de 179€ TTC</p>
               
               <div class="text-center">
           <a type="button" 
-            class="btn banner-button-3 text-light px-4 py-3 mt-4" href="#">
+            class="btn banner-button-3 text-light px-4 py-3 mt-4 app-font-family" href="#">
             <b>Transporter un véhicule</b></a>
             </div>
             </div>
@@ -287,7 +287,7 @@
           <div class="d-block d-sm-flex align-items-center mb-4">
             <img 
               src="{{ asset('images/wallet/achat-vente-voiture-vehicule.jpg') }}"
-              alt="Leslie Alexander" class="text-center img-fluid rounded" width="40%" height="auto" />
+              alt="Leslie Alexander" class="text-center img-fluid rounded" width="200" height="auto" />
             <div class="mt-sm-0 ms-0 ms-sm-3">
               <h4 class="mb-1 differnce-section mt-2">Achat / Vente</h4>
               <p class="mb-0 text-dark frequently-move" style="text-align: justify; font-size:16px; line-height:normal;">Un véhicule d'occasion haut de gamme se trouve à Strasbourg ? Pas de souci, Alexandre peut vous le convoyer sans vous ruiner.</p>
@@ -471,12 +471,12 @@
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Au moins on s’est partagé les frais.</p>
-    <p class="card-text testimonial-text">Très bien. Merci Cocarmoov</p>
-	<p class="card-text"><b>Patrice</b></p>
+    <p class="card-text app-font-family">Au moins on s’est partagé les frais.</p>
+    <p class="card-text testimonial-text app-font-family">Très bien. Merci Cocarmoov</p>
+	<p class="card-text app-font-family"><b>Patrice</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Nice -> Bordeaux</p>
-	<p class="card-text testimonial-text">Il y a 1 mois</p>
+	<p class="card-text testimonial-text-2 app-font-family">Nice -> Bordeaux</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 1 mois</p>
   </div>
 </div>
     </div>
@@ -488,13 +488,13 @@
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Ma première expérience en co-convoyage </p>
-    <p class="card-text testimonial-text">formidable Tout le monde est gagnant
+    <p class="card-text app-font-family">Ma première expérience en co-convoyage </p>
+    <p class="card-text testimonial-text app-font-family">formidable Tout le monde est gagnant
 </p>
-	<p class="card-text"><b>Alex</b></p>
+	<p class="card-text app-font-family"><b>Alex</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Lille -> Pau</p>
-	<p class="card-text testimonial-text">Il y a 2 semaines</p>
+	<p class="card-text testimonial-text-2 app-font-family">Lille -> Pau</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 2 semaines</p>
   </div>
 </div>
     </div>
@@ -506,12 +506,12 @@
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Déménagement au top en 20m3</p>
-    <p class="card-text testimonial-text">Très bon compromis.</p>
-	<p class="card-text"><b>Lucas</b></p>
+    <p class="card-text app-font-family">Déménagement au top en 20m3</p>
+    <p class="card-text testimonial-text app-font-family">Très bon compromis.</p>
+	<p class="card-text app-font-family"><b>Lucas</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Nantes -> Montpellier</p>
-	<p class="card-text testimonial-text">Il y a 1 mois</p>
+	<p class="card-text testimonial-text-2 app-font-family">Nantes -> Montpellier</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 1 mois</p>
   </div>
 </div>
     </div>
@@ -523,14 +523,14 @@
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Co-convoyage</p>
-    <p class="card-text testimonial-text">ça donne envie de voyager
+    <p class="card-text app-font-family">Co-convoyage</p>
+    <p class="card-text testimonial-text app-font-family">ça donne envie de voyager
 Souvent même.
 </p>
-	<p class="card-text"><b> Léa</b></p>
+	<p class="card-text app-font-family"><b> Léa</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Rennes -> Le Havre</p>
-	<p class="card-text testimonial-text">Il y a 1 semaine</p>
+	<p class="card-text testimonial-text-2 app-font-family">Rennes -> Le Havre</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 1 semaine</p>
   </div>
 </div>
     </div>
@@ -542,12 +542,12 @@ Souvent même.
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Je découvre une nouvelle plateforme à mon avis.</p>
-    <p class="card-text testimonial-text">J’espère que je trouverai souvent des véhicules.</p>
-	<p class="card-text"><b>Hugo</b></p>
+    <p class="card-text app-font-family">Je découvre une nouvelle plateforme à mon avis.</p>
+    <p class="card-text testimonial-text app-font-family">J’espère que je trouverai souvent des véhicules.</p>
+	<p class="card-text app-font-family"><b>Hugo</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Cergy -> Avignon</p>
-	<p class="card-text testimonial-text">Il y a 1 mois</p>
+	<p class="card-text testimonial-text-2 app-font-family">Cergy -> Avignon</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 1 mois</p>
   </div>
 </div>
     </div>
@@ -559,12 +559,12 @@ Souvent même.
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Je suis étudiante et le concept</p>
-    <p class="card-text testimonial-text">est très arrangeant.</p>
-	<p class="card-text"><b>Manon</b></p>
+    <p class="card-text app-font-family">Je suis étudiante et le concept</p>
+    <p class="card-text testimonial-text app-font-family">est très arrangeant.</p>
+	<p class="card-text app-font-family"><b>Manon</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Besançon -> Saint-Étienne</p>
-	<p class="card-text testimonial-text">Il y a 3 semaines</p>
+	<p class="card-text testimonial-text-2 app-font-family">Besançon -> Saint-Étienne</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 3 semaines</p>
   </div>
 </div>
     </div>
@@ -576,12 +576,12 @@ Souvent même.
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Déménagement à 50 euros de frais TTC.</p>
-    <p class="card-text testimonial-text">Merci pour le concept.</p>
-	<p class="card-text"><b>Reda</b></p>
+    <p class="card-text app-font-family">Déménagement à 50 euros de frais TTC.</p>
+    <p class="card-text testimonial-text app-font-family">Merci pour le concept.</p>
+	<p class="card-text app-font-family"><b>Reda</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Angers -> Limoges</p>
-	<p class="card-text testimonial-text">Il y a 1 semaine</p>
+	<p class="card-text testimonial-text-2 app-font-family">Angers -> Limoges</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 1 semaine</p>
   </div>
 </div>
     </div>
@@ -593,12 +593,12 @@ Souvent même.
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Concept écolo et économique</p>
-    <p class="card-text testimonial-text">Qui aurait pensé !</p>
-	<p class="card-text"><b>Mus</b></p>
+    <p class="card-text app-font-family">Concept écolo et économique</p>
+    <p class="card-text testimonial-text app-font-family">Qui aurait pensé !</p>
+	<p class="card-text app-font-family"><b>Mus</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Calais -> Cannes</p>
-	<p class="card-text testimonial-text">Il y a 2 semaines</p>
+	<p class="card-text testimonial-text-2 app-font-family">Calais -> Cannes</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 2 semaines</p>
   </div>
 </div>
     </div>
@@ -610,12 +610,12 @@ Souvent même.
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Ça se joue aux bons plans.</p>
-    <p class="card-text testimonial-text">Même en îDF.</p>
-	<p class="card-text"><b>Théo</b></p>
+    <p class="card-text app-font-family">Ça se joue aux bons plans.</p>
+    <p class="card-text testimonial-text app-font-family">Même en îDF.</p>
+	<p class="card-text app-font-family"><b>Théo</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Courbevoie -> Saint-Denis</p>
-	<p class="card-text testimonial-text">Il y a 1 mois</p>
+	<p class="card-text testimonial-text-2 app-font-family">Courbevoie -> Saint-Denis</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 1 mois</p>
   </div>
 </div>
     </div>
@@ -627,12 +627,12 @@ Souvent même.
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Bon petit déménagement de fin de stage.</p>
-    <p class="card-text testimonial-text">Merci au propriétaire.</p>
-	<p class="card-text"><b>Chloé</b></p>
+    <p class="card-text app-font-family">Bon petit déménagement de fin de stage.</p>
+    <p class="card-text testimonial-text app-font-family">Merci au propriétaire.</p>
+	<p class="card-text app-font-family"><b>Chloé</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Le Mans -> Aubervilliers</p>
-	<p class="card-text testimonial-text">Il y a 1 semaine</p>
+	<p class="card-text testimonial-text-2 app-font-family">Le Mans -> Aubervilliers</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 1 semaine</p>
   </div>
 </div>
     </div>
@@ -644,12 +644,12 @@ Souvent même.
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Bonne formule, à savoir la disponibilité !</p>
-    <p class="card-text testimonial-text">Trajet rentabilisé entre amis.</p>
-	<p class="card-text"><b>Djabir</b></p>
+    <p class="card-text app-font-family">Bonne formule, à savoir la disponibilité !</p>
+    <p class="card-text testimonial-text app-font-family">Trajet rentabilisé entre amis.</p>
+	<p class="card-text app-font-family"><b>Djabir</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Colmar -> Valenciennes</p>
-	<p class="card-text testimonial-text">Il y a 1 semaine</p>
+	<p class="card-text testimonial-text-2 app-font-family">Colmar -> Valenciennes</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 1 semaine</p>
   </div>
 </div>
     </div>
@@ -670,17 +670,17 @@ Souvent même.
       <div class="col-lg-8 col-sm-12 col-md-12">
         <ul class="payment_info_tab nav nav-pills justify-content-center mb-4" id="pills-tab" role="tablist">
           <li class="nav-item m-2" role="presentation"> <a
-              class="nav-link btn btn-outline-primary effect-none text-light formula-nav-1 active fw-bold" id="pills-how-much-can-i-recive-tab"
+              class="nav-link btn btn-outline-primary app-font-family effect-none text-light formula-nav-1 active fw-bold" id="pills-how-much-can-i-recive-tab"
               data-bs-toggle="pill" href="#pills-how-much-can-i-recive" role="tab"
               aria-controls="pills-how-much-can-i-recive" aria-selected="true">La formule économique</a>
           </li>
           <li class="nav-item m-2" role="presentation"> <a
-              class="nav-link btn btn-outline-primary effect-none text-light formula-nav-2 fw-bold" id="pills-how-much-does-it-costs-tab"
+              class="nav-link btn btn-outline-primary app-font-family effect-none text-light formula-nav-2 fw-bold" id="pills-how-much-does-it-costs-tab"
               data-bs-toggle="pill" href="#pills-how-much-does-it-costs" role="tab"
               aria-controls="pills-how-much-does-it-costs" aria-selected="true">La formule express</a>
           </li>
           <li class="nav-item m-2" role="presentation"> <a
-              class="nav-link btn btn-outline-primary effect-none text-light formula-nav-3 fw-bold" id="pills-how-do-i-repay-tab"
+              class="nav-link btn btn-outline-primary app-font-family effect-none text-light formula-nav-3 fw-bold" id="pills-how-do-i-repay-tab"
               data-bs-toggle="pill" href="#pills-how-do-i-repay" role="tab" aria-controls="pills-how-do-i-repay"
               aria-selected="true">La formule premium</a>
           </li>
@@ -692,7 +692,7 @@ Souvent même.
       <div class="col-lg-12">
         <div class="accordion accordion-border-bottom" id="accordionFAQ">
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
+            <h2 class="accordion-header accordion-button app-font-family h5 border-0 app-font-family"
               id="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" aria-expanded="false"
               aria-controls="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9">Comment ça marche ?
@@ -700,7 +700,7 @@ Souvent même.
             <div id="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9"
               class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"> <p>Un co-convoyeur particulier de la communauté CoCarmoov qui a besoin de voyager ou de déménager, déplacera votre véhicule, c'est pourquoi nous proposons des prix très bas.</p>
+              <div class="accordion-body py-0 content app-font-family"> <p>Un co-convoyeur particulier de la communauté CoCarmoov qui a besoin de voyager ou de déménager, déplacera votre véhicule, c'est pourquoi nous proposons des prix très bas.</p>
                             <p>
                             Le co-convoyeur est soumis à une franchise et donne une caution bancaire (pré autorisation bancaire) avant chaque réservation, comme dans une location de véhicule.
                             </p>
@@ -716,7 +716,7 @@ Souvent même.
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec2" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec2" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Oui votre véhicule bénéficie automatiquement d'une assurance automobile (dommages, incendie et vol) par notre partenaire Wakam et d’une assistance routière AXA.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Oui votre véhicule bénéficie automatiquement d'une assurance automobile (dommages, incendie et vol) par notre partenaire Wakam et d’une assistance routière AXA.</p>
             </div>
             </div>
           </div>
@@ -728,7 +728,7 @@ Souvent même.
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec3" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec3" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Dès que vous validez votre commande, CoCarmoov notifie sa communauté de co-convoyeurs particuliers susceptibles de co-convoyer votre véhicule. CoCarmoov ne garantit pas de trouver un co-convoyeur particulier.<br>
+              <div class="accordion-body py-0 content app-font-family"><p>Dès que vous validez votre commande, CoCarmoov notifie sa communauté de co-convoyeurs particuliers susceptibles de co-convoyer votre véhicule. CoCarmoov ne garantit pas de trouver un co-convoyeur particulier.<br>
               Pour maximiser les chances, il faudra indiquer une période de départ possible suffisamment longue (idéalement 10 à 15 jours).<br>
               Le co-convoyeur particulier dispose de 24 à 48 heures pour déplacer votre véhicule selon la distance.
               </p>
@@ -744,7 +744,7 @@ Souvent même.
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec4" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec4" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Le prix comprend : l'assurance automobile jusqu'à 45.000 euros, les péages et le carburant.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Le prix comprend : l'assurance automobile jusqu'à 45.000 euros, les péages et le carburant.</p>
             </div>
             </div>
           </div>
@@ -756,7 +756,7 @@ Souvent même.
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec5" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec5" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Tant que votre trajet n'est pas réservé par un co-convoyeur particulier, vous ne serez pas facturé.<br> 
+              <div class="accordion-body py-0 content app-font-family"><p>Tant que votre trajet n'est pas réservé par un co-convoyeur particulier, vous ne serez pas facturé.<br> 
 Votre carte est débitée à 72h avant le départ lorsque votre trajet est réservé.
 </p>
             </div>
@@ -770,7 +770,7 @@ Votre carte est débitée à 72h avant le départ lorsque votre trajet est rése
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec6" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec6" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Gratuit si le trajet n'est pas encore réservé ou avant 72h du départ s’il est déjà réservé.<br>
+              <div class="accordion-body py-0 content app-font-family"><p>Gratuit si le trajet n'est pas encore réservé ou avant 72h du départ s’il est déjà réservé.<br>
 50% à 72h ou moins du départ, si le trajet est déjà réservé par un co-convoyeur.
 </p>
             </div>
@@ -784,7 +784,7 @@ Votre carte est débitée à 72h avant le départ lorsque votre trajet est rése
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec7" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec7" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Un contrat de co-convoyage pré-rempli vous sera envoyé par e-mail.<br> 
+              <div class="accordion-body py-0 content app-font-family"><p>Un contrat de co-convoyage pré-rempli vous sera envoyé par e-mail.<br> 
 Utilisez-le pour vérifier avec le co-convoyeur tout dommage causé à votre véhicule.
 
 </p>
@@ -799,7 +799,7 @@ Utilisez-le pour vérifier avec le co-convoyeur tout dommage causé à votre vé
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec8" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec8" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Le co-convoyeur parcourt la distance nécessaire pour relier les deux adresses le plus rapidement possible +20% de kilomètres supplémentaires (Exemple : pour 100 kilomètres de distance, le co-convoyeur est autorisé à parcourir 120 kilomètres maximum)
+              <div class="accordion-body py-0 content app-font-family"><p>Le co-convoyeur parcourt la distance nécessaire pour relier les deux adresses le plus rapidement possible +20% de kilomètres supplémentaires (Exemple : pour 100 kilomètres de distance, le co-convoyeur est autorisé à parcourir 120 kilomètres maximum)
 
 </p>
             </div>
@@ -813,7 +813,7 @@ Utilisez-le pour vérifier avec le co-convoyeur tout dommage causé à votre vé
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec9" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec9" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Vous vous engagez à fournir un véhicule en bon état de marche, assuré (en cas de panne moteur) et avec un contrôle technique à jour (si le véhicule a plus de 4 ans).
+              <div class="accordion-body py-0 content app-font-family"><p>Vous vous engagez à fournir un véhicule en bon état de marche, assuré (en cas de panne moteur) et avec un contrôle technique à jour (si le véhicule a plus de 4 ans).
 </p>
             </div>
             </div>
@@ -835,7 +835,7 @@ Utilisez-le pour vérifier avec le co-convoyeur tout dommage causé à votre vé
             <div id="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d99"
               class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d99" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"> <p>Votre véhicule sera proposé à notre réseau de convoyeurs professionnels sélectionnés.<br>
+              <div class="accordion-body py-0 content app-font-family"> <p>Votre véhicule sera proposé à notre réseau de convoyeurs professionnels sélectionnés.<br>
 Ceux-ci sont certifiés par nos services pour offrir une prestation irréprochable.
 
                             </p>
@@ -851,7 +851,7 @@ Ceux-ci sont certifiés par nos services pour offrir une prestation irréprochab
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec34" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec34" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Oui votre véhicule bénéficie automatiquement d'une assurance automobile (dommages, incendie et vol) par notre partenaire Wakam et d’une assistance routière AXA.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Oui votre véhicule bénéficie automatiquement d'une assurance automobile (dommages, incendie et vol) par notre partenaire Wakam et d’une assistance routière AXA.</p>
             </div>
             </div>
           </div>
@@ -863,7 +863,7 @@ Ceux-ci sont certifiés par nos services pour offrir une prestation irréprochab
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec35" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec35" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Dès que vous validez votre commande, CoCarmoov notifie son réseau de convoyeurs professionnels susceptibles de convoyer votre véhicule.<br>
+              <div class="accordion-body py-0 content app-font-family"><p>Dès que vous validez votre commande, CoCarmoov notifie son réseau de convoyeurs professionnels susceptibles de convoyer votre véhicule.<br>
 Le convoyage du véhicule dure 24 à 48 heures selon la distance.
 </p>
             </div>
@@ -877,7 +877,7 @@ Le convoyage du véhicule dure 24 à 48 heures selon la distance.
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec36" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec36" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Le prix comprend : l'assurance automobile jusqu'à 45.000 euros, les péages et le carburant ainsi que les éventuels services spécifiques commandés.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Le prix comprend : l'assurance automobile jusqu'à 45.000 euros, les péages et le carburant ainsi que les éventuels services spécifiques commandés.</p>
             </div>
             </div>
           </div>
@@ -889,7 +889,7 @@ Le convoyage du véhicule dure 24 à 48 heures selon la distance.
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec37" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec37" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Tant que votre trajet n'est pas réservé par un convoyeur professionnel, vous ne serez pas facturé.<br> 
+              <div class="accordion-body py-0 content app-font-family"><p>Tant que votre trajet n'est pas réservé par un convoyeur professionnel, vous ne serez pas facturé.<br> 
 Votre carte est débitée à 72h avant le départ lorsque votre trajet est réservé.
 </p>
             </div>
@@ -903,7 +903,7 @@ Votre carte est débitée à 72h avant le départ lorsque votre trajet est rése
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec38" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec38" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Gratuit si le trajet n'est pas encore réservé ou avant 72h du départ s’il est déjà réservé.<br>
+              <div class="accordion-body py-0 content app-font-family"><p>Gratuit si le trajet n'est pas encore réservé ou avant 72h du départ s’il est déjà réservé.<br>
 35% entre 24-72h avant le départ, si le trajet est déjà réservé par un convoyeur.<br>
 70% à moins de 24 heures avant le départ, si le trajet est déjà réservé par un convoyeur.
 </p>
@@ -918,7 +918,7 @@ Votre carte est débitée à 72h avant le départ lorsque votre trajet est rése
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec39" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec39" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Un contrat de convoyage pré-rempli vous sera envoyé par e-mail.<br> 
+              <div class="accordion-body py-0 content app-font-family"><p>Un contrat de convoyage pré-rempli vous sera envoyé par e-mail.<br> 
 Utilisez-le pour vérifier avec le convoyeur tout dommage causé à votre véhicule.
 </p>
             </div>
@@ -932,7 +932,7 @@ Utilisez-le pour vérifier avec le convoyeur tout dommage causé à votre véhic
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec40" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec40" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Le convoyeur parcourt la distance nécessaire pour relier les deux adresses le plus rapidement possible +20% de kilomètres supplémentaires (Exemple : pour 100 kilomètres de distance, le convoyeur est autorisé à parcourir 120 kilomètres maximum)</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Le convoyeur parcourt la distance nécessaire pour relier les deux adresses le plus rapidement possible +20% de kilomètres supplémentaires (Exemple : pour 100 kilomètres de distance, le convoyeur est autorisé à parcourir 120 kilomètres maximum)</p>
             </div>
             </div>
           </div>
@@ -944,7 +944,7 @@ Utilisez-le pour vérifier avec le convoyeur tout dommage causé à votre véhic
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec41" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec41" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Vous vous engagez à fournir un véhicule en bon état de marche, assuré (en cas de panne moteur) et avec un contrôle technique à jour (si le véhicule a plus de 4 ans).</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Vous vous engagez à fournir un véhicule en bon état de marche, assuré (en cas de panne moteur) et avec un contrôle technique à jour (si le véhicule a plus de 4 ans).</p>
             </div>
             </div>
           </div>
@@ -965,7 +965,7 @@ Utilisez-le pour vérifier avec le convoyeur tout dommage causé à votre véhic
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec81" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec81" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Votre véhicule sera proposé à notre réseau de transporteurs professionnels partenaires.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Votre véhicule sera proposé à notre réseau de transporteurs professionnels partenaires.</p>
             </div>
             </div>
           </div>
@@ -977,7 +977,7 @@ Utilisez-le pour vérifier avec le convoyeur tout dommage causé à votre véhic
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec82" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec82" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Dès que vous validez votre commande, CoCarmoov notifie son réseau de transporteurs de véhicules susceptibles de transporter votre véhicule.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Dès que vous validez votre commande, CoCarmoov notifie son réseau de transporteurs de véhicules susceptibles de transporter votre véhicule.</p>
             </div>
             </div>
           </div>
@@ -989,7 +989,7 @@ Utilisez-le pour vérifier avec le convoyeur tout dommage causé à votre véhic
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec83" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec83" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Le prix comprend : l'assurance automobile du transporteur ainsi que les éventuels services spécifiques commandés.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Le prix comprend : l'assurance automobile du transporteur ainsi que les éventuels services spécifiques commandés.</p>
             </div>
             </div>
           </div>
@@ -1001,7 +1001,7 @@ Utilisez-le pour vérifier avec le convoyeur tout dommage causé à votre véhic
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec84" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec84" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Tant que votre transport n'est pas réservé par un transporteur de véhicules partenaire, vous ne serez pas facturé.<br> 
+              <div class="accordion-body py-0 content app-font-family"><p>Tant que votre transport n'est pas réservé par un transporteur de véhicules partenaire, vous ne serez pas facturé.<br> 
 Votre carte est débitée à 72h avant le départ lorsque votre trajet est réservé.
 </p>
             </div>
@@ -1015,7 +1015,7 @@ Votre carte est débitée à 72h avant le départ lorsque votre trajet est rése
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec85" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec85" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Gratuit si le trajet n'est pas encore réservé ou avant 72h du départ s’il est déjà réservé.<br>
+              <div class="accordion-body py-0 content app-font-family"><p>Gratuit si le trajet n'est pas encore réservé ou avant 72h du départ s’il est déjà réservé.<br>
 35% entre 24-72h avant le départ, si le trajet est déjà réservé par un transporteur.<br>
 70% à moins de 24 heures avant le départ, si le trajet est déjà réservé par un transporteur.
 </p>
@@ -1030,7 +1030,7 @@ Votre carte est débitée à 72h avant le départ lorsque votre trajet est rése
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec86" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec86" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Un contrat de transport pré-rempli vous sera envoyé par e-mail.<br> 
+              <div class="accordion-body py-0 content app-font-family"><p>Un contrat de transport pré-rempli vous sera envoyé par e-mail.<br> 
 Utilisez-le pour vérifier avec le transporteur tout dommage causé à votre véhicule.<br>
 Assurez-vous que les adresses de départ et d'arrivée peuvent accueillir un camion porte-voiture de 15 mètres.
 </p>
@@ -1045,7 +1045,7 @@ Assurez-vous que les adresses de départ et d'arrivée peuvent accueillir un cam
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec87" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec87" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Vous vous engagez à fournir un véhicule dans l'état de fonctionnement mentionné.<br> 
+              <div class="accordion-body py-0 content app-font-family"><p>Vous vous engagez à fournir un véhicule dans l'état de fonctionnement mentionné.<br> 
 Attention, quel que soit l'état du véhicule, celui-ci ne doit pas avoir de roues bloquées, et peut être transporté sans protection particulière.
 </p>
             </div>
