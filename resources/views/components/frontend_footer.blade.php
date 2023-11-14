@@ -44,7 +44,7 @@
 					<ul class="list-unstyled">
 					<li class="mb-2 text-center footer-links"><a href="{{route('insurance')}}">Assurance</a>
 						</li>
-						<li class="mb-2 text-center footer-links"><a href="{{('blog')}}">Blog</a>
+						<li class="mb-2 text-center footer-links"><a href="{{route('blog')}}">Blog</a>
 						</li>
 						<li class="mb-2 text-center footer-links">
 						<a href="{{ route('generate-cgu', ['filename' => 'CGU-CoCarmoov-Vf.pdf']) }}">CGU</a>
@@ -83,13 +83,13 @@
 			</div>
 			<div class="col-lg-4 col-md-12 col-sm-6  mt-lg-0">
 				<ul class="list-unstyled list-inline mb-0 text-lg-start" style="margin-left:10px">
-					<li class="list-inline-item footer-links privacy_term"><a class="text-black" href="{{ ('legal-notice') }}">Mentions légales</a>
+					<li class="list-inline-item footer-links privacy_term"><a class="text-black" href="{{ route('legal_notice') }}">Mentions légales</a>
 					</li>
 				</ul>
 			</div>
           	<div class="col-lg-4 col-md-12 col-sm-6  mt-lg-0">
 				<ul class="list-unstyled list-inline mb-0 text-lg-start" style="margin-left:-170px">
-					<li class="list-inline-item footer-links privacy_term mobile-view-privacy"><a class="text-black" href="{{ ('privacy-policy') }}">Politique de confidentialité</a>
+					<li class="list-inline-item footer-links privacy_term mobile-view-privacy"><a class="text-black" href="{{ route('privacy_policy') }}">Politique de confidentialité</a>
 					</li>
 				</ul>
 			</div>
