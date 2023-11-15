@@ -80,6 +80,9 @@ Route::get('/mentions-legales', function () {
 Route::get('/transporteur', function () {
     return view('frontend.transporteurs');
 })->name('transporteur');
+Route::get('/test', function () {
+    return view('admin.admin_layout');
+});
 Route::get('/generate-cgv', [PDFController::class, 'generateCGVPDF'])->name('generate-cgv');
 Route::get('/generate-cgu', [PDFController::class, 'generateCGUPDF'])->name('generate-cgu');
 require __DIR__.'/auth.php';
