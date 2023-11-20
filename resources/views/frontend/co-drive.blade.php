@@ -39,65 +39,65 @@
 <div class="carousel-inner-test">
 <div class="card carousel-item-test mb-5 mx-0" style="width: 100%;">
   <div class="card-body">
-    <h5 class="card-title">Card title1</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h5 class="card-title app-font-family">Card title1</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary app-font-family">Card subtitle</h6>
+    <p class="card-text app-font-family">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link app-font-family">Card link</a>
+    <a href="#" class="card-link app-font-family">Another link</a>
   </div>
 </div>
 <div class="card carousel-item-test mb-5 " style="width: 100%">
   <div class="card-body">
-    <h5 class="card-title">Card title2</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h5 class="card-title app-font-family">Card title2</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary app-font-family">Card subtitle</h6>
+    <p class="card-text app-font-family">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link app-font-family">Card link</a>
+    <a href="#" class="card-link app-font-family">Another link</a>
   </div>
 </div>
 <div class="card carousel-item-test mb-5" style="width: 100%;">
   <div class="card-body">
-    <h5 class="card-title">Card title3</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h5 class="card-title app-font-family">Card title3</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary app-font-family">Card subtitle</h6>
+    <p class="card-text app-font-family">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link app-font-family">Card link</a>
+    <a href="#" class="card-link app-font-family">Another link</a>
   </div>
 </div>
 <div class="card carousel-item-test mb-5" style="width: 100%;">
   <div class="card-body">
-    <h5 class="card-title">Card title4</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h5 class="card-title app-font-family">Card title4</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary app-font-family">Card subtitle</h6>
+    <p class="card-text app-font-family">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link app-font-family">Card link</a>
+    <a href="#" class="card-link app-font-family">Another link</a>
   </div>
 </div>
 <div class="card carousel-item-test mb-5" style="width: 100%;">
   <div class="card-body">
-    <h5 class="card-title">Card title5</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h5 class="card-title app-font-family">Card title5</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary app-font-family">Card subtitle</h6>
+    <p class="card-text app-font-family">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link app-font-family">Card link</a>
+    <a href="#" class="card-link app-font-family">Another link</a>
   </div>
 </div>
 <div class="card carousel-item-test mb-5" style="width: 100%;">
   <div class="card-body">
-    <h5 class="card-title">Card title6</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h5 class="card-title app-font-family">Card title6</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary app-font-family">Card subtitle</h6>
+    <p class="card-text app-font-family">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link app-font-family">Card link</a>
+    <a href="#" class="card-link app-font-family">Another link</a>
   </div>
 </div>
 <div class="card carousel-item-test mb-5" style="width: 100%;">
   <div class="card-body">
-    <h5 class="card-title">Card title7</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h5 class="card-title app-font-family">Card title7</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary app-font-family">Card subtitle</h6>
+    <p class="card-text app-font-family">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link app-font-family">Card link</a>
+    <a href="#" class="card-link app-font-family">Another link</a>
   </div>
 </div>
                 <!-- <div class="card-slider">Card 2</div>
@@ -117,7 +117,7 @@
         <p class="services-p fw-bold mt-5"><b>Concept & Avantages</b></p>
 
           <!-- <p class="text-compensation text-uppercase fw-bold mb-3">Our Service Holders</p> -->
-          <h3 class="mb-4 frequently-h">Bienvenue dans le monde passionnant du <b>Co-convoyage</b>, où vous pouvez combiner votre passion pour la conduite avec une opportunité de service et de voyage sans pareil.</h3>
+          <h3 class="mb-4 frequently-h app-font-family">Bienvenue dans le monde passionnant du <b>Co-convoyage</b>, où vous pouvez combiner votre passion pour la conduite avec une opportunité de service et de voyage sans pareil.</h3>
           <!-- <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing. egestas cursus pellentesque dignissim
             dui, congue. Vel etiam ut</p> -->
         </div>
@@ -133,7 +133,7 @@
             </div>
             <div class="block differnce-section">
               <!-- <h3 class="mb-3 text-top ">Intuitive et sécurisée</h3> -->
-              <p class="mb-0 text-top service-concept">Partagez la conduite, accédez à divers véhicules.</p>
+              <p class="mb-0 text-top service-concept app-font-family">Partagez la conduite, accédez à divers véhicules.</p>
                 <!-- <p class="text-top service-concept">Assurance automobile incluse</p> -->
                 <!-- <h5 class="mb-0 text-top">Pas de frais cachés</h5>
                 <p class="text-top service-concept"> Assurance, carburant, péages, transport</p> -->
@@ -146,7 +146,7 @@
             </div>
             <div class="block differnce-section">
               <!-- <h3 class="mb-3 text-top ">Intuitive et sécurisée</h3> -->
-              <p class="mb-0 text-top service-concept">Réduisez vos frais en optant pour le co-convoyage.</p>
+              <p class="mb-0 text-top service-concept app-font-family">Réduisez vos frais en optant pour le co-convoyage.</p>
                 <!-- <p class="text-top service-concept">Assurance automobile incluse</p> -->
                 <!-- <h5 class="mb-0 text-top">Pas de frais cachés</h5>
                 <p class="text-top service-concept"> Assurance, carburant, péages, transport</p> -->
@@ -159,7 +159,7 @@
             </div>
             <div class="block differnce-section">
               <!-- <h3 class="mb-3 text-top ">Intuitive et sécurisée</h3> -->
-              <p class="mb-0 text-top service-concept">Profitez d'une flexibilité totale pour vos voyages.</p>
+              <p class="mb-0 text-top service-concept app-font-family">Profitez d'une flexibilité totale pour vos voyages.</p>
                 <!-- <p class="text-top service-concept">Assurance automobile incluse</p> -->
                 <!-- <h5 class="mb-0 text-top">Pas de frais cachés</h5>
                 <p class="text-top service-concept"> Assurance, carburant, péages, transport</p> -->
@@ -172,7 +172,7 @@
             </div>
             <div class="block differnce-section">
               <!-- <h3 class="mb-3 text-top ">Intuitive et sécurisée</h3> -->
-              <p class="mb-0 text-top service-concept">Contribuez à la réduction de l'empreinte carbone.</p>
+              <p class="mb-0 text-top service-concept app-font-family">Contribuez à la réduction de l'empreinte carbone.</p>
                 <!-- <p class="text-top service-concept">Assurance automobile incluse</p> -->
                 <!-- <h5 class="mb-0 text-top">Pas de frais cachés</h5>
                 <p class="text-top service-concept"> Assurance, carburant, péages, transport</p> -->
@@ -185,7 +185,7 @@
             </div>
             <div class="block differnce-section">
               <!-- <h3 class="mb-3 text-top ">Intuitive et sécurisée</h3> -->
-              <p class="mb-0 text-top service-concept">Économisez en rejoignant notre communauté.</p>
+              <p class="mb-0 text-top service-concept app-font-family">Économisez en rejoignant notre communauté.</p>
                 <!-- <p class="text-top service-concept">Assurance automobile incluse</p> -->
                 <!-- <h5 class="mb-0 text-top">Pas de frais cachés</h5>
                 <p class="text-top service-concept"> Assurance, carburant, péages, transport</p> -->
@@ -198,7 +198,7 @@
             </div>
             <div class="block differnce-section">
               <!-- <h3 class="mb-3 text-top ">Intuitive et sécurisée</h3> -->
-              <p class="mb-0 text-top service-concept">Expérimentez un goût différent des voyages.</p>
+              <p class="mb-0 text-top service-concept app-font-family">Expérimentez un goût différent des voyages.</p>
                 <!-- <p class="text-top service-concept">Assurance automobile incluse</p> -->
                 <!-- <h5 class="mb-0 text-top">Pas de frais cachés</h5>
                 <p class="text-top service-concept"> Assurance, carburant, péages, transport</p> -->
@@ -211,7 +211,7 @@
             </div>
             <div class="block differnce-section">
               <!-- <h3 class="mb-3 text-top ">Intuitive et sécurisée</h3> -->
-              <p class="mb-0 text-top service-concept">Co-convoyez et Gagnez 10 centimes par kilomètre.</p>
+              <p class="mb-0 text-top service-concept app-font-family">Co-convoyez et Gagnez 10 centimes par kilomètre.</p>
                 <!-- <p class="text-top service-concept">Assurance automobile incluse</p> -->
                 <!-- <h5 class="mb-0 text-top">Pas de frais cachés</h5>
                 <p class="text-top service-concept"> Assurance, carburant, péages, transport</p> -->
@@ -244,12 +244,12 @@
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Au moins on s’est partagé les frais.</p>
-    <p class="card-text testimonial-text">Très bien. Merci Cocarmoov</p>
-	<p class="card-text"><b>Patrice</b></p>
+    <p class="card-text app-font-family">Au moins on s’est partagé les frais.</p>
+    <p class="card-text testimonial-text app-font-family">Très bien. Merci Cocarmoov</p>
+	<p class="card-text app-font-family"><b>Patrice</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Nice -> Bordeaux</p>
-	<p class="card-text testimonial-text">Il y a 1 mois</p>
+	<p class="card-text testimonial-text-2 app-font-family">Nice -> Bordeaux</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 1 mois</p>
   </div>
 </div>
     </div>
@@ -261,13 +261,13 @@
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Ma première expérience en co-convoyage </p>
-    <p class="card-text testimonial-text">formidable Tout le monde est gagnant
+    <p class="card-text app-font-family">Ma première expérience en co-convoyage </p>
+    <p class="card-text testimonial-text app-font-family">formidable Tout le monde est gagnant
 </p>
-	<p class="card-text"><b>Alex</b></p>
+	<p class="card-text app-font-family"><b>Alex</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Lille -> Pau</p>
-	<p class="card-text testimonial-text">Il y a 2 semaines</p>
+	<p class="card-text testimonial-text-2 app-font-family">Lille -> Pau</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 2 semaines</p>
   </div>
 </div>
     </div>
@@ -279,12 +279,12 @@
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Déménagement au top en 20m3</p>
-    <p class="card-text testimonial-text">Très bon compromis.</p>
-	<p class="card-text"><b>Lucas</b></p>
+    <p class="card-text app-font-family">Déménagement au top en 20m3</p>
+    <p class="card-text testimonial-text app-font-family">Très bon compromis.</p>
+	<p class="card-text app-font-family"><b>Lucas</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Nantes -> Montpellier</p>
-	<p class="card-text testimonial-text">Il y a 1 mois</p>
+	<p class="card-text testimonial-text-2 app-font-family">Nantes -> Montpellier</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 1 mois</p>
   </div>
 </div>
     </div>
@@ -296,14 +296,14 @@
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Co-convoyage</p>
-    <p class="card-text testimonial-text">ça donne envie de voyager
+    <p class="card-text app-font-family">Co-convoyage</p>
+    <p class="card-text testimonial-text app-font-family">ça donne envie de voyager
 Souvent même.
 </p>
-	<p class="card-text"><b> Léa</b></p>
+	<p class="card-text app-font-family"><b> Léa</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Rennes -> Le Havre</p>
-	<p class="card-text testimonial-text">Il y a 1 semaine</p>
+	<p class="card-text testimonial-text-2 app-font-family">Rennes -> Le Havre</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 1 semaine</p>
   </div>
 </div>
     </div>
@@ -315,12 +315,12 @@ Souvent même.
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Je découvre une nouvelle plateforme à mon avis.</p>
-    <p class="card-text testimonial-text">J’espère que je trouverai souvent des véhicules.</p>
-	<p class="card-text"><b>Hugo</b></p>
+    <p class="card-text app-font-family">Je découvre une nouvelle plateforme à mon avis.</p>
+    <p class="card-text testimonial-text app-font-family">J’espère que je trouverai souvent des véhicules.</p>
+	<p class="card-text app-font-family"><b>Hugo</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Cergy -> Avignon</p>
-	<p class="card-text testimonial-text">Il y a 1 mois</p>
+	<p class="card-text testimonial-text-2 app-font-family">Cergy -> Avignon</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 1 mois</p>
   </div>
 </div>
     </div>
@@ -332,12 +332,12 @@ Souvent même.
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Je suis étudiante et le concept</p>
-    <p class="card-text testimonial-text">est très arrangeant.</p>
-	<p class="card-text"><b>Manon</b></p>
+    <p class="card-text app-font-family">Je suis étudiante et le concept</p>
+    <p class="card-text testimonial-text app-font-family">est très arrangeant.</p>
+	<p class="card-text app-font-family"><b>Manon</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Besançon -> Saint-Étienne</p>
-	<p class="card-text testimonial-text">Il y a 3 semaines</p>
+	<p class="card-text testimonial-text-2 app-font-family">Besançon -> Saint-Étienne</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 3 semaines</p>
   </div>
 </div>
     </div>
@@ -349,12 +349,12 @@ Souvent même.
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Déménagement à 50 euros de frais TTC.</p>
-    <p class="card-text testimonial-text">Merci pour le concept.</p>
-	<p class="card-text"><b>Reda</b></p>
+    <p class="card-text app-font-family">Déménagement à 50 euros de frais TTC.</p>
+    <p class="card-text testimonial-text app-font-family">Merci pour le concept.</p>
+	<p class="card-text app-font-family"><b>Reda</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Angers -> Limoges</p>
-	<p class="card-text testimonial-text">Il y a 1 semaine</p>
+	<p class="card-text testimonial-text-2 app-font-family">Angers -> Limoges</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 1 semaine</p>
   </div>
 </div>
     </div>
@@ -366,12 +366,12 @@ Souvent même.
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Concept écolo et économique</p>
-    <p class="card-text testimonial-text">Qui aurait pensé !</p>
-	<p class="card-text"><b>Mus</b></p>
+    <p class="card-text app-font-family">Concept écolo et économique</p>
+    <p class="card-text testimonial-text app-font-family">Qui aurait pensé !</p>
+	<p class="card-text app-font-family"><b>Mus</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Calais -> Cannes</p>
-	<p class="card-text testimonial-text">Il y a 2 semaines</p>
+	<p class="card-text testimonial-text-2 app-font-family">Calais -> Cannes</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 2 semaines</p>
   </div>
 </div>
     </div>
@@ -383,12 +383,12 @@ Souvent même.
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Ça se joue aux bons plans.</p>
-    <p class="card-text testimonial-text">Même en îDF.</p>
-	<p class="card-text"><b>Théo</b></p>
+    <p class="card-text app-font-family">Ça se joue aux bons plans.</p>
+    <p class="card-text testimonial-text app-font-family">Même en îDF.</p>
+	<p class="card-text app-font-family"><b>Théo</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Courbevoie -> Saint-Denis</p>
-	<p class="card-text testimonial-text">Il y a 1 mois</p>
+	<p class="card-text testimonial-text-2 app-font-family">Courbevoie -> Saint-Denis</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 1 mois</p>
   </div>
 </div>
     </div>
@@ -400,12 +400,12 @@ Souvent même.
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Bon petit déménagement de fin de stage.</p>
-    <p class="card-text testimonial-text">Merci au propriétaire.</p>
-	<p class="card-text"><b>Chloé</b></p>
+    <p class="card-text app-font-family">Bon petit déménagement de fin de stage.</p>
+    <p class="card-text testimonial-text app-font-family">Merci au propriétaire.</p>
+	<p class="card-text app-font-family"><b>Chloé</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Le Mans -> Aubervilliers</p>
-	<p class="card-text testimonial-text">Il y a 1 semaine</p>
+	<p class="card-text testimonial-text-2 app-font-family">Le Mans -> Aubervilliers</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 1 semaine</p>
   </div>
 </div>
     </div>
@@ -417,12 +417,12 @@ Souvent même.
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
 	<i class="fas fa-star checked"></i>
-    <p class="card-text">Bonne formule, à savoir la disponibilité !</p>
-    <p class="card-text testimonial-text">Trajet rentabilisé entre amis.</p>
-	<p class="card-text"><b>Djabir</b></p>
+    <p class="card-text app-font-family">Bonne formule, à savoir la disponibilité !</p>
+    <p class="card-text testimonial-text app-font-family">Trajet rentabilisé entre amis.</p>
+	<p class="card-text app-font-family"><b>Djabir</b></p>
 	<img  class="rounded"  src="{{ asset('images/wallet/profil-particulier.png') }}" width="20%" height="auto" alt="Post Thumbnail">
-	<p class="card-text testimonial-text-2">Colmar -> Valenciennes</p>
-	<p class="card-text testimonial-text">Il y a 1 semaine</p>
+	<p class="card-text testimonial-text-2 app-font-family">Colmar -> Valenciennes</p>
+	<p class="card-text testimonial-text app-font-family">Il y a 1 semaine</p>
   </div>
 </div>
     </div>
@@ -436,7 +436,7 @@ Souvent même.
 			<div class="col-lg-12">
 				<div class="section-title text-center">
                 <p class="services-p fw-bold mb-3"><b>Comment ça marche ?</b></p>
-          <h3 class="mb-4 frequently-h">Le Co-convoyage en 4 étapes faciles</h3>
+          <h3 class="mb-4 frequently-h app-font-family">Le Co-convoyage en 4 étapes faciles</h3>
 				<div class="row mt-5">
 					<div class="col-lg-3 col-md-12">
 					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/choisir-son-type-de-vehicule.png')}}" style="width:60%;" height="auto"/>
@@ -468,7 +468,7 @@ Souvent même.
 		</div>
         <div class="text-center">
         <a type="button" 
-            class="btn find-text-button  text-top mt-3 mb-2 fw-bold" href="#">
+            class="btn find-text-button  text-top mt-3 mb-2 fw-bold app-font-family" href="#">
             Des questions ?
 </a>
             </div>
@@ -480,7 +480,7 @@ Souvent même.
 			<div class="col-lg-12">
 				<div class="section-title text-center">
                 <p class="services-p fw-bold mb-3"><b>Avantages à tout-va</b></p>
-          <h3 class="mb-4 frequently-h text-light">Je suis récompensé 10 centimes par kilomètre pour</h3>
+          <h3 class="mb-4 frequently-h text-light app-font-family">Je suis récompensé 10 centimes par kilomètre pour</h3>
 				<div class="row mt-5">
 					<div class="col-lg-3 col-md-12">
 					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/voyager-en-co-convoyant.jpg')}}" class="rounded" style="width:100%;" height="auto"/>
@@ -488,7 +488,7 @@ Souvent même.
 					<p class="text-light d-benefits app-font-family">Embarquez pour une évasion sans tracas en co-convoyage ! Dites adieu aux soucis de la route et partez en escapade spontanée à un prix imbattable. Chaque kilomètre rapproche encore plus de l'aventure.</p>
                     <div class="text-center">
         <a type="button" 
-            class="btn find-text-button  text-top mt-1 mb-4 fw-bold" href="#">
+            class="btn find-text-button  text-top mt-1 mb-4 fw-bold app-font-family" href="#">
             Découvrir les trajets
 </a>
             </div>
@@ -500,7 +500,7 @@ Souvent même.
 					<p class="text-light d-benefits app-font-family">Week-end Intelligent : Optez pour le co-convoyage ! Partagez votre voyage avec de nouveaux compagnons, économisez sur les frais de route et gagnez des récompenses à chaque kilomètre partagé.</p>		
                     <div class="text-center">
         <a type="button" 
-            class="btn find-text-button  text-top mt-1 mb-4 fw-bold" href="#">
+            class="btn find-text-button  text-top mt-1 mb-4 fw-bold app-font-family" href="#">
             Rejoindre l’aventure
 </a>
             </div>
@@ -512,7 +512,7 @@ Souvent même.
 					<p class="text-light d-benefits app-font-family">Déménagez Malin grâce au co-convoyage ! Utilisez un utilitaire sans stress pour votre déménagement, économisez de l'argent et recevez une compensation kilomètre parcouru vers votre nouveau chez-vous.</p>	
                     <div class="text-center">
         <a type="button" 
-            class="btn find-text-button  text-top mt-1 mb-4 fw-bold" href="#">
+            class="btn find-text-button  text-top mt-1 mb-4 fw-bold app-font-family" href="#">
             Réserver un utilitaire
 </a>
             </div>
@@ -525,7 +525,7 @@ Souvent même.
 				</div>
                 <div class="text-center">
         <a type="button" 
-            class="btn find-text-button  text-top mt-1 mb-4 fw-bold" href="#">
+            class="btn find-text-button  text-top mt-1 mb-4 fw-bold app-font-family" href="#">
             Embarquer une voiture
 </a>
             </div>
@@ -543,7 +543,7 @@ Souvent même.
 			<div class="col-lg-12">
 				<div class="section-title text-center">
                 <p class="services-p fw-bold mb-3 mt-5"><b>Économisez à chaque déplacement</b></p>
-                <h3 class="mb-4 frequently-h">Comment fonctionnent les économies en Co-convoyage ?</h3>
+                <h3 class="mb-4 frequently-h app-font-family">Comment fonctionnent les économies en Co-convoyage ?</h3>
 				</div>
 			</div>
             <div class="row">
@@ -553,7 +553,7 @@ Souvent même.
                 <div class="col-lg-6 kilometer-gif">
                 <img src="{{asset('images/wallet/Compensation.gif')}}" width="60%" height="auto"/>
                 </div>
-                <p class="mb-4 frequently-h text-center fw-bold">Chez CoCarmoov, gagnez 10 centimes par kilomètre direct parcouru
+                <p class="mb-4 frequently-h text-center fw-bold app-font-family">Chez CoCarmoov, gagnez 10 centimes par kilomètre direct parcouru
 pour un déménagement ou un voyage gagnant !
 </p>
 <h5 class="text-center mb-3 app-font-family">Un cas pratique : Co-convoyage d'un utilitaire et d'une voiture</h5>
@@ -1019,7 +1019,7 @@ Je crée mon alerte sur https://www.cocarmoov.fr/co-convoyer/creer-une-alerte
 		<div class="row justify-content-center">
 			<div class="col-lg-12">
 				<div class="section-title text-center">
-          <h3 class="mb-4 frequently-h text-light">Vous avez encore des questions ?</h3>
+          <h3 class="mb-4 frequently-h text-light app-font-family">Vous avez encore des questions ?</h3>
 				</div>
         <div class="row">
           <div class="col-lg-4 col-md-12">

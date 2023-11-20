@@ -34,7 +34,7 @@
       <a type="button" 
             class="btn find-text-button text-dark mt-3 mb-2" href="#">
             Déplacer un véhicule</a>
-        <p class="card-text">Tout ce qu’il faut savoir pour faire déplacer sa voiture</p>
+        <p class="card-text app-font-family">Tout ce qu’il faut savoir pour faire déplacer sa voiture</p>
       </div>
     </div>
   </div>
@@ -52,7 +52,7 @@
         <a type="button" 
             class="btn find-text-button text-dark mt-3 mb-2" href="#">
             Co-convoyer un véhicule</a>
-        <p class="card-text">Tout ce qu’il faut savoir pour co-convoyer une voiture</p>
+        <p class="card-text app-font-family">Tout ce qu’il faut savoir pour co-convoyer une voiture</p>
       </div>
     </div>
   </div>
@@ -71,7 +71,7 @@
       <a type="button" 
             class="btn find-text-button text-dark mt-3 mb-2" href="#">
             Je suis convoyeur</a>
-        <p class="card-text">Tout ce qu’il faut savoir pour convoyer sur notre plateforme</p>
+        <p class="card-text app-font-family">Tout ce qu’il faut savoir pour convoyer sur notre plateforme</p>
       </div>
     </div>
   </div>
@@ -89,7 +89,7 @@
       <a type="button" 
             class="btn find-text-button text-dark mt-3 mb-2" href="#">
             Je suis transporteur</a>
-        <p class="card-text">Tout ce qu’il faut savoir pour transporter sur notre plateforme</p>
+        <p class="card-text app-font-family">Tout ce qu’il faut savoir pour transporter sur notre plateforme</p>
         <!-- <a href="#" class="card-text-find"><span class="text-dark">En savoir plus</span></a> -->
       </div>
     </div>
@@ -106,19 +106,19 @@
 				<div class="section-title text-center">
                 <img src="{{asset('images/wallet/mail.png')}}" class="qa-find-img img-fluid"  style="width: 40%; height:auto;" />
 					<h2 class="mb-3 qa-find-h text-light">Contactez CoCarmoov</h2>
-                    <p class="mb-3 qa-banner-p text-light">Une question à laquelle nous n’y avons pas répondu,<br> 
+                    <p class="mb-3 qa-banner-p text-light app-font-family">Une question à laquelle nous n’y avons pas répondu,<br> 
 écrivez-nous en remplissant le formulaire ci-dessous.
 </p>
 <div class="card">
   <div class="card-body">
-    <p class="card-text text-center"><img src="{{asset('images/wallet/quote.png')}}" class="qa-find-img img-fluid"  style="max-width: 19%; height:auto;" />L'équipe du service client CoCarmoov est située en France<br> Disponible du lundi au vendredi de 9h30 à 17h30.<br> 
+    <p class="card-text text-center app-font-family"><img src="{{asset('images/wallet/quote.png')}}" class="qa-find-img img-fluid"  style="max-width: 19%; height:auto;" />L'équipe du service client CoCarmoov est située en France<br> Disponible du lundi au vendredi de 9h30 à 17h30.<br> 
 Pas de robots : de vraies personnes sont là pour répondre à vos questions sous 24 heures<br>
 (sauf le weekend et les jours fériés)<img src="{{asset('images/wallet/smile.png')}}" class="qa-find-img img-fluid"  style="max-width: 10%; height:auto;" />
 </p>
 
   </div>
 </div>
-<p class="mb-2 qa-banner-p text-light mt-2">Quelle est votre adresse e-mail ?</p>
+<p class="mb-2 qa-banner-p text-light mt-2 app-font-family">Quelle est votre adresse e-mail ?</p>
 <form action="#" method="post">
         @csrf
       <div class="row pt-1">  
@@ -129,7 +129,7 @@ Pas de robots : de vraies personnes sont là pour répondre à vos questions sou
             </div>
       </div>
       <a type="button" 
-            class="btn find-text-button text-light mt-3 mb-2" href="#">
+            class="btn find-text-button text-light mt-3 mb-2 app-font-family" href="#">
             Suivant</a>
 </form>     
 				</div>

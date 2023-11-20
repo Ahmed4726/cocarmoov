@@ -37,7 +37,7 @@
       <div class="col-lg-10 mx-auto text-center">
         <div class="content">
         <img src="{{asset('images/wallet/insurance-section-3.png')}}" class="img-fluid"  style="max-width: 30%; height:auto;" />
-        <h3 class="text-center section-3-h text-light mb-5">Comment fonctionne l’assurance ?</h3>
+        <h3 class="text-center section-3-h text-light mb-5 app-font-family">Comment fonctionne l’assurance ?</h3>
           <p class="text-center section-2-text text-light">En partenariat avec le groupe d'assurance Wakam, CoCarmoov vous offre une assurance automobile. </p>
             <p class="text-center section-2-text text-light">Pendant la réalisation de chaque Co-convoyage ou Convoyage sur CoCarmoov, l'assurance Wakam remplace automatiquement l'assurance du propriétaire.</p>
             <!-- <p class="text-center section-2-text text-light">Vous n'avez aucune démarche à effectuer.</p> -->
@@ -53,8 +53,8 @@
       <div class="col-lg-10 mx-auto text-center">
         <div class="content">
         <img src="{{asset('images/wallet/insurance-section-4.png')}}" class="insurance-4-section-img img-fluid"  style="max-width: 40%; height:auto;" />
-          <h3 class="text-center section-4-h text-dark mb-5">Quelles sont les garanties de l’assurance ?</h3>
-            <h4 class="text-center  text-dark">Dommages aux biens</h4>
+          <h3 class="text-center section-4-h text-dark mb-5 app-font-family">Quelles sont les garanties de l’assurance ?</h3>
+            <h4 class="text-center app-font-family text-dark">Dommages aux biens</h4>
             <div class="row">
                 <div class="col-lg-6 col-md-12 ">
                     <p class="text-end section-2-text text-dark section-4-row">Dommages tout accident</p>
@@ -95,7 +95,7 @@
                     <p class="text-center section-2-text text-dark">45.000€ HT</p>
                 </div>
             </div>
-            <h3 class="text-center  text-dark">Responsabilité civile circulation</h3>
+            <h3 class="text-center text-dark app-font-family">Responsabilité civile circulation</h3>
             <div class="row">
                 <div class="col-md-6 col-sm-12">
                     <p class="text-end section-2-text text-dark section-4-row">Dommage matériel</p>
@@ -120,7 +120,7 @@
                     <p class="text-center section-2-text text-dark">13.500€ HT</p>
                 </div>
             </div>
-            <h3 class="text-center text-dark">Liste des franchises pour le conducteur</h3>
+            <h3 class="text-center text-dark app-font-family">Liste des franchises pour le conducteur</h3>
             <div class="row">
                 <div class="col-md-6 col-sm-12">  
                 <p class="text-center section-2-text text-dark text-end"><b>Responsabilité civile</b></p>
@@ -191,16 +191,15 @@
       <div class="col-lg-10 mx-auto">
         <div class="content">
         <img src="{{asset('images/wallet/insurance-section-5.png')}}" class="insurance-5-section-img mx-auto d-block img-fluid"  style="max-width: 35%; height:auto;" />
-
-          <h3 id="application-processing" class="section-5-h text-center">Quelles sont les conditions d’assurance ?</h3>
-          <h4 id="intellectual-property-rights">Pour le conducteur du véhicule</h4>
-          <ul class="section-2-text text-dark">
+          <h3 id="application-processing" class="section-5-h text-center app-font-family">Quelles sont les conditions d’assurance ?</h3>
+          <h4 id="intellectual-property-rights app-font-family">Pour le conducteur du véhicule</h4>
+          <ul class="section-2-text text-dark app-font-family">
             <li>Age du conducteur : 25 ans minimum.</li>
             <li>Ancienneté du permis : 2 ans minimum.</li>
             <li>Zone de circulation autorisée : France et jusqu’à 2 frontières limitrophes.</li>
           </ul>
-          <h4 id="the-use-of-the-information">Pour le propriétaire du véhicule</h4>
-          <ul class="section-2-text text-dark">
+          <h4 id="the-use-of-the-information app-font-family">Pour le propriétaire du véhicule</h4>
+          <ul class="section-2-text text-dark app-font-family">
             <li>Type de véhicule autorisé : 4 roues & tonnage inférieur ou égal à 3,5 tonnes.</li>
             <li>Identification du véhicule : immatriculation française ou étrangère.</li>
             <li>Assurance du véhicule : être assuré à l’année en cas de panne moteur.</li>
@@ -216,10 +215,10 @@
       <div class="col-lg-10 mx-auto text-center">
         <div class="content">
         <img src="{{asset('images/wallet/insurance-section-6.png')}}" class="insurance-6-section-img img-fluid"  style="max-width: 30%; height:auto;" />
-          <h3 class="text-center section-6-h text-light mb-5">Contrat d’assurance</h3>
-            <p class="text-center section-2-text text-light">Consulter l’intégralité des termes contractuelles d’assurance à l’adresse suivante</p>
+          <h3 class="text-center section-6-h text-light mb-5 app-font-family">Contrat d’assurance</h3>
+            <p class="text-center section-2-text text-light app-font-family">Consulter l’intégralité des termes contractuelles d’assurance à l’adresse suivante</p>
             <a type="button" 
-            class="btn insurance-condition-button text-white rounded-pill" href="#">
+            class="btn insurance-condition-button text-white rounded-pill app-font-family" href="#">
             Conditions générales d’assurance</a>
             <!-- <p class="text-center section-2-text text-dark">Pour chaque prestation CoCarmoov, l'assurance XXX complète l’assurance annuelle du propriétaire.</p>
             <p class="text-center section-2-text text-dark">Vous n'avez aucune démarche à effectuer.</p>

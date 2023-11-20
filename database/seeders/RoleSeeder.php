@@ -25,7 +25,5 @@ class RoleSeeder extends Seeder
         $role->save();
         $role = new Role(['title' => 'Transporteur']);
         $role->save();
-        // $role = new Role(['title' => 'viewer']);
-        // $role->save();
     }
 }
