@@ -47,22 +47,22 @@
       <div class="col-lg-12">
         <div class="accordion accordion-border-bottom" id="accordionFAQ">
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 active"
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" aria-expanded="true"
               aria-controls="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9">Qu'est-ce que CoCarmoov ?
             </h2>
             <div id="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9"
-              class="accordion-collapse collapse border-0 show"
+              class="accordion-collapse collapse border-0"
               aria-labelledby="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"> <p>CoCarmoov est une plateforme qui offre des services personnalisés de transport de véhicules touristiques et utilitaires légers. </p>
-                                        <h5 id="intellectual-property-rights">CoCarmoov propose 3 formules pour déplacer ces véhicules : </h5>
-                            <ul class="text-dark">
+              <div class="accordion-body py-0 content app-font-family"> <p class="app-font-family">CoCarmoov est une plateforme qui offre des services personnalisés de transport de véhicules touristiques et utilitaires légers. </p>
+                                        <h5 id="intellectual-property-rights" class="app-font-family">CoCarmoov propose 3 formules pour déplacer ces véhicules : </h5>
+                            <ul class="text-dark app-font-family">
                                 <li>Formule économique (co-convoyage) : Une solution gagnant-gagnant peu onéreuse où un propriétaire professionnel ou particulier propose son véhicule à un co-convoyeur particulier pour le déplacer pendant qu’il covoiture ou déménage, et ce sous forme d’co-convoyage sur notre plateforme.</li>
                                 <li>Formule express (convoyage) : Une solution personnalisée où un acteur de l’automobile voire même un particulier engage les services d’un convoyeur certifié pour livrer ou restituer un véhicule neuf ou d’occasion, avec des services à la clé.</li>
                                 <li>Formule prestige (transport) : Une solution premium à 0 km, où le professionnel ou le particulier loue les services d’un transporteur par camion pour expédier ou rapatrier un véhicule neuf, de collection, en panne ou accidenté.</li>
                             </ul>
-                            <p>
+                            <p class="app-font-family text-dark app-font-family">
                             Ces services permettent aux clients de faire transporter leurs véhicules d'un point A à un point B sans avoir à les conduire eux-mêmes, ce qui est particulièrement utile pour les personnes déménageant dans une autre région ou les entreprises ayant besoin d’expédier des véhicules.
                             </p>
                     </div>
@@ -70,15 +70,15 @@
           </div>
           
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec1" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec1" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec1">Quelles solutions vous proposez pour transporter ma voiture?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec1" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec1" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Nous avons 3 solutions pour transporter votre véhicule</p>
-              <ul class="text-dark">
+              <div class="accordion-body py-0 content app-font-family"><p>Nous avons 3 solutions pour transporter votre véhicule</p>
+              <ul class="text-dark app-font-family">
                                 <li>La solution la plus économique, le co-convoyeur particulier : 
 Vous pouvez confier votre véhicule en toute confiance à notre communauté de co-convoyeurs particuliers. 
 Le concept, vous proposez votre véhicule sur une plage de date durant laquelle le co-convoyeur pourra conduire votre voiture d'un point A à un point B pour une durée de 24h ou 48h en fonction de la distance. 
@@ -102,237 +102,237 @@ Notez bien que si le véhicule est en panne ou accidenté, celui-ci ne doit pas 
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec2" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec2" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec2">Mon véhicule est-il assuré ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec2" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec2" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>L'assurance proposée dépend de la solution que vous avez choisie pour le déplacement de votre voiture :</p>
-              <ul class="text-dark">
+              <div class="accordion-body py-0 content app-font-family"><p>L'assurance proposée dépend de la solution que vous avez choisie pour le déplacement de votre voiture :</p>
+              <ul class="text-dark app-font-family">
                                 <li>Les formules “co-convoyeur particulier” ainsi que “convoyeur professionnel” bénéficient d'une assurance tous risques, veuillez consulter les garanties et conditions de notre assurance sur <a href = 'https://www.cocarmoov.fr/assurance'>Cliquez ici</a></li>
                                 <li>La formule transport par camion porte-voiture, le véhicule est assuré tous risques par le partenaire transporteur en cas de dommages causés au véhicule ou de vol.</li>
                             </ul>
-             <h6>Attention : l'intérieur du véhicule n'est pas couvert par l’assurance, c'est pour cela que nous vous demandons qu'il soit totalement vide.</h6>               
+             <h6 class="text-dark app-font-family">Attention : l'intérieur du véhicule n'est pas couvert par l’assurance, c'est pour cela que nous vous demandons qu'il soit totalement vide.</h6>               
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec3" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec3" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec3">Comment puis-je effectuer une réservation? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec3" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec3" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Pour effectuer une réservation, vous devez faire un devis sur <a href="https://www.cocarmoov.fr/deplacer-un-vehicule">Cliquez ici</a>, une fois la formule choisie et réglée, votre réservation sera confirmée par e-mail.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Pour effectuer une réservation, vous devez faire un devis sur <a href="https://www.cocarmoov.fr/deplacer-un-vehicule">Cliquez ici</a>, une fois la formule choisie et réglée, votre réservation sera confirmée par e-mail.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec4" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec4" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec4">Pouvez-vous commander le trajet à ma place? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec4" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec4" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Pour des raisons de sécurité et de confidentialité, nous ne sommes pas autorisés à passer la commande pour vous. Toutefois, nous restons à votre disposition pour vous guider et vous aider en cas de blocage sur le site.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Pour des raisons de sécurité et de confidentialité, nous ne sommes pas autorisés à passer la commande pour vous. Toutefois, nous restons à votre disposition pour vous guider et vous aider en cas de blocage sur le site.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec5" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec5" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec3">Le site est-il sécurisé? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec5" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec5" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Absolument ! Les informations confidentielles sont demandées uniquement après la création de votre compte. Notre partenaire de paiement est totalement sécurisé.</p>
-              <h6>Il existe deux moyens de s’assurer que le paiement sur notre site est sécurisé:</h6>
-              <p>La présence d’un petit cadenas dans la barre de votre navigateur</p>
-              <p>La marque (https://) indique que l’URL est sécurisée.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Absolument ! Les informations confidentielles sont demandées uniquement après la création de votre compte. Notre partenaire de paiement est totalement sécurisé.</p>
+              <h6 class="text-dark app-font-family">Il existe deux moyens de s’assurer que le paiement sur notre site est sécurisé:</h6>
+              <p class="text-dark app-font-family">La présence d’un petit cadenas dans la barre de votre navigateur</p>
+              <p class="text-dark app-font-family">La marque (https://) indique que l’URL est sécurisée.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec6" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec6" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec6">Je n'arrive pas à me connecter?  
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec6" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec6" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Si vous essayez de vous connecter avec Facebook, Apple ou Google, assurez-vous que vous utilisez le même compte que celui utilisé lors de votre inscription.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Si vous essayez de vous connecter avec Facebook, Apple ou Google, assurez-vous que vous utilisez le même compte que celui utilisé lors de votre inscription.</p>
               <p>Si vous essayez de vous connecter avec votre adresse e-mail, assurez-vous que c'est bien celle que vous aviez utilisée au moment de vous inscrire et renseignez à nouveau votre mot de passe.</p>
               <p>Vous ne vous souvenez plus de votre mot de passe ? Pas d'inquiétude, choisissez "Mot de passe oublié" et entrez votre adresse e-mail. Nous vous enverrons un lien qui vous permettra de créer un nouveau mot de passe.</p>
               <p>Si vous avez un doute sur votre mode d'inscription ou que vous n'arrivez tout simplement pas à vous connecter, contactez-nous !</p>
             <h5>Je n'arrive pas à créer mon mot de passe!</h5>
             <p>Afin de pouvoir créer votre compte, votre mot de passe doit contenir au moins 8 caractères, des lettres minuscules et majuscules, des chiffres et au moins un caractère spécial. Exemple : Année2024!</p>
-        <h5>J’ai oublié mon mot de passe !</h5> 
-        <p>Si vous avez oublié votre mot de passe, vous pouvez en créer un nouveau.</p>   
-        <ul class="text-dark">
+        <h5 class="text-dark app-font-family">J’ai oublié mon mot de passe !</h5> 
+        <p class="text-dark app-font-family">Si vous avez oublié votre mot de passe, vous pouvez en créer un nouveau.</p>   
+        <ul class="text-dark app-font-family">
                                 <li>Il vous suffit d’indiquer l’adresse e-mail associée à votre compte CoCarmoov et nous vous enverrons un e-mail contenant la marche à suivre afin de pouvoir réinitialiser votre mot de passe.</li>
                             </ul>
           <p>Vous ne recevez pas notre e-mail ? Vérifiez vos spams, il s’y trouve peut-être!</p> 
           <p>Vous avez reçu l'e-mail, mais le lien ne fonctionne pas?</p>
-          <ul class="text-dark">
+          <ul class="text-dark app-font-family">
                                 <li>Si vous avez fait plusieurs demandes de mise à jour de votre mot de passe successives, vous avez sûrement reçu plusieurs e-mails de notre part. Veillez à cliquer sur le lien contenu dans le dernier e-mail que vous avez reçu.</li>
                                 <li>Pour des raisons de sécurité, vous disposez de 24 heures pour modifier votre mot de passe à partir de cet e-mail. Passé ce délai, si vous n'avez pas modifié votre mot de passe, vous devrez faire une nouvelle demande car le lien contenu dans le e-mail ne sera plus valide.</li>    
                             </ul> 
-                            <h5>Je ne trouve pas où choisir mon type de véhicule !</h5> 
-        <p>Vous pouvez choisir le type de véhicule à la deuxième étape. Il vous suffit de consulter le menu déroulant du "type de véhicule" et de faire défiler pour choisir le vôtre.</p>  
-        <h5>Je ne trouve pas le type de mon véhicule !</h5> 
-        <p>Si vous ne trouvez pas le type de votre véhicule, vous pouvez choisir un véhicule équivalent, puis nous contacter à contact@cocarmoov.fr après la validation de votre commande afin de confirmer ensemble le bon type.</p>                                        
+                            <h5 class="text-dark app-font-family">Je ne trouve pas où choisir mon type de véhicule !</h5> 
+        <p class="app-font-family text-dark">Vous pouvez choisir le type de véhicule à la deuxième étape. Il vous suffit de consulter le menu déroulant du "type de véhicule" et de faire défiler pour choisir le vôtre.</p>  
+        <h5 class="app-font-family text-dark">Je ne trouve pas le type de mon véhicule !</h5> 
+        <p class="app-font-family text-dark">Si vous ne trouvez pas le type de votre véhicule, vous pouvez choisir un véhicule équivalent, puis nous contacter à contact@cocarmoov.fr après la validation de votre commande afin de confirmer ensemble le bon type.</p>                                        
     </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec7" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec7" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec7">Est-il possible de déplacer une voiture sans permi? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec7" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec7" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Oui, nous avons la possibilité de déplacer les véhicules sans permis uniquement par camion porte-voiture. Afin d'obtenir un tarif, merci de renseigner "citadine" pour le type de véhicule.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Oui, nous avons la possibilité de déplacer les véhicules sans permis uniquement par camion porte-voiture. Afin d'obtenir un tarif, merci de renseigner "citadine" pour le type de véhicule.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec8" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec8" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec8">Est-ce que les voitures anglaises (volant à droite) sont acceptées? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec8" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec8" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Nous sommes en capacité de déplacer votre véhicule par un convoyeur professionnel ou par camion porte-voiture.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Nous sommes en capacité de déplacer votre véhicule par un convoyeur professionnel ou par camion porte-voiture.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec9" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec9" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec9">Que considérez-vous comme véhicule de collection ? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec9" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec9" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Vous devez renseigner "véhicule de collection" lorsque vous êtes en possession d'une carte grise véhicule de collection ou que le véhicule a plus de 25 ans.</p>
-              <p>Pour ce type de véhicule, seul un transport par camion porte-voiture est envisageable.</p>
-              <p>Cette solution de transport vous sera directement proposée après avoir renseigné "véhicule de collection" comme type de véhicule sur notre site.</p>
-              <p>Si vous avez le moindre doute, vous pouvez nous envoyer un e-mail à contact@cocarmoov.fr en nous précisant le modèle et l’année de mise en circulation.</p>
-              <p>Nous vous répondrons sous 24h ouvrés.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Vous devez renseigner "véhicule de collection" lorsque vous êtes en possession d'une carte grise véhicule de collection ou que le véhicule a plus de 25 ans.</p>
+              <p class="text-dark app-font-family">Pour ce type de véhicule, seul un transport par camion porte-voiture est envisageable.</p>
+              <p class="text-dark app-font-family">Cette solution de transport vous sera directement proposée après avoir renseigné "véhicule de collection" comme type de véhicule sur notre site.</p>
+              <p class="text-dark app-font-family">Si vous avez le moindre doute, vous pouvez nous envoyer un e-mail à contact@cocarmoov.fr en nous précisant le modèle et l’année de mise en circulation.</p>
+              <p class="text-dark app-font-family">Nous vous répondrons sous 24h ouvrés.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec10" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec10" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec10">Est-il possible de faire déplacer mon véhicule électrique? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec10" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec10" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Oui, nous pouvons vous proposer un transport par convoyeur professionnel, ou par camion porte-voiture en fonction de la distance à parcourir.</p>
-              <p>Merci de nous contacter par e-mail à contact@cocarmoov.fr si vous avez des spécificités à nous signaler.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Oui, nous pouvons vous proposer un transport par convoyeur professionnel, ou par camion porte-voiture en fonction de la distance à parcourir.</p>
+              <p class="text-dark app-font-family">Merci de nous contacter par e-mail à contact@cocarmoov.fr si vous avez des spécificités à nous signaler.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec11" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec11" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec11">Est-il possible de réserver un transport si ma voiture a une immatriculation étrangère ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec11" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec11" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Le transport par co-convoyeur particulier n'est pas possible.</p>
-              <p>En revanche, nous pouvons effectuer le transport par convoyeur professionnel ou par camion porte-voiture. </p>
-              <p>Veuillez sélectionner lors de votre commande “plaques WW” dans la liste des services spécifiques si vous choisissez un transport par convoyeur professionnel.</p>
-              <p>Vous pouvez nous contacter par e-mail à contact@cocarmoov.fr si vous avez d’autres questions.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Le transport par co-convoyeur particulier n'est pas possible.</p>
+              <p class="text-dark app-font-family">En revanche, nous pouvons effectuer le transport par convoyeur professionnel ou par camion porte-voiture. </p>
+              <p class="text-dark app-font-family">Veuillez sélectionner lors de votre commande “plaques WW” dans la liste des services spécifiques si vous choisissez un transport par convoyeur professionnel.</p>
+              <p class="text-dark app-font-family">Vous pouvez nous contacter par e-mail à contact@cocarmoov.fr si vous avez d’autres questions.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec12" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec12" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec12">J'achète un véhicule, les papiers ne sont pas à mon nom. Est-ce un problème? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec12" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec12" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Cela n'est pas un problème.</p>
-              <p>Cependant, les papiers de cession du véhicule doivent être à votre nom le jour du transport.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Cela n'est pas un problème.</p>
+              <p class="text-dark app-font-family">Cependant, les papiers de cession du véhicule doivent être à votre nom le jour du transport.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec13" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec13" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec13">Est-ce possible de transporter mon véhicule avec un coffre de toit? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec13" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec13" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Il est possible de déplacer votre voiture par un convoyeur professionnel ou un co-convoyeur particulier.</p>
-              <p>Si vous voulez que votre voiture soit transportée par un camion porte-voiture “plateau”, pensez à le notifier dans la section des remarques spécifiques.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Il est possible de déplacer votre voiture par un convoyeur professionnel ou un co-convoyeur particulier.</p>
+              <p class="text-dark app-font-family">Si vous voulez que votre voiture soit transportée par un camion porte-voiture “plateau”, pensez à le notifier dans la section des remarques spécifiques.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec14" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec14" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec14">Comment faire si je ne trouve pas la taille de mon utilitaire sur votre liste? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec14" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec14" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Si vous ne trouvez pas la taille exacte d’utilitaire correspondante à votre véhicule, nous vous prions de choisir la taille la plus proche dans la liste de choix.</p>
-              <p>Pensez aussi à le notifier dans la section remarque spécifique lorsque vous renseignez les détails de votre commande.</p>
-              <p>Vous pouvez nous contacter à contact@cocarmoov.fr pour vous confirmer le type de véhicule approprié à choisir.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Si vous ne trouvez pas la taille exacte d’utilitaire correspondante à votre véhicule, nous vous prions de choisir la taille la plus proche dans la liste de choix.</p>
+              <p class="text-dark app-font-family">Pensez aussi à le notifier dans la section remarque spécifique lorsque vous renseignez les détails de votre commande.</p>
+              <p class="text-dark app-font-family">Vous pouvez nous contacter à contact@cocarmoov.fr pour vous confirmer le type de véhicule approprié à choisir.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec15" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec15" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec15">Quel type de véhicule ne transportons-nous pas? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec15" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec15" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Nous pouvons transporter tout véhicule ayant 4 roues et pouvant être conduit avec le permis B et n'excédant pas un poids de 3.5 tonnes.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Nous pouvons transporter tout véhicule ayant 4 roues et pouvant être conduit avec le permis B et n'excédant pas un poids de 3.5 tonnes.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec16" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec16" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec16">Est-ce que vous transportez les vans aménagés ou les campings cars? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec16" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec16" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Il est possible de déplacer votre véhicule par convoyeur professionnel ou par camion porte-voiture. 
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Il est possible de déplacer votre véhicule par convoyeur professionnel ou par camion porte-voiture. 
 Cependant il est important de préciser que notre assurance ne prend pas en compte le matériel à l'intérieur du véhicule.
 </p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec17" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec17" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec17">Est-ce que vous transportez les utilitaires? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec17" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec17" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Les camions peuvent être transportés par nos services à condition qu'ils respectent les critères suivants:</p>
-              <ul class="text-dark">
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Les camions peuvent être transportés par nos services à condition qu'ils respectent les critères suivants:</p>
+              <ul class="text-dark app-font-family">
                  <li>Conduit avec un permis B </li>
                  <li>Taille max 15m3 </li>
                  <li>Poids max 3.5 tonnes</li>                   
@@ -341,74 +341,74 @@ Cependant il est important de préciser que notre assurance ne prend pas en comp
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec18" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec18" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec18">Est-il possible de faire transporter une remorque ? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec18" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec18" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Non, notre assurance ne couvre pas ce type de véhicule. Il est donc impossible de transporter une remorque.</p>
+              <div class="accordion-body py-0 content"><p class="text-dark app-font-family">Non, notre assurance ne couvre pas ce type de véhicule. Il est donc impossible de transporter une remorque.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec19" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec19" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec19">Est-ce que je peux effectuer une commande pour un aller-retour? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec19" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec19" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Il est possible de commander un aller-retour à la fois uniquement avec la formule “convoyeur professionnel” ou la formule “camion porte-voiture”. Il suffit de sélectionner lors de la commande dans la liste des services spécifiques “Restitution de véhicule”.</p>
-              <p>Si vous voulez  choisir la formule “co-convoyeur particulier”, il faudra donc commander l’aller et le retour séparément.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Il est possible de commander un aller-retour à la fois uniquement avec la formule “convoyeur professionnel” ou la formule “camion porte-voiture”. Il suffit de sélectionner lors de la commande dans la liste des services spécifiques “Restitution de véhicule”.</p>
+              <p class="text-dark app-font-family">Si vous voulez  choisir la formule “co-convoyeur particulier”, il faudra donc commander l’aller et le retour séparément.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec20" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec20" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec20">Est-il possible de faire déplacer ma voiture vers/depuis la Corse? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec20" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec20" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Il est possible de faire déplacer votre véhicule vers/depuis la Corse par convoyage (délai de livraison d'environ 4-5 jours) ou par camion porte-voiture (délai de livraison de 2 à 3 semaines). </p>
-              <p>Pour obtenir un tarif, il suffit de nous envoyer un e-mail à l'adresse contact@cocarmoov.fr avec les informations suivantes : </p>
-              <p>Adresse d’enlèvement:</p>
-              <p>Adresse de livraison:</p>
-              <p>Véhicule (marque + modèle):</p>
-              <p>Etat du véhicule (en marche/en panne/accidenté):</p>
-              <p>Véhicule disponible à partir de:</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Il est possible de faire déplacer votre véhicule vers/depuis la Corse par convoyage (délai de livraison d'environ 4-5 jours) ou par camion porte-voiture (délai de livraison de 2 à 3 semaines). </p>
+              <p class="text-dark app-font-family">Pour obtenir un tarif, il suffit de nous envoyer un e-mail à l'adresse contact@cocarmoov.fr avec les informations suivantes : </p>
+              <p class="text-dark app-font-family">Adresse d’enlèvement:</p>
+              <p class="text-dark app-font-family">Adresse de livraison:</p>
+              <p class="text-dark app-font-family">Véhicule (marque + modèle):</p>
+              <p class="text-dark app-font-family">Etat du véhicule (en marche/en panne/accidenté):</p>
+              <p class="text-dark app-font-family">Véhicule disponible à partir de:</p>
             </div>
             </div>
                                 </div>
                                 <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec21" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec21" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec21">Est-il possible de faire transporter ma voiture depuis ou vers l'étranger? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec21" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec21" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Nous pouvons effectuer le transport de votre véhicule dans certains pays étrangers. Il s'agira forcément d'un transport par camion sous 15 à 21 jours ouvrés, sauf pour les pays limitrophes (Belgique, Allemagne, Luxembourg, Suisse, Italie et Espagne) où vous pouvez aussi choisir un convoyeur professionnel.</p>
-              <p>Pour obtenir un tarif, merci de nous envoyer un e-mail à contact@cocarmoov.fr en nous précisant les villes, le modèle du véhicule, ses dates de disponibilité ainsi que son état (en marche / en panne / accidenté).</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Nous pouvons effectuer le transport de votre véhicule dans certains pays étrangers. Il s'agira forcément d'un transport par camion sous 15 à 21 jours ouvrés, sauf pour les pays limitrophes (Belgique, Allemagne, Luxembourg, Suisse, Italie et Espagne) où vous pouvez aussi choisir un convoyeur professionnel.</p>
+              <p class="text-dark app-font-family">Pour obtenir un tarif, merci de nous envoyer un e-mail à contact@cocarmoov.fr en nous précisant les villes, le modèle du véhicule, ses dates de disponibilité ainsi que son état (en marche / en panne / accidenté).</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec22" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec22" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec22">Est-il possible de faire transporter une limousine? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec22" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec22" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Oui. Le transport de limousine peut s'effectuer par convoyeur professionnel. Il suffit de nous envoyer un e-mail à l'adresse contact@cocarmoov.fr avec les renseignements nécessaires (lieu de départ/arrivée, modèle du véhicule) afin de recevoir un devis.</p>
-              <h5>Je suis bloqué(e) sur le site lorsque j'essaie de consulter les devis !</h5>
-              <p>Il faut saisir manuellement l’adresse précise et cliquer sur la bonne proposition présente dans le menu déroulant.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Oui. Le transport de limousine peut s'effectuer par convoyeur professionnel. Il suffit de nous envoyer un e-mail à l'adresse contact@cocarmoov.fr avec les renseignements nécessaires (lieu de départ/arrivée, modèle du véhicule) afin de recevoir un devis.</p>
+              <h5 class="text-dark app-font-family">Je suis bloqué(e) sur le site lorsque j'essaie de consulter les devis !</h5>
+              <p class="text-dark app-font-family">Il faut saisir manuellement l’adresse précise et cliquer sur la bonne proposition présente dans le menu déroulant.</p>
               <img src="" />
-              <p>Si la liste des suggestions d’adresses n'apparaît pas, merci de vider le cache de votre navigateur en appuyant simultanément sur les touches : Ctrl + Shift + Suppr (pour Windows) / Cmd + Alt + E (pour Mac OS)</p>
+              <p class="text-dark app-font-family">Si la liste des suggestions d’adresses n'apparaît pas, merci de vider le cache de votre navigateur en appuyant simultanément sur les touches : Ctrl + Shift + Suppr (pour Windows) / Cmd + Alt + E (pour Mac OS)</p>
              <div class="container">
                 <div class="row">
                     <div class="col-md-12 mx-auto">
@@ -416,71 +416,71 @@ Cependant il est important de préciser que notre assurance ne prend pas en comp
               </div>
               </div>
               </div>
-              <p>Si vous êtes toujours bloqué, n'hésitez pas à nous contacter par e-mail à contact@cocarmoov.fr ou via le chat.</p>
+              <p class="text-dark app-font-family">Si vous êtes toujours bloqué, n'hésitez pas à nous contacter par e-mail à contact@cocarmoov.fr ou via le chat.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec23" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec23" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec23">Est-il possible de déplacer mon véhicule si le contrôle technique n'est pas à jour? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec23" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec23" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Nous pouvons déplacer votre voiture sans contrôle technique uniquement avec la solution de transport par camion porte-voiture.</p>
-              <h6>Attention : Le co-convoyeur particulier ou le convoyeur professionnel sont obligés de refuser le déplacement d’un véhicule sans contrôle technique, donc une pénalité de non conformité de véhicule pour le propriétaire.</h6>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Nous pouvons déplacer votre voiture sans contrôle technique uniquement avec la solution de transport par camion porte-voiture.</p>
+              <h6 class="text-dark app-font-family">Attention : Le co-convoyeur particulier ou le convoyeur professionnel sont obligés de refuser le déplacement d’un véhicule sans contrôle technique, donc une pénalité de non conformité de véhicule pour le propriétaire.</h6>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec24" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec24" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec24">Pourquoi me conseiller de rendre ma voiture disponible entre 10 et 15 jours pour un co-convoyeur particulier?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec24" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec24" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Afin de maximiser vos chances qu'un co-convoyeur particulier réserve votre véhicule, nous vous préconisons de laisser un délai de 10 à 15 jours entre la date de prise en charge et la date limite de livraison pour rendre votre annonce attractive.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Afin de maximiser vos chances qu'un co-convoyeur particulier réserve votre véhicule, nous vous préconisons de laisser un délai de 10 à 15 jours entre la date de prise en charge et la date limite de livraison pour rendre votre annonce attractive.</p>
               <p>Toutefois, nous ne pouvons pas vous garantir à 100% que votre véhicule sera réservé, cela dépend de la demande des particuliers.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec25" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec25" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec25">Est-ce que le prélèvement est effectué si ma voiture n'est pas réservée sur CoCarmoov? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec25" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec25" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Le prélèvement sera effectué uniquement si votre véhicule est réservé via notre plateforme et vous en serez immédiatement notifié par e-mail.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Le prélèvement sera effectué uniquement si votre véhicule est réservé via notre plateforme et vous en serez immédiatement notifié par e-mail.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec26" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec26" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec26">Pourquoi le délai est aussi long pour le transport par camion? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec26" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec26" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Pour cette solution, le véhicule sera transporté par un camion porte-voiture ou plateau. Ceci dit, leur demande est élevée au point de surcharge en commandes, ce qui entraîne des délais plus longs pour la planification et l'exécution des transports.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Pour cette solution, le véhicule sera transporté par un camion porte-voiture ou plateau. Ceci dit, leur demande est élevée au point de surcharge en commandes, ce qui entraîne des délais plus longs pour la planification et l'exécution des transports.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec27" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec27" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec27">Quel est le type de camion qui se présentera pour récupérer mon véhicule? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec27" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec27" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Nos transporteurs partenaires utilisent des camions porte-voiture ou plateau transportant un seul véhicule, comme illustré sur l'image ci-dessous.</p>
-              <p>La longueur du camion est d’environ 15 mètres après descente du plateau, les adresses indiquées lors du passage de la commande doivent donc être accessibles à ce type de camion.</p>
-              <p>Si votre commande est passée et que ce n'est pas le cas, merci de nous contacter par e-mail à contact@cocarmoov.fr.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Nos transporteurs partenaires utilisent des camions porte-voiture ou plateau transportant un seul véhicule, comme illustré sur l'image ci-dessous.</p>
+              <p class="text-dark app-font-family">La longueur du camion est d’environ 15 mètres après descente du plateau, les adresses indiquées lors du passage de la commande doivent donc être accessibles à ce type de camion.</p>
+              <p class="text-dark app-font-family">Si votre commande est passée et que ce n'est pas le cas, merci de nous contacter par e-mail à contact@cocarmoov.fr.</p>
               <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -495,67 +495,67 @@ Cependant il est important de préciser que notre assurance ne prend pas en comp
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec28" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec28" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec28">Pourquoi une telle différence de prix entre le co-convoyeur particulier et le convoyeur professionnel? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec28" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec28" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Contrairement à la solution économique du co-convoyeur particulier, la solution express du convoyeur professionnel consiste à mandater l'un des convoyeurs professionnels certifiés par nos services. Nous pouvons donc vous garantir un transport de qualité avec un délai de livraison en moyenne de 72h. De plus, il faut savoir que pour cette prestation, nous rémunérons les convoyeurs et payons les frais pour le trajet effectué contrairement au co-convoyeur particulier qui a une compensation symbolique de 10 centimes par kilomètre.</p>
-              <p>La solution du co-convoyeur particulier permet à n’importe quel particulier de se déplacer d'un point A à un point B. Il s'agit en quelque sorte d'un échange de service et partage de frais pour vous permettre de répondre à vos besoins respectifs. Cependant la faisabilité de votre trajet dépend du besoin des particuliers.</p> 
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Contrairement à la solution économique du co-convoyeur particulier, la solution express du convoyeur professionnel consiste à mandater l'un des convoyeurs professionnels certifiés par nos services. Nous pouvons donc vous garantir un transport de qualité avec un délai de livraison en moyenne de 72h. De plus, il faut savoir que pour cette prestation, nous rémunérons les convoyeurs et payons les frais pour le trajet effectué contrairement au co-convoyeur particulier qui a une compensation symbolique de 10 centimes par kilomètre.</p>
+              <p class="text-dark app-font-family">La solution du co-convoyeur particulier permet à n’importe quel particulier de se déplacer d'un point A à un point B. Il s'agit en quelque sorte d'un échange de service et partage de frais pour vous permettre de répondre à vos besoins respectifs. Cependant la faisabilité de votre trajet dépend du besoin des particuliers.</p> 
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec29" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec29" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec29">Si je choisis la solution par co-convoyeur particulier, ou convoyeur professionnel, puis-je accompagner le co-convoyeur? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec29" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec29" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Nous sommes spécialisés dans le transport de voitures et non de personnes, ce qui est une toute autre activité qui nécessite une autorisation que nous n'avons pas.</p>
-              <p>Ce n'est donc pas possible d'accompagner le co-convoyeur pendant le déplacement de votre voiture.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Nous sommes spécialisés dans le transport de voitures et non de personnes, ce qui est une toute autre activité qui nécessite une autorisation que nous n'avons pas.</p>
+              <p class="text-dark app-font-family">Ce n'est donc pas possible d'accompagner le co-convoyeur pendant le déplacement de votre voiture.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec30" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec30" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec30">Puis-je mettre mes bagages à bord de la voiture?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec30" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec30" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content">
-                <ul class="text-dark">
+              <div class="accordion-body py-0 content app-font-family">
+                <ul class="text-dark app-font-family">
                     <li>La solution co-convoyeur particulier : </li>
                 </ul>   
-                <p>Un à 2 sacs rangés dans le coffre sont autorisés.</p>
-              <p>En règle générale, les co-convoyeurs particuliers préfèrent réserver des véhicules vides afin de pouvoir mettre leurs propres objets personnels (sac, valise, carton).</p>
-              <ul class="text-dark">
+                <p class="text-dark app-font-family">Un à 2 sacs rangés dans le coffre sont autorisés.</p>
+              <p class="text-dark app-font-family">En règle générale, les co-convoyeurs particuliers préfèrent réserver des véhicules vides afin de pouvoir mettre leurs propres objets personnels (sac, valise, carton).</p>
+              <ul class="text-dark app-font-family">
                     <li>La solution convoyeur professionnel : </li>
                 </ul>   
                 <p>Vous pouvez tout à fait laisser des bagages et objets dans le véhicule tant que ces derniers ne gênent pas la conduite du convoyeur.</p>
               <h6>Attention : les affaires laissées à l'intérieur du véhicule ne sont pas couvertes par notre assurance.</h6>
-              <ul class="text-dark">
+              <ul class="text-dark app-font-family">
                     <li>La solution camion porte-voiture :</li>
                 </ul>   
-                <p>Il n'est pas du tout possible de laisser de bagages dans le véhicule pour ne pas surcharger le poids total autorisé (PTAC) du camion, et ce pour des raisons de sécurité routière.</p> 
+                <p class="text-dark app-font-family">Il n'est pas du tout possible de laisser de bagages dans le véhicule pour ne pas surcharger le poids total autorisé (PTAC) du camion, et ce pour des raisons de sécurité routière.</p> 
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec31" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec31" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec31">Comment être sûr que le co-convoyeur, convoyeur ou transporteur est fiable? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec31" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec31" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Afin de garantir la fiabilité des co-convoyeurs et la sérénité de nos clients sur le site, nous confirmons le profil de nos membres et partenaires CoCarmoov avant de pouvoir déplacer un véhicule, et ce:</p>
-            <ul class="text-dark">
+              <div class="accordion-body py-0 content app-font-family"><p>Afin de garantir la fiabilité des co-convoyeurs et la sérénité de nos clients sur le site, nous confirmons le profil de nos membres et partenaires CoCarmoov avant de pouvoir déplacer un véhicule, et ce:</p>
+            <ul class="text-dark app-font-family">
 <li>En ajoutant une photo de profil, </li>
 <li>En faisant vérifier leur e-mail et leur numéro de téléphone mobile, </li>
 <li>En vérifiant leur identité par authentification via permis de conduire + carte d’identité / titre de séjour / passeport.</li>
@@ -565,14 +565,14 @@ Cependant il est important de préciser que notre assurance ne prend pas en comp
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec32" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec32" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec32">Comment pouvez-vous me garantir que le co-convoyeur particulier n'abusera pas de l'utilité de mon véhicule? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec32" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec32" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Lors de la prise en charge et de la restitution un état des lieux devra être effectué. Celui-ci est envoyé par e-mail au moment de la confirmation de votre commande. </p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Lors de la prise en charge et de la restitution un état des lieux devra être effectué. Celui-ci est envoyé par e-mail au moment de la confirmation de votre commande. </p>
               <p>Si vous constatez une différence entre les deux états des lieux, nous vous invitons à le signaler depuis votre tableau de bord de gestion de commande ou à contacter notre service client afin qu'une personne de notre équipe vous explique les démarches à suivre pour une demande de dédommagement auprès de notre assurance, comprise dans votre contrat. </p>
               <p>De plus, lors de la réservation de votre co-convoyage, le co-convoyeur est soumis à une franchise, vous pouvez consulter les garanties de notre assurance sur https://www.cocarmoov.fr/assurance. </p>
               <p>Le kilométrage, quant à lui, est limité à la distance entre les 2 adresses fournies avec 20% maximum de kilomètre additionnel. Il ne peut donc pas aller où il le souhaite. Si la limite kilométrique indiquée sur le contrat est dépassée, vous serez dédommagé.</p>
@@ -580,168 +580,168 @@ Cependant il est important de préciser que notre assurance ne prend pas en comp
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec33" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec33" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec33">Si je choisis la solution par co-convoyeur particulier, ou convoyeur professionnel, puis-je accompagner le co-convoyeur? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec33" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec33" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Nous sommes spécialisés dans le transport de voitures et non de personnes, ce qui est une toute autre activité qui nécessite une autorisation que nous n'avons pas.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Nous sommes spécialisés dans le transport de voitures et non de personnes, ce qui est une toute autre activité qui nécessite une autorisation que nous n'avons pas.</p>
               <p>Ce n'est donc pas possible d'accompagner le co-convoyeur pendant le déplacement de votre voiture.</p>
             <img src="" />
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec34" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec34" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec34">Est-ce que mon badge télépéage est utilisé par le co-convoyeur?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec34" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec34" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Non, les frais de péages sont à la charge du co-convoyeur. Le badge ne sera donc pas utilisé, nous vous invitons à le ranger loin du pare-brise afin qu’il ne soit pas scanné au passage du péage.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Non, les frais de péages sont à la charge du co-convoyeur. Le badge ne sera donc pas utilisé, nous vous invitons à le ranger loin du pare-brise afin qu’il ne soit pas scanné au passage du péage.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec35" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec35" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec35">En cas de panne, qui prend en charge les frais de réparation? Dans quels cas précisément? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec35" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec35" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>En cas de panne liée au mauvais entretien ou usure des pièces du véhicule, ces frais sont à la charge du propriétaire du véhicule. 
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">En cas de panne liée au mauvais entretien ou usure des pièces du véhicule, ces frais sont à la charge du propriétaire du véhicule. 
 </p>
-              <p>Toutefois, si le propriétaire a des doutes quant à l'utilisation de son véhicule par le co-convoyeur, il devra à ses frais mandater un expert pour démontrer la responsabilité du co-convoyeur.</p>
+              <p class="text-dark app-font-family">Toutefois, si le propriétaire a des doutes quant à l'utilisation de son véhicule par le co-convoyeur, il devra à ses frais mandater un expert pour démontrer la responsabilité du co-convoyeur.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec36" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec36" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec36">Pour le transport sur camion porte-voiture, est-ce que je peux choisir la date de prise en charge?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec36" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec36" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Non, la date de prise en charge du véhicule dépend de la feuille de route du transporteur, c'est donc lui qui décide de la date et de l'heure de passage. </p>
-              <p>Toutefois, le transporteur a l'obligation de passer pendant le créneau de dates indiquées dans votre commande, et de vous prévenir au plus tard 24h avant son passage.</p>
-              <p>Si vous avez un impératif pour la date de prise en charge, veuillez choisir la solution "convoyeur professionnel".</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Non, la date de prise en charge du véhicule dépend de la feuille de route du transporteur, c'est donc lui qui décide de la date et de l'heure de passage. </p>
+              <p class="text-dark app-font-family">Toutefois, le transporteur a l'obligation de passer pendant le créneau de dates indiquées dans votre commande, et de vous prévenir au plus tard 24h avant son passage.</p>
+              <p class="text-dark app-font-family">Si vous avez un impératif pour la date de prise en charge, veuillez choisir la solution "convoyeur professionnel".</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec37" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec37" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec37">Quand serais-je prévenu de la prise en charge et de la livraison de mon véhicule par le transporteur? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec37" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec37" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Si vous avez choisi la solution de transport par camion porte-voiture, vous serez prévenu des dates de prise en charge dès qu’un transporteur réserve votre véhicule. </p>
-              <p>En effet, c'est le transporteur qui s'organise en fonction de sa feuille de route. Il prendra contact avec la personne présente au départ dès la réservation du véhicule et il l’informera du créneau horaire de livraison au moment de l’enlèvement.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Si vous avez choisi la solution de transport par camion porte-voiture, vous serez prévenu des dates de prise en charge dès qu’un transporteur réserve votre véhicule. </p>
+              <p class="text-dark app-font-family">En effet, c'est le transporteur qui s'organise en fonction de sa feuille de route. Il prendra contact avec la personne présente au départ dès la réservation du véhicule et il l’informera du créneau horaire de livraison au moment de l’enlèvement.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec29" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec38" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec38">Mon véhicule peut-il arriver plus tôt que prévu par camion? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec38" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec38" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Sachez qu'il faut compter 10 jours ouvrés pour la livraison du véhicule. Toutefois, le véhicule peut arriver plus tôt en fonction de la distance du transport. Vous serez prévenu par téléphone de la date de livraison après l’enlèvement du véhicule.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Sachez qu'il faut compter 10 jours ouvrés pour la livraison du véhicule. Toutefois, le véhicule peut arriver plus tôt en fonction de la distance du transport. Vous serez prévenu par téléphone de la date de livraison après l’enlèvement du véhicule.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec39" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec39" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec39">Si aucun co-convoyeur particulier n'est trouvé, suis-je remboursé? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec39" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec39" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Lors de votre commande pour un co-convoyeur particulier, le montant réglé prend la forme d'une pré-autorisation bancaire. Vous n’êtes donc pas débité mais, en fonction de votre contrat avec votre banque, les montants peuvent apparaître sur votre relevé.</p>
-              <p>Rassurez-vous, si nous ne trouvons pas de co-convoyeur particulier pour votre trajet, la pré-autorisation bancaire est automatiquement supprimée lorsque votre commande expire.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Lors de votre commande pour un co-convoyeur particulier, le montant réglé prend la forme d'une pré-autorisation bancaire. Vous n’êtes donc pas débité mais, en fonction de votre contrat avec votre banque, les montants peuvent apparaître sur votre relevé.</p>
+              <p class="text-dark app-font-family">Rassurez-vous, si nous ne trouvons pas de co-convoyeur particulier pour votre trajet, la pré-autorisation bancaire est automatiquement supprimée lorsque votre commande expire.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec40" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec40" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec40">Ai-je plus de chance que mon véhicule soit réservé en mettant une adresse dans une grande ville? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec40" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec40" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Oui, plus le trajet est attractif, plus vous avez de chances que le véhicule soit réservé. En passant votre commande, pensez aussi à activer la possibilité de récupérer le co-convoyeur à la gare la plus proche pour l’enlèvement et/ou la possibilité de déposer le co-convoyeur à la gare la plus proche après la livraison si l’une des deux adresses se trouve loin des moyens de transport.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Oui, plus le trajet est attractif, plus vous avez de chances que le véhicule soit réservé. En passant votre commande, pensez aussi à activer la possibilité de récupérer le co-convoyeur à la gare la plus proche pour l’enlèvement et/ou la possibilité de déposer le co-convoyeur à la gare la plus proche après la livraison si l’une des deux adresses se trouve loin des moyens de transport.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec41" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec41" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec41">Que se passe-t-il si aucun co-convoyeur ne se propose pour le trajet déposé sur CoCarmoov? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec41" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec41" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Le transport ne pourra pas être effectué. Le trajet expirera après la date d'arrivée indiquée sur la commande. Vous ne serez donc pas débité.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Le transport ne pourra pas être effectué. Le trajet expirera après la date d'arrivée indiquée sur la commande. Vous ne serez donc pas débité.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec42" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec42" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec42">Est-il possible de modifier la ville de départ ou d'arrivée une fois mon trajet publié sur CoCarmoov? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec42" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec42" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Non, vous ne pourrez pas modifier la ville d'arrivée ou la ville de départ pour la commande déjà existante. Cependant, vous pouvez annuler l'annonce sur CoCarmoov avant que le véhicule soit réservé et passer une nouvelle commande avec les bonnes adresses.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Non, vous ne pourrez pas modifier la ville d'arrivée ou la ville de départ pour la commande déjà existante. Cependant, vous pouvez annuler l'annonce sur CoCarmoov avant que le véhicule soit réservé et passer une nouvelle commande avec les bonnes adresses.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec43" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec43" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec43">Comment annuler ma commande CoCarmoov? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec43" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec43" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Vous pouvez annuler votre commande depuis votre compte CoCarmoov en quelques clics. L’annulation est sans pénalités si le véhicule n’a pas encore été réservé. Si le véhicule a déjà été réservé, la pénalité dépend de la date d’annulation et de la formule de transport commandée.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Vous pouvez annuler votre commande depuis votre compte CoCarmoov en quelques clics. L’annulation est sans pénalités si le véhicule n’a pas encore été réservé. Si le véhicule a déjà été réservé, la pénalité dépend de la date d’annulation et de la formule de transport commandée.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec44" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec44" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec44">Ai-je des frais si j’annule le transport de ma voiture ? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec44" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec44" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Des frais peuvent s'appliquer en fonction de la formule de transport commandée et de la date d’annulation.</p>
-            <p>S’il s’agit d’un transport par co-convoyeur particulier (co-convoyage) :</p>
-              <ul class="text-dark">
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Des frais peuvent s'appliquer en fonction de la formule de transport commandée et de la date d’annulation.</p>
+            <p class="text-dark app-font-family">S’il s’agit d’un transport par co-convoyeur particulier (co-convoyage) :</p>
+              <ul class="text-dark app-font-family">
                 <li>Vous pouvez annuler votre commande sans frais tant que celle-ci n'a pas été réservée.</li>
                 <li>0% si l’annulation intervient jusqu'à 72 heures avant le début du l’co-convoyage si le véhicule a déjà été réservé.</li>
                 <li>50% si l’annulation intervient à 72h et moins avant le début du l’co-convoyage si le véhicule a déjà été réservé.</li>
             </ul>
-            <p>S’il s’agit d’un transport par convoyeur professionnel (convoyage) :</p>
-            <ul class="text-dark">
+            <p class="text-dark app-font-family">S’il s’agit d’un transport par convoyeur professionnel (convoyage) :</p>
+            <ul class="text-dark app-font-family">
                 <li>Vous pouvez annuler votre commande sans frais tant que celle-ci n'a pas été réservée.</li>
                 <li>0% si l’annulation intervient jusqu'à 72 heures avant le début du convoyage si le véhicule a déjà été réservé.</li>
                 <li>35% si l’annulation intervient entre 24 et 72h avant le début du convoyage si le véhicule a déjà été réservé.</li>
                 <li>70% si l’annulation intervient moins de 24h avant le début du convoyage si le véhicule a déjà été réservé.</li>
             </ul>
-            <p>S’il s’agit d’un transport par camion porte-voiture (transporteur) :</p>
+            <p class="text-dark app-font-family">S’il s’agit d’un transport par camion porte-voiture (transporteur) :</p>
             <li>Vous pouvez annuler votre commande sans frais tant que celle-ci n'a pas été réservée.</li>
             <li>0% si l’annulation intervient jusqu'à 72 heures avant le début du transport si le véhicule a déjà été réservé.</li>
             <li>35% si l’annulation intervient entre 24 et 72h avant le début du transport si le véhicule a déjà été réservé.</li>
@@ -750,69 +750,68 @@ Cependant il est important de préciser que notre assurance ne prend pas en comp
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec45" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec45" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec45">Quand vais-je recevoir mon remboursement? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec45" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec45" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Vous recevrez votre remboursement entre 3 et 5 jours ouvrés (hors weekend et jours fériés) après l’annulation de votre commande ou le traitement de votre réclamation.</p>
-              <p>Nous vous remboursons toujours avec la carte ou le mode de paiement utilisé pour réserver.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Vous recevrez votre remboursement entre 3 et 5 jours ouvrés (hors weekend et jours fériés) après l’annulation de votre commande ou le traitement de votre réclamation.</p>
+              <p class="text-dark app-font-family">Nous vous remboursons toujours avec la carte ou le mode de paiement utilisé pour réserver.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec46" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec46" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec46">Comment modifier le nom du contact à l'arrivée ou au départ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec46" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec46" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Afin de modifier les coordonnées des contacts renseignés, vous pouvez apporter une modification à votre commande avant sa réservation par un co-convoyeur ou nous écrire par e-mail à contact@cocarmoov.fr si le véhicule est déjà réservé.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Afin de modifier les coordonnées des contacts renseignés, vous pouvez apporter une modification à votre commande avant sa réservation par un co-convoyeur ou nous écrire par e-mail à contact@cocarmoov.fr si le véhicule est déjà réservé.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec47" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec47" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec47">Pourquoi masquons-nous les numéros de téléphone? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec47" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec47" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Vous l'avez peut-être remarqué ; tant que la réservation n'est pas finalisée, nous n'autorisons pas l'échange des numéros de téléphone au sein des discussions.</p>
-              <p>En effet, nous comprenons que transmettre votre numéro de téléphone pourrait faciliter certains échanges.</p>
-              <p>Cependant, nous voulons ainsi garantir la fiabilité du service dans son ensemble (sécurité, assurance) et protéger votre vie privée.</p>
-              <p>Nous vous invitons à communiquer avec votre interlocuteur grâce à la messagerie privée de CoCarmoov afin de vous mettre d'accord. </p>
-              <p>Une fois le paiement validé, le numéro de téléphone de votre interlocuteur s'affiche systématiquement !</p>
-
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Vous l'avez peut-être remarqué ; tant que la réservation n'est pas finalisée, nous n'autorisons pas l'échange des numéros de téléphone au sein des discussions.</p>
+              <p class="text-dark app-font-family">En effet, nous comprenons que transmettre votre numéro de téléphone pourrait faciliter certains échanges.</p>
+              <p class="text-dark app-font-family">Cependant, nous voulons ainsi garantir la fiabilité du service dans son ensemble (sécurité, assurance) et protéger votre vie privée.</p>
+              <p class="text-dark app-font-family">Nous vous invitons à communiquer avec votre interlocuteur grâce à la messagerie privée de CoCarmoov afin de vous mettre d'accord. </p>
+              <p class="text-dark app-font-family">Une fois le paiement validé, le numéro de téléphone de votre interlocuteur s'affiche systématiquement !</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec48" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec48" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec48">Comment joindre le co-convoyeur particulier? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec48" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec48" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Nous vous envoyons les coordonnées du co-convoyeur par e-mail une fois qu'il a réservé le trajet. Vous pourrez donc le contacter à ce moment-là.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Nous vous envoyons les coordonnées du co-convoyeur par e-mail une fois qu'il a réservé le trajet. Vous pourrez donc le contacter à ce moment-là.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec49" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec49" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec49">Quels documents dois-je apporter au départ et à l'arrivée pour un transport? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec49" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec49" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Les documents demandés sont: </p>
-              <ul class="text-dark">
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Les documents demandés sont: </p>
+              <ul class="text-dark app-font-family">
                  <li>Une copie de la carte grise </li>
                  <li>La carte d'identité de la personne présente sur place </li>
                  <li>Le formulaire pour effectuer l’état des lieux avant l’enlèvement du véhicule et à la restitution.</li>                       
@@ -821,57 +820,57 @@ Cependant il est important de préciser que notre assurance ne prend pas en comp
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec50" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec50" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec50">Dois-je être présent au départ et à l'arrivée de mon véhicule? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec50" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec50" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Il faut impérativement qu'une personne soit présente lors de l’enlèvement et lors de la livraison du véhicule.
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Il faut impérativement qu'une personne soit présente lors de l’enlèvement et lors de la livraison du véhicule.
 Lors du passage de votre commande vous devez renseigner les informations des "Contacts" au départ et à l’arrivée. 
 </p>
-              <p>Ces contacts peuvent être vous, mais peuvent aussi être toute autre personne de confiance pouvant assurer la prise en charge et restitution du véhicule.</p>
-              <p>Si vous souhaitez modifier les informations des contacts, vous pouvez le faire depuis votre compte tant que votre véhicule n’est pas encore réservé.</p>
-              <p>Si un co-convoyeur l’a déjà réservé, merci de nous contacter à contact@cocarmoov.fr</p>
-              <h5>Le contrôle technique est obsolète le jour d’enlèvement de mon véhicule !</h5>
-              <p>Si le véhicule a été déclaré en état de marche lors de la commande, il est impératif que le véhicule soit conforme aux conditions de circulation et de sécurité routière le jour de son enlèvement.</p>
-              <p>Exemple : Absence de contrôle technique, non conformité des plaques d’immatriculation, véhicule sur réserve carburant, pneus d’été en période d’hiver, absence de roue de secours ou de kit anti-crevaison, … etc</p>
-              <p>Le propriétaire doit tenir conforme le véhicule pour le rendez-vous d’enlèvement, faute de quoi une pénalité de non conformité du véhicule à la circulation est applicable :  </p>
-              <ul class="text-dark">
+              <p class="text-dark app-font-family">Ces contacts peuvent être vous, mais peuvent aussi être toute autre personne de confiance pouvant assurer la prise en charge et restitution du véhicule.</p>
+              <p class="text-dark app-font-family">Si vous souhaitez modifier les informations des contacts, vous pouvez le faire depuis votre compte tant que votre véhicule n’est pas encore réservé.</p>
+              <p class="text-dark app-font-family">Si un co-convoyeur l’a déjà réservé, merci de nous contacter à contact@cocarmoov.fr</p>
+              <h5 class="text-dark app-font-family">Le contrôle technique est obsolète le jour d’enlèvement de mon véhicule !</h5>
+              <p class="text-dark app-font-family">Si le véhicule a été déclaré en état de marche lors de la commande, il est impératif que le véhicule soit conforme aux conditions de circulation et de sécurité routière le jour de son enlèvement.</p>
+              <p class="text-dark app-font-family">Exemple : Absence de contrôle technique, non conformité des plaques d’immatriculation, véhicule sur réserve carburant, pneus d’été en période d’hiver, absence de roue de secours ou de kit anti-crevaison, … etc</p>
+              <p class="text-dark app-font-family">Le propriétaire doit tenir conforme le véhicule pour le rendez-vous d’enlèvement, faute de quoi une pénalité de non conformité du véhicule à la circulation est applicable :  </p>
+              <ul class="text-dark app-font-family">
                 <li>- 50% s’il s’agit d’un transport par co-convoyeur particulier (co-convoyage)</li>
                 <li>- 70% s’il s’agit d’un transport par convoyeur professionnel (convoyage)</li>
               </ul>
-              <p>Dans le cas d’un transport par camion porte-voiture (transporteur) : Quel que soit l'état du véhicule (en marche / en panne / accidenté), celui-ci ne doit pas avoir de roues bloquées, et peut être transporté sans protection particulière. Faute de quoi une pénalité de 70% sera appliquée.</p>
+              <p class="text-dark app-font-family">Dans le cas d’un transport par camion porte-voiture (transporteur) : Quel que soit l'état du véhicule (en marche / en panne / accidenté), celui-ci ne doit pas avoir de roues bloquées, et peut être transporté sans protection particulière. Faute de quoi une pénalité de 70% sera appliquée.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec51" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec51" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec51">Que faire quand la carte grise n'est pas à mon nom? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec51" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec51" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Vous pouvez toujours commander le transport même si le nom figurant sur la carte grise ne correspond pas à l'identité de la personne responsable de la commande.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Vous pouvez toujours commander le transport même si le nom figurant sur la carte grise ne correspond pas à l'identité de la personne responsable de la commande.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec52" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec52" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec52">Dois-je remettre les clés de mon véhicule lors du départ ? Comment les transmettre à l'arrivée? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec52" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec52" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Pour les voitures et utilitaires, les clés sont prises en charge par nos transporteurs.</p>
-              <h5>Mon véhicule n’est pas prêt pour être transporté à l’heure du rendez-vous d’enlèvement !</h5>
-              <p>Dès lors qu’un véhicule est mis en ligne pour être déplacé, son propriétaire est notifié systématiquement par e-mail dès que le véhicule est réservé. Le e-mail stipulerait les coordonnées du conducteur ou transporteur, ainsi que le jour et l’heure de l’enlèvement du véhicule.</p>
-              <p>Le propriétaire a la possibilité de paramétrer sa demande de transport s’il a besoin de temps pour préparer son véhicule, et ce dans la section des disponibilités du véhicule.</p>
-              <p>Si à l’heure du rendez-vous d’enlèvement le véhicule n’est pas prêt, le co-convoyeur ou transporteur peut signaler un passage à vide au bout d’une heure d’attente, ce qui applique la pénalité suivante :  </p>
-              <ul class="text-dark">
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Pour les voitures et utilitaires, les clés sont prises en charge par nos transporteurs.</p>
+              <h5 class="text-dark app-font-family">Mon véhicule n’est pas prêt pour être transporté à l’heure du rendez-vous d’enlèvement !</h5>
+              <p class="text-dark app-font-family">Dès lors qu’un véhicule est mis en ligne pour être déplacé, son propriétaire est notifié systématiquement par e-mail dès que le véhicule est réservé. Le e-mail stipulerait les coordonnées du conducteur ou transporteur, ainsi que le jour et l’heure de l’enlèvement du véhicule.</p>
+              <p class="text-dark app-font-family">Le propriétaire a la possibilité de paramétrer sa demande de transport s’il a besoin de temps pour préparer son véhicule, et ce dans la section des disponibilités du véhicule.</p>
+              <p class="text-dark app-font-family">Si à l’heure du rendez-vous d’enlèvement le véhicule n’est pas prêt, le co-convoyeur ou transporteur peut signaler un passage à vide au bout d’une heure d’attente, ce qui applique la pénalité suivante :  </p>
+              <ul class="text-dark app-font-family">
                 <li>- 50% s’il s’agit d’un transport par co-convoyeur particulier (co-convoyage)</li>
                 <li>- 70% s’il s’agit d’un transport par convoyeur professionnel (convoyage)</li>
                 <li>- 70% s’il s’agit d’un transport par camion porte-voiture (transporteur)</li>
@@ -880,117 +879,117 @@ Lors du passage de votre commande vous devez renseigner les informations des "Co
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec53" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec53" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec53">Comment déclarer un sinistre ? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec53" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec53" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content">
-              <ul class="text-dark">
+              <div class="accordion-body py-0 content app-font-family">
+              <ul class="text-dark app-font-family">
                 <li>Si vous avez choisi le transport par un co-convoyeur particulier : il faudra nous envoyer  le contrat de co-convoyage signé par les deux parties et des photos du véhicule.</li>
                 <li>Si vous avez choisi le transport par un convoyeur professionnel : </li>
-                <p>- Si le convoyeur a utilisé l'application CoCarmoov pour réaliser les états des lieux, vous n'avez rien à nous envoyer. </p>
-                <p>- Si le convoyeur a utilisé un état des lieux papier (problème de connexion à l'application), il nous faut les états des lieux et les photos.</p>
+                <p class="text-dark app-font-family">- Si le convoyeur a utilisé l'application CoCarmoov pour réaliser les états des lieux, vous n'avez rien à nous envoyer. </p>
+                <p class="text-dark app-font-family">- Si le convoyeur a utilisé un état des lieux papier (problème de connexion à l'application), il nous faut les états des lieux et les photos.</p>
                 <li>Si vous avez choisi le transport par camion porte-voiture : nous devons recevoir les états des lieux départ et arrivée signés avec le transporteur ainsi que des photos du véhicule.</li>
             </ul>
-            <p>Merci de nous envoyer le nécessaire à l’adresse : qualite@cocarmoov.fr </p>
+            <p class="text-dark app-font-family">Merci de nous envoyer le nécessaire à l’adresse : qualite@cocarmoov.fr </p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec54" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec54" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec54">Quels documents dois-je envoyer en cas de sinistre ? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec54" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec54" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Pour les transports par convoyeur professionnel ou co-convoyeur particulier</p>
-                <p>Nous avons besoin des documents suivants:</p>
-              <ul>
+              <div class="accordion-body py-0 content app-font-family"><p>Pour les transports par convoyeur professionnel ou co-convoyeur particulier</p>
+                <p class="text-dark app-font-family">Nous avons besoin des documents suivants:</p>
+              <ul class="text-dark app-font-family">
                 <li>Les photos relatives à votre sinistre</li>
                 <li>Le devis correspondant aux dommages réclamés</li>
               </ul>
-              <p>Pour les transports par camion porte-voiture</p>
-              <p>Nous avons besoin des documents suivants: </p>
-              <ul class="text-dark">
+              <p class="text-dark app-font-family">Pour les transports par camion porte-voiture</p>
+              <p class="text-dark app-font-family">Nous avons besoin des documents suivants: </p>
+              <ul class="text-dark app-font-family">
                  <li>Les photos relatives à votre sinistre</li>
                  <li>L’état des lieux lors de l’enlèvement, indiquant l’état du véhicule avant son transport </li>
                  <li>L’état des lieux lors de la livraison, stipulant les réserves constatées par vous même avec le transporteur (tampon + signature + date obligatoire)</li>
                  <li>Le devis correspondant aux dommages réclamés</li>                   
               </ul>
-              <p>Envoyez ces documents à l’adresse e-mail : qualite@cocarmoov.fr</p>
+              <p class="text-dark app-font-family">Envoyez ces documents à l’adresse e-mail : qualite@cocarmoov.fr</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec55" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec55" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec55">Qu’est-ce qui n’est pas pris en charge en cas de sinistre? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec55" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec55" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Pour le transport par convoyeur professionnel ou co-convoyeur particulier</p>
-            <ul class="text-dark">
+              <div class="accordion-body py-0 content app-font-family"><p>Pour le transport par convoyeur professionnel ou co-convoyeur particulier</p>
+            <ul class="text-dark app-font-family">
 <li>Tous les dommages non mentionnés sur les états des lieux ne seront pas pris en charge</li>
             </ul>
-            <p>Pour le transport par camion porte-voiture</p>
-            <ul class="text-dark">
+            <p class="text-dark app-font-family">Pour le transport par camion porte-voiture</p>
+            <ul class="text-dark app-font-family">
                 <li>Les micros-rayures ne sont pas prises en charge</li>
                 <li>Etat des lieux d’enlèvement mal complété :</li>
             </ul>
-            <p>Toutes réserves non mentionnées sur l’EDL ne seront pas prises en charge</p>
-                <p>S’il manque le tampon, la signature ou la date : l’EDL risque d’être refusé par l’assurance</p>
+            <p class="text-dark app-font-family">Toutes réserves non mentionnées sur l’EDL ne seront pas prises en charge</p>
+                <p class="text-dark app-font-family">S’il manque le tampon, la signature ou la date : l’EDL risque d’être refusé par l’assurance</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec56" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec56" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec56">Où en est la gestion de mon sinistre? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec56" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec56" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Merci de contacter le service chargé des sinistres à l’adresse qualite@cocarmoov.fr en indiquant la référence de votre dossier afin d’obtenir des informations. </p>
-              <p>Nous vous répondrons dans un délai de 24h ouvrées maximum.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Merci de contacter le service chargé des sinistres à l’adresse qualite@cocarmoov.fr en indiquant la référence de votre dossier afin d’obtenir des informations. </p>
+              <p class="app-font-family text-dark">Nous vous répondrons dans un délai de 24h ouvrées maximum.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec57" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec57" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec57">Pourquoi est-ce à moi de faire les démarches pour obtenir un devis des réparations? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec57" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec57" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Vous êtes en possession du véhicule, c'est donc à vous de choisir le réparateur de votre choix.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Vous êtes en possession du véhicule, c'est donc à vous de choisir le réparateur de votre choix.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec58" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec58" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec58">En cas de sinistre, ai-je le droit à un véhicule de prêt?    
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec58" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec58" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Pour le transport par camion</p>
-              <ul class="text-dark">
+              <div class="accordion-body py-0 content app-font-family"><p class="app-font-family text-dark">Pour le transport par camion</p>
+              <ul class="text-dark app-font-family">
                 <li>L’assurance de nos partenaires transporteurs ne proposent pas de véhicule de prêt</li>
               </ul>
-              <p>Pour le transport par convoyeur professionnel ou co-convoyeur particulier</p>
-              <ul class="text-dark">
+              <p class="text-dark app-font-family">Pour le transport par convoyeur professionnel ou co-convoyeur particulier</p>
+              <ul class="text-dark app-font-family">
                 <li>Notre partenaire d’assurance ne propose pas de véhicule de prêt</li>
               </ul>
-              <h5>J'ai fait co-convoyer ma voiture, et j'ai reçu une contravention !</h5>
-              <p>En cas de contravention, vous devez vous rendre sur le site de l'ANTAI https://www.antai.gouv.fr/ (Agence National de Traitement des Infractions) afin de contester l'amende directement en ligne en y joignant le contrat de co-convoyage et rentrer les informations de votre co-convoyeur. </p>
-              <p>La copie du permis de conduire est facultative et n'est donc pas nécessaire au processus de contestation. 
+              <h5 class="text-dark app-font-family">J'ai fait co-convoyer ma voiture, et j'ai reçu une contravention !</h5>
+              <p class="text-dark app-font-family">En cas de contravention, vous devez vous rendre sur le site de l'ANTAI https://www.antai.gouv.fr/ (Agence National de Traitement des Infractions) afin de contester l'amende directement en ligne en y joignant le contrat de co-convoyage et rentrer les informations de votre co-convoyeur. </p>
+              <p class="text-dark app-font-family">La copie du permis de conduire est facultative et n'est donc pas nécessaire au processus de contestation. 
 Le co-convoyeur recevra alors directement l'amende chez lui.
 
 </p>
@@ -999,66 +998,39 @@ Le co-convoyeur recevra alors directement l'amende chez lui.
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec59" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec59" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec59">La réglementation DSP2 qu'est-ce que c'est? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec59" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec59" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>La Directive sur les Services de Paiement est une directive européenne qui permet aux utilisateurs d'effectuer des paiements en ligne en toute sécurité.</p>
-              <p>Les entreprises qui l'appliquent assurent la sécurité de leur service d'une part, et permettent d'affirmer leur position en tant que société en règle.</p>
-              <p>La réglementation DSP2 est une réforme mise en place avec les banques qui va permettre aux clients d'obtenir une sécurité supplémentaire lors de leurs achats sur Internet.</p>
-              <p>En effet, tous les sites ayant mis en place la réglementation proposent une nouvelle procédure de paiement.</p>
-              <p>Maintenant lorsqu'un utilisateur voudra procéder au règlement de sa commande, il sera automatiquement redirigé vers l'application mobile de sa banque.</p>
-              <p>Cette nouvelle fonctionnalité va permettre aux banques de réduire drastiquement le nombre de fraudes en ligne.</p>
-              <p>Vous l'aurez compris, CoCarmoov faisant partie des bons élèves, a adhéré à ce nouveau système de paiement garantissant ainsi à ses clients, un paiement complètement sécurisé.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">La Directive sur les Services de Paiement est une directive européenne qui permet aux utilisateurs d'effectuer des paiements en ligne en toute sécurité.</p>
+              <p class="text-dark app-font-family">Les entreprises qui l'appliquent assurent la sécurité de leur service d'une part, et permettent d'affirmer leur position en tant que société en règle.</p>
+              <p class="text-dark app-font-family">La réglementation DSP2 est une réforme mise en place avec les banques qui va permettre aux clients d'obtenir une sécurité supplémentaire lors de leurs achats sur Internet.</p>
+              <p class="text-dark app-font-family">En effet, tous les sites ayant mis en place la réglementation proposent une nouvelle procédure de paiement.</p>
+              <p class="text-dark app-font-family">Maintenant lorsqu'un utilisateur voudra procéder au règlement de sa commande, il sera automatiquement redirigé vers l'application mobile de sa banque.</p>
+              <p class="text-dark app-font-family">Cette nouvelle fonctionnalité va permettre aux banques de réduire drastiquement le nombre de fraudes en ligne.</p>
+              <p class="text-dark app-font-family">Vous l'aurez compris, CoCarmoov faisant partie des bons élèves, a adhéré à ce nouveau système de paiement garantissant ainsi à ses clients, un paiement complètement sécurisé.</p>
 
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec60" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec60" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec60">Autotrain n'existe plus? 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec60" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec60" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>La SNCF a cessé son activité Autotrain depuis le 13 décembre 2019. Nous vous proposons donc 3 solutions alternatives de transport sur toute la France : un co-convoyeur particulier, un convoyeur professionnel ou un camion porte-voiture. Rendez-vous directement sur https://www.cocarmoov.fr/deplacer-un-vehicule pour obtenir votre devis en 2 clics !</p>
+              <div class="accordion-body py-0 content app-font-family"><p>La SNCF a cessé son activité Autotrain depuis le 13 décembre 2019. Nous vous proposons donc 3 solutions alternatives de transport sur toute la France : un co-convoyeur particulier, un convoyeur professionnel ou un camion porte-voiture. Rendez-vous directement sur https://www.cocarmoov.fr/deplacer-un-vehicule pour obtenir votre devis en 2 clics !</p>
             </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-            <!-- <div class="row align-items-center">
-              <div class="col-md-12 order-1 order-md-0">
-                <div class="content-block">
-                  <h3 class="mb-4">Qu'est-ce que CoCarmoov ?</h3>
-                  <div class="content">
-                    <p>CoCarmoov est une plateforme qui offre des services personnalisés de transport de véhicules touristiques et utilitaires légers. </p>
-                    <p>turpis vivamus donec. Id congue vesti bualum odio dignissim at quisque viverra. Non semper in sed
-                      quisque dui. Platea posuere ullamcorper id fames ut sed urna cursus eget. Neque, vel</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 order-1 order-md-0">
-                <div class="content-block">
-                  <div class="content">
-                      <h5 id="intellectual-property-rights">CoCarmoov propose 3 formules pour déplacer ces véhicules : </h5>
-          <ul class="text-dark">
-            <li>Formule économique (gagnant-gagnant) : Une solution peu onéreuse où un propriétaire professionnel ou particulier propose son véhicule à un co-convoyeur particulier pour le déplacer pendant qu’il covoiture ou déménage, et ce sous forme de location à tarif symbolique sur notre plateforme.</li>
-            <li>Formule express (convoyage) : Une solution rapide où un acteur de l’automobile voire même un particulier engage les services d’un convoyeur certifié pour livrer ou restituer un véhicule neuf ou d’occasion, avec des services à la clé.</li>
-            <li>Formule prestige (transport) : Une solution à 0 km, où le professionnel ou le particulier loue les services d’un transporteur pour expédier ou rapatrier un véhicule neuf, de collection, en panne ou accidenté.</li>
-          </ul>
-          <p>
-          Ces services permettent aux clients de faire transporter leurs véhicules d'un point A à un point B sans avoir à les conduire eux-mêmes, ce qui est particulièrement utile pour les personnes déménageant dans une autre région ou les entreprises ayant besoin d’expédier des véhicules.
-          </p>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
           <div class="tab-pane fade " id="pills-how-much-does-it-costs" role="tabpanel"
             aria-labelledby="pills-how-much-does-it-costs-tab">
@@ -1066,33 +1038,33 @@ Le co-convoyeur recevra alors directement l'amende chez lui.
       <div class="col-lg-12">
         <div class="accordion accordion-border-bottom" id="accordionFAQ">
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 active"
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d61" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d61" aria-expanded="true"
               aria-controls="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d61">Co-convoyer un véhicule, qu’est ce que c'est ?
             </h2>
             <div id="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d61"
-              class="accordion-collapse collapse border-0 show"
+              class="accordion-collapse collapse border-0"
               aria-labelledby="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d61" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Chaque jour, des milliers de véhicules nécessitent d'être déplacés d'un lieu à un autre, généralement par le biais de camions transporteurs, sans qu'il y ait de passagers à bord.</p>
-              <p>Pour améliorer l'efficacité logistique de ces transferts, CoCarmoov présente une solution gagnant-gagnant écologique et collaborative (co-convoyage) : faire rapatrier les véhicules par des co-convoyeurs particuliers qui ont besoin de se déplacer.</p>
-        <p>Ces particuliers sont des individus qui planifient un trajet pour leurs propres besoins de déplacement ou de déménagement. Si leurs points de départ et d'arrivée correspondent à ceux du véhicule à déplacer, tout le monde y gagne : le particulier obtient une voiture pour se déplacer, tandis que le propriétaire du véhicule bénéficie d'un co-convoyeur pour le ramener à destination.</p>    
-    <p>Ainsi, CoCarmoov vous offre la possibilité de déplacer des véhicules et de partager les frais avec leurs propriétaires.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Chaque jour, des milliers de véhicules nécessitent d'être déplacés d'un lieu à un autre, généralement par le biais de camions transporteurs, sans qu'il y ait de passagers à bord.</p>
+              <p class="text-dark app-font-family">Pour améliorer l'efficacité logistique de ces transferts, CoCarmoov présente une solution gagnant-gagnant écologique et collaborative (co-convoyage) : faire rapatrier les véhicules par des co-convoyeurs particuliers qui ont besoin de se déplacer.</p>
+        <p class="text-dark app-font-family">Ces particuliers sont des individus qui planifient un trajet pour leurs propres besoins de déplacement ou de déménagement. Si leurs points de départ et d'arrivée correspondent à ceux du véhicule à déplacer, tout le monde y gagne : le particulier obtient une voiture pour se déplacer, tandis que le propriétaire du véhicule bénéficie d'un co-convoyeur pour le ramener à destination.</p>    
+    <p class="text-dark app-font-family">Ainsi, CoCarmoov vous offre la possibilité de déplacer des véhicules et de partager les frais avec leurs propriétaires.</p>
             </div>
     </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec155" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec155" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec155">Qu’est ce qui diffère un co-convoyage d’une location classique de véhicules ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec155" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec155" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>CoCarmoov vous offre la possibilité de déplacer des véhicules et de partager les frais avec leurs propriétaires.</p>
-            <p>Une location classique coûte chère, où au moins, elle est payante même si elle ne coûte que quelques euros.</p>
-            <p>Tandis que notre co-convoyage est indemnisante sur différents plans : </p>
-            <ol class="text-dark">
+              <div class="accordion-body py-0 content app-font-family"><p>CoCarmoov vous offre la possibilité de déplacer des véhicules et de partager les frais avec leurs propriétaires.</p>
+            <p class="text-dark app-font-family">Une location classique coûte chère, où au moins, elle est payante même si elle ne coûte que quelques euros.</p>
+            <p class="text-dark app-font-family">Tandis que notre co-convoyage est indemnisante sur différents plans : </p>
+            <ol class="text-dark app-font-family">
                 <li>Vous collaborez avec le propriétaire du véhicule à diviser en deux vos empreintes carbone</li>
                 <li>Vous êtes compensé 10 centimes par kilomètre pour vous aider à couvrir vos frais de route</li>
                 <li>Vous réduisez davantage votre empreinte carbone par le covoiturage, déménagement ou le transport de colis.</li>
@@ -1101,41 +1073,41 @@ Le co-convoyeur recevra alors directement l'amende chez lui.
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec62" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec62" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec62">Quelles sont les conditions pour Co-convoyer un véhicule ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec62" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec62" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Vous devez être âgé(e) de 25 ans minimum et posséder votre permis européen depuis au moins trois ans : ce sont des conditions imposées par notre assurance.</p>
-            <p>Vous pouvez consulter les conditions de notre assurance sur https://www.cocarmoov.fr/assurance</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Vous devez être âgé(e) de 25 ans minimum et posséder votre permis européen depuis au moins trois ans : ce sont des conditions imposées par notre assurance.</p>
+            <p class="text-dark app-font-family">Vous pouvez consulter les conditions de notre assurance sur https://www.cocarmoov.fr/assurance</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec63" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec63" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec63">Quelles sont les conditions pour pouvoir Co-convoyer une voiture sur CoCarmoov ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec63" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec63" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Vous devez être âgé(e) de 25 ans minimum et posséder votre permis délivré dans l'Union Européenne depuis au moins trois ans : ce sont des conditions imposées par notre assurance.</p>
-            <p>Vous pouvez consulter les conditions de notre assurance sur https://www.cocarmoov.fr/assurance</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Vous devez être âgé(e) de 25 ans minimum et posséder votre permis délivré dans l'Union Européenne depuis au moins trois ans : ce sont des conditions imposées par notre assurance.</p>
+            <p class="text-dark app-font-family">Vous pouvez consulter les conditions de notre assurance sur https://www.cocarmoov.fr/assurance</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec64" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730e64" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec64">Les permis étrangers sont-ils valables ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec64" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec64" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content">
-                <ul class="text-dark">
+              <div class="accordion-body py-0 content app-font-family">
+                <ul class="text-dark font-family">
                <li>Seuls les permis délivrés par les pays européens sont acceptés au même titre que les permis de conduire français, et sans documents complémentaires. Ce sont les exigences de notre assurance.</li>
                <li>Pour tout permis rédigé dans un autre alphabet que l'alphabet latin, une traduction est nécessaire, ou un permis international.</li>
             </ul>
@@ -1143,65 +1115,65 @@ Le co-convoyeur recevra alors directement l'amende chez lui.
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec65" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec65" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec65">J'ai un permis étranger, puis-je Co-convoyer un véhicule ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec65" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec65" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"> <p>Seuls les permis délivrés par les pays européens sont acceptés au même titre que les permis de conduire français, et sans documents complémentaires. Ce sont les exigences de notre assurance. </p>
-              <p>Pour tout permis rédigé dans un autre alphabet que l'alphabet latin, une traduction est nécessaire, ou un permis international.</p>
+              <div class="accordion-body py-0 content app-font-family"> <p class="text-dark app-font-family">Seuls les permis délivrés par les pays européens sont acceptés au même titre que les permis de conduire français, et sans documents complémentaires. Ce sont les exigences de notre assurance. </p>
+              <p class="text-dark app-font-family">Pour tout permis rédigé dans un autre alphabet que l'alphabet latin, une traduction est nécessaire, ou un permis international.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec165" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec165" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec165">Quels types de véhicules sont disponibles au co-convoyage sur CoCarmoov ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec165" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec165" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"> <p>Sur CoCarmoov, vous avez la possibilité de co-convoyer une vaste gamme de véhicules autorisés à être conduits avec un permis B. Cela signifie que vous avez accès à au co-convoyage de voitures citadines, de berlines, de monospaces, ainsi que de divers types d'utilitaires, y compris ceux allant jusqu'à une capacité de 20 mètres cubes.</p>
+              <div class="accordion-body py-0 content app-font-family"> <p class="text-dark app-font-family">Sur CoCarmoov, vous avez la possibilité de co-convoyer une vaste gamme de véhicules autorisés à être conduits avec un permis B. Cela signifie que vous avez accès à au co-convoyage de voitures citadines, de berlines, de monospaces, ainsi que de divers types d'utilitaires, y compris ceux allant jusqu'à une capacité de 20 mètres cubes.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec66" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec66" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec66">Les dates, la durée ou le kilométrage du co-convoyage proposé ne me conviennent pas ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec66" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec66" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Une modification de trajet (changement des dates, changement d’adresse de dépôt ou de récupération du véhicule, dépassement kilométrique) est possible avant sa réservation, sous réserve de l’accord du propriétaire du véhicule. </p>
-               <p>Pour cela, il suffit de vérifier si le bouton « Faire une proposition » est activé pour le co-convoyage en question et d’envoyer votre proposition avec les détails nécessaires.</p>
-               <p>Si le bouton est inactif, veuillez nous adresser un e-mail détaillant la modification souhaitée, nous revenons vers vous dès que nous avons la réponse du propriétaire.</p>                     
-           <h5>Je ne parviens pas à choisir une période de co-convoyage de 24 ou 48 heures !</h5>
-           <p>Si vous rencontrez des difficultés à sélectionner des dates sur le calendrier, vérifiez si ce n'est pas à cause de la date limite de disponibilité du véhicule.</p>
-                                    <p>Vous pouvez trouver toutes les informations nécessaires directement sur l'offre, notamment :</p>
-                                    <p>- La durée du co-convoyage autorisé</p>
-                                    <p>- Les horaires et jours d'ouverture des lieux de départ et d’arrivée</p>
-                                    <p>- Les dates limites de départ et d’arrivée.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Une modification de trajet (changement des dates, changement d’adresse de dépôt ou de récupération du véhicule, dépassement kilométrique) est possible avant sa réservation, sous réserve de l’accord du propriétaire du véhicule. </p>
+               <p class="text-dark app-font-family">Pour cela, il suffit de vérifier si le bouton « Faire une proposition » est activé pour le co-convoyage en question et d’envoyer votre proposition avec les détails nécessaires.</p>
+               <p class="text-dark app-font-family">Si le bouton est inactif, veuillez nous adresser un e-mail détaillant la modification souhaitée, nous revenons vers vous dès que nous avons la réponse du propriétaire.</p>                     
+           <h5 class="text-dark app-font-family">Je ne parviens pas à choisir une période de co-convoyage de 24 ou 48 heures !</h5>
+           <p class="text-dark app-font-family">Si vous rencontrez des difficultés à sélectionner des dates sur le calendrier, vérifiez si ce n'est pas à cause de la date limite de disponibilité du véhicule.</p>
+                                    <p class="text-dark app-font-family">Vous pouvez trouver toutes les informations nécessaires directement sur l'offre, notamment :</p>
+                                    <p class="text-dark app-font-family">- La durée du co-convoyage autorisé</p>
+                                    <p class="text-dark app-font-family">- Les horaires et jours d'ouverture des lieux de départ et d’arrivée</p>
+                                    <p class="text-dark app-font-family">- Les dates limites de départ et d’arrivée.</p>
         </div>
             </div>
           </div>
           <!-- <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec67" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec67" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec67">Les dates, la durée ou le kilométrage de la location proposée ne me conviennent pas?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec67" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec67" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Une modification de trajet (changement des dates, changement d’adresse de dépôt ou de récupération du véhicule, dépassement kilométrique) est possible avant sa réservation, sous réserve de l’accord du propriétaire du véhicule.</p>
-              <p>Pour cela, il suffit de vérifier si le bouton « Faire une proposition » est activé pour la location en question et d’envoyer votre proposition avec les détails nécessaires.</p>
-              <p>Si le bouton est inactif, veuillez nous adresser un e-mail détaillant la modification souhaitée, nous revenons vers vous dès que nous avons la réponse du propriétaire.</p>
-              <h5>Je ne parviens pas à choisir une période de location de 24 ou 48 heures !</h5>
-              <p>Si vous rencontrez des difficultés à sélectionner des dates sur le calendrier, vérifiez si ce n'est pas à cause de la date limite de disponibilité du véhicule.</p>
-              <p>Vous pouvez trouver toutes les informations nécessaires directement sur l'offre, notamment :</p>
-              <ul class="text-dark">
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Une modification de trajet (changement des dates, changement d’adresse de dépôt ou de récupération du véhicule, dépassement kilométrique) est possible avant sa réservation, sous réserve de l’accord du propriétaire du véhicule.</p>
+              <p class="text-dark app-font-family">Pour cela, il suffit de vérifier si le bouton « Faire une proposition » est activé pour la location en question et d’envoyer votre proposition avec les détails nécessaires.</p>
+              <p class="text-dark app-font-family">Si le bouton est inactif, veuillez nous adresser un e-mail détaillant la modification souhaitée, nous revenons vers vous dès que nous avons la réponse du propriétaire.</p>
+              <h5 class="text-dark app-font-family">Je ne parviens pas à choisir une période de location de 24 ou 48 heures !</h5>
+              <p class="text-dark app-font-family">Si vous rencontrez des difficultés à sélectionner des dates sur le calendrier, vérifiez si ce n'est pas à cause de la date limite de disponibilité du véhicule.</p>
+              <p class="text-dark app-font-family">Vous pouvez trouver toutes les informations nécessaires directement sur l'offre, notamment :</p>
+              <ul class="text-dark app-font-family">
                 <li>La durée de location autorisée</li>
                 <li>Les horaires et jours d'ouverture des lieux de départ et d’arrivée</li>
                 <li>Les dates limites de départ et d’arrivée.</li>
@@ -1210,16 +1182,16 @@ Le co-convoyeur recevra alors directement l'amende chez lui.
             </div>
           </div> -->
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec68" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec68" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec68">Comment procéder à une réservation?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec68" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec68" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Pour effectuer une réservation, vous devez d'abord disposer d'un compte CoCarmoov.</p>
-              <p>Voici ensuite les étapes à suivre :</p>
-              <ol class="text-dark">
+              <div class="accordion-body py-0 content app-font-family"><p>Pour effectuer une réservation, vous devez d'abord disposer d'un compte CoCarmoov.</p>
+              <p class="text-dark app-font-family">Voici ensuite les étapes à suivre :</p>
+              <ol class="text-dark app-font-family">
                 <li> Connectez-vous à votre compte CoCarmoov</li>
                 <li>Rendez-vous sur l'offre de co-convoyage qui vous intéresse</li>
                 <li>Sélectionnez la date et l'heure de prise en charge du véhicule, ainsi que celles du retour</li>
@@ -1228,143 +1200,143 @@ Le co-convoyeur recevra alors directement l'amende chez lui.
 La réservation ne sera effective qu'une fois que vous aurez entré vos coordonnées bancaires, et tant que cela n'a pas été fait, l'offre reste en ligne.
 </li>
               </ol>
-              <p>Une fois la réservation effectuée, vous recevrez un e-mail de confirmation. Si vous ne l'avez pas reçu dans les 2 heures qui suivent, veuillez vérifier vos courriers indésirables (spams) ou contacter notre service client.</p>
+              <p class="text-dark app-font-family">Une fois la réservation effectuée, vous recevrez un e-mail de confirmation. Si vous ne l'avez pas reçu dans les 2 heures qui suivent, veuillez vérifier vos courriers indésirables (spams) ou contacter notre service client.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec69" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec69" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec69">Puis-je mettre des bagages dans la voiture?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec69" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec69" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Tout à fait ! Vous pouvez déposer vos objets personnels dans le véhicule. Sachez que le propriétaire particulier de la voiture est autorisé à laisser 1 à 2 sacs maximum dans le coffre.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Tout à fait ! Vous pouvez déposer vos objets personnels dans le véhicule. Sachez que le propriétaire particulier de la voiture est autorisé à laisser 1 à 2 sacs maximum dans le coffre.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec70" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec70" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec70">Quels sont les frais à ma charge pendant le co-convoyage ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec70" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec70" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Les frais de carburant et de péages sont à votre charge, que vous pouvez déduire de votre compensation convenue de 10 centimes par kilomètre.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Les frais de carburant et de péages sont à votre charge, que vous pouvez déduire de votre compensation convenue de 10 centimes par kilomètre.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec71" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec71" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec71">Puis-je faire du covoiturage avec un co-convoyage ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec71" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec71" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Le covoiturage est conseillé avec nos co-convoyages, via des plateformes telles que Blablacar par exemple. </p>
-              <p>Vous pourrez ainsi réduire davantage vos frais de carburant et de péages, mais aussi rendre service à un passager !</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Le covoiturage est conseillé avec nos co-convoyages, via des plateformes telles que Blablacar par exemple. </p>
+              <p class="text-dark app-font-family">Vous pourrez ainsi réduire davantage vos frais de carburant et de péages, mais aussi rendre service à un passager !</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec72" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec72" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec72">Puis-je déménager mon appartement avec une co-convoyage ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec72" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec72" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Le déménagement est autorisé avec nos co-convoyages, vous pouvez Co-convoyer l’utilitaire pour 24 à 48h selon la disponibilité du véhicule et la distance à parcourir.</p>
-              <p>Vous pourrez ainsi faire des économies considérables, voire même covoiturer pour réduire vos frais de carburant et de péages.</p>
-            <h5>Ai-je des frais si je co-convoie ? (Caution, franchise, etc.)</h5>
-            <p>Nous avons une caution ainsi qu’une franchise :</p>
-            <p>Au moment de réserver un co-convoyage, le dépôt d’une caution est systématique comme dans des locations classiques. Cette caution prend la forme d’une pré-autorisation bancaire. Vous n’êtes donc pas débité mais, en fonction de votre contrat avec votre banque, les montants peuvent apparaître sur votre relevé. 
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Le déménagement est autorisé avec nos co-convoyages, vous pouvez Co-convoyer l’utilitaire pour 24 à 48h selon la disponibilité du véhicule et la distance à parcourir.</p>
+              <p class="text-dark app-font-family">Vous pourrez ainsi faire des économies considérables, voire même covoiturer pour réduire vos frais de carburant et de péages.</p>
+            <h5 class="text-dark app-font-family">Ai-je des frais si je co-convoie ? (Caution, franchise, etc.)</h5>
+            <p class="text-dark app-font-family">Nous avons une caution ainsi qu’une franchise :</p>
+            <p class="text-dark app-font-family">Au moment de réserver un co-convoyage, le dépôt d’une caution est systématique comme dans des locations classiques. Cette caution prend la forme d’une pré-autorisation bancaire. Vous n’êtes donc pas débité mais, en fonction de votre contrat avec votre banque, les montants peuvent apparaître sur votre relevé. 
 </p>
-            <p>De même, une franchise est associée à chaque co-convoyage en cas de sinistre responsable.</p>
-            <p>Veuillez consulter notre liste des franchises à l’adresse https://www.cocarmoov.fr/assurance </p>
+            <p class="text-dark app-font-family">De même, une franchise est associée à chaque co-convoyage en cas de sinistre responsable.</p>
+            <p class="text-dark app-font-family">Veuillez consulter notre liste des franchises à l’adresse https://www.cocarmoov.fr/assurance </p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec73" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec73" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec73">Est ce que l’assurance est comprise dans un co-convoyage ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec73" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec73" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Tous les co-convoyages disponibles sur CoCarmoov bénéficient d'une assurance. L'assurance est systématiquement incluse et comprise dans votre co-convoyage.</p>
-              <p>En fonction du co-convoyage choisi choisie, vous pouvez avoir </p>
-              <p>- Le produit d'assurance du propriétaire du véhicule </p>
-              <p>- Le produit d'assurance d'un partenaire CoCarmoov</p>
-              <p>Les conditions et garanties de l'assurance sont détaillées dans le détail de chaque co-convoyage.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Tous les co-convoyages disponibles sur CoCarmoov bénéficient d'une assurance. L'assurance est systématiquement incluse et comprise dans votre co-convoyage.</p>
+              <p class="text-dark app-font-family">En fonction du co-convoyage choisi choisie, vous pouvez avoir </p>
+              <p class="text-dark app-font-family">- Le produit d'assurance du propriétaire du véhicule </p>
+              <p class="text-dark app-font-family">- Le produit d'assurance d'un partenaire CoCarmoov</p>
+              <p class="text-dark app-font-family">Les conditions et garanties de l'assurance sont détaillées dans le détail de chaque co-convoyage.</p>
             </div>
             </div>
           </div>
           <!-- <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec74" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec74" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec74">Est ce que l’assurance est comprise dans la location?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec74" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec74" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Toutes les locations disponibles sur CoCarmoov bénéficient d'une assurance. L'assurance est automatiquement incluse et comprise dans votre location à 1 euro.</p>
-            <p>En fonction de la location choisie, vous pouvez avoir :</p>
-            <p>Le produit d'assurance du propriétaire du véhicule</p>
-            <p>Le produit d'assurance d'un partenaire CoCarmoov</p>
-            <p>Les conditions et garanties de l'assurance sont détaillées dans le détail de chaque location.</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">Toutes les locations disponibles sur CoCarmoov bénéficient d'une assurance. L'assurance est automatiquement incluse et comprise dans votre location à 1 euro.</p>
+            <p class="text-dark app-font-family">En fonction de la location choisie, vous pouvez avoir :</p>
+            <p class="text-dark app-font-family">Le produit d'assurance du propriétaire du véhicule</p>
+            <p class="text-dark app-font-family">Le produit d'assurance d'un partenaire CoCarmoov</p>
+            <p class="text-dark app-font-family">Les conditions et garanties de l'assurance sont détaillées dans le détail de chaque location.</p>
             </div>
             </div>
           </div> -->
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec75" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec75" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec75">Pourquoi y a-t-il un dépôt de caution?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec75" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec75" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Afin de valider votre réservation, vous devez effectuer une empreinte bancaire. Cela permet de garantir une fiabilité des réservations. Cette pré-autorisation bancaire sera levée une fois le véhicule restitué.</p>
+              <div class="accordion-body py-0 content app-font-family"><p>Afin de valider votre réservation, vous devez effectuer une empreinte bancaire. Cela permet de garantir une fiabilité des réservations. Cette pré-autorisation bancaire sera levée une fois le véhicule restitué.</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec76" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec76" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec76">Dans quels cas ma pré-autorisation bancaire peut-elle être débitée?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec76" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec76" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>La pré-autorisation bancaire sera débitée pour les cas suivants :</p>
-              <p>Vous ne vous présentez pas à l'adresse de départ au rendez-vous précédemment choisi sans prévenir</p>
-              <p>Vous ne respectez pas les conditions de la société de co-convoyage décrites dans le trajet concerné</p>
-              <p>Vous annulez votre réservation.</p>
-              <p>Les montants de débits sont détaillés dans chaque offre de co-convoyage dans l'onglet 'Tarifs'</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">La pré-autorisation bancaire sera débitée pour les cas suivants :</p>
+              <p class="text-dark app-font-family">Vous ne vous présentez pas à l'adresse de départ au rendez-vous précédemment choisi sans prévenir</p>
+              <p class="text-dark app-font-family">Vous ne respectez pas les conditions de la société de co-convoyage décrites dans le trajet concerné</p>
+              <p class="text-dark app-font-family">Vous annulez votre réservation.</p>
+              <p class="text-dark app-font-family">Les montants de débits sont détaillés dans chaque offre de co-convoyage dans l'onglet 'Tarifs'</p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec77" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec77" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec77">Qu'est-ce qu'une franchise d'assurance pendant un co-convoyage ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec77" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec77" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>La franchise est le montant à partir duquel l'assurance prend le relais en cas de sinistre. </p>
-              <p><b>Exemple :</b></p>
-              <p>Si vous avez un accident responsable avec une franchise de 2.500€</p>
+              <div class="accordion-body py-0 content app-font-family"><p class="text-dark app-font-family">La franchise est le montant à partir duquel l'assurance prend le relais en cas de sinistre. </p>
+              <p class="text-dark app-font-family"><b>Exemple :</b></p>
+              <p class="text-dark app-font-family">Si vous avez un accident responsable avec une franchise de 2.500€</p>
               <ol class="text-dark">
                 <li>Les dégâts s'élèvent à 700€ => Vous êtes responsable de 700€</li>
                 <li>Les dégâts s'élèvent à 3000€ => Vous êtes responsable de 2.500€, les 1000 euros restants seront pris en charge par l'assurance.</li>
               </ol>
-              <p>Pour nos co-convoyages, il y a une franchise en cas d’accident responsable.  </p>
-              <p>Veuillez consulter notre liste des franchises à l’adresse https://www.cocarmoov.fr/assurance  </p>
+              <p class="text-dark app-font-family">Pour nos co-convoyages, il y a une franchise en cas d’accident responsable.  </p>
+              <p class="text-dark app-font-family">Veuillez consulter notre liste des franchises à l’adresse https://www.cocarmoov.fr/assurance  </p>
             </div>
             </div>
           </div>
