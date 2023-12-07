@@ -7,12 +7,12 @@
           <div><img src="{{asset('images/wallet/QA-banner.png')}}" class="qa-header-img img-fluid"  style="max-width: 40%; height:auto;" /></div>
 				<!-- <div><h2 class="mb-2 text-capitalize qa-banner-text">Contact Us</h2></div> -->
                 <h2 class="mb-2 qa-banner-h">A toute question, une réponse</h2>
-                <p class="qa-banner-p">Un renseignement, besoin d’aide, ou simplement nous faire part de vos remarques?</p>
+                <p class="qa-banner-p">Un renseignement, besoin d’aide, ou simplement nous faire part de vos remarques ?</p>
 			</div>
 		</div>
 	</div>
 </section>
-<section class="section find-section pt-4">
+<section class="section find-section pt-4">                         
 	<div class="container pb-5">
 		<div class="row justify-content-center">
 			<div class="col-lg-6">

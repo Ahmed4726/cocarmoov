@@ -5,8 +5,7 @@
     <div class="row">
       <div class="col-8 mx-auto text-center">
         <img src="{{asset('images/wallet/insurance_head_img2.png')}}" class="insurance-header-img img-fluid"  style="max-width: 100%; height:auto;" />
-        <h2 class="mb-3 text-capitalize insurance-header-text insurance-header-h2">Assurance Wakam</h2>
-        <h4 class="insurance-header-text mb-3 text-capitalize">100% tous risques</h4>
+        <h2 class="mb-3 text-capitalize insurance-header-text insurance-header-h2">Assurance Wakam</h2>           
         <!-- <ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
           <li class="list-inline-item"><a href="index.html">Home</a>
           </li>
@@ -25,7 +24,7 @@
         <div class="content text-center">
         <img src="{{asset('images/wallet/assurance-wakam-cocarmoov.png')}}" class="insurance-header-img img-fluid"  style="max-width: 60%; height:auto;" />
           <p class="text-center section-2-text insuarnce-text-2 text-dark">Assurance Wakam avec assistance AXA pour toute la durée du transport.</p>
-            <p class="text-center section-2-text text-dark insuarnce-text-3">Votre véhicule est automatiquement assuré.</p>
+            <p class="text-center section-2-text text-dark insuarnce-text-3">Votre véhicule est assuré.</p>
         </div>
       </div> 
      </div>
@@ -192,13 +191,13 @@
         <div class="content">
         <img src="{{asset('images/wallet/insurance-section-5.png')}}" class="insurance-5-section-img mx-auto d-block img-fluid"  style="max-width: 35%; height:auto;" />
           <h3 id="application-processing" class="section-5-h text-center app-font-family">Quelles sont les conditions d’assurance ?</h3>
-          <h4 id="intellectual-property-rights app-font-family">Pour le conducteur du véhicule</h4>
+          <h4 id="intellectual-property-rights" class="app-font-family">Pour le conducteur du véhicule</h4>
           <ul class="section-2-text text-dark app-font-family">
-            <li>Age du conducteur : 25 ans minimum.</li>
-            <li>Ancienneté du permis : 2 ans minimum.</li>
-            <li>Zone de circulation autorisée : France et jusqu’à 2 frontières limitrophes.</li>
+            <li>Age minimum du conducteur : 25 ans.</li>
+            <li>Ancienneté du permis : 2 ans de permis valide en France.</li>
+            <li>Zone de circulation couverte : France et jusqu’à 2 frontières limitrophes.</li>
           </ul>
-          <h4 id="the-use-of-the-information app-font-family">Pour le propriétaire du véhicule</h4>
+          <h4 id="the-use-of-the-information" class="app-font-family">Pour le propriétaire du véhicule</h4>
           <ul class="section-2-text text-dark app-font-family">
             <li>Type de véhicule autorisé : 4 roues & tonnage inférieur ou égal à 3,5 tonnes.</li>
             <li>Identification du véhicule : immatriculation française ou étrangère.</li>

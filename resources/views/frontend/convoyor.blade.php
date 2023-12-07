@@ -38,20 +38,20 @@
 				<div class="row mt-5">
 					<div class="col-lg-4 col-md-12">
 					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/inscription-profil.png')}}" style="width:50%;" height="auto"/>
-					<h5 class="mt-2">Inscription et Profil</h5>	
-					<p class="text-dark">Créez votre compte, complétez vos informations et téléchargez les documents requis.</p>
+					<h5 class="mt-2 app-font-family">Inscription et Profil</h5>	
+					<p class="text-dark app-font-family">Créez votre compte, complétez vos informations et téléchargez les documents requis.</p>
 				</div>
 					</div>
 					<div class="col-lg-4 col-md-12">
 					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/connaissances.png')}}" style="width: 50%;" height="auto"/>
-					<h5 class="mt-2">Connaissances et Formations</h5>
-					<p class="text-dark">Répondez au questionnaire et suivez notre formation en ligne interactive.</p>		
+					<h5 class="mt-2 app-font-family">Connaissances et Formations</h5>
+					<p class="text-dark app-font-family">Répondez au questionnaire et suivez notre formation en ligne interactive.</p>		
 				</div>
 					</div>
 					<div class="col-lg-4 col-md-12">
 					<div class="icon me-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/validation-acces.png')}}" style="width:50%;" height="auto"/>
-					<h5 class="mt-2">Validation et Accès</h5>	
-					<p class="text-dark">Faites valider votre statut de convoyeur professionnel et accédez aux offres de convoyage.</p>	
+					<h5 class="mt-2 app-font-family">Validation et Accès</h5>	
+					<p class="text-dark app-font-family">Faites valider votre statut de convoyeur professionnel et accédez aux offres de convoyage.</p>	
 				</div>
 					</div>
 				</div>
@@ -69,7 +69,7 @@
         </div>
         <div class="row">
 <div class="col-md-12">
-<p class="text-dark">
+<p class="text-dark app-font-family">
 <i class="fas fa-check eligibility-section mx-2"></i>Avoir <b>le droit de travailler en France</b><br>
 <i class="fas fa-check eligibility-section mx-2"></i>Disposer d’un <b>statut d’entrepreneur</b> ou de <b>société</b><br>
 <i class="fas fa-check eligibility-section mx-2"></i>Être <b>âgé d’au moins 21 ans</b><br>
@@ -111,7 +111,7 @@
   </div>
   <div class="text-center">
   <a type="button" 
-            class="btn professionall-button-register text-dark mt-3 mb-3" href="#">
+            class="btn professionall-button-register text-dark mt-3 mb-3 app-font-family" href="#">
             S’inscrire
 </a>
 </div>
@@ -126,7 +126,7 @@
 		<div class="row justify-content-center">
 			<div class="col-lg-12">
 				<div class="section-title text-center">
-                <p class="services-p fw-bold mb-3">Des questions fréquentes</p>
+                <p class="services-p fw-bold mb-3 app-font-family">Des questions fréquentes</p>
           <h3 class="mb-4 frequently-h text-light">Le plus important à savoir</h3>
 				</div>
 			</div>
@@ -136,62 +136,61 @@
       <div class="rounded shadow bg-white p-5">
       <div class="accordion accordion-border-bottom" id="accordionFAQ">
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 active"
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" aria-expanded="true"
               aria-controls="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9">Qu’est ce qui est inclus dans le prix de la prestation ?
             </h2>
             <div id="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9"
-              class="accordion-collapse collapse border-0 show"
+              class="accordion-collapse collapse border-0"
               aria-labelledby="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"> <p>Le prix de la prestation englobe votre rémunération, les frais de rapprochement, les frais de route (carburant, péages), ainsi que les services optionnels (tels que les plaques W garage, le lavage extérieur ou complet, la remise de carburant, la démonstration au client et la signature de documents).
+              <div class="accordion-body py-0 content app-font-family"> <p>Le prix de la prestation englobe votre rémunération, les frais de rapprochement, les frais de route (carburant, péages), ainsi que les services optionnels (tels que les plaques W garage, le lavage extérieur ou complet, la remise de carburant, la démonstration au client et la signature de documents).
                             </p>
                     </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec2" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec2" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec2">Suis-je couvert par une assurance en tant que convoyeur pour CoCarmoov ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec2" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec2" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Pour devenir convoyeur sur CoCarmoov, vous devez disposer d'une assurance responsabilité civile professionnelle.<br>
+              <div class="accordion-body py-0 content app-font-family"><p>Pour devenir convoyeur sur CoCarmoov, vous devez disposer d'une assurance responsabilité civile professionnelle.<br>
 CoCarmoov offre également une assurance pour couvrir les véhicules lors des missions de convoyage.<br>
 En cas de sinistre, une participation vous sera demandée, couvrant la moitié des frais de réparation ou la moitié de la franchise si les coûts de réparation excèdent cette franchise.<br>
-Pour plus de détails, vous pouvez consulter les conditions de notre assurance sur https://www.cocarmoov.fr/assurance<br>
+Pour plus de détails, vous pouvez consulter les conditions de notre assurance sur <a href="{{route('insurance')}}">https://www.cocarmoov.fr/assurance</a><br>
 Dans les cas où le sinistre ne relève pas de la couverture de l'assurance CoCarmoov (par exemple, erreur de carburant ou passage dans une trémie sans considération de la hauteur du véhicule), les frais seront entièrement à votre charge, où vous pouvez faire intervenir votre propre assurance responsabilité civile professionnelle.<br>
 </p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec2" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec3" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec3">Y a-t-il des frais si j’annule un convoyage après sa réservation ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec3" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec3" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Oui, des frais d'annulation sont prévus :<br>
-25€ si l’annulation intervient avant 48 heures du départ.<br>
-50€ si l’annulation intervient à 48 heures ou moins du départ.
+              <div class="accordion-body py-0 content app-font-family"><p>Oui, des frais d'annulation s’appliquent :<br>
+25€ pour les annulations faites plus de 48 heures avant le départ.<br>
+50€ pour les annulations faites 48 heures ou moins avant le départ.
 
               </p>
-            
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec4" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec4" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec4">Comment se déroule le convoyage ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec4" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec4" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Le processus de convoyage comprend les étapes suivantes :<br>
+              <div class="accordion-body py-0 content app-font-family"><p>Le processus de convoyage comprend les étapes suivantes :<br>
 Le convoyeur présente son permis de conduire le jour de l'enlèvement du véhicule.<br>
 Le convoyeur réalise un état des lieux en présence du contact de départ et prend en charge le véhicule.<br>
 Il conduit le véhicule jusqu'à destination et le restitue conformément aux conditions de la prestation.
@@ -201,14 +200,14 @@ Il conduit le véhicule jusqu'à destination et le restitue conformément aux co
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec5" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec5" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec5">Des frais à prévoir ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec5" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec5" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Certaines situations peuvent entraîner des frais :<br>
+              <div class="accordion-body py-0 content app-font-family"><p>Certaines situations peuvent entraîner des frais :<br>
 Absence au rendez-vous du convoyage : pénalité de 100€.<br>
 État des lieux de départ manquant : pénalité de 30%.<br>
 État des lieux d'arrivée manquant : pénalité de 30%.<br>
@@ -220,14 +219,14 @@ Oubli de remise au même niveau de carburant : facturation de 2,50€ par litre 
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec6" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec6" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec6">Je ne trouve pas le convoyage qui me correspond, que puis-je faire ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec6" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec6" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Nous ajoutons régulièrement de nouvelles offres de convoyage sur le site.<br>
+              <div class="accordion-body py-0 content app-font-family"><p>Nous ajoutons régulièrement de nouvelles offres de convoyage sur le site.<br>
 Si vous ne trouvez pas le trajet qui vous convient, vous pouvez créer une alerte depuis votre espace convoyeur pour recevoir un e-mail dès qu'un trajet aux alentours est disponible.
 </p>
             </div>
@@ -239,7 +238,7 @@ Si vous ne trouvez pas le trajet qui vous convient, vous pouvez créer une alert
         </div>
         <div class="text-center mt-5">
   <a type="button" 
-            class="btn professionall-button-register text-light mt-3 mb-3" href="#">
+            class="btn professionall-button-register text-light mt-3 mb-3 app-font-family" href="#">
             Devenir convoyeur partenaire
 
 </a>

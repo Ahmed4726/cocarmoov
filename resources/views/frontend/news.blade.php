@@ -28,27 +28,27 @@
           <p class="text-dark app-font-family">Voici la liste des véhicules pré-sélectionnés pour le Trophée européen de la Voiture de l'année 2024 :</p>
           <ul class="text-dark app-font-family">
             <li>
-            - BMW i5</li>
-<li>- BYD Seal</li>
-<li>- Fiat 600e</li>
-<li>- Fisker Ocean</li>
-<li>- Ford Bronco</li>
-<li>- Honda ZR-V</li>
-<li>- Honda e:NY1</li>
-<li>- Hyundai Kona</li>
-<li>- Hyundai Ioniq 6</li>
-<li>- Jeep Grand Cherokee</li>
-<li>- Kia EV9</li>
-<li>- Lexus RZ</li>
-<li>- Lucid Air</li>
-<li>- Nio ET5</li>
-<li>- Nio EL6</li>
-<li>- Nio ET7</li>
-<li>- Peugeot e-3008</li>
-<li>- Renault Espace</li>
-<li>- Renault Scénic</li>
-<li>- Toyota CH-R</li>
-<li>- Toyota Prius</li>
+             BMW i5</li>
+<li>BYD Seal</li>
+<li>Fiat 600e</li>
+<li>Fisker Ocean</li>
+<li>Ford Bronco</li>
+<li>Honda ZR-V</li>
+<li>Honda e:NY1</li>
+<li>Hyundai Kona</li>
+<li>Hyundai Ioniq 6</li>
+<li>Jeep Grand Cherokee</li>
+<li>Kia EV9</li>
+<li>Lexus RZ</li>
+<li>Lucid Air</li>
+<li>Nio ET5</li>
+<li>Nio EL6</li>
+<li>Nio ET7</li>
+<li>Peugeot e-3008</li>
+<li>Renault Espace</li>
+<li>Renault Scénic</li>
+<li>Toyota CH-R</li>
+<li>Toyota Prius</li>
           </ul>
           <p class="text-dark app-font-family">Il est important de noter que parmi ces 22 pré-sélectionnées, seules celles ayant déjà été évaluées par un nombre suffisant de journalistes seront éligibles pour la sélection finale. De plus, il est intéressant de constater que sur les 22 modèles pré-sélectionnés, 15 sont des véhicules 100 % électriques.</p>
           

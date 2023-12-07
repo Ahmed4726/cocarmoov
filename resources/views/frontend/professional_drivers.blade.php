@@ -45,7 +45,7 @@
         </div>
         <div class="mb-5">
         <p class="list-inline-item app-font-family"><a href="#!" class="ml-1 app-font-family">Publié le 04 octobre 2023</a></p><br>
-          <p class="list-inline-item app-font-family">Catégorie : <a href="#!" class="ml-1 app-font-family">Professionnels</a>
+          <p class="list-inline-item app-font-family">Catégorie : <a href="#!" class="ml-1 app-font-family">Convoyeurs</a>
           </p>
           <p class="list-inline-item app-font-family">Mots clés : <a href="#!" class="ml-1 app-font-family">Devenir convoyeur </a> , <a href="#!"
               class="ml-1 app-font-family"> Convoyeur professionnel </a> , <a href="#!"
@@ -65,15 +65,15 @@
                 <div class="row">
                   <div class="col-md-4 mt-5">
 									<img loading="lazy" class="rounded mb-3" decoding="async" src="{{ asset('images/wallet/car_of_the_year.jpg') }}" width="100%" height="auto" alt="Post Thumbnail">
-                  <a href="{{route('news')}}" class="h5 mt-4 related-articles-text">Voiture de l'année 2024 : découvrez les véhicules pré-sélectionnés</a>
+                  <a href="{{route('news')}}" class="h5 mt-4 related-articles-text app-font-family">Voiture de l'année 2024 : découvrez les véhicules pré-sélectionnés</a>
                   </div>
                   <div class="col-md-4 mt-5">
 									<img loading="lazy" class="rounded mb-3" decoding="async" src="{{ asset('images/wallet/leasing_auto.jpg') }}" width="100%" height="auto" alt="Post Thumbnail">
-                  <a href="{{route('tips-tricks')}}" class="h5 mt-4 related-articles-text">Comment économiser sur un leasing auto</a>
+                  <a href="{{route('tips-tricks')}}" class="h5 mt-4 related-articles-text app-font-family">Comment économiser sur un leasing auto</a>
                   </div>
                   <div class="col-md-4 mt-5">
 									<img loading="lazy" class="rounded mb-3" decoding="async" src="{{ asset('images/wallet/expedier-vehicule.jpg') }}" width="100%" height="auto" alt="Post Thumbnail">
-                  <a href="{{route('pros')}}" class="h5 mt-4 related-articles-text">Expédition de tous types de véhicules – Astuces pour une transition en toute simplicité</a>
+                  <a href="{{route('pros')}}" class="h5 mt-4 related-articles-text app-font-family">Expédition de tous types de véhicules – Astuces pour une transition en toute simplicité</a>
                   </div>
                 </div>
             </div>

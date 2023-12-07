@@ -971,6 +971,18 @@ Utilisez-le pour vérifier avec le convoyeur tout dommage causé à votre véhic
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
+              id="heading-a443e01b4db47b3f4a1267e10594576d52730ec813" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec813" aria-expanded="true"
+              aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec813">Mon véhicule est-il assuré pendant le transport ?
+            </h2>
+            <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec813" class="accordion-collapse collapse border-0 app-font-family"
+              aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec813" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body py-0 content app-font-family"><p>Votre véhicule est assuré par le partenaire transporteur de véhicules.</p>
+            </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec82" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec82" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec82">Quand mon véhicule sera-t-il déplacé ? 

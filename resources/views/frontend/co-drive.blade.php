@@ -570,72 +570,72 @@ pour un déménagement ou un voyage gagnant !
           <p class="text-top mt-4 fw-bold mobile-view-9-p app-font-family">Co-convoyage</p>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-10 d-none">
-          <a type="button" 
-            class="btn find-text-button text-top mt-3 mb-2 button-size" href="#">
-            Paris - Lyon</a>
+          <div type="button" 
+            class="btn find-text-button text-top mt-3 mb-2 button-size fw-bold">
+            Paris - Lyon</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-9 d-none">
           <img src="{{asset('images/wallet/parcours.png')}}" width="20%" height="auto"/>
           <p class="text-top mt-4 fw-bold mobile-view-9-p app-font-family">Parcours direct</p>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-10 d-none">
-          <a type="button" 
-            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family" href="#">
-            463 km</a>
+          <div type="button" 
+            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family fw-bold">
+            463 km</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-9 d-none">
           <img src="{{asset('images/wallet/distance-autorisee.png')}}" width="20%" height="auto"/>
           <p class="text-top mt-4 fw-bold mobile-view-9-p app-font-family">Distance autorisée</p>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-10 d-none">
-          <a type="button" 
-            class="btn find-text-button text-light button-size mt-3 mb-2 app-font-family" href="#">
-            556 km [463 x 1,2]</a>
+          <div type="button" 
+            class="btn find-text-button text-light button-size mt-3 mb-2 app-font-family fw-bold">
+            556 km</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-9 d-none">
           <img src="{{asset('images/wallet/duree-maximale.png')}}" width="20%" height="auto"/>
           <p class="text-top mt-4 fw-bold mobile-view-9-p app-font-family">Durée maximale</p>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-10 d-none">
-          <a type="button" 
-            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family" href="#">
-             24 heures</a>
+          <div type="button" 
+            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family fw-bold">
+             24 heures</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-9 d-none">
           <img src="{{asset('images/wallet/compensation.png')}}" width="20%" height="auto"/>
           <p class="text-top mt-4 fw-bold mobile-view-9-p app-font-family">Compensation</p>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-10 d-none">
-          <a type="button" 
-            class="btn find-text-button button-size bg-white find-text-border text-compensation text-compensation mt-3 mb-2 app-font-family" href="#">
-            46,30€ [463 x 0,10]</a>
+          <div type="button" 
+            class="btn find-text-button button-size bg-white find-text-border text-compensation text-compensation mt-3 mb-2 app-font-family fw-bold">
+            46,30€ </div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-9 d-none">
           <img src="{{asset('images/wallet/carburant-peages.png')}}" width="20%" height="auto"/>
           <p class="text-top mt-4 fw-bold mobile-view-9-p app-font-family">Carburant + péages</p>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-10 d-none">
-          <a type="button" 
-            class="btn find-text-button bg-white button-size find-text-border text-danger mt-3 mb-2 app-font-family" href="#">
-            -84,40€</a>
+          <div type="button" 
+            class="btn find-text-button bg-white button-size find-text-border text-danger mt-3 mb-2 app-font-family fw-bold">
+            84,40€</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-9 d-none">
           <img src="{{asset('images/wallet/covoiturage.png')}}" width="20%" height="auto"/>
           <p class="text-top mt-4 fw-bold mobile-view-9-p app-font-family">Covoiturage</p>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-10 d-none">
-          <a type="button" 
-            class="btn find-text-button button-size bg-white find-text-border text-compensation mt-3 mb-2 app-font-family" href="#">
-            + 40€ [2 x 20€]</a>
+          <div type="button" 
+            class="btn find-text-button button-size bg-white find-text-border text-compensation mt-3 mb-2 app-font-family fw-bold">
+            + 2 × 20€ </div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-9 d-none">
           <img src="{{asset('images/wallet/bilan.png')}}" width="20%" height="auto"/>
           <p class="text-top mt-4 fw-bold mobile-view-9-p app-font-family">Bilan</p>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-10 d-none">
-          <a type="button" 
-            class="btn find-text-button text-top button-size mt-3 mb-2 app-font-family" href="#">
-            + 1,90€</a>
+          <div type="button" 
+            class="btn find-text-button text-top button-size mt-3 mb-2 app-font-family fw-bold">
+            + 1,90€</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-3 text-center">
           <img src="{{asset('images/wallet/co-convoyage-voiture.png')}}" width="20%" height="auto"/>
@@ -653,19 +653,19 @@ pour un déménagement ou un voyage gagnant !
           <p class="text-top mt-4 fw-bold app-font-family">Co-convoyage</p>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-8 text-center d-none">
-          <a type="button" 
-            class="btn find-text-button button-size text-top mt-3 mb-2 app-font-family" href="#">
-            Lille - Marseille</a>
+          <div type="button" 
+            class="btn find-text-button button-size text-top mt-3 mb-2 app-font-family fw-bold">
+            Lille - Marseille</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-7 text-center">
-          <a type="button" 
-            class="btn find-text-button button-size text-top mt-3 mb-2 app-font-family" href="#">
-            Paris - Lyon</a>
+          <div type="button" 
+            class="btn find-text-button button-size text-top mt-3 mb-2 app-font-family fw-bold">
+            Paris - Lyon</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-6 text-center">
-          <a type="button" 
-            class="btn find-text-button button-size text-top mt-3 mb-2 app-font-family" href="#">
-            Lille - Marseille</a>
+          <div type="button" 
+            class="btn find-text-button button-size text-top mt-3 mb-2 app-font-family fw-bold">
+            Lille - Marseille</div>
           </div>
         </div>
         <div class="row">
@@ -678,18 +678,18 @@ pour un déménagement ou un voyage gagnant !
           <p class="text-top mt-4 fw-bold app-font-family">Parcours direct</p>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-8 text-center d-none">
-          <a type="button" 
-            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family" href="#">
-            1001 km</a>
+          <div type="button" 
+            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family fw-bold">
+            1001 km</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-7 text-center">
-          <a type="button" 
-            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family" href="#">
-            463 km</a>
+          <div type="button" 
+            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family fw-bold">
+            463 km</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-6 text-center">
           <a type="button" 
-            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family" href="#">
+            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family fw-bold">
             1001 km</a>
           </div>
         </div>
@@ -703,19 +703,19 @@ pour un déménagement ou un voyage gagnant !
           <p class="text-top mt-4 fw-bold app-font-family">Distance autorisée</p>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-8 text-center d-none">
-          <a type="button" 
-            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family" href="#">
-            1201 km[1001 x 1,2]</a>
+          <div type="button" 
+            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family fw-bold">
+            1201 km</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-7 text-center">
-          <a type="button" 
-            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family" href="#">
-            556 km[463x 1,2]</a>
+          <div type="button" 
+            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family fw-bold">
+            556 km</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-6 text-center">
-          <a type="button" 
-            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family" href="#">
-            1201km[1001x1,2]</a>
+          <div type="button" 
+            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family fw-bold">
+            1201km</div>
           </div>
         </div>
         <div class="row">
@@ -728,19 +728,19 @@ pour un déménagement ou un voyage gagnant !
           <p class="text-top mt-4 fw-bold app-font-family">Durée maximale</p>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-8 text-center d-none">
-          <a type="button" 
-            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family" href="#">
-            48 heures</a>
+          <div type="button" 
+            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family fw-bold">
+            48 heures</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-7 text-center">
           <a type="button" 
-            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family" href="#">
+            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family fw-bold">
             24 heures</a>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-6 text-center">
-          <a type="button" 
-            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family" href="#">
-            48 heures</a>
+          <div type="button" 
+            class="btn find-text-button button-size text-light mt-3 mb-2 app-font-family fw-bold">
+            48 heures</div>
           </div>
         </div>
         <div class="row">
@@ -753,19 +753,19 @@ pour un déménagement ou un voyage gagnant !
           <p class="text-top mt-4 fw-bold app-font-family">Compensation</p>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-8 text-center d-none">
-          <a type="button" 
-            class="btn find-text-button bg-white button-size find-text-border text-compensation mt-3 mb-2 app-font-family" href="#">
-            100,10€[1001x0,10]</a>
+          <div type="button" 
+            class="btn find-text-button bg-white button-size find-text-border text-compensation mt-3 mb-2 app-font-family fw-bold">
+            100,10€</div>
           </div>
           <div class="col-lg-4 col-sm-6  mobile-view-7 text-center">
-          <a type="button" 
-            class="btn find-text-button bg-white button-size find-text-border text-compensation mt-3 mb-2 app-font-family" href="#">
-            46,30€[463x0,10]</a>
+          <div type="button" 
+            class="btn find-text-button bg-white button-size find-text-border text-compensation mt-3 mb-2 app-font-family fw-bold">
+            46,30€</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-6 text-center">
-          <a type="button" 
-            class="btn find-text-button button-size bg-white find-text-border text-compensation mt-3 mb-2 app-font-family" href="#">
-            100,10€[1001x0,10]</a>
+          <div type="button" 
+            class="btn find-text-button button-size bg-white find-text-border text-compensation mt-3 mb-2 app-font-family fw-bold">
+            100,10€</div>
           </div>
         </div>
         <div class="row">
@@ -780,21 +780,21 @@ pour un déménagement ou un voyage gagnant !
 </p>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-8 text-center d-none">
-          <a type="button" 
-            class="btn find-text-button bg-white button-size find-text-border text-danger mt-3 mb-2 app-font-family" href="#">
-            - 180,36€</a>
+          <div type="button" 
+            class="btn find-text-button bg-white button-size find-text-border text-danger mt-3 mb-2 app-font-family fw-bold" >
+            180,36€</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-7 text-center">
-          <a type="button" 
-            class="btn find-text-button bg-white button-size find-text-border text-danger mt-3 mb-2 app-font-family" href="#">
-            - 84,40€</a>
+          <div type="button" 
+            class="btn find-text-button bg-white button-size find-text-border text-danger mt-3 mb-2 app-font-family fw-bold" >
+            84,40€</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-6 text-center">
-          <a type="button" 
-            class="btn find-text-button bg-white button-size find-text-border text-danger mt-3 mb-2 app-font-family" href="#">
-            - 180,36€
+          <div type="button" 
+            class="btn find-text-button bg-white button-size find-text-border text-danger mt-3 mb-2 app-font-family fw-bold">
+            180,36€
 
-</a>
+</div>
           </div>
         </div>
         <div class="row">
@@ -807,19 +807,19 @@ pour un déménagement ou un voyage gagnant !
           <p class="text-top mt-4 fw-bold app-font-family">Covoiturage</p>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-8 text-center d-none">
-          <a type="button" 
-            class="btn find-text-button bg-white button-size find-text-border text-compensation mt-3 mb-2 app-font-family" href="#">
-            + 150€ [3 x 50€]</a>
+          <div type="button" 
+            class="btn find-text-button bg-white button-size find-text-border text-compensation mt-3 mb-2 app-font-family fw-bold">
+            3 x 50€</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-7 text-center">
-          <a type="button" 
-            class="btn find-text-button bg-white button-size find-text-border text-compensation mt-3 mb-2 app-font-family" href="#">
-            + 40€ [2 x 20€]</a>
+          <div type="button" 
+            class="btn find-text-button bg-white button-size find-text-border text-compensation mt-3 mb-2 app-font-family fw-bold">
+            2 x 20€</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-6 text-center">
-          <a type="button" 
-            class="btn find-text-button bg-white button-size find-text-border text-compensation mt-3 mb-2 app-font-family" href="#">
-            + 150€[3 x 50€]</a>
+          <div type="button" 
+            class="btn find-text-button bg-white button-size find-text-border text-compensation mt-3 mb-2 app-font-family fw-bold">
+            3 x 50€</div>
           </div>
         </div>
         <div class="row">
@@ -832,20 +832,20 @@ pour un déménagement ou un voyage gagnant !
           <p class="text-top mt-4 fw-bold app-font-family">Bilan</p>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-8 text-center d-none">
-          <a type="button" 
-            class="btn find-text-button button-size text-top mt-3 mb-2 app-font-family" href="#">
+          <div type="button" 
+            class="btn find-text-button button-size text-top mt-3 mb-2 app-font-family fw-bold" >
             + 69,74€
-</a>
+</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-7 text-center">
-          <a type="button" 
-            class="btn find-text-button button-size text-top mt-3 mb-2 app-font-family" href="#">
-            + 1,90€</a>
+          <div type="button" 
+            class="btn find-text-button button-size text-top mt-3 mb-2 app-font-family fw-bold">
+            + 1,90€</div>
           </div>
           <div class="col-lg-4 col-sm-6 mobile-view-6 text-center">
-          <a type="button" 
-            class="btn find-text-button button-size text-top mt-3 mb-2 app-font-family" href="#">
-            + 69,74€</a>
+          <div type="button" 
+            class="btn find-text-button button-size text-top mt-3 mb-2 app-font-family fw-bold">
+            + 69,74€</div>
           </div>
         </div>
         </div>
@@ -876,8 +876,8 @@ pour un déménagement ou un voyage gagnant !
             <div id="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9"
               class="accordion-collapse collapse border-0"
               aria-labelledby="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content app-font-family"> <p>Vous devez être âgé(e) de 25 ans minimum et posséder votre permis européen depuis au moins trois ans : ce sont des conditions imposées par notre assurance.
-Vous pouvez consulter les conditions de notre assurance sur https://www.cocarmoov.fr/assurance 
+              <div class="accordion-body py-0 content app-font-family"> <p>Vous devez être âgé(e) de 25 ans minimum et posséder votre permis européen depuis au moins trois ans : ce sont des conditions imposées par notre assurance.<br>
+Vous pouvez consulter les conditions de notre assurance sur <a href="{{route('insurance')}}">https://www.cocarmoov.fr/assurance</a> 
                             </p>
                     </div>
             </div>
@@ -903,10 +903,10 @@ Vous pouvez consulter les conditions de notre assurance sur https://www.cocarmoo
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec3" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec3" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content app-font-family"><p>Nous avons une caution ainsi qu’une franchise :
-Au moment de réserver un co-convoyage, le dépôt d’une caution est systématique comme dans des locations classiques. Cette caution prend la forme d’une pré-autorisation bancaire. Vous n’êtes donc pas débité mais, en fonction de votre contrat avec votre banque, les montants peuvent apparaître sur votre relevé. 
-De même, une franchise est associée à chaque co-convoyage en cas de sinistre responsable.
-Veuillez consulter notre liste des franchises à l’adresse https://www.cocarmoov.fr/assurance 
+              <div class="accordion-body py-0 content app-font-family"><p>Nous avons une caution ainsi qu’une franchise :<br>
+Au moment de réserver un co-convoyage, le dépôt d’une caution est systématique comme dans des locations classiques. Cette caution prend la forme d’une pré-autorisation bancaire. Vous n’êtes donc pas débité mais, en fonction de votre contrat avec votre banque, les montants peuvent apparaître sur votre relevé.<br> 
+De même, une franchise est associée à chaque co-convoyage en cas de sinistre responsable.<br>
+Veuillez consulter notre liste des franchises à l’adresse <a href="{{route('insurance')}}">https://www.cocarmoov.fr/assurance</a>
               </p>
             
             </div>
@@ -920,11 +920,11 @@ Veuillez consulter notre liste des franchises à l’adresse https://www.cocarmo
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec4" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec4" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content app-font-family"><p>Tous les co-convoyages disponibles sur CoCarmoov bénéficient d'une assurance. L'assurance est systématiquement incluse et comprise dans votre co-convoyage.
-En fonction du co-convoyage choisi, vous pouvez avoir :
-Le produit d'assurance du propriétaire du véhicule
-Le produit d'assurance d'un partenaire CoCarmoov
-Les conditions et garanties de l'assurance sont détaillées dans le détail de chaque co-convoyage.
+              <div class="accordion-body py-0 content app-font-family"><p>Tous les co-convoyages disponibles sur CoCarmoov bénéficient d'une assurance. L'assurance est systématiquement incluse et comprise dans votre co-convoyage.<br>
+En fonction du co-convoyage choisi, vous pouvez avoir :<br>
+Le produit d'assurance du propriétaire du véhicule<br>
+Le produit d'assurance d'un partenaire CoCarmoov<br>
+Les conditions et garanties de l'assurance sont détaillées dans le détail de chaque co-convoyage.<br>
 </p>
             </div>
             </div>
@@ -937,10 +937,10 @@ Les conditions et garanties de l'assurance sont détaillées dans le détail de 
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec5" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec5" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content app-font-family"><p>En cas d'annulation, les frais suivants s'appliquent :
-Pour les véhicules de tourisme, les frais d'annulation sont de 25€
-Pour les véhicules utilitaires, les frais d'annulation sont de 50€
-Ces pénalités sont doublées si vous annulez moins de 48h avant le départ
+              <div class="accordion-body py-0 content app-font-family"><p>En cas d'annulation, les frais suivants s'appliquent :<br>
+Pour les véhicules de tourisme, les frais d'annulation sont de 25€<br>
+Pour les véhicules utilitaires, les frais d'annulation sont de 50€<br>
+Ces pénalités sont doublées si vous annulez moins de 48h avant le départ<br>
 
 </p>
             </div>
@@ -954,9 +954,9 @@ Ces pénalités sont doublées si vous annulez moins de 48h avant le départ
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec6" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec6" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content app-font-family"><p>Le conducteur particulier présente le jour d’enlèvement du véhicule un permis de conduire et la carte bancaire à son nom, qui a été utilisée pour la réservation.
-Le co-convoyeur se fait remettre un véhicule après un état des lieux effectué par le contact de départ.
-Il prend en charge le véhicule, le conduit jusqu’à destination pour le restituer dans le même état.
+              <div class="accordion-body py-0 content app-font-family"><p>Le conducteur particulier présente le jour d’enlèvement du véhicule un permis de conduire et la carte bancaire à son nom, qui a été utilisée pour la réservation.<br>
+Le co-convoyeur se fait remettre un véhicule après un état des lieux effectué par le contact de départ.<br>
+Il prend en charge le véhicule, le conduit jusqu’à destination pour le restituer dans le même état.<br>
 
 </p>
             </div>
@@ -970,9 +970,9 @@ Il prend en charge le véhicule, le conduit jusqu’à destination pour le resti
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec7" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec7" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content app-font-family"><p>Absence au rendez-vous du co-convoyage, une pénalité de 100€ sera appliquée.
-Restitution tardive du véhicule, facturation de 100€ par demi-journée supplémentaire.
-Dépassement de l’enveloppe kilométrique autorisée, une pénalité kilométrique de 0.5€.
+              <div class="accordion-body py-0 content app-font-family"><p>Absence au rendez-vous du co-convoyage, une pénalité de 100€ sera appliquée.<br>
+Restitution tardive du véhicule, facturation de 100€ par demi-journée supplémentaire.<br>
+Dépassement de l’enveloppe kilométrique autorisée, une pénalité kilométrique de 0.5€.<br>
 Oubli de remise au même niveau de carburant, facturation de 2.50€ par litre manquant après passage du client à la station service.
 </p>
             </div>
@@ -986,15 +986,15 @@ Oubli de remise au même niveau de carburant, facturation de 2.50€ par litre m
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec8" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec8" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content app-font-family"><p>De nouveaux co-convoyages apparaissent régulièrement sur le site.
-Si vous n'avez pas trouvé le véhicule qui vous correspond, vous pouvez créer une alerte avec vos coordonnées et vos critères pour recevoir un e-mail ou un sms dès qu'un véhicule est disponible.
-Je crée mon alerte sur https://www.cocarmoov.fr/co-convoyer/creer-une-alerte 
+              <div class="accordion-body py-0 content app-font-family"><p>De nouveaux co-convoyages apparaissent régulièrement sur le site.<br>
+Si vous n'avez pas trouvé le véhicule qui vous correspond, vous pouvez créer une alerte avec vos coordonnées et vos critères pour recevoir un e-mail ou un sms dès qu'un véhicule est disponible.<br>
+Je crée mon alerte sur <a href="#">https://www.cocarmoov.fr/co-convoyer/creer-une-alerte</a> 
 
 </p>
             </div>
             </div>
           </div>
-          <div class="accordion-item">
+          <!-- <div class="accordion-item">
             <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec6" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec6" aria-expanded="false"
@@ -1006,7 +1006,7 @@ Je crée mon alerte sur https://www.cocarmoov.fr/co-convoyer/creer-une-alerte
 </p>
             </div>
             </div>
-          </div>
+          </div> -->
         </div>
 				</div>
           </div>

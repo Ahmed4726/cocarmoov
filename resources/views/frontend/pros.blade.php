@@ -64,7 +64,7 @@
           <h4 class="text-dark app-font-family">2. Inspection du véhicule :</h4>
           <p class="text-dark app-font-family">Lors de la prise en charge, une inspection approfondie de votre véhicule sera effectuée. Cette inspection comprend la documentation de l’état actuel de votre véhicule, y compris tout dommage ou imperfection existant. Vous et la plateforme de transport recevrez une copie de cet état des lieux à titre de référence.</p>
           <h4 class="text-dark app-font-family">3. Affectation du transporteur :</h4>
-          <p class="text-dark app-font-family">en fonction de votre besoin, choix de formule de transport et du type de véhicule que vous expédiez, la plateforme de transport attribuera votre véhicule à un partenaire approprié. Les transports sont de 3 types principaux : co-convoyeur particulier, convoyeur professionnel et camion porte-voiture. Le co-convoyeur particulier est la formule la plus économique pour rapatrier des véhicules de location en aller simple et rééquilibrer la distribution des flottes automobiles, tandis que le convoyeur professionnel offre une formule express pour livrer et/ou restituer des véhicules avec des services à la clé, enfin le camion porte-voiture est une formule garantissant une prestation prestige à 0 km et est souvent choisi pour les voitures de luxe ou de collection, ou bien pour un véhicule en panne ou accidenté.</p>
+          <p class="text-dark app-font-family">en fonction de votre besoin, choix de formule de transport et du type de véhicule que vous expédiez, la plateforme de transport attribuera votre véhicule à un partenaire approprié. Les transports sont de 3 types principaux : co-convoyeur particulier, convoyeur professionnel et camion porte-voiture. Le co-convoyeur particulier est la formule la plus économique pour rapatrier des véhicules de location en aller simple et rééquilibrer la distribution des flottes automobiles, tandis que le convoyeur professionnel offre une formule express pour livrer et/ou restituer des véhicules avec des services à la clé, enfin le camion porte-voiture est une formule garantissant une prestation premium à 0 km et est souvent choisi pour les voitures de luxe ou de collection, ou bien pour un véhicule en panne ou accidenté.</p>
           <h4 class="text-dark app-font-family">4. Transit et suivi :</h4>
           <p class="text-dark app-font-family">Une fois pris en charge par le co-convoyeur particulier, ou enlevé par le convoyeur professionnel ou bien chargé sur le camion transporteur, votre véhicule commencera son voyage. Tout au long du transit, vous pouvez généralement suivre la progression de votre transport en ligne ou en contactant le conducteur qui en est responsable. Cette transparence vous permet de rester informé de la localisation de votre véhicule et de l'heure d'arrivée estimée.</p>
           <h4 class="text-dark app-font-family">5. Livraison et inspection :</h4>
@@ -165,15 +165,15 @@
                 <div class="row">
                   <div class="col-md-4 mt-5">
 									<img loading="lazy" class="rounded mb-3" decoding="async" src="{{ asset('images/wallet/car_of_the_year.jpg') }}" width="100%" height="auto" alt="Post Thumbnail">
-                  <a href="{{route('news')}}" class="h5 mt-4 related-articles-text">Voiture de l'année 2024 : découvrez les véhicules pré-sélectionnés</a>
+                  <a href="{{route('news')}}" class="h5 mt-4 related-articles-text app-font-family">Voiture de l'année 2024 : découvrez les véhicules pré-sélectionnés</a>
                   </div>
                   <div class="col-md-4 mt-5">
 									<img loading="lazy" class="rounded mb-3" decoding="async" src="{{ asset('images/wallet/leasing_auto.jpg') }}" width="100%" height="auto" alt="Post Thumbnail">
-                  <a href="{{route('tips-tricks')}}" class="h5 mt-4 related-articles-text">Comment économiser sur un leasing auto</a>
+                  <a href="{{route('tips-tricks')}}" class="h5 mt-4 related-articles-text app-font-family">Comment économiser sur un leasing auto</a>
                   </div>
                   <div class="col-md-4 mt-5">
 									<img loading="lazy" class="rounded mb-3" decoding="async" src="{{ asset('images/wallet/expedier-vehicule.jpg') }}" width="100%" height="auto" alt="Post Thumbnail">
-                  <a href="{{route('pros')}}" class="h5 mt-4 related-articles-text">Expédition de tous types de véhicules – Astuces pour une transition en toute simplicité</a>
+                  <a href="{{route('pros')}}" class="h5 mt-4 related-articles-text app-font-family">Expédition de tous types de véhicules – Astuces pour une transition en toute simplicité</a>
                   </div>
                 </div>
             </div>

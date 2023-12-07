@@ -21,7 +21,7 @@
 <div class="text-center">
 <a type="button"
             class="btn convoyar-text-button text-light mt-3 mb-5" href="#">
-            Devenir convoyeur partenaire
+            Devenir transporteur partenaire
 </a>
 </div>
 			</div>
@@ -38,20 +38,20 @@
 				<div class="row mt-5">
 					<div class="col-lg-4 col-md-12">
 					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/inscription-profil.png')}}" style="width:50%;" height="auto"/>
-					<h5 class="mt-2">Inscription et Profil</h5>	
-					<p class="text-dark">Créez votre compte, complétez vos informations et téléchargez les documents requis.</p>
+					<h5 class="mt-2 app-font-family">Inscription et Profil</h5>	
+					<p class="text-dark app-font-family">Créez votre compte, complétez vos informations et téléchargez les documents requis.</p>
 				</div>
 					</div>
 					<div class="col-lg-4 col-md-12">
 					<div class="icon me-4 mb-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/connaissances.png')}}" style="width: 50%;" height="auto"/>
-					<h5 class="mt-2">Conditions et garanties</h5>
-					<p class="text-dark">Spécifiez vos capacités et conditions de transport ainsi que les garanties de votre assurance.</p>		
+					<h5 class="mt-2 app-font-family">Conditions et garanties</h5>
+					<p class="text-dark app-font-family">Spécifiez vos capacités et conditions de transport ainsi que les garanties de votre assurance.</p>		
 				</div>
 					</div>
 					<div class="col-lg-4 col-md-12">
 					<div class="icon me-4 mb-sm-0 font-icon-color img-fluid"><img src="{{asset('images/wallet/validation-acces.png')}}" style="width:50%;" height="auto"/>
-					<h5 class="mt-2">Validation et Accès</h5>	
-					<p class="text-dark">Faites valider votre statut de transporteur partenaire et accédez aux offres de transport.</p>	
+					<h5 class="mt-2 app-font-family">Validation et Accès</h5>	
+					<p class="text-dark app-font-family">Faites valider votre statut de transporteur partenaire et accédez aux offres de transport.</p>	
 				</div>
 					</div>
 				</div>
@@ -69,7 +69,7 @@
         </div>
         <div class="row">
 <div class="col-md-12">
-<p class="text-dark">
+<p class="text-dark app-font-family">
 <i class="fas fa-check eligibility-section mx-2"></i>Détenir <b>un certificat de capacité de transport</b><br>
 <i class="fas fa-check eligibility-section mx-2"></i>Avoir une <b>société de transport</b><br>
 <i class="fas fa-check eligibility-section mx-2"></i>Disposer d’<b>un camion dépanneur</b> ou d’<b>un camion plateau individuel</b><br>
@@ -90,7 +90,7 @@
 				</div>
 			</div>
             <div class="card rounded mx-auto card-register p-5" style="width:60%;"> 
-          <h4 class="frequently-h text-center">3 étapes pour devenir transporteur partenaire sur CoCarmoov</h4>
+          <h4 class="frequently-h text-center">Commencez dès maintenant votre inscription en remplissant ce formulaire simple.</h4>
 
             <div class="card-body">
 			  <form action="/action_page.php">
@@ -111,7 +111,7 @@
   </div>
   <div class="text-center">
   <a type="button" 
-            class="btn professionall-button-register text-dark mt-3 mb-3" href="#">
+            class="btn professionall-button-register text-dark mt-3 mb-3 app-font-family" href="#">
             S’inscrire
 </a>
 </div>
@@ -136,28 +136,28 @@
       <div class="rounded shadow bg-white p-5">
       <div class="accordion accordion-border-bottom" id="accordionFAQ">
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 active"
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" aria-expanded="true"
               aria-controls="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9">Qu’est ce qui est inclus dans le prix de la prestation ?
             </h2>
             <div id="collapse-ebd23e34fd2ed58299b32c03c521feb0b02f19d9"
-              class="accordion-collapse collapse border-0 show"
+              class="accordion-collapse collapse border-0"
               aria-labelledby="heading-ebd23e34fd2ed58299b32c03c521feb0b02f19d9" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"> <p>Le prix de la prestation englobe votre rémunération, les frais de rapprochement, les frais de route (carburant, péages), ainsi que les services optionnels (tels que le lavage extérieur, la démonstration au client et la signature de documents).
+              <div class="accordion-body py-0 content app-font-family"> <p>Le prix de la prestation englobe votre rémunération, les frais de rapprochement, les frais de route (carburant, péages), ainsi que les services optionnels (tels que le lavage extérieur, la démonstration au client et la signature de documents).
                             </p>
                     </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec2" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec2" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec2">Quelles sont les responsabilités d’assurance pour le transporteur sur CoCarmoov ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec2" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec2" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Les transporteurs sur CoCarmoov doivent disposer d'une assurance pour le transport de véhicules.<br>
+              <div class="accordion-body py-0 content app-font-family"><p>Les transporteurs sur CoCarmoov doivent disposer d'une assurance pour le transport de véhicules.<br>
 En cas de sinistre, les frais seront entièrement à leur charge, où ils font intervenir leur propre assurance.
 
 </p>
@@ -165,14 +165,14 @@ En cas de sinistre, les frais seront entièrement à leur charge, où ils font i
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec2" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec3" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec3">Y a-t-il des frais si j’annule un transport après sa réservation ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec3" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec3" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Oui, des frais d'annulation s’appliquent :<br>
+              <div class="accordion-body py-0 content app-font-family"><p>Oui, des frais d'annulation s’appliquent :<br>
 50€ pour les annulations faites plus de 48 heures avant le départ.<br>
 100€ pour les annulations faites 48 heures ou moins avant le départ.
 
@@ -183,27 +183,27 @@ En cas de sinistre, les frais seront entièrement à leur charge, où ils font i
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec4" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec4" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec4">Comment se déroule le transport ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec4" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec4" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Le transporteur se présente le jour de l'enlèvement du véhicule, réalise un état des lieux en présence du contact de départ, prend en charge le véhicule, le transporte jusqu'à destination et le restitue conformément aux conditions de la prestation.
+              <div class="accordion-body py-0 content app-font-family"><p>Le transporteur se présente le jour de l'enlèvement du véhicule, réalise un état des lieux en présence du contact de départ, prend en charge le véhicule, le transporte jusqu'à destination et le restitue conformément aux conditions de la prestation.
 </p>
             </div>
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec5" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec5" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec5">Des frais à prévoir ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec5" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec5" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Certaines situations peuvent entraîner des frais :<br>
+              <div class="accordion-body py-0 content app-font-family"><p>Certaines situations peuvent entraîner des frais :<br>
 Absence au rendez-vous du transport : pénalité de 200€.<br>
 État des lieux de départ manquant : pénalité de 30%.<br>
 État des lieux d'arrivée manquant : pénalité de 30%.<br>
@@ -214,14 +214,14 @@ Restitution tardive du véhicule : facturation de 10€ par heure.
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header accordion-button h5 border-0 "
+            <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec6" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec6" aria-expanded="false"
               aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec6">Je ne trouve pas le transport qui me correspond, que puis-je faire ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec6" class="accordion-collapse collapse border-0 "
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec6" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content"><p>Nous ajoutons régulièrement de nouvelles offres de transport sur le site.<br>
+              <div class="accordion-body py-0 content app-font-family"><p>Nous ajoutons régulièrement de nouvelles offres de transport sur le site.<br>
 Si vous ne trouvez pas le trajet qui vous convient, vous pouvez créer une alerte depuis votre espace transporteur pour recevoir un e-mail dès qu'un trajet aux alentours est disponible.
 
 </p>
@@ -234,8 +234,8 @@ Si vous ne trouvez pas le trajet qui vous convient, vous pouvez créer une alert
         </div>
         <div class="text-center mt-5">
   <a type="button" 
-            class="btn professionall-button-register text-light mt-3 mb-3" href="#">
-            Devenir convoyeur partenaire
+            class="btn professionall-button-register text-light mt-3 mb-3 app-font-family" href="#">
+            Devenir transporteur partenaire
 
 </a>
 </div>

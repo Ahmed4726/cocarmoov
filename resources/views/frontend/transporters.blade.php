@@ -55,13 +55,13 @@
           </p>
           <p class="list-inline-item app-font-family">Mots clés : <a href="#!" class="ml-1 app-font-family">Expédier un véhicule </a> , <a href="#!"
               class="ml-1 app-font-family"> Déplacer un véhicule </a> , <a href="#!"
-              class="ml-1 app-font-family"> Transporter un véhicule </a>
+              class="ml-1 app-font-family"> Transporter un véhicule </a>,
               <a href="#!"
-              class="ml-1 app-font-family"> CoCarmoov </a>
+              class="ml-1 app-font-family"> CoCarmoov </a>,
               <a href="#!"
-              class="ml-1 app-font-family"> Société de transport</a>
+              class="ml-1 app-font-family"> Société de transport </a>,
               <a href="#!"
-              class="ml-1 app-font-family">  Transport automobile</a>
+              class="ml-1 app-font-family">  Transport automobile </a>,
               <a href="#!"
               class="ml-1 app-font-family"> Transport par camion </a>
           </p>
@@ -74,19 +74,19 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 mx-auto text-center">
-                <div><h2 class="news-blog">Latest Articles</h2></div>
+                <div><h2 class="news-blog">Derniers Articles</h2></div>
                 <div class="row">
                   <div class="col-md-4 mt-5">
 									<img loading="lazy" class="rounded mb-3" decoding="async" src="{{ asset('images/wallet/car_of_the_year.jpg') }}" width="100%" height="auto" alt="Post Thumbnail">
-                  <a href="{{route('news')}}" class="h5 mt-4 related-articles-text">Voiture de l'année 2024 : découvrez les véhicules pré-sélectionnés</a>
+                  <a href="{{route('news')}}" class="h5 mt-4 related-articles-text app-font-family">Voiture de l'année 2024 : découvrez les véhicules pré-sélectionnés</a>
                   </div>
                   <div class="col-md-4 mt-5">
 									<img loading="lazy" class="rounded mb-3" decoding="async" src="{{ asset('images/wallet/leasing_auto.jpg') }}" width="100%" height="auto" alt="Post Thumbnail">
-                  <a href="{{route('tips-tricks')}}" class="h5 mt-4 related-articles-text">Comment économiser sur un leasing auto</a>
+                  <a href="{{route('tips-tricks')}}" class="h5 mt-4 related-articles-text app-font-family">Comment économiser sur un leasing auto</a>
                   </div>
                   <div class="col-md-4 mt-5">
 									<img loading="lazy" class="rounded mb-3" decoding="async" src="{{ asset('images/wallet/expedier-vehicule.jpg') }}" width="100%" height="auto" alt="Post Thumbnail">
-                  <a href="{{route('pros')}}" class="h5 mt-4 related-articles-text">Expédition de tous types de véhicules – Astuces pour une transition en toute simplicité</a>
+                  <a href="{{route('pros')}}" class="h5 mt-4 related-articles-text app-font-family">Expédition de tous types de véhicules – Astuces pour une transition en toute simplicité</a>
                   </div>
                 </div>
             </div>

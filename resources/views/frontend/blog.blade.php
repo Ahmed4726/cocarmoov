@@ -148,17 +148,17 @@
 				<div class="widget widget-categories">
 					<h4 class="widget-title  app-font-family"><span>Catégorie</span></h4>
 					<ul class="list-unstyled widget-list">
-						<li><a href="#!">Actualité <small class="ml-auto  app-font-family"></small></a>
+						<li class="app-font-family"><a href="#!">Actualité <small class="ml-auto"></small></a>
 						</li>
-						<li><a href="#!">Conseils et Astuces <small class="ml-auto  app-font-family"></small></a>
+						<li class="app-font-family"><a href="#!">Conseils et Astuces <small class="ml-auto"></small></a>
 						</li>
-						<li><a href="#!">Professionnels <small class="ml-auto  app-font-family"></small></a>
+						<li class="app-font-family"><a href="#!">Professionnels <small class="ml-auto"></small></a>
 						</li>
-						<li><a href="#!">Convoyeurs <small class="ml-auto  app-font-family"></small></a>
+						<li class="app-font-family"><a href="#!">Convoyeurs <small class="ml-auto"></small></a>
 						</li>
-						<li><a href="#!">Transporteurs <small class="ml-auto  app-font-family"></small></a>
+						<li class="app-font-family"><a href="#!">Transporteurs <small class="ml-auto"></small></a>
 						</li>
-                        <li><a href="#!"> A propos de CoCarmoov <small class="ml-auto  app-font-family"></small></a>
+                        <li class="app-font-family"><a href="#!"> A propos de CoCarmoov <small class="ml-auto"></small></a>
 						</li>
 					</ul>
 				</div>
@@ -206,7 +206,7 @@
 						</li>
                         <li class="list-inline-item  app-font-family"><a href="#!">Devenir convoyeur</a>
 						</li>
-                        <li class="list-inline-item  app-font-family"><a href="#!">Convoyeur professionne</a>
+                        <li class="list-inline-item  app-font-family"><a href="#!">Convoyeur professionnel</a>
 						</li>
                         <li class="list-inline-item  app-font-family"><a href="#!">Partenaire CoCarmoov</a>
 						</li>

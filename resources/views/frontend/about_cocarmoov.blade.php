@@ -23,7 +23,7 @@
           <ul class="text-dark app-font-family">
             <li>Formule économique (co-convoyage) : Une solution gagnant-gagnant peu onéreuse où un propriétaire professionnel ou particulier propose son véhicule à un conducteur particulier pour le déplacer pendant qu’il covoiture ou déménage, et ce sous forme de co-convoyage sur notre plateforme.</li>
             <li>Formule express (convoyage) : Une solution personnalisée où un acteur de l’automobile voire même un particulier engage les services d’un convoyeur certifié pour livrer ou restituer un véhicule neuf ou d’occasion, avec des services à la clé.</li>
-            <li>Formule prestige (transport) : Une solution premium à 0 km, où le professionnel ou le particulier loue les services d’un transporteur par camion pour expédier ou rapatrier un véhicule neuf, de collection, en panne ou accidenté.</li>
+            <li>Formule premium (transport) : Une solution à 0 km, où le professionnel ou le particulier loue les services d’un transporteur par camion pour expédier ou rapatrier un véhicule neuf, de collection, en panne ou accidenté.</li>
           </ul>
           <p class="text-dark app-font-family">Ces services permettent aux clients de faire transporter leurs véhicules d'un point A à un point B sans avoir à les conduire eux-mêmes, ce qui est particulièrement utile pour les personnes déménageant dans une autre région ou les entreprises ayant besoin d’expédier des véhicules.</p>
           <div class="mb-5 text-center">
@@ -40,23 +40,20 @@
 
           <p class="list-inline-item app-font-family">Catégorie : <a href="#!" class="ml-1 app-font-family">A propos de CoCarmoov</a>
           </p>
-          <p class="list-inline-item app-font-family">Mots clés : <a href="#!" class="ml-1 app-font-family">Expédier un véhicule </a> , <a href="#!"
-              class="ml-1 app-font-family"> Déplacer un véhicule </a> , <a href="#!"
-              class="ml-1 app-font-family"> CoCarmoov </a>
+          <p class="list-inline-item app-font-family">Mots clés : <a href="#!" class="ml-1 app-font-family">CoCarmoov </a> , <a href="#!"
+              class="ml-1 app-font-family">Société de transport  </a>,
               <a href="#!"
-              class="ml-1 app-font-family">  Société de transport </a>
+              class="ml-1 app-font-family"> Transport automobile </a>,
               <a href="#!"
-              class="ml-1 app-font-family"> Transport économique</a>
+              class="ml-1 app-font-family"> Transport économique </a>,
               <a href="#!"
-              class="ml-1 app-font-family">Transport express </a>
+              class="ml-1 app-font-family">Transport express </a>,
               <a href="#!"
-              class="ml-1 app-font-family"> Transport premium </a>
+              class="ml-1 app-font-family">  Transport par camion </a>,
               <a href="#!"
-              class="ml-1 app-font-family"> Éco-location </a>
+              class="ml-1 app-font-family"> Transport premium </a>,
               <a href="#!"
-              class="ml-1 app-font-family"> Éco-louer </a>
-              <a href="#!"
-              class="ml-1 app-font-family"> Location partagée</a>
+              class="ml-1 app-font-family"> Transport prestige </a>
           </p>
         </div>
       </div>
@@ -71,15 +68,15 @@
                 <div class="row">
                   <div class="col-md-4 mt-5">
 									<img loading="lazy" class="rounded mb-3" decoding="async" src="{{ asset('images/wallet/car_of_the_year.jpg') }}" width="100%" height="auto" alt="Post Thumbnail">
-                  <a href="{{route('news')}}" class="h5 mt-4 related-articles-text">Voiture de l'année 2024 : découvrez les véhicules pré-sélectionnés</a>
+                  <a href="{{route('news')}}" class="h5 mt-4 related-articles-text app-font-family">Voiture de l'année 2024 : découvrez les véhicules pré-sélectionnés</a>
                   </div>
                   <div class="col-md-4 mt-5">
 									<img loading="lazy" class="rounded mb-3" decoding="async" src="{{ asset('images/wallet/leasing_auto.jpg') }}" width="100%" height="auto" alt="Post Thumbnail">
-                  <a href="{{route('tips-tricks')}}" class="h5 mt-4 related-articles-text">Comment économiser sur un leasing auto</a>
+                  <a href="{{route('tips-tricks')}}" class="h5 mt-4 related-articles-text app-font-family">Comment économiser sur un leasing auto</a>
                   </div>
                   <div class="col-md-4 mt-5">
 									<img loading="lazy" class="rounded mb-3" decoding="async" src="{{ asset('images/wallet/expedier-vehicule.jpg') }}" width="100%" height="auto" alt="Post Thumbnail">
-                  <a href="{{route('pros')}}" class="h5 mt-4 related-articles-text">Expédition de tous types de véhicules – Astuces pour une transition en toute simplicité</a>
+                  <a href="{{route('pros')}}" class="h5 mt-4 related-articles-text app-font-family">Expédition de tous types de véhicules – Astuces pour une transition en toute simplicité</a>
                   </div>
                 </div>
             </div>

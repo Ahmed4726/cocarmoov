@@ -10874,11 +10874,11 @@
    }
  }
  .button-size{
-   width: 60%;
+   width: 55%;
  }
- @media (max-width: 768px) {
+ @media (max-width: 480px) {
    .button-size{
-    width: 100%;
+    width: 55%;
    }
  }
  @media (max-width: 480px) {
