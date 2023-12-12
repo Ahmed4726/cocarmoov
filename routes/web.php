@@ -32,7 +32,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
+Route::get('/test', function () {
+    return view('admin.admin_dashboard');
+});
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -80,9 +82,7 @@ Route::get('/mentions-legales', function () {
 Route::get('/transporteur', function () {
     return view('frontend.transporteurs');
 })->name('transporteur');
-Route::get('/test', function () {
-    return view('admin.admin_layout');
-});
+
 Route::get('/generate-cgv', [PDFController::class, 'generateCGVPDF'])->name('generate-cgv');
 Route::get('/generate-cgu', [PDFController::class, 'generateCGUPDF'])->name('generate-cgu');
 require __DIR__.'/auth.php';
