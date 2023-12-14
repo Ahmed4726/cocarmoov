@@ -3756,6 +3756,16 @@
    margin-bottom: 0;
    list-style: none;
  }
+ @media (max-width: 768px) {
+  .navbar-nav {
+    margin-left: -100px !important;
+  }
+}
+@media (max-width: 480px) {
+  .navbar-nav {
+    margin-left: -100px !important;
+  }
+}
  .navbar-nav .nav-link {
    padding-right: 0;
    padding-left: 0;
@@ -9652,7 +9662,6 @@
  .login-button-header{
    background-color: #FDCD02;
    font-size: 15px;
-   padding:8px;
    font-family: "Lato", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
  }
  @media (max-width: 768px) {

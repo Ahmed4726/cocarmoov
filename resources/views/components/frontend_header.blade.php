@@ -10,7 +10,7 @@
 			</button>
             </div>
 			<div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-				<ul class="navbar-nav mb-2" style="margin-left: -100px;" >
+				<ul class="navbar-nav mb-2" style="margin-left: -209px;" >
 					<!-- <li class="nav-item"> <a class="nav-link" href="{{ route('welcome') }}">Accueil</a>
 					</li> -->
 					<li class="nav-item dropdown">
@@ -34,7 +34,8 @@
           </li>
 				</ul>
                         
-				<!-- account btn --> <a href="#!" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 20px;"><span class="text-dark fw-bold app-font-family">Se connecter</span></a>
+				 <a href="#!" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 30px;"><span class="text-dark fw-bold app-font-family">S'identifier</span></a>
+				<a href="#!" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 10px;"><span class="text-dark fw-bold app-font-family">S'inscrire</span></a>
 			
 				<!-- <a href="#!" class="btn btn-primary ms-2 ms-lg-3">Sign Up</a> -->
 			</div>
