@@ -3758,12 +3758,12 @@
  }
  @media (max-width: 768px) {
   .navbar-nav {
-    margin-left: -100px !important;
+    margin-left: -80px !important;
   }
 }
 @media (max-width: 480px) {
   .navbar-nav {
-    margin-left: -100px !important;
+    margin-left: -80px !important;
   }
 }
  .navbar-nav .nav-link {

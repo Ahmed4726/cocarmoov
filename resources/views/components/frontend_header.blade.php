@@ -34,8 +34,13 @@
           </li>
 				</ul>
                         
-				 <a href="#!" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 30px;"><span class="text-dark fw-bold app-font-family">S'identifier</span></a>
-				<a href="#!" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 10px;"><span class="text-dark fw-bold app-font-family">S'inscrire</span></a>
+				<button onclick="window.location.href='#'" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;">
+  <span class="text-dark fw-bold app-font-family">S'identifier</span>
+</button>
+<button onclick="window.location.href='#'" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;">
+  <span class="text-dark fw-bold app-font-family">S'inscrire</span>
+</button>
+
 			
 				<!-- <a href="#!" class="btn btn-primary ms-2 ms-lg-3">Sign Up</a> -->
 			</div>
