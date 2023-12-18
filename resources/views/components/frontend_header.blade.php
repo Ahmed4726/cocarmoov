@@ -42,9 +42,10 @@
 				<button class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;" data-toggle="modal" data-target="#loginModal">
 				<span class="text-dark fw-bold app-font-family">S'identifier</span>
 				</button>
-<button onclick="window.location.href='#'" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;">
-  <span class="text-dark fw-bold app-font-family">S'inscrire</span>
-</button>
+  <!-- Signup Button -->
+  <button class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;" data-toggle="modal" data-target="#signupModal">
+    <span class="text-dark fw-bold app-font-family">S'inscrire</span>
+  </button>
 
 			
 				<!-- <a href="#!" class="btn btn-primary ms-2 ms-lg-3">Sign Up</a> -->
@@ -78,6 +79,39 @@
             </div>
             <!-- Add any additional form fields or buttons as needed -->
             <button type="submit" class="btn btn-warning">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Signup Modal -->
+	<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Add your signup form fields here (e.g., username, email, password) -->
+          <form>
+            <div class="form-group">
+              <label for="signup-username">Username</label>
+              <input type="text" class="form-control" id="signup-username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+              <label for="signup-email">Email</label>
+              <input type="email" class="form-control" id="signup-email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="signup-password">Password</label>
+              <input type="password" class="form-control" id="signup-password" placeholder="Enter your password">
+            </div>
+            <!-- Add any additional form fields or buttons as needed -->
+            <button type="submit" class="btn btn-warning">Sign Up</button>
           </form>
         </div>
       </div>
