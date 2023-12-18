@@ -1,3 +1,8 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
 <!-- navigation -->
 <header class="navigation bg-tertiary sticky-top">
 	<nav class="navbar navbar-expand-xl navbar-light">
@@ -34,9 +39,9 @@
           </li>
 				</ul>
                         
-				<button onclick="window.location.href='#'" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;">
-  <span class="text-dark fw-bold app-font-family">S'identifier</span>
-</button>
+				<button class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;" data-toggle="modal" data-target="#loginModal">
+				<span class="text-dark fw-bold app-font-family">S'identifier</span>
+				</button>
 <button onclick="window.location.href='#'" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;">
   <span class="text-dark fw-bold app-font-family">S'inscrire</span>
 </button>
@@ -48,3 +53,38 @@
 	</nav>
 </header>
 <!-- /navigation -->
+
+
+  <!-- Modal login start -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Add your login form fields here (e.g., username and password inputs) -->
+          <form>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter your password">
+            </div>
+            <!-- Add any additional form fields or buttons as needed -->
+            <button type="submit" class="btn btn-warning">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
