@@ -1,7 +1,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
 </head>
 <!-- navigation -->
 <header class="navigation bg-tertiary sticky-top">
@@ -77,8 +77,9 @@
               <label for="password">Password</label>
               <input type="password" class="form-control" id="password" placeholder="Enter your password">
             </div>
+			<br>
             <!-- Add any additional form fields or buttons as needed -->
-            <button type="submit" class="btn btn-warning">Login</button>
+            <button type="submit" class="btn btn-warning" style="width:100%;">Login</button>
           </form>
         </div>
       </div>
@@ -110,15 +111,16 @@
               <label for="signup-password">Password</label>
               <input type="password" class="form-control" id="signup-password" placeholder="Enter your password">
             </div>
+			<br>
             <!-- Add any additional form fields or buttons as needed -->
-            <button type="submit" class="btn btn-warning">Sign Up</button>
+            <button type="submit" class="btn btn-warning" style="width:100%;">Sign Up</button>
           </form>
         </div>
       </div>
     </div>
   </div>
-
+<!-- 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
 
