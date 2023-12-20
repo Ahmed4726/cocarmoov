@@ -1090,4 +1090,16 @@ Attention, quel que soit l'état du véhicule, celui-ci ne doit pas avoir de rou
         </div>
 </div>  
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    if(session('showSweetAlert'))
+        Swal.fire({
+            icon: 'info',
+            title: 'Hi!',
+            text: 'You Must be Logged in To access this page.',
+        });
+</script>
+
+
 @endsection

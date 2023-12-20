@@ -59,66 +59,104 @@
   <!-- Modal login start -->
   <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="loginModalLabel">Login</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <!-- Add your login form fields here (e.g., username and password inputs) -->
-          <form>
-            <div class="form-group">
-              <label for="username">Username</label>
-              <input type="text" class="form-control" id="username" placeholder="Enter your username">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Enter your password">
+            <div class="modal-body">
+                <!-- Your Laravel login form -->
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
+                    <!-- Email Address -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required autofocus>
+                    </div>
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <!-- Remember Me -->
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="remember_me" name="remember">
+                        <label class="form-check-label" for="remember_me">Remember me</label>
+                    </div>
+                    <!-- Forgot Password Link -->
+                    <div class="form-group">
+                        <a href="{{ route('password.request') }}" class="text-muted">Forgot your password?</a>
+                    </div>
+                    <!-- Login button -->
+                    <button type="submit" class="btn btn-warning" style="width:100%;">Login</button>
+                </form>
             </div>
-			<br>
-            <!-- Add any additional form fields or buttons as needed -->
-            <button type="submit" class="btn btn-warning" style="width:100%;">Login</button>
-          </form>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 
     <!-- Signup Modal -->
 	<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Your Laravel registration form -->
+                <form method="POST" action="{{ route('register') }}">
+                    @csrf
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required autofocus>
+                    </div>
+                    <!-- Email Address -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <!-- Confirm Password -->
+                    <div class="form-group">
+                        <label for="password_confirmation">Confirm Password</label>
+                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirm your password" required>
+                    </div>
+					<div class="form-group">
+						<label for="user_type">User Type</label>
+						<select class="form-control" name="user_type" id="user_type">
+							<option value="driver">Driver</option>
+							<option value="student">Student</option>
+						</select>
+					</div>
+					<br>
+					
+                    <!-- Sign Up button -->
+                    <button type="submit" class="btn btn-warning" style="width:100%;">Sign Up</button>
+                </form>
+            </div>
         </div>
-        <div class="modal-body">
-          <!-- Add your signup form fields here (e.g., username, email, password) -->
-          <form>
-            <div class="form-group">
-              <label for="signup-username">Username</label>
-              <input type="text" class="form-control" id="signup-username" placeholder="Enter your username">
-            </div>
-            <div class="form-group">
-              <label for="signup-email">Email</label>
-              <input type="email" class="form-control" id="signup-email" placeholder="Enter your email">
-            </div>
-            <div class="form-group">
-              <label for="signup-password">Password</label>
-              <input type="password" class="form-control" id="signup-password" placeholder="Enter your password">
-            </div>
-			<br>
-            <!-- Add any additional form fields or buttons as needed -->
-            <button type="submit" class="btn btn-warning" style="width:100%;">Sign Up</button>
-          </form>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
+@if(session('showLoginAlert'))
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        Swal.fire({
+            icon: 'info',
+            title: 'Please Login',
+            text: 'You need to log in to access this page.',
+        });
+    </script>
+@endif
 <!-- 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
