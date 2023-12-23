@@ -1,6 +1,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
 </head>
 <!-- navigation -->
@@ -68,7 +70,7 @@
             </div>
             <div class="modal-body">
                 <!-- Your Laravel login form -->
-                <form method="POST" action="{{ route('login') }}">
+                <form id="loginForm" method="POST" action="{{ route('login') }}">
                     @csrf
                     <!-- Email Address -->
                     <div class="form-group">
@@ -161,6 +163,47 @@
         </div>
     </div>
 </div>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Store 'this' in a variable for use inside fetch callback
+        const form = this;
+
+        // Perform an AJAX request to submit the form
+        fetch(form.action, {
+            method: form.method,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams(new FormData(form)),
+        })
+        .then(response => {
+            if (response.ok) {
+                // If login is successful, show success message
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Logged in successfully!',
+                    showConfirmButton: false,
+					timer: 1000, // Wait for user confirmation
+                }).then(() => {
+                    // Redirect to the dashboard after user confirms
+                    window.location.href = '{{ route("dashboard") }}';
+                });
+            } else {
+                // If login fails, show error message
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Login failed',
+                    text: 'Login details are incorrect. Please try again.',
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+</script>
 @if(session('showLoginAlert'))
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
