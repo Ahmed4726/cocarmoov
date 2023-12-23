@@ -130,7 +130,7 @@
       <form method="POST" action="{{ route('logout') }}">
     @csrf
     <button type="submit" class="nav-link" role="button" style="border: none; background-color: transparent;">
-        <i class="fas fa-user"></i>
+        <i class="fas fa-power"></i>
     </button>
 </form>
 

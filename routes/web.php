@@ -30,9 +30,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 // Route::get('/test', function () {
 //     return view('admin.admin_dashboard');
 // });
@@ -44,7 +44,7 @@ Route::get('/main-dashboard', function () {
         return view('welcome')->with('showSweetAlert', true);
     }
     return view('admin.admin_dashboard');
-});
+})->name('dashboard');
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

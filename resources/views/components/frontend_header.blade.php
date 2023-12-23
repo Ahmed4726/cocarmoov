@@ -61,7 +61,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <h5 class="modal-title" id="loginModalLabel">S'identifier</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -72,25 +72,26 @@
                     @csrf
                     <!-- Email Address -->
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required autofocus>
+                        <label for="email">Adresse e-mail</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="entrez votre Adresse e-mail"  required autofocus>
                     </div>
                     <!-- Password -->
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                        <label for="password">Mot de passe</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="entrez votre Mot de passe"  required>
                     </div>
+					<br>
                     <!-- Remember Me -->
-                    <div class="form-group form-check">
+                    <!-- <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="remember_me" name="remember">
                         <label class="form-check-label" for="remember_me">Remember me</label>
-                    </div>
+                    </div> -->
                     <!-- Forgot Password Link -->
                     <div class="form-group">
                         <a href="{{ route('password.request') }}" class="text-muted">Forgot your password?</a>
                     </div>
                     <!-- Login button -->
-                    <button type="submit" class="btn btn-warning" style="width:100%;">Login</button>
+                    <button type="submit" class="btn btn-warning" style="width:100%;">Connexion</button>
                 </form>
             </div>
         </div>
@@ -102,7 +103,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                <h5 class="modal-title" id="signupModalLabel">S'inscrire</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -113,35 +114,44 @@
                     @csrf
                     <!-- Name -->
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required autofocus>
+                        <label for="name">Prénom</label>
+                        <input type="text" class="form-control" id="name" name="last_name" placeholder="entrez votre Prénom" required autofocus>
+                    </div>
+					
+					<div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" class="form-control" id="name" name="family_name" placeholder="entrez votre Nom" required>
+                    </div>
+					<div class="form-group">
+                        <label for="name">Numéro de téléphone</label>
+                        <input type="text" class="form-control" id="name" name="phone_number" placeholder="entrez votre Numéro de téléphone" required>
                     </div>
                     <!-- Email Address -->
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                        <label for="email">Adresse e-mail</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="entrez votre Adresse e-mail" required>
                     </div>
                     <!-- Password -->
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                        <label for="password">Mot de passe</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="entrez votre Mot de passe" required>
                     </div>
                     <!-- Confirm Password -->
                     <div class="form-group">
-                        <label for="password_confirmation">Confirm Password</label>
-                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirm your password" required>
+                        <label for="password_confirmation">Confirmer Mot de passe</label>
+                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirmer votre Mot de passe" required>
                     </div>
 					<div class="form-group">
-						<label for="user_type">User Type</label>
+						<label for="user_type">Type d'utilisateur</label>
 						<select class="form-control" name="user_type" id="user_type">
-							<option value="driver">Driver</option>
-							<option value="student">Student</option>
+							<option value="Particulier">Particulier</option>
+							<option value="professionnel">Professionnel</option>
 						</select>
 					</div>
 					<br>
 					
                     <!-- Sign Up button -->
-                    <button type="submit" class="btn btn-warning" style="width:100%;">Sign Up</button>
+                    <button type="submit" class="btn btn-warning" style="width:100%;">S'inscrire</button>
                 </form>
             </div>
         </div>

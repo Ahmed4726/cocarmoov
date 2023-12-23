@@ -20,7 +20,9 @@ class User extends Authenticatable implements LaratrustUser
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'last_name',
+        'family_name',
+        'phone_number',
         'email',
         'password',
         'user_type',
