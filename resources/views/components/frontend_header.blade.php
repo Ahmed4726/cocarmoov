@@ -146,12 +146,12 @@
 					<div class="form-group">
 						<label for="user_type">Type d'utilisateur</label>
 						<select class="form-control" name="user_type" id="user_type">
+							<option selected>Choisissez votre rôle</option>
 							<option value="Particulier">Particulier</option>
 							<option value="professionnel">Professionnel</option>
 							<option value="Co-convoyeur">Co-convoyeur</option>
 							<option value="Convoyeur">Convoyeur</option>
 							<option value="Transporteur">Transporteur</option>
-
 						</select>
 					</div>
 					<br>
