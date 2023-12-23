@@ -36,21 +36,15 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/test', function () {
 //     return view('admin.admin_dashboard');
 // });
-Route::get('/main-dashboard', function () {
-    // dd("oka");
-    if (!Auth::check()) {
-        // dd("ok");
-        // User is not logged in, show SweetAlert or redirect to login page
-        return view('welcome')->with('showSweetAlert', true);
-    }
-    return view('admin.admin_dashboard');
-})->name('dashboard');
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
+    Route::get('/main-dashboard', function () {
+        return view('admin.admin_dashboard');
+    });
 });
+
 Route::get('/', [WelcomeController::class,'index'])->name('welcome');
 Route::get('/assurance', [InsuranceController::class,'index'])->name('insurance');
 Route::get('/contact', [ContactController::class,'index'])->name('contact_us');

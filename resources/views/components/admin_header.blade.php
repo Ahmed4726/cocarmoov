@@ -188,11 +188,22 @@
               </li>
             </ul>
           </li>
+          @if(check_persmission('test','view'))
           <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="./index.html" class="nav-link active">
                   <p>Orders</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          @endif
+          <li class="nav-item menu-open">
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link active">
+                  <p>Invoices</p>
                 </a>
               </li>
             </ul>

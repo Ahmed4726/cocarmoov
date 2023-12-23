@@ -10,12 +10,14 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WelcomeController;
 
 Route::middleware('guest')->group(function () {
-    Route::get('/show-sweetalert', function () {
-        return view('sweetalert.show');
-    })->name('sweetalert');
-    
+    // Route::get('/show-sweetalert', function () {
+    //     return view('sweetalert.show');
+    // })->name('sweetalert');
+    Route::get('/sweetalert', [WelcomeController::class,'sweetalert'])->name('sweetalert');
+    Route::get('/', [WelcomeController::class,'index'])->name('welcome');
     Route::get('register', [RegisteredUserController::class, 'create'])
                 ->name('register');
 

@@ -1,5 +1,7 @@
 @extends('frontend.frontend_main_layout')
 @section('content')
+
+
 <!-- <div class="modal applyLoanModal fade" id="applyLoan" tabindex="-1" aria-labelledby="applyLoanLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -1090,16 +1092,15 @@ Attention, quel que soit l'état du véhicule, celui-ci ne doit pas avoir de rou
         </div>
 </div>  
 </section>
-
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-    if(session('showSweetAlert'))
+@if($showSweetAlert == true)
+    <script>
         Swal.fire({
             icon: 'info',
-            title: 'Hi!',
-            text: 'You Must be Logged in To access this page.',
+            title: 'Hello!',
+            text: 'Please Log In to access this page',
         });
-</script>
-
+    </script>
+@endif
 
 @endsection
