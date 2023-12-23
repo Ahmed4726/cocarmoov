@@ -146,6 +146,10 @@
 						<select class="form-control" name="user_type" id="user_type">
 							<option value="Particulier">Particulier</option>
 							<option value="professionnel">Professionnel</option>
+							<option value="Co-convoyeur">Co-convoyeur</option>
+							<option value="Convoyeur">Convoyeur</option>
+							<option value="Transporteur">Transporteur</option>
+
 						</select>
 					</div>
 					<br>
