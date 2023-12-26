@@ -9,6 +9,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
+use Illuminate\Http\JsonResponse;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -23,15 +24,18 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      */
-    public function store(LoginRequest $request)
+    public function store(LoginRequest $request): JsonResponse
     {
-        // dd($request);
-        $request->authenticate();
-
-        $request->session()->regenerate();
-        return redirect()->route('dashboard');
-        // return redirect()->intended(RouteServiceProvider::HOME);
+        if ($request->authenticate()) {
+            // If authentication is successful
+            $request->session()->regenerate();
+            return response()->json(['url' => route('dashboard')], 200);
+        } else {
+            // If authentication fails
+            return response()->json(['error' => 'Login failed.'], 401);
+        }
     }
+    
 
     /**
      * Destroy an authenticated session.

@@ -179,18 +179,18 @@
             body: new URLSearchParams(new FormData(form)),
         })
         .then(response => {
-            if (response.ok) {
+            if (response.status === 401) {
                 // If login is successful, show success message
                 Swal.fire({
                     icon: 'success',
                     title: 'Logged in successfully!',
                     showConfirmButton: false,
-					timer: 1000, // Wait for user confirmation
+                    timer: 1000, // Wait for user confirmation
                 }).then(() => {
                     // Redirect to the dashboard after user confirms
                     window.location.href = '{{ route("dashboard") }}';
                 });
-            } else {
+            } else if (response.status === 200) {
                 // If login fails, show error message
                 Swal.fire({
                     icon: 'error',
@@ -204,6 +204,7 @@
         });
     });
 </script>
+
 @if(session('showLoginAlert'))
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
