@@ -11,10 +11,15 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CodriveController;
 use App\Http\Controllers\ConvoyorController;
 use App\Http\Controllers\TransporteurController;
-use App\Http\Controllers\permissionsController;
+use App\Http\Controllers\PermissionsController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\RolesAndPermissionController;
+
+
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Support\Facades\Route;
+use Laratrust\Http\Controllers\RolesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,10 +49,36 @@ Route::middleware('auth')->group(function () {
     Route::get('/main-dashboard', function () {
         return view('admin.admin_dashboard');
     })->name('dashboard');
-    Route::get('/permissions', [permissionsController::class,'index'])->name('permissions');
+    //Roles and Permissions
+    Route::get('/roles-and-permissions', [RolesAndPermissionController::class,'index'])->name('roles.and.permissions');
+    Route::get('/get-permissions/{role_id}', [RolesAndPermissionController::class,'getPermissions'])->name('get.permissions');
+
+    //Permissions
+    Route::get('/permissions', [PermissionsController::class,'index'])->name('permissions');
+    Route::post('/add-new-permissions', [PermissionsController::class,'newPermission'])->name('add.new.Permission');
+    Route::post('/delete-permission/{id}', [PermissionsController::class,'destroy'])->name('delete.permission');
+    //Roles
+    Route::get('/roles', [RoleController::class,'index'])->name('roles');
+    Route::post('/add-new-role', [RoleController::class,'newRole'])->name('add.new.role');
+    Route::get('/edit-role/{id}', [RoleController::class,'edit'])->name('edit.role');
+    Route::put('/update-role/{id}', [RoleController::class,'update'])->name('update.role');
+    Route::post('/delete-role/{id}', [RoleController::class,'destroy'])->name('delete.role');
+
 
 });
 
+
+
+
+
+
+
+
+
+
+
+
+//Website
 Route::get('/', [WelcomeController::class,'index'])->name('welcome');
 Route::get('/assurance', [InsuranceController::class,'index'])->name('insurance');
 Route::get('/contact', [ContactController::class,'index'])->name('contact_us');

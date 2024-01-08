@@ -213,14 +213,28 @@
             </ul>
           </li>
           <li class="nav-item menu-open">
+            <a href="#" class="nav-link">
+                <p>Manage <i class="fas fa-angle-down"></i></p>
+            </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-              <a href="{{ route('permissions') }}" class="nav-link active">
-                  <p>Permissions</p>
-                </a>
-              </li>
+                <li class="nav-item">
+                    <a href="{{ route('roles.and.permissions') }}" class="nav-link">
+                        <p>Roles & Permissions</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('roles') }}" class="nav-link">
+                        <p>Roles</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('permissions') }}" class="nav-link">
+                        <p>Permissions</p>
+                    </a>
+                </li>
             </ul>
-          </li>
+        </li>
+
           <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
               <li class="nav-item">

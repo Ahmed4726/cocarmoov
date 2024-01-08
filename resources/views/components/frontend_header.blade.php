@@ -175,6 +175,7 @@
             method: form.method,
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
+                'X-Content-Type-Options': 'nosniff',
             },
             body: new URLSearchParams(new FormData(form)),
         })
