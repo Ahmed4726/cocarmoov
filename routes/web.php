@@ -49,6 +49,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/main-dashboard', function () {
         return view('admin.admin_dashboard');
     })->name('dashboard');
+
     //Roles and Permissions
     Route::get('/roles-and-permissions', [RolesAndPermissionController::class,'index'])->name('roles.and.permissions');
     Route::get('/get-permissions/{role_id}', [RolesAndPermissionController::class,'getPermissions'])->name('get.permissions');
@@ -64,6 +65,9 @@ Route::middleware('auth')->group(function () {
     Route::put('/update-role/{id}', [RoleController::class,'update'])->name('update.role');
     Route::post('/delete-role/{id}', [RoleController::class,'destroy'])->name('delete.role');
 
+
+
+    Route::get('/permissions', [permissionsController::class,'index'])->name('permissions');
 
 });
 

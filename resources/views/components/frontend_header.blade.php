@@ -74,12 +74,12 @@
                     @csrf
                     <!-- Email Address -->
                     <div class="form-group">
-                        <label for="email">Adresse e-mail</label>
+                        <!-- <label for="email">Adresse e-mail</label> -->
                         <input type="email" class="form-control" id="email" name="email" placeholder="entrez votre Adresse e-mail"  required autofocus>
                     </div>
                     <!-- Password -->
                     <div class="form-group">
-                        <label for="password">Mot de passe</label>
+                        <!-- <label for="password">Mot de passe</label> -->
                         <input type="password" class="form-control" id="password" name="password" placeholder="entrez votre Mot de passe"  required>
                     </div>
 					<br>
@@ -116,35 +116,35 @@
                     @csrf
                     <!-- Name -->
                     <div class="form-group">
-                        <label for="name">Prénom</label>
+                        <!-- <label for="name">Prénom</label> -->
                         <input type="text" class="form-control" id="name" name="last_name" placeholder="entrez votre Prénom" required autofocus>
                     </div>
 					
 					<div class="form-group">
-                        <label for="name">Nom</label>
+                        <!-- <label for="name">Nom</label> -->
                         <input type="text" class="form-control" id="name" name="family_name" placeholder="entrez votre Nom" required>
                     </div>
 					<div class="form-group">
-                        <label for="name">Numéro de téléphone</label>
+                        <!-- <label for="name">Numéro de téléphone</label> -->
                         <input type="text" class="form-control" id="name" name="phone_number" placeholder="entrez votre Numéro de téléphone" required>
                     </div>
                     <!-- Email Address -->
                     <div class="form-group">
-                        <label for="email">Adresse e-mail</label>
+                        <!-- <label for="email">Adresse e-mail</label> -->
                         <input type="email" class="form-control" id="email" name="email" placeholder="entrez votre Adresse e-mail" required>
                     </div>
                     <!-- Password -->
                     <div class="form-group">
-                        <label for="password">Mot de passe</label>
+                        <!-- <label for="password">Mot de passe</label> -->
                         <input type="password" class="form-control" id="password" name="password" placeholder="entrez votre Mot de passe" required>
                     </div>
                     <!-- Confirm Password -->
                     <div class="form-group">
-                        <label for="password_confirmation">Confirmer Mot de passe</label>
+                        <!-- <label for="password_confirmation">Confirmer Mot de passe</label> -->
                         <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirmer votre Mot de passe" required>
                     </div>
 					<div class="form-group">
-						<label for="user_type">Type d'utilisateur</label>
+						<!-- <label for="user_type">Type d'utilisateur</label> -->
 						<select class="form-control" name="user_type" id="user_type">
 							<option selected>Choisissez votre rôle</option>
 							<option value="Particulier">Particulier</option>
