@@ -43,9 +43,7 @@
                                     <button type="button" class="btn btn-primary text-dark text-bold"
                                         style="background-color: #FDCD02; border:none;" data-toggle="modal"
                                         data-target="#roleModal">Roles</button>
-                                    {{-- <button type="button" class="btn btn-primary text-dark text-bold"
-                                        style="background-color: #FDCD02; border:none;" data-toggle="modal"
-                                        data-target="#permissionModal">Permissions</button> --}}
+                                 
                                 </div>
                             </div>
 

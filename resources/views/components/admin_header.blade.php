@@ -2,7 +2,12 @@
 <!-- Include SweetAlert2 CSS and JS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
+<style>
+  .nav-item.active a {
+    background-color: #fdcd02; /* Set your desired background color */
+    color: #000; /* Set your desired text color */
+  }
+</style>
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
@@ -146,7 +151,7 @@
     </ul> -->
   </nav>
   <!-- /.navbar -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style='background-color:#333132'>
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img class="img-fluid" width="100%" height="100px" src="{{ asset('images/wallet/footer-2.png') }}" alt="Wallet" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -166,7 +171,7 @@
       </div> -->
 
       <!-- SidebarSearch Form -->
-      <div class="form-inline">
+      <!-- <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
           <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
           <div class="input-group-append">
@@ -175,39 +180,95 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <ul class="nav nav-treeview">
+               <li class="nav-item menu-open">
+            <ul class="nav nav-treeview rounded" style='background-color:#fdcd02;'>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <!-- <i class="far fa-circle nav-icon"></i> -->
-                  <p>Dashboard</p>
+                <a href="{{route('account')}}" class="nav-link">
+                <i class='fas fa-user text-dark'></i>
+                  <p  class='text-dark'>My account</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+               <li class="nav-item menu-open">
+            <ul class="nav nav-treeview rounded" style='background-color:#fdcd02;'>
+              <li class="nav-item">
+                <a href="{{route('dashboard')}}" class="nav-link">
+                <i class='fas fa-tachometer-alt text-dark'></i>
+                  <p  class='text-dark'>Dashboard</p>
                 </a>
               </li>
             </ul>
           </li>
           @if(check_persmission('test','view'))
           <li class="nav-item menu-open">
-            <ul class="nav nav-treeview">
+            <ul class="nav nav-treeview rounded" style='background-color:#fdcd02;'>
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
-                  <p>Orders</p>
+                <a href="./index.html" class="nav-link">
+                <i class='fas fa-shopping-cart text-dark'></i>
+                  <p  class='text-dark'>Orders</p>
                 </a>
               </li>
             </ul>
           </li>
           @endif
           <li class="nav-item menu-open">
-            <ul class="nav nav-treeview">
+            <ul class="nav nav-treeview rounded" style='background-color:#fdcd02;'>
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
-                  <p>Invoices</p>
+                <a href="./index.html" class="nav-link">
+                <i class='fas fa-file-invoice text-dark'></i>
+                  <p  class='text-dark'>Invoicing</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-open">
+            <ul class="nav nav-treeview rounded" style='background-color:#fdcd02;'>
+              <li class="nav-item">
+                <a href="{{route('bookings')}}" class="nav-link">
+                  <i class='fas fa-car text-dark'></i>
+                  <p class='text-dark'>Bookings</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item{{ Request::is('calendar') ? ' active' : '' }}">
+    <a href="{{ route('calendar') }}" class="nav-link">
+        <i class='fas fa-calendar text-dark'></i>
+        <p class='text-dark'>Calendar</p>
+    </a>
+</li>
+
+<li class="nav-item{{ Request::is('alerts') ? ' active' : '' }}">
+    <a href="{{ route('alerts') }}" class="nav-link">
+        <i class='fas fa-bell text-dark'></i>
+        <p class='text-dark'>Alerts</p>
+    </a>
+</li>
+
+          <li class="nav-item menu-open">
+            <ul class="nav nav-treeview rounded" style='background-color:#fdcd02;'>
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link">
+                  <i class='fas fa-bell text-dark'></i>
+                  <p class='text-dark'>Training space</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-open">
+            <ul class="nav nav-treeview rounded" style='background-color:#fdcd02;'>
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link">
+                  <i class='fas fa-user text-dark'></i>
+                  <p class='text-dark'>My profile</p>
                 </a>
               </li>
             </ul>
@@ -235,7 +296,7 @@
             </ul>
         </li>
 
-          <li class="nav-item menu-open">
+          <!-- <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="./index.html" class="nav-link active">
@@ -243,7 +304,7 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

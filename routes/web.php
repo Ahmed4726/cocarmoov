@@ -8,11 +8,16 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\AccountController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\CodriveController;
 use App\Http\Controllers\ConvoyorController;
 use App\Http\Controllers\TransporteurController;
 use App\Http\Controllers\PermissionsController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\AlertController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\RolesAndPermissionController;
 
 
@@ -58,6 +63,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/permissions', [PermissionsController::class,'index'])->name('permissions');
     Route::post('/add-new-permissions', [PermissionsController::class,'newPermission'])->name('add.new.Permission');
     Route::post('/delete-permission/{id}', [PermissionsController::class,'destroy'])->name('delete.permission');
+    Route::get('/permissions', [permissionsController::class,'index'])->name('permissions');
+
     //Roles
     Route::get('/roles', [RoleController::class,'index'])->name('roles');
     Route::post('/add-new-role', [RoleController::class,'newRole'])->name('add.new.role');
@@ -66,8 +73,20 @@ Route::middleware('auth')->group(function () {
     Route::post('/delete-role/{id}', [RoleController::class,'destroy'])->name('delete.role');
 
 
+    //Bookings
+    Route::get('/bookings', [BookingController::class,'index'])->name('bookings');
+    //Calendar
+    Route::get('/calendar', [CalendarController::class,'index'])->name('calendar');
+    //Account
+    Route::get('/my-account', [AccountController::class,'index'])->name('account');
+    //Alerts
+    Route::get('/alerts', [AlertController::class,'index'])->name('alerts');
+    //Invoices
+    Route::get('/invoices', [InvoiceController::class,'index'])->name('invoice');
 
-    Route::get('/permissions', [permissionsController::class,'index'])->name('permissions');
+
+    // Route::view('my-account','admin.calendar')->name('calendar');
+
 
 });
 
