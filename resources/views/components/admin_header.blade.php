@@ -222,7 +222,7 @@
           <li class="nav-item menu-open">
             <ul class="nav nav-treeview rounded" style='background-color:#fdcd02;'>
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="{{route('invoice')}}" class="nav-link">
                 <i class='fas fa-file-invoice text-dark'></i>
                   <p  class='text-dark'>Invoicing</p>
                 </a>
@@ -256,7 +256,7 @@
           <li class="nav-item menu-open">
             <ul class="nav nav-treeview rounded" style='background-color:#fdcd02;'>
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="{{route('certification')}}" class="nav-link">
                   <i class='fas fa-bell text-dark'></i>
                   <p class='text-dark'>Training space</p>
                 </a>

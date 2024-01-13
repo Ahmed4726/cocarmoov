@@ -25,6 +25,7 @@
                 <h3 class="card-title">
                 Invoices
                 </h3>
+              
                 <!-- <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
                     <li class="nav-item">
@@ -37,7 +38,50 @@
                 </div> -->
               </div><!-- /.card-header -->
               <div class="card-body">
-                <div class="tab-content p-0">
+              <div class="container mb-2">
+    <form action="/submit" method="post">
+        <!-- Form Row 1 -->
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" name="field1" placeholder="professional driver">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="field2" placeholder="activity">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="field3" placeholder="status">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="field4" placeholder="amount">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="field5" placeholder="action">
+            </div>
+            <div class="col">
+            <button type="button" class="btn btn-primary text-dark text-bold"
+                                        style="background-color: #FDCD02; border:none;">Search</button>
+            </div>
+           
+        </div>
+
+        <!-- Add more form rows as needed -->
+
+        <!-- Submit Button -->
+       
+    </form>
+</div>
+              <table class="table table-bordered table-striped">
+                            <thead>
+                                <th scope='col'>Professional Driver</th>
+                                <th scope='col'>Activity</th>
+                                <th scope='col'>Status</th>
+                                <th scope='col'>Amount</th>
+                                <th scope='col'>Action</th>
+                            </thead>
+                            <tbody>
+                              
+                            </tbody>
+                        </table>
                 </div>
               </div><!-- /.card-body -->
             </div>

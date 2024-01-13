@@ -18,6 +18,8 @@ use App\Http\Controllers\PermissionsController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\AlertController;
 use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\TrainingController;
+
 use App\Http\Controllers\RolesAndPermissionController;
 
 
@@ -75,15 +77,26 @@ Route::middleware('auth')->group(function () {
 
     //Bookings
     Route::get('/bookings', [BookingController::class,'index'])->name('bookings');
+
+
     //Calendar
     Route::get('/calendar', [CalendarController::class,'index'])->name('calendar');
+
+
     //Account
     Route::get('/my-account', [AccountController::class,'index'])->name('account');
+
+
     //Alerts
     Route::get('/alerts', [AlertController::class,'index'])->name('alerts');
+
+
     //Invoices
     Route::get('/invoices', [InvoiceController::class,'index'])->name('invoice');
 
+
+    //Training certifications
+    Route::get('/certifications', [TrainingController::class,'index'])->name('certification');
 
     // Route::view('my-account','admin.calendar')->name('calendar');
 
