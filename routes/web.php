@@ -60,6 +60,7 @@ Route::middleware('auth')->group(function () {
     //Roles and Permissions
     Route::get('/roles-and-permissions', [RolesAndPermissionController::class,'index'])->name('roles.and.permissions');
     Route::get('/get-permissions/{role_id}', [RolesAndPermissionController::class,'getPermissions'])->name('get.permissions');
+    Route::post('/save-permissions', [RolesAndPermissionController::class,'savePermission'])->name('save.Permission');
 
     //Permissions
     Route::get('/permissions', [PermissionsController::class,'index'])->name('permissions');

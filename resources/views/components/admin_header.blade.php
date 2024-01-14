@@ -207,7 +207,7 @@
               </li>
             </ul>
           </li>
-          @if(check_persmission('test','view'))
+          @if(check_persmission('sad'))
           <li class="nav-item menu-open">
             <ul class="nav nav-treeview rounded" style='background-color:#fdcd02;'>
               <li class="nav-item">
