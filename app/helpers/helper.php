@@ -1,6 +1,6 @@
 <?php
 
-function check_permission($permission_name)
+function check_persmission($permission_name)
 {
     $user_role_id = auth()->user()->role_id;
 
@@ -15,7 +15,7 @@ function check_permission($permission_name)
     }
 
     // Check if the user's role has the specified permission
-    $hasPermission = DB::table('role_permissions')
+    $hasPermission = DB::table('permission_role')
         ->where('role_id', $user_role_id)
         ->where('permission_id', $permissionId)
         ->exists();
