@@ -43,7 +43,7 @@
                                     <button type="button" class="btn btn-primary text-dark text-bold"
                                         style="background-color: #FDCD02; border:none;" data-toggle="modal"
                                         data-target="#roleModal">Roles</button>
-                                 
+
                                 </div>
                             </div>
 
@@ -210,7 +210,7 @@
                             // Assuming you have a button with the id 'editButton'
                             $('.editButton').click(function () {
                                 var roleId = $(this).data('role-id');
-                                // alert(roleId)
+                                alert(roleId)
                                 editRole(roleId);
                             });
                             });
