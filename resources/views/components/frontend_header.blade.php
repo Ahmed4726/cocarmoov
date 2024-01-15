@@ -154,8 +154,12 @@
 							<option value="Transporteur">Transporteur</option>
 						</select>
 					</div>
-					<br>
-					
+                                <div class="form-group">
+                <input type="checkbox" id="checkbox" name="checkbox_name">
+                <span>J'accepte les Conditions Générales d'Utilisation</span>
+                            </div>
+
+
                     <!-- Sign Up button -->
                     <button type="submit" class="btn btn-warning" style="width:100%;">S'inscrire</button>
                 </form>
