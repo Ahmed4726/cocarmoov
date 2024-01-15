@@ -50,9 +50,6 @@ use Laratrust\Http\Controllers\RolesController;
 //     return view('admin.admin_dashboard');
 // });
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/main-dashboard', function () {
         return view('admin.admin_dashboard');
     })->name('dashboard');
@@ -74,26 +71,26 @@ Route::middleware('auth')->group(function () {
     Route::put('/update-role/{id}', [RoleController::class,'update'])->name('update.role');
     Route::post('/delete-role/{id}', [RoleController::class,'destroy'])->name('delete.role');
 
+    //profile
+    Route::get('/show_profile', [ProfileController::class,'index'])->name('profile.index');
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     //Bookings
     Route::get('/bookings', [BookingController::class,'index'])->name('bookings');
 
-
     //Calendar
     Route::get('/calendar', [CalendarController::class,'index'])->name('calendar');
-
 
     //Account
     Route::get('/my-account', [AccountController::class,'index'])->name('account');
 
-
     //Alerts
     Route::get('/alerts', [AlertController::class,'index'])->name('alerts');
 
-
     //Invoices
     Route::get('/invoices', [InvoiceController::class,'index'])->name('invoice');
-
 
     //Training certifications
     Route::get('/certifications', [TrainingController::class,'index'])->name('certification');

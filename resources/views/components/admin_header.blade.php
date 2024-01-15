@@ -266,7 +266,7 @@
           <li class="nav-item menu-open">
             <ul class="nav nav-treeview rounded" style='background-color:#fdcd02;'>
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="{{route('profile.index')}}" class="nav-link">
                   <i class='fas fa-user text-dark'></i>
                   <p class='text-dark'>My profile</p>
                 </a>
