@@ -1,16 +1,28 @@
 <?php
 
-function check_persmission($permission_name, $permission_type)
+function check_permission($permission_name)
 {
-    $user_id = auth()->user()->id;
-    $user = DB::table('users')
-    ->leftjoin('user_permissions','user_permissions.user_id','users.id')
-    ->where('users.id', $user_id)
-    ->where('user_permissions.permission_name', $permission_name)
-    ->where('user_permissions.permission_type', $permission_type)
-    ->first();
-    return $user !== null; 
+    $user_role_id = auth()->user()->role_id;
+
+    // Get the permission id based on the permission name
+    $permissionId = DB::table('permissions')
+        ->where('name', $permission_name)
+        ->value('id');
+
+    if (!$permissionId) {
+        // Permission not found
+        return false;
+    }
+
+    // Check if the user's role has the specified permission
+    $hasPermission = DB::table('role_permissions')
+        ->where('role_id', $user_role_id)
+        ->where('permission_id', $permissionId)
+        ->exists();
+
+    return $hasPermission;
 }
+
 
 // function user_role($role)
 // {
