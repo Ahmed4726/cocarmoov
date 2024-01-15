@@ -29,7 +29,6 @@
                                     <button type="button" class="btn btn-primary text-dark text-bold"
                                         style="background-color: #FDCD02; border:none;" data-toggle="modal"
                                         data-target="#roleModal">Create new Alert</button>
-
                                 </div>
                                 <div class="modal fade" id="roleModal" tabindex="-1" role="dialog" aria-labelledby="roleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
@@ -78,8 +77,17 @@
                 </div> -->
               </div><!-- /.card-header -->
               <div class="card-body">
-                <div class="tab-content p-0">
-                </div>
+              <table class="table table-bordered table-striped">
+                            <thead>
+                                <th scope='col'>Collection</th>
+                                <th scope='col'>Delivery</th>
+                                <th scope='col'>Trips</th>
+                                <th scope='col'>Action</th>
+                            </thead>
+                            <tbody>
+                              
+                            </tbody>
+                        </table>
               </div><!-- /.card-body -->
             </div>
 </div>
