@@ -1,11 +1,6 @@
 @extends('admin.admin_layout')
 @section('content')
-<style>
-  .nav-item.active a {
-    background-color: #fdcd02; /* Set your desired background color */
-    color: #000; /* Set your desired text color */
-  }
-</style>
+
 <div class="wrapper">
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -28,10 +23,10 @@
             <!-- Custom tabs (Charts with tabs)-->
             <ul class="nav nav-pills mb-2">
                     <li class="nav-item{{ Request::is('#revenue-chart') ? ' active' : '' }}  mx-2">
-                      <a class="nav-link active" href="#revenue-chart" >In progress</a>
+                      <a class="nav-link active" href="#revenue-chart" data-toggle="tab">In progress</a>
                     </li>
                     <li class="nav-item{{ Request::is('#revenue-chart') ? ' active' : '' }}">
-                      <a class="nav-link" href="#sales-chart">History</a>
+                      <a class="nav-link" href="#sales-chart" data-toggle="tab">History</a>
                     </li>
                   </ul>
             <div class="card">
