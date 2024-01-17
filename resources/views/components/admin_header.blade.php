@@ -23,10 +23,16 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="index3.html" class="nav-link">Assistance</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="#" class="nav-link">Rechercher un Co-convoyage</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Tableau de bord</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Rechercher un Carmoov</a>
       </li>
     </ul>
 
@@ -303,7 +309,7 @@
 </li> 
 <li class="nav-item {{ Request::is('show_profile') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-credit-card"></i>
+        <i class="nav-icon fas fa-car"></i>
         <p>
         Co-convoyages
             <i class="right fas fa-angle-left"></i>
@@ -318,16 +324,159 @@
         </li>
     </ul>
 </li> 
-          <li class="nav-item menu-open">
-            <ul class="nav nav-treeview rounded" style='background-color:#fdcd02;'>
-              <li class="nav-item{{ Request::is('calendar') ? ' active' : '' }}">
-                <a href="{{route('bookings')}}" class="nav-link">
-                  <i class='fas fa-car text-dark'></i>
-                  <p class='text-dark'>Bookings</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+<li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-bell"></i>
+        <p>
+        Alertes
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('alerts') ? 'active' : '' }} text-hover rounded">
+            <a href="{{ route('alerts') }}" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Orders 1</p>
+            </a>
+        </li>
+    </ul>
+</li> 
+<li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-car-side"></i>
+        <p>
+        Proposer un Carmoov
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('alerts') ? 'active' : '' }} text-hover rounded">
+            <a href="{{ route('alerts') }}" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Orders 1</p>
+            </a>
+        </li>
+    </ul>
+</li> 
+<li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-taxi"></i>
+        <p>
+        Rechercher un Carmoov
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('alerts') ? 'active' : '' }} text-hover rounded">
+            <a href="{{ route('alerts') }}" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Orders 1</p>
+            </a>
+        </li>
+    </ul>
+</li> 
+<li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-certificate"></i>
+        <p>
+        Certifications
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('alerts') ? 'active' : '' }} text-hover rounded">
+            <a href="{{ route('alerts') }}" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Orders 1</p>
+            </a>
+        </li>
+    </ul>
+</li> 
+<li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-car"></i>
+        <p>
+        Convoyages
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('alerts') ? 'active' : '' }} text-hover rounded">
+            <a href="{{ route('alerts') }}" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Orders 1</p>
+            </a>
+        </li>
+    </ul>
+</li> 
+
+<li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-shipping-fast"></i>
+        <p>
+        Transports
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('alerts') ? 'active' : '' }} text-hover rounded">
+            <a href="{{ route('alerts') }}" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Orders 1</p>
+            </a>
+        </li>
+    </ul>
+</li> 
+<li class="nav-item {{ Request::is('bookings') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-book"></i>
+        <p>
+        Bookings
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('bookings') ? 'active' : '' }} text-hover rounded">
+            <a href="{{ route('bookings') }}" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Orders 1</p>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item {{ Request::is('roles-and-permissions','/get-permissions/{role_id}','roles') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-key"></i>
+        <p>
+        Gestion
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('roles-and-permissions') ? 'active' : '' }} text-hover rounded">
+            <a href="{{ route('roles.and.permissions') }}" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Rôles et autorisations</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('roles') ? 'active' : '' }} text-hover rounded">
+            <a href="{{ route('roles') }}" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Rôles</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('/permissions') ? 'active' : '' }} text-hover rounded">
+            <a href="{{ route('permissions') }}" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Autorisations</p>
+            </a>
+        </li>
+    </ul>
+</li> 
           <li class="nav-item{{ Request::is('invoices') ? ' active' : '' }}">
     <a href="{{ route('invoice') }}" class="nav-link">
         <i class='fas fa-file-invoice text-dark'></i>
@@ -341,12 +490,6 @@
     </a>
 </li>
 
-<li class="nav-item{{ Request::is('alerts') ? ' active' : '' }}">
-    <a href="{{ route('alerts') }}" class="nav-link">
-        <i class='fas fa-bell text-dark'></i>
-        <p class='text-dark'>Alerts</p>
-    </a>
-</li>
 
           <li class="nav-item menu-open">
             <ul class="nav nav-treeview rounded" style='background-color:#fdcd02;'>
@@ -358,49 +501,7 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item menu-open">
-            <ul class="nav nav-treeview rounded" style='background-color:#fdcd02;'>
-              <li class="nav-item">
-                <a href="{{route('profile.index')}}" class="nav-link">
-                  <i class='fas fa-user text-dark'></i>
-                  <p class='text-dark'>My profile</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item {{ Request::is('roles-and-permissions','/get-permissions/{role_id}','roles') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-key"></i>
-        <p>
-        Manage
-            <i class="right fas fa-angle-left"></i>
-        </p>
-    </a>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('roles-and-permissions') ? 'active' : '' }} text-hover rounded">
-            <a href="{{ route('roles.and.permissions') }}" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Roles & Permissions</p>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('roles') ? 'active' : '' }} text-hover rounded">
-            <a href="{{ route('roles') }}" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Roles</p>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('/permissions') ? 'active' : '' }} text-hover rounded">
-            <a href="{{ route('permissions') }}" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Permissions</p>
-            </a>
-        </li>
-    </ul>
-</li> 
+          
           <!-- <li class="nav-item menu-open">
             <a href="#" class="nav-link">
                 <p>Manage <i class="fas fa-angle-down"></i></p>

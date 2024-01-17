@@ -20,7 +20,7 @@
             <div class="container">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 font-monospace">Alerts</h1>
+                        <h1 class="m-0 font-monospace">Alertes</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -35,19 +35,19 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title mt-2">
-                                    My Alerts
+                                Mes alertes
                                 </h3>
                                 <div class="text-right">
                                     <button type="button" class="btn btn-primary text-dark text-bold"
                                             style="background-color: #FDCD02; border:none;" data-toggle="modal"
-                                            data-target="#roleModal">Create new Alert</button>
+                                            data-target="#roleModal">créer une nouvelle alerte</button>
                                 </div>
                                 <div class="modal fade" id="roleModal" tabindex="-1" role="dialog"
                                      aria-labelledby="roleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="roleModalLabel">Create new Alert</h5>
+                                                <h5 class="modal-title" id="roleModalLabel">créer une nouvelle alerte</h5>
                                                 <button type="button" class="close" data-dismiss="modal"
                                                         aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
@@ -57,7 +57,7 @@
                                                 <form class="row" id="roleForm">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="city_of_collection">City of Collection:</label>
+                                                            <label for="city_of_collection">Ville de collecte :</label>
                                                             <input type="text" class="form-control" id="city_of_collection"
                                                                    name="city_of_collection">
                                                         </div>
@@ -65,7 +65,7 @@
 
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="city_of_delivery">City of Delivery:</label>
+                                                            <label for="city_of_delivery">Ville de livraison :</label>
                                                             <input type="text" class="form-control" id="city_of_delivery"
                                                                    name="city_of_delivery">
                                                         </div>
@@ -73,7 +73,7 @@
 
                                                     <div class="col-md-12">
                                                         <button type="button" class="btn btn-primary"
-                                                                id="saveAlertBtn">Save Alert
+                                                                id="saveAlertBtn">Enregistrer l'alerte
                                                         </button>
                                                     </div>
                                                 </form>

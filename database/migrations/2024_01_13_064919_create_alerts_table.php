@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('alerts', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('user_id');
+            $table->string('city_of_collection');
+            $table->string('city_of_delivery');
             $table->timestamps();
         });
     }
