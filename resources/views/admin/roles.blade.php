@@ -98,8 +98,7 @@
                                         <td>{{ $role->description }}</td>
                                         <td>
                                             <button class="btn btn-primary btn-sm editButton" data-role-id="{{ $role->id }}" data-target="#roleModal">Edit</button>
-                                            <button class="btn btn-danger btn-sm"
-                                                onclick="confirmDelete({{ $role->id }})">Delete</button>
+                                            <button class="btn btn-danger btn-sm"onclick="confirmDelete({{ $role->id }})">Delete</button>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -113,31 +112,59 @@
                     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
                     <script>
-                        $(document).ready(function () {
-                            // Function to fetch role data for editing
-                            function editRole(roleId) {
-                                $.ajax({
-                                    url: '/edit-role/' + roleId,
-                                    type: 'GET',
-                                    success: function (role) {
-                                        // Populate form fields with the retrieved data
-                                        $('#roleName').val(role.name);
-                                        $('#roleDescription').val(role.description);
 
-                                        // Update modal title to indicate editing
-                                        $('#roleModalLabel').text('Edit Role');
+                        // Attach an event listener to be triggered when the modal is completely hidden
+                    $('#roleModal').on('hidden.bs.modal', function () {
+                        // Reset the form
+                        $('#roleForm')[0].reset();
 
-                                        // Set a data attribute to indicate that the form is in editing mode
-                                        $('#roleForm').attr('data-edit-mode', true);
+                        // Reset modal title
+                        $('#roleModalLabel').text('Add Role');
 
-                                        // Show the modal
-                                        $('#roleModal').modal('show');
-                                    },
-                                    error: function (error) {
-                                        console.log('Error fetching role data: ', error);
-                                    }
+                        // Reset edit mode attribute
+                        $('#roleForm').removeAttr('data-edit-mode');
+
+                        // Remove the event listener to prevent multiple bindings
+                        $(this).off('hidden.bs.modal');
+                    });
+
+                $(document).ready(function () {
+                    // Function to edit role
+                    function editRole(roleId) {
+                        $.ajax({
+                            url: '/edit-role/' + roleId,
+                            type: 'GET',
+                            success: function (role) {
+                                // Populate form fields with the retrieved data
+                                $('#roleName').val(role.name);
+                                $('#roleDescription').val(role.description);
+
+                                // Update modal title to indicate editing
+                                $('#roleModalLabel').text('Edit Role');
+
+                                // Set a data attribute to indicate that the form is in editing mode
+                                $('#roleForm').attr('data-edit-mode', true);
+
+                                // Set the role ID to the form for submission
+                                $('#roleForm').data('role-id', roleId);
+
+                                // Attach an event listener to be triggered when the modal is shown
+                                $('#roleModal').on('shown.bs.modal', function () {
+                                    // Show the modal after the form fields are populated
+                                    $(this).modal('show');
+
+                                    // Remove the event listener to prevent multiple bindings
+                                    $(this).off('shown.bs.modal');
                                 });
+
+                                // Trigger the modal to initiate the process
+                                $('#roleModal').modal('show');
+                            },
+                            error: function (error) {
+                                console.log('Error fetching role data: ', error);
                             }
+                        });
+                    }
 
                             // Listen for the form submission
                             $('#roleForm').submit(function (event) {
@@ -149,11 +176,12 @@
                                     'name': $('#roleName').val(),
                                     'description': $('#roleDescription').val()
                                 };
-
+                                // Get the role ID
+                                var roleId = $(this).data('edit-mode') ? $(this).data('role-id') : null;
                                 // Determine the URL based on whether it's an edit or add action
-                                const url = $('#roleForm').data('edit-mode') ? '/update-role/{id}' : '{{ route("add.new.role") }}';
+                                const url = $('#roleForm').data('edit-mode') ? '/update-role/' + roleId : '{{ route("add.new.role") }}';
                                 const method = $('#roleForm').data('edit-mode') ? 'PUT' : 'POST';
-
+                                // alert(method)
                                 // Perform an AJAX request to submit the form
                                 $.ajax({
                                     type: method,
@@ -210,7 +238,7 @@
                             // Assuming you have a button with the id 'editButton'
                             $('.editButton').click(function () {
                                 var roleId = $(this).data('role-id');
-                                alert(roleId)
+
                                 editRole(roleId);
                             });
                             });

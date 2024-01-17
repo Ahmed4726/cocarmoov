@@ -61,10 +61,10 @@ Route::middleware('auth')->group(function () {
 
     //Permissions
     Route::get('/permissions', [PermissionsController::class,'index'])->name('permissions');
-    Route::post('/add-new-permissions', [PermissionsController::class,'newPermission'])->name('add.new.Permission');
+    Route::post('/add-new-permissions', [PermissionsController::class,'newPermission'])->name('add.new.permission');
+    Route::get('/edit-permission/{id}', [PermissionsController::class,'edit'])->name('edit.Permission');
+    Route::put('/update-permission/{id}', [PermissionsController::class,'update'])->name('update.Permission');
     Route::post('/delete-permission/{id}', [PermissionsController::class,'destroy'])->name('delete.permission');
-    Route::get('/permissions', [permissionsController::class,'index'])->name('permissions');
-
     //Roles
     Route::get('/roles', [RoleController::class,'index'])->name('roles');
     Route::post('/add-new-role', [RoleController::class,'newRole'])->name('add.new.role');
@@ -89,6 +89,10 @@ Route::middleware('auth')->group(function () {
 
     //Alerts
     Route::get('/alerts', [AlertController::class,'index'])->name('alerts');
+    Route::post('/add-alert',[AlertController::class,'addNew'])->name('add.new.alert');
+    Route::get('/edit-alert/{id}', [AlertController::class,'edit'])->name('edit.alert');
+    Route::put('/update-alert/{id}', [AlertController::class,'update'])->name('update.alert');
+    Route::post('/delete-alert/{id}',[AlertController::class,'destroy'])->name('alert.delete');
 
     //Invoices
     Route::get('/invoices', [InvoiceController::class,'index'])->name('invoice');

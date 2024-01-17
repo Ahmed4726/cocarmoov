@@ -50,29 +50,33 @@ class RoleController extends Controller
     return response()->json($role);
     }
 
-    public function update($id)
+    public function update(Request $request, $id)
     {
-        // dd($request);
-    // Validate the incoming request data
-    // $validatedData = $request->validate([
-    //     'name' => 'required|string|max:255',
-    //     'description' => 'required|string|max:1000',
-    // ]);
+        // Validate the incoming request data
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'required|string|max:1000',
+        ]);
 
-    // Find the role by ID
-    $role = Role::find($id);
+        // Find the role by ID
+        $role = Role::find($id);
 
-    // Check if the role exists
-    if (!$role) {
-        return response()->json(['error' => 'Role not found'], 404);
+        // Check if the role exists
+        if (!$role) {
+            return response()->json(['error' => 'Role not found'], 404);
+        }
+
+        // Update the role directly with the validated data
+        $role->update([
+            'name' => $request->input('name'),
+            'description' => $request->input('description'),
+        ]);
+
+        // Return a success response
+        return response()->json(['message' => 'Role updated successfully']);
     }
 
-    // Update the role with the validated data
-    $role->update($role);
 
-    // Return a success response
-    return response()->json(['message' => 'Role updated successfully']);
-    }
 
     public function destroy($id)
     {

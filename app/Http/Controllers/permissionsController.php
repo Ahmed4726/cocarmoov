@@ -17,7 +17,7 @@ class PermissionsController extends Controller
     {
     // Validate the request data with custom error messages
     $request->validate([
-        'name' => 'required|unique:roles,name',
+        'name' => 'required|unique:permissions,name',
         'description' => 'required',
     ], [
         'name.required' => 'The name field is required.',
@@ -38,6 +38,41 @@ class PermissionsController extends Controller
         return response()->json(['message' => 'Record added successfully'], 200);
     }
 
+    public function edit($id)
+    {
+    // Retrieve role by ID and return the data (you may use Eloquent or your own logic)
+    $role = Permission::find($id);
+
+    // Return the role data as a JSON response
+    return response()->json($role);
+    }
+
+    public function update(Request $request, $id)
+    {
+        // Validate the incoming request data
+        $request->validate([
+            'name' => 'required|unique:permissions,name|string|max:255',
+            'description' => 'required|string|max:1000',
+        ]);
+
+        // Find the role by ID
+        $role = Permission::find($id);
+
+        // Check if the role exists
+        if (!$role) {
+            return response()->json(['error' => 'Permission not found'], 404);
+        }
+
+        // Update the role directly with the validated data
+        $role->update([
+            'name' => $request->input('name'),
+            'description' => $request->input('description'),
+        ]);
+
+        // Return a success response
+        return response()->json(['message' => 'Permission updated successfully']);
+    }
+
     public function destroy($id)
     {
         // Find the role by ID and delete it
@@ -45,7 +80,7 @@ class PermissionsController extends Controller
         $role->delete();
 
         // Return a success message or a JSON response
-        return response()->json(['message' => 'Role deleted successfully']);
+        return response()->json(['message' => 'Permission deleted successfully']);
     }
 
 }
