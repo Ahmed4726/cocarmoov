@@ -7,32 +7,31 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Profil</h1>
+            <h1>Password Reset</h1>
           </div>
 
         </div>
       </div><!-- /.container-fluid -->
     </section>
-    <!-- Main content -->
     <section class="content">
-      <div class="container-fluid mb-5">
+      <div class="container-fluid">
         <div class="row">
           <!-- /.col -->
           <div class="col-md-12">
             <div class="card">
-              <div class="card-header">
+              <div class="card-header p-2">
               <ul class="nav nav-pills">
-                <li class="nav-item {{ Request::is('show_profile') ? 'active' : '' }}">
-                    <a href="{{ route('profile.index') }}" class="nav-link py-0">
-                        <p class="text-dark">Profil</p>
-                    </a>
-                </li>
-                <li class="nav-item {{ Request::is('password-update') ? 'active' : '' }}rounded">
-                    <a href="{{ route('password.update') }}" class="nav-link py-0">
-                        <p class="text-dark">Password</p>
-                    </a>
-                </li>
-              </ul>
+    <li class="nav-item">
+        <a class="nav-link active" href="#activity" data-toggle="tab">Profil</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('password_update')}}" data-toggle="tab">Password</a>
+    </li>
+    <!-- <li class="nav-item">
+        <a class="nav-link" href="#settings" data-toggle="tab">Settings</a>
+    </li> -->
+</ul>
+
               </div><!-- /.card-header -->
               <div class="card-body">
                 <div class="tab-content">
@@ -50,7 +49,7 @@
                                             data-target="#roleModal">Change profile photo</button> -->
               
 
-                    <form id="loginForm" method="POST" action="{{ route('login') }}">
+                    <form id="loginForm" class="form-horizontal" method="POST" action="{{ route('login') }}">
                     @csrf
                     <!-- Email Address -->
                     <div class="form-group mt-2">
@@ -75,29 +74,25 @@
                     </div>
                  <h2>Company</h2>
                  <div class="form-group">
-                    <label for="birthday">Adresse</label>
-                    <input type="text" class="form-control" id="birthday" name="adddress">
-                    </div>
-
-                    <div class="form-group">
-                    <label for="birthday">Code postal</label>
-                    <input type="text" class="form-control" id="birthday" name="postal_code">
-                    </div>
-                    <div class="form-group">
-                    <label for="birthday">Ville</label>
-                    <input type="text" class="form-control" id="birthday" name="city">
-                    </div>
-                    <!-- /.post -->
-                    <h2>langues</h2>
-                    <div class="form-group">
-                    <label for="languages">langues</label>
-                    <input type="text" class="form-control" id="birthday" name="language">
-                    </div>
-
-                    <!-- <div class="form-group">
                     <label for="birthday">Date de naissance</label>
                     <input type="date" class="form-control" id="birthday" name="birthday">
-                    </div> -->
+                    </div>
+
+                    <div class="form-group">
+                    <label for="birthday">Date de naissance</label>
+                    <input type="date" class="form-control" id="birthday" name="birthday">
+                    </div>
+                    <!-- /.post -->
+                    <h2>Language</h2>
+                 <div class="form-group">
+                    <label for="birthday">Date de naissance</label>
+                    <input type="date" class="form-control" id="birthday" name="birthday">
+                    </div>
+
+                    <div class="form-group">
+                    <label for="birthday">Date de naissance</label>
+                    <input type="date" class="form-control" id="birthday" name="birthday">
+                    </div>
                     <!-- /.post -->
                     <h2>Driving lisence</h2>
                  <div class="form-group">
@@ -109,49 +104,27 @@
                     <label for="birthday">Date de naissance</label>
                     <input type="date" class="form-control" id="birthday" name="birthday">
                     </div>
-                    <div class="form-group">
-                    <label for="birthday">Date de naissance</label>
-                    <input type="date" class="form-control" id="birthday" name="birthday">
-                    </div>
-                    <div class="form-group">
-                    <label for="birthday">Date de naissance</label>
-                    <input type="date" class="form-control" id="birthday" name="birthday">
-                    </div>
-                    <div class="form-group">
-                    <label for="birthday">Date de naissance</label>
-                    <input type="date" class="form-control" id="birthday" name="birthday">
-                    </div>
                     <!-- /.post -->
                     <h2>Bank account details</h2>
                  <div class="form-group">
-                    <label for="birthday">Titulaire du compte</label>
-                    <input type="text" class="form-control" id="birthday" name="birthday">
+                    <label for="birthday">Date de naissance</label>
+                    <input type="date" class="form-control" id="birthday" name="birthday">
                     </div>
+
                     <div class="form-group">
-                    <label for="birthday">Numéro IBAN</label>
-                    <input type="text" class="form-control" id="birthday" name="birthday">
-                    </div>
-                    <div class="form-group">
-                    <label for="birthday">Code BIC</label>
-                    <input type="text" class="form-control" id="birthday" name="swift_code">
-                    </div>
-                    <div class="form-group">
-                    <label for="birthday">Numéro de carte bancaire</label>
-                    <input type="text" class="form-control" id="birthday" name="card_number">
+                    <label for="birthday">Date de naissance</label>
+                    <input type="date" class="form-control" id="birthday" name="birthday">
                     </div>
                     <!-- /.post -->
-                    <h2>Fichiers</h2>
+                    <h2>Documents</h2>
                  <div class="form-group">
-                 <label for="birthday">Photo</label>
-                <input type="file" class="form-control" name="photo" id="fileToUpload">
+                    <label for="birthday">Date de naissance</label>
+                    <input type="date" class="form-control" id="birthday" name="birthday">
                     </div>
+
                     <div class="form-group">
-                 <label for="birthday">Pièce d'identité</label>
-                <input type="file" class="form-control" name="id_card" id="fileToUpload">
-                    </div>
-                    <div class="form-group">
-                 <label for="birthday">Documents de mission</label>
-                <input type="file" class="form-control" name="mission_document" id="fileToUpload">
+                    <label for="birthday">Date de naissance</label>
+                    <input type="date" class="form-control" id="birthday" name="birthday">
                     </div>
                     <!-- /.post -->
                   </div>
@@ -168,6 +141,4 @@
         <!-- /.row -->
       </div><!-- /.container-fluid -->
     </section>
-    <!-- /.content -->
-  </div>
-@endsection
+ </div>

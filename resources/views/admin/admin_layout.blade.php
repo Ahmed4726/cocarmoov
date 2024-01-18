@@ -19,12 +19,15 @@
   <link rel="stylesheet" href="{{ asset('plugins/adminlte/jqvmap/jqvmap.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/adminlte/css/style.css') }}">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="{{ asset('plugins/adminlte/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
   <!-- Daterange picker -->
   <link rel="stylesheet" href="{{ asset('plugins/adminlte/daterangepicker/daterangepicker.css') }}">
   <!-- summernote -->
   <link rel="stylesheet" href="{{ asset('plugins/adminlte/summernote/summernote-bs4.min.css') }}">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP1ZIGPpduFbi1CehT7uDirS9zBDx1sAQ&libraries=places"></script>
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">

@@ -145,6 +145,10 @@ small {
   font-size: 80%;
 }
 
+.pac-container {
+  z-index: 9999;
+}
+
 sub,
 sup {
   position: relative;

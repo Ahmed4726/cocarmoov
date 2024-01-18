@@ -13,11 +13,11 @@ class AlertController extends Controller
         $alert = null;
         if($user_id == 1)
         {
-            $alerts = Alert::get();
+            $alerts = Alert::simplepaginate(10);
         }
         else
         {
-            $alerts = Alert::where('user_id',$user_id)->get();
+            $alerts = Alert::where('user_id',$user_id)->paginate(10);
         }
         return view('admin.alerts',compact('alerts'));
     }

@@ -1,17 +1,12 @@
 @extends('admin.admin_layout')
-
 @section('content')
 <head>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP1ZIGPpduFbi1CehT7uDirS9zBDx1sAQ&libraries=places"></script>
-    <!-- Include this meta tag in the head section of your HTML layout file -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
-        .pac-container {
-            z-index: 9999;
-        }
+          .pac-container {
+  z-index: 9999;
+}
     </style>
 </head>
-
 <div class="wrapper">
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -30,14 +25,15 @@
             <div class="container-fluid">
                 <div class="row mb-5">
                     <!-- Left col -->
-                    <section class="col-lg-12">
+                    <div class="col-lg-12">
                         <!-- Custom tabs (Charts with tabs)-->
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title mt-2">
                                 Mes alertes
                                 </h3>
-                                <div class="text-right">
+                            </div>
+                                <div class="text-right mt-2 mx-4">
                                     <button type="button" class="btn btn-primary text-dark text-bold"
                                             style="background-color: #FDCD02; border:none;" data-toggle="modal"
                                             data-target="#roleModal">créer une nouvelle alerte</button>
@@ -55,6 +51,7 @@
                                             </div>
                                             <div class="modal-body">
                                                 <form class="row" id="roleForm">
+                                                    @csrf
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="city_of_collection">Ville de collecte :</label>
@@ -62,7 +59,6 @@
                                                                    name="city_of_collection">
                                                         </div>
                                                     </div>
-
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="city_of_delivery">Ville de livraison :</label>
@@ -72,7 +68,7 @@
                                                     </div>
 
                                                     <div class="col-md-12">
-                                                        <button type="button" class="btn btn-primary"
+                                                        <button type="button" class="btn btn-primary text-dark text-bold" style="background-color: #FDCD02; border:none;"
                                                                 id="saveAlertBtn">Enregistrer l'alerte
                                                         </button>
                                                     </div>
@@ -98,20 +94,21 @@
                                                 <td></td>
                                                 <td>
                                                     <button class="btn btn-primary btn-sm editButton"
-                                                            data-role-id="{{ $alert->id }}" data-target="#roleModal">Edit
+                                                            data-role-id="{{ $alert->id }}" data-target="#roleModal">Modifier
                                                     </button>
                                                     <button class="btn btn-danger btn-sm"
-                                                            onclick="confirmDelete({{ $alert->id }})">Delete
+                                                            onclick="confirmDelete({{ $alert->id }})">Supprimer
                                                     </button>
                                                 </td>
                                             </tr>
                                         @endforeach
                                         </tbody>
                                     </table>
+                                    {{ $alerts->links() }}
                                 </div><!-- /.card-body -->
                             </div>
-                        </div>
-                    </section>
+                        </div>  
+                    </div>
                 </div>
             </div>
         </section>

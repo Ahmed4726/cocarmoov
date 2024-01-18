@@ -18,6 +18,7 @@ use App\Http\Controllers\PermissionsController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\AlertController;
 use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\TrainingController;
 
 use App\Http\Controllers\RolesAndPermissionController;
@@ -104,7 +105,7 @@ Route::middleware('auth')->group(function () {
 
     // Route::view('my-account','admin.calendar')->name('calendar');
 
-
+    Route::put('/password-update', [PasswordController::class,'password_update'])->name('password.update');
 });
 
 
