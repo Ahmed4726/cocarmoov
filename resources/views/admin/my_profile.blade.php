@@ -73,7 +73,11 @@
                     <label for="birthday">Date de naissance</label>
                     <input type="date" class="form-control" id="birthday" name="birthday">
                     </div>
-                 <h2>Company</h2>
+                 <h2>Informations sur l'Entreprise</h2>
+                 <div class="form-group">
+                    <label for="birthday">Raison sociale de l'entreprise</label>
+                    <input type="text" class="form-control" id="birthday" name="company_name">
+                    </div>
                  <div class="form-group">
                     <label for="birthday">Adresse</label>
                     <input type="text" class="form-control" id="birthday" name="adddress">
@@ -143,15 +147,65 @@
                     <h2>Fichiers</h2>
                  <div class="form-group">
                  <label for="birthday">Photo</label>
-                <input type="file" class="form-control" name="photo" id="fileToUpload">
+                <input type="file" class="form-control" name="photo" id="filename">
                     </div>
                     <div class="form-group">
                  <label for="birthday">Pièce d'identité</label>
-                <input type="file" class="form-control" name="id_card" id="fileToUpload">
+                <input type="file" class="form-control" name="id_card" id="filename">
                     </div>
                     <div class="form-group">
                  <label for="birthday">Documents de mission</label>
-                <input type="file" class="form-control" name="mission_document" id="fileToUpload">
+                <input type="file" class="form-control" name="mission_document" id="filename">
+                    </div>
+                    <div class="form-group">
+                 <label for="birthday">Permis de conduire</label>
+                <input type="file" class="form-control" name="driving_lisence" id="filename">
+                    </div>
+                    <div class="form-group">
+                 <label for="birthday">Extrait KBis</label>
+                <input type="file" class="form-control" name="company_registeration" id="filename">
+                    </div>
+                    <div class="form-group">
+                 <label for="birthday">Responsabilité civile professionnelle</label>
+                <input type="file" class="form-control" name="professional_liabilities" id="filename">
+                    </div>
+                    <div class="form-group">
+                 <label for="birthday">Assurance convoyage</label>
+                <input type="file" class="form-control" name="carmov_insurance" id="filename">
+                    </div>
+                    <div class="form-group">
+                 <label for="birthday">Plaques W garage</label>
+                <input type="file" class="form-control" name="trade_plates" id="filename">
+                    </div>
+                    <div class="form-group">
+                 <label for="birthday">RIB</label>
+                <input type="file" class="form-control" name="bank_details" id="filename">
+                    </div>
+                    <div class="form-group">
+                 <label for="birthday">Contrat signé</label>
+                <input type="file" class="form-control" name="signed_contract" id="filename">
+                    </div>
+                    <div class="form-group">
+                 <label for="birthday">Certificat de capacité</label>
+                <input type="file" class="form-control" name="transport_capacity" id="filename">
+                    </div>
+                    <div class="form-group">
+                 <label for="birthday">Assurance transport</label>
+                <input type="file" class="form-control" name="transport_insurance" id="filename">
+                    </div>
+                    <div class="form-group">
+                 <label for="birthday">Carte grise véhicule transporteur</label>
+                <input type="file" class="form-control" name="vehicle_carrier_reg" id="filename">
+                    </div>
+                    <div class="form-group">
+                 <label for="birthday"> Attestation de cotisations sur les revenus à jour</label>
+                <input type="file" class="form-control" name="income_contribution" id="filename">
+                    </div>
+                    <!-- /.post -->
+                    <h2>Test d'État des Lieux</h2>
+                    <div class="form-group">
+                 <label for="birthday">Etat des lieux Test</label>
+                <input type="file" class="form-control" name="vehicle_condition_test" id="filename">
                     </div>
                     <!-- /.post -->
                   </div>
@@ -170,4 +224,11 @@
     </section>
     <!-- /.content -->
   </div>
+<script>
+    function displayFileName() {
+        const fileInput = document.getElementById('file');
+        const filenameDisplay = document.getElementById('filename');
+        filenameDisplay.innerText = fileInput.files[0].name;
+    }
+</script> 
 @endsection

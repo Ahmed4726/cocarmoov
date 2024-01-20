@@ -48,10 +48,9 @@ class RegisteredUserController extends Controller
             'user_type' => $request->user_type,
         ]);
 
-            // Send email verification notification
-    if ($user instanceof MustVerifyEmail && ! $user->hasVerifiedEmail()) {
-        $user->sendEmailVerificationNotification();
-    }
+        if ($user instanceof MustVerifyEmail && ! $user->hasVerifiedEmail()) {
+            $user->getEmailForVerification();
+        }
 
 // dd($user);
         event(new Registered($user));
