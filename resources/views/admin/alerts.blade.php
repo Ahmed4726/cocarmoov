@@ -107,7 +107,7 @@
                                     {{ $alerts->links() }}
                                 </div><!-- /.card-body -->
                             </div>
-                        </div>  
+                        </div>
                     </div>
                 </div>
             </div>
@@ -196,7 +196,10 @@
                     });
                 });
 
-                function confirmDelete(Id) {
+
+            });
+
+            function confirmDelete(Id) {
                     Swal.fire({
                         title: 'Are you sure?',
                         text: 'You won\'t be able to revert this!',
@@ -230,7 +233,6 @@
                             Swal.fire('Error!', 'An error occurred while deleting the role.', 'error');
                         });
                 }
-            });
         </script>
         {{-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places"></script> --}}
     </div>

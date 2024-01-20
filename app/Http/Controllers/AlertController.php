@@ -71,7 +71,7 @@ class AlertController extends Controller
         ]);
 
         // Return a success response
-        return response()->json(['message' => 'Permission updated successfully']);
+        return response()->json(['message' => 'Alert updated successfully']);
     }
 
 

@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 class RegisteredUserController extends Controller
 {
@@ -46,6 +47,12 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
             'user_type' => $request->user_type,
         ]);
+
+            // Send email verification notification
+    if ($user instanceof MustVerifyEmail && ! $user->hasVerifiedEmail()) {
+        $user->sendEmailVerificationNotification();
+    }
+
 // dd($user);
         event(new Registered($user));
 

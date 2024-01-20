@@ -40,7 +40,7 @@
               </ul>
           </li>
 				</ul>
-                        
+
 				<button class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;" data-toggle="modal" data-target="#loginModal">
 				<span class="text-dark fw-bold app-font-family">S'identifier</span>
 				</button>
@@ -49,7 +49,7 @@
     <span class="text-dark fw-bold app-font-family">S'inscrire</span>
   </button>
 
-			
+
 				<!-- <a href="#!" class="btn btn-primary ms-2 ms-lg-3">Sign Up</a> -->
 			</div>
 		</div>
@@ -119,7 +119,7 @@
                         <!-- <label for="name">Prénom</label> -->
                         <input type="text" class="form-control" id="name" name="last_name" placeholder="entrez votre Prénom" required autofocus>
                     </div>
-					
+
 					<div class="form-group">
                         <!-- <label for="name">Nom</label> -->
                         <input type="text" class="form-control" id="name" name="family_name" placeholder="entrez votre Nom" required>
@@ -146,7 +146,7 @@
 					<div class="form-group">
 						<!-- <label for="user_type">Type d'utilisateur</label> -->
 						<select class="form-control" name="user_type" id="user_type">
-							<option selected>Choisissez votre rôle</option>
+							<option selected value="">Choisissez votre rôle</option>
 							<option value="Particulier">Particulier</option>
 							<option value="professionnel">Professionnel</option>
 							<option value="Co-convoyeur">Co-convoyeur</option>
@@ -155,9 +155,8 @@
 						</select>
 					</div>
                                 <div class="form-group">
-                <input type="checkbox" id="checkbox" name="checkbox_name">
-                <span>J'accepte les Conditions Générales d'Utilisation</span>
-                            </div>
+                <input type="checkbox" id="checkbox" name="checkbox_name"><span>J'accepte les Conditions Générales d'Utilisation</span>
+            </div>
 
 
                     <!-- Sign Up button -->
@@ -220,7 +219,7 @@
         });
     </script>
 @endif
-<!-- 
+<!--
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->

@@ -44,7 +44,7 @@
 <!-- jQuery -->
 <script src="{{ asset('plugins/adminlte/jquery/jquery.min.js') }}"></script>
 <!-- Include jQuery (assuming it's not already included) -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+{{-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> --}}
 <!-- Include SweetAlert library -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <!-- jQuery UI 1.11.4 -->

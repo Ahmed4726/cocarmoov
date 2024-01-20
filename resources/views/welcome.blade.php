@@ -1,5 +1,9 @@
 @extends('frontend.frontend_main_layout')
 @section('content')
+<head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP1ZIGPpduFbi1CehT7uDirS9zBDx1sAQ&libraries=places"></script>
+
+</head>
 
 
 <!-- <div class="modal applyLoanModal fade" id="applyLoan" tabindex="-1" aria-labelledby="applyLoanLabel" aria-hidden="true">
@@ -58,9 +62,9 @@
       <div class="col-lg-6 mb-5 mb-lg-0">
         <div class="block text-center text-lg-start">
           <h2 class="mb-5 banner-text text-center section-title-mobile">Enfin… déplacer un véhicule revient à poster un colis</h2>
-          <h5 class="mb-4 banner-text-2 mb-5 text-light" style="text-align: justify;">Des partenaires convoyeurs et transporteurs professionnels, partout en France s'engagent à déplacer vos véhicules.</h5> 
+          <h5 class="mb-4 banner-text-2 mb-5 text-light" style="text-align: justify;">Des partenaires convoyeurs et transporteurs professionnels, partout en France s'engagent à déplacer vos véhicules.</h5>
           <div class="text-center">
-          <a type="button" 
+          <a type="button"
             class="btn banner-button text-light banner-button-hover px-4 py-3" href="#">
             <b>E<span class="lowercase">xpédier un véhicule</span></b></a>
             </div>
@@ -68,7 +72,7 @@
       </div>
       <div class="col-md-4">
         <div class="ps-lg-5 text-center">
-          <img  
+          <img
             src="{{ asset('images/wallet/banner/banner_main.png') }}"
             alt="banner image" class="w-100 img-fluid" style="max-width: 100%; height:auto;">
         </div>
@@ -81,27 +85,35 @@
     <div class="row">
     <p class="fw-bold services-p text-center">1 clic = 1 devis</p>
       <div class="col-lg-12 col-md-12 col-sm-12">
-      <div class="card mt-4 rounded mx-auto card-register p-2" style="width:60%;"> 
+      <div class="card mt-4 rounded mx-auto card-register p-2" style="width:60%;">
             <div class="card-body">
               <h4 class="card-title text-center p-complete-info py-2">Indiquez vos adresses</h4>
 			  <form action="/action_page.php">
   <div class="row">
-	<div class="col-lg-6 col-md-12">
-	<input type="text" class="form-control form-input-border mt-0" placeholder="Adresse d’enlèvement"><br>
-	</div>
-	<div class="col-lg-6 col-md-12">
-	<input type="text" class="form-control form-input-border mt-0" placeholder="Adresse de livraison"><br>
-	</div>
+    <div class="col-lg-6 col-md-12">
+        <input type="text" class="form-control form-input-border mt-0" id="pickup" placeholder="Adresse d’enlèvement">
+        <input type="hidden" id="pickup-lat" name="pickup_lat">
+        <input type="hidden" id="pickup-lng" name="pickup_lng">
+     </div>
+
+     <div class="col-lg-6 col-md-12">
+        <input type="text" class="form-control form-input-border mt-0" id="delivery" placeholder="Adresse de livraison">
+        <input type="hidden" id="delivery-lat" name="delivery_lat">
+        <input type="hidden" id="delivery-lng" name="delivery_lng">
+     </div>
+
   <h4 class="card-title text-center p-complete-info py-2">Spécifiez votre véhicule</h4>
 	<div class="col-lg-6 col-md-12">
 	<div class="input-group">
 			  <div class="select-container">
-    <select name="cars" id="cars" class="form-control">
+          <select name="vehicle-type" id="vehicle-type"
+          class="form-control app-font-family"
+         >
       <option hidden selected class="app-font-family">Type de véhicule</option>
       <option value="Citadine" class="app-font-family">Citadine</option>
       <option value="Berline" class="app-font-family">Berline</option>
       <option value="Sportive" class="app-font-family">Sportive</option>
-	  <option value="Collection" class="app-font-family">Collection</option> 
+	  <option value="Collection" class="app-font-family">Collection</option>
       <option value="Monospace" class="app-font-family">Monospace</option>
 	  <option value="4×4" class="app-font-family">SUV ou 4×4</option>
 	  <option value="3m3" class="app-font-family">Utilitaire 3m3</option>
@@ -124,22 +136,28 @@
   <div class="col-lg-6 col-md-12">
 	<div class="input-group">
 			  <div class="select-container">
-    <select name="cars" id="cars" class="form-control">
-      <option hidden selected class="app-font-family">Etat du véhicule</option>
-      <option value="En-état-de-marche" class="app-font-family">En état de marche</option>
-      <option value="En-panne" class="app-font-family">En panne</option>
-      <option value="Accidenté" class="app-font-family">Accidenté</option>
-    </select>
+                <select name="vehicle-condition" id="vehicle-condition"
+                class="form-control app-font-family"
+                onchange="calculateAndDisplayResult()">
+                <option hidden selected>Etat du véhicule</option>
+                <option value="En-état-de-marche" class="app-font-family">En état
+                    de marche</option>
+                <option value="En-panne" class="app-font-family">En panne</option>
+                <option value="Accidenté" class="app-font-family">Accidenté</option>
+            </select>
     <i class="fas fa-caret-down fa-dropdown-icon"></i> <!-- Font Awesome dropdown icon -->
   </div>
   </div><br>
 	</div>
   </div>
-  <div class="text-center">
-  <a type="button" 
+  <div class="col-lg-12">
+    <div id="resultDiv" class="result-container"></div>
+</div>
+<div class="text-center">
+    <a type="button" 
             class="btn professionall-button-register text-dark mt-3 mb-3" href="#">
-            <b>Calculer</b>
-</a>
+        <b>Calculer</b>
+    </a>
 </div>
 </form>
             </div>
@@ -165,7 +183,7 @@
       <div class="col-lg-6">
         <div class="difference-of-us-item p-3 rounded mr-0 me-lg-4">
           <div class="d-block d-sm-flex align-items-center m-2">
-            <div class="icon me-4 mb-4 mb-sm-0"><i class="fas fa-cogs mt-0" style="font-size:70px"></i> 
+            <div class="icon me-4 mb-4 mb-sm-0"><i class="fas fa-cogs mt-0" style="font-size:70px"></i>
             </div>
             <div class="block differnce-section">
               <h5 class="mb-3 text-dark app-font-family">Intuitive et sécurisée</h5>
@@ -226,7 +244,7 @@
                 <p class="text-center text-light mt-3 solution-text-p app-font-family">Sous 15 jours en moyenne</p>
                 <p class="text-center  mt-3 h5 solution-price-eco app-font-family">À partir de 59€ TTC</p>
                 <div class="text-center">
-          <a type="button" 
+          <a type="button"
             class="btn banner-button-1 text-light px-4 py-3 mt-4 app-font-family" href="#">
             <b>Rapatrier un véhicule</b></a>
             </div>
@@ -240,11 +258,11 @@
 
               <p class="text-center text-light mt-3 solution-text-p"><b>Satisfaites  vos clients ou vous même en toute sérénité dans l'exécution opérationnelle en  louant les   services d'un convoyeur fiable sur CoCarmoov.</b></p>
               <p class="text-center text-light mt-3 solution-text-p">Sous 3 jours en moyenne</p>
-               
+
               <p class="text-center h5 text-light mt-3 solution-price-exp app-font-family">À partir de 79€ TTC</p>
-              
+
               <div class="text-center">
-          <a type="button" 
+          <a type="button"
             class="btn banner-button-2 mt-4 px-4 py-3 text-light app-font-family" href="#">
             <b>Déplacer un véhicule</b></a>
             </div>
@@ -258,9 +276,9 @@
               <p class="text-center text-light mt-3 solution-text-p"><b>Faites transporter vos véhicules, en marche, en panne ou accidenté, avec une solution à 0 km, de porte à porte, grâce aux camions transporteurs partenaires.</b></p>
               <p class="text-center text-light mt-3 solution-text-p app-font-family">Sous 10 jours en moyenne </p>
               <p class="text-center text-light h5 mt-3 solution-price-pre app-font-family">À partir de 179€ TTC</p>
-              
+
               <div class="text-center">
-          <a type="button" 
+          <a type="button"
             class="btn banner-button-3 text-light px-4 py-3 mt-4 app-font-family" href="#">
             <b>Transporter un véhicule</b></a>
             </div>
@@ -287,7 +305,7 @@
       <div class="col-lg-6 col-md-12 col-sm-12 mobile-view-50">
         <div class="rounded p-4">
           <div class="d-block d-sm-flex align-items-center mb-4">
-            <img 
+            <img
               src="{{ asset('images/wallet/achat-vente-voiture-vehicule.jpg') }}"
               alt="Leslie Alexander" class="text-center img-fluid rounded" width="200" height="auto" />
             <div class="mt-sm-0 ms-0 ms-sm-3">
@@ -300,7 +318,7 @@
        <div class="col-lg-6 col-md-12 col-sm-12 d-none mobile-view-51">
         <div class="rounded p-4">
           <div class="d-block d-sm-flex align-items-center mb-4">
-            <img 
+            <img
               src="{{ asset('images/wallet/achat-vente-voiture-vehicule.jpg') }}"
               alt="Leslie Alexander" class="text-center img-fluid rounded" width="100%" height="auto" />
             <div class="mt-sm-0 ms-0 ms-sm-3">
@@ -313,7 +331,7 @@
       <div class="col-lg-6 col-md-12 col-sm-12 mobile-view-50">
         <div class="rounded p-4">
         <div class="d-block d-sm-flex align-items-center">
-            <img 
+            <img
               src="{{ asset('images/wallet/reparation-mecanique-voiture-vehicule.jpg') }}"
               alt="Leslie Alexander" class="img-fluid rounded" width="200" height="auto" />
             <div class="mt-sm-0 ms-0 ms-sm-3">
@@ -328,7 +346,7 @@
         <div class="col-lg-6 col-md-12 col-sm-12 d-none mobile-view-51">
         <div class="rounded p-4">
         <div class="d-block d-sm-flex align-items-center mb-4">
-            <img 
+            <img
               src="{{ asset('images/wallet/reparation-mecanique-voiture-vehicule.jpg') }}"
               alt="Leslie Alexander" class="img-fluid rounded" width="100%" height="auto" />
             <div class="mt-sm-0 ms-0 ms-sm-3">
@@ -345,7 +363,7 @@
     <div class="col-lg-6 col-md-12 col-sm-12 mobile-view-50">
         <div class="rounded p-4">
           <div class="d-block d-sm-flex align-items-center mb-4">
-            <img 
+            <img
               src="{{ asset('images/wallet/location-voiture-demenagement-utilitaire.jpg') }}"
               alt="Leslie Alexander" class="img-fluid rounded" width="200" height="auto" />
             <div class="mt-sm-0 ms-0 ms-sm-3">
@@ -358,7 +376,7 @@
        <div class="col-lg-6 col-md-12 col-sm-12 d-none mobile-view-51">
         <div class="rounded p-4">
           <div class="d-block d-sm-flex align-items-center mb-4">
-            <img 
+            <img
               src="{{ asset('images/wallet/location-voiture-demenagement-utilitaire.jpg') }}"
               alt="Leslie Alexander" class="img-fluid rounded" width="100%" height="auto" />
             <div class="mt-sm-0 ms-0 ms-sm-3">
@@ -371,7 +389,7 @@
       <div class="col-lg-6 col-md-12 col-sm-12 mobile-view-50">
         <div class="rounded p-4">
         <div class="d-block d-sm-flex align-items-center mb-4">
-            <img 
+            <img
               src="{{ asset('images/wallet/transport-voyage-evenement-salon-foire.png') }}"
               alt="Leslie Alexander" class="img-fluid rounded mobile-img-5" width="200" height="auto" />
             <div class="mt-sm-0 ms-0 ms-sm-3">
@@ -384,7 +402,7 @@
          <div class="col-lg-6 col-md-12 col-sm-12 d-none mobile-view-51">
         <div class="rounded p-4">
         <div class="d-block d-sm-flex align-items-center mb-4">
-            <img 
+            <img
               src="{{ asset('images/wallet/transport-voyage-evenement-salon-foire.png') }}"
               alt="Leslie Alexander" class="img-fluid rounded" width="100%" height="auto" />
             <div class="mt-sm-0 ms-0 ms-sm-3">
@@ -399,7 +417,7 @@
     <div class="col-lg-6 col-md-12 col-sm-12 mobile-view-50">
         <div class="rounded p-4">
           <div class="d-block d-sm-flex align-items-center">
-            <img 
+            <img
               src="{{ asset('images/wallet/transport-prestige-voiture-sport-collection-luxe.jpg') }}"
               alt="Leslie Alexander" class="img-fluid rounded" width="200" height="auto" />
             <div class="mt-sm-0 ms-0 ms-sm-3">
@@ -412,7 +430,7 @@
          <div class="col-lg-6 col-md-12 col-sm-12 d-none mobile-view-51">
         <div class="rounded p-4">
           <div class="d-block d-sm-flex align-items-center mb-4">
-            <img 
+            <img
               src="{{ asset('images/wallet/transport-prestige-voiture-sport-collection-luxe.jpg') }}"
               alt="Leslie Alexander" class="img-fluid rounded" width="100%" height="auto" />
             <div class="mt-sm-0 ms-0 ms-sm-3">
@@ -425,7 +443,7 @@
       <div class="col-lg-6 col-md-12 col-sm-12 mobile-view-50">
         <div class="rounded p-4">
         <div class="d-block d-sm-flex align-items-center">
-            <img 
+            <img
               src="{{ asset('images/wallet/restituer-un-vehicule.jpg')}}"
               alt="Leslie Alexander" class="img-fluid rounded" width="200" height="auto" />
             <div class="mt-sm-0 ms-0 ms-sm-3">
@@ -438,7 +456,7 @@
          <div class="col-lg-6 col-md-12 col-sm-12 d-none mobile-view-51">
         <div class="rounded p-4">
         <div class="d-block d-sm-flex align-items-center">
-            <img 
+            <img
               src="{{ asset('images/wallet/restituer-un-vehicule.jpg')}}"
               alt="Leslie Alexander" class="img-fluid rounded" width="100%" height="auto" />
             <div class="mt-sm-0 ms-0 ms-sm-3">
@@ -657,7 +675,7 @@ Souvent même.
     </div>
 	</div>
 	</div>
-</div>	
+</div>
 </section>
 <section class="section testimonial-header">
 	<div class="container">
@@ -708,7 +726,7 @@ Souvent même.
                             </p>
                     </div>
             </div>
-          
+
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
@@ -734,7 +752,7 @@ Souvent même.
               Pour maximiser les chances, il faudra indiquer une période de départ possible suffisamment longue (idéalement 10 à 15 jours).<br>
               Le co-convoyeur particulier dispose de 24 à 48 heures pour déplacer votre véhicule selon la distance.
               </p>
-            
+
             </div>
             </div>
           </div>
@@ -758,7 +776,7 @@ Souvent même.
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec5" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec5" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content app-font-family"><p>Tant que votre trajet n'est pas réservé par un co-convoyeur particulier, vous ne serez pas facturé.<br> 
+              <div class="accordion-body py-0 content app-font-family"><p>Tant que votre trajet n'est pas réservé par un co-convoyeur particulier, vous ne serez pas facturé.<br>
 Votre carte est débitée à 72h avant le départ lorsque votre trajet est réservé.
 </p>
             </div>
@@ -786,7 +804,7 @@ Votre carte est débitée à 72h avant le départ lorsque votre trajet est rése
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec7" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec7" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content app-font-family"><p>Un contrat de co-convoyage pré-rempli vous sera envoyé par e-mail.<br> 
+              <div class="accordion-body py-0 content app-font-family"><p>Un contrat de co-convoyage pré-rempli vous sera envoyé par e-mail.<br>
 Utilisez-le pour vérifier avec le co-convoyeur tout dommage causé à votre véhicule.
 
 </p>
@@ -843,7 +861,7 @@ Ceux-ci sont certifiés par nos services pour offrir une prestation irréprochab
                             </p>
                     </div>
             </div>
-          
+
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
@@ -891,7 +909,7 @@ Le convoyage du véhicule dure 24 à 48 heures selon la distance.
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec37" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec37" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content app-font-family"><p>Tant que votre trajet n'est pas réservé par un convoyeur professionnel, vous ne serez pas facturé.<br> 
+              <div class="accordion-body py-0 content app-font-family"><p>Tant que votre trajet n'est pas réservé par un convoyeur professionnel, vous ne serez pas facturé.<br>
 Votre carte est débitée à 72h avant le départ lorsque votre trajet est réservé.
 </p>
             </div>
@@ -920,7 +938,7 @@ Votre carte est débitée à 72h avant le départ lorsque votre trajet est rése
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec39" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec39" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content app-font-family"><p>Un contrat de convoyage pré-rempli vous sera envoyé par e-mail.<br> 
+              <div class="accordion-body py-0 content app-font-family"><p>Un contrat de convoyage pré-rempli vous sera envoyé par e-mail.<br>
 Utilisez-le pour vérifier avec le convoyeur tout dommage causé à votre véhicule.
 </p>
             </div>
@@ -987,7 +1005,7 @@ Utilisez-le pour vérifier avec le convoyeur tout dommage causé à votre véhic
             <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec82" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec82" aria-expanded="false"
-              aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec82">Quand mon véhicule sera-t-il déplacé ? 
+              aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec82">Quand mon véhicule sera-t-il déplacé ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec82" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec82" data-bs-parent="#accordionFAQ">
@@ -999,7 +1017,7 @@ Utilisez-le pour vérifier avec le convoyeur tout dommage causé à votre véhic
             <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec83" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec83" aria-expanded="false"
-              aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec83">Des frais supplémentaires à prévoir ? 
+              aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec83">Des frais supplémentaires à prévoir ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec83" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec83" data-bs-parent="#accordionFAQ">
@@ -1011,11 +1029,11 @@ Utilisez-le pour vérifier avec le convoyeur tout dommage causé à votre véhic
             <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec84" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec84" aria-expanded="false"
-              aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec84">Quand ma carte bancaire sera-t-elle débitée ? 
+              aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec84">Quand ma carte bancaire sera-t-elle débitée ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec84" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec84" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content app-font-family"><p>Tant que votre transport n'est pas réservé par un transporteur de véhicules partenaire, vous ne serez pas facturé.<br> 
+              <div class="accordion-body py-0 content app-font-family"><p>Tant que votre transport n'est pas réservé par un transporteur de véhicules partenaire, vous ne serez pas facturé.<br>
 Votre carte est débitée à 72h avant le départ lorsque votre trajet est réservé.
 </p>
             </div>
@@ -1025,7 +1043,7 @@ Votre carte est débitée à 72h avant le départ lorsque votre trajet est rése
             <h2 class="accordion-header accordion-button h5 border-0 app-font-family"
               id="heading-a443e01b4db47b3f4a1267e10594576d52730ec85" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapse-a443e01b4db47b3f4a1267e10594576d52730ec85" aria-expanded="false"
-              aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec85">Que se passe-t-il si j'annule ma commande ? 
+              aria-controls="collapse-a443e01b4db47b3f4a1267e10594576d52730ec85">Que se passe-t-il si j'annule ma commande ?
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec85" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec85" data-bs-parent="#accordionFAQ">
@@ -1044,7 +1062,7 @@ Votre carte est débitée à 72h avant le départ lorsque votre trajet est rése
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec86" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec86" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content app-font-family"><p>Un contrat de transport pré-rempli vous sera envoyé par e-mail.<br> 
+              <div class="accordion-body py-0 content app-font-family"><p>Un contrat de transport pré-rempli vous sera envoyé par e-mail.<br>
 Utilisez-le pour vérifier avec le transporteur tout dommage causé à votre véhicule.<br>
 Assurez-vous que les adresses de départ et d'arrivée peuvent accueillir un camion porte-voiture de 15 mètres.
 </p>
@@ -1059,7 +1077,7 @@ Assurez-vous que les adresses de départ et d'arrivée peuvent accueillir un cam
             </h2>
             <div id="collapse-a443e01b4db47b3f4a1267e10594576d52730ec87" class="accordion-collapse collapse border-0 app-font-family"
               aria-labelledby="heading-a443e01b4db47b3f4a1267e10594576d52730ec87" data-bs-parent="#accordionFAQ">
-              <div class="accordion-body py-0 content app-font-family"><p>Vous vous engagez à fournir un véhicule dans l'état de fonctionnement mentionné.<br> 
+              <div class="accordion-body py-0 content app-font-family"><p>Vous vous engagez à fournir un véhicule dans l'état de fonctionnement mentionné.<br>
 Attention, quel que soit l'état du véhicule, celui-ci ne doit pas avoir de roues bloquées, et peut être transporté sans protection particulière.
 </p>
             </div>
@@ -1069,7 +1087,7 @@ Attention, quel que soit l'état du véhicule, celui-ci ne doit pas avoir de rou
       </div>
             </div>
           </div>
-  </div>  
+  </div>
         </div>
         <div class="col-lg-4 col-md-12 col-sm-12 formula-section-2">
         <div class="card rounded px-2 mx-2" style="width:100%;">
@@ -1090,8 +1108,132 @@ Attention, quel que soit l'état du véhicule, celui-ci ne doit pas avoir de rou
   </div>
 </div>
         </div>
-</div>  
+</div>
 </section>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP1ZIGPpduFbi1CehT7uDirS9zBDx1sAQ&libraries=places"></script>
+
+
+<script>
+    function initAutocomplete() {
+        var pickupAutocomplete = new google.maps.places.Autocomplete(document.getElementById('pickup'));
+        var deliveryAutocomplete = new google.maps.places.Autocomplete(document.getElementById('delivery'));
+
+        pickupAutocomplete.addListener('place_changed', function () {
+            var place = pickupAutocomplete.getPlace();
+            document.getElementById('pickup-lat').value = place.geometry.location.lat();
+            document.getElementById('pickup-lng').value = place.geometry.location.lng();
+        });
+
+        deliveryAutocomplete.addListener('place_changed', function () {
+            var place = deliveryAutocomplete.getPlace();
+            document.getElementById('delivery-lat').value = place.geometry.location.lat();
+            document.getElementById('delivery-lng').value = place.geometry.location.lng();
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initAutocomplete);
+
+    function toRad(degrees) {
+        return degrees * (Math.PI / 180);
+    }
+
+    function calculateAndDisplayResult() {
+    var vehicleTypeSelect = document.getElementById('vehicle-type');
+    var conditionSelect = document.getElementById('vehicle-condition');
+    var selectedVehicleType = vehicleTypeSelect.options[vehicleTypeSelect.selectedIndex].value;
+    var selectedCondition = conditionSelect.options[conditionSelect.selectedIndex].value;
+// alert(selectedCondition)
+    // Use Google Maps Distance Matrix API to get accurate distance
+    var service = new google.maps.DistanceMatrixService();
+    var pickup = new google.maps.LatLng(
+        parseFloat(document.getElementById('pickup-lat').value),
+        parseFloat(document.getElementById('pickup-lng').value)
+    );
+    var delivery = new google.maps.LatLng(
+        parseFloat(document.getElementById('delivery-lat').value),
+        parseFloat(document.getElementById('delivery-lng').value)
+    );
+
+    service.getDistanceMatrix({
+        origins: [pickup],
+        destinations: [delivery],
+        travelMode: 'DRIVING',
+        unitSystem: google.maps.UnitSystem.METRIC, // Use METRIC for kilometers
+    }, function (response, status) {
+        if (status === 'OK') {
+            var distance = response.rows[0].elements[0].distance.value / 1000; // Convert meters to kilometers
+
+            var result;
+            var packages;
+            if (selectedVehicleType === 'Citadine' || selectedVehicleType === 'Berline' || selectedVehicleType === 'Sportive' ||  selectedVehicleType === 'Monospace' || selectedVehicleType === '4×4' || selectedVehicleType === '3m3' || selectedVehicleType === '6m3' || selectedVehicleType === '9m3' || selectedVehicleType === '12m3' || selectedVehicleType === '15m3' || selectedVehicleType === 'Camion-benne'  || selectedVehicleType === 'Camping-car' || selectedVehicleType === 'Van-aménagé' && (selectedCondition === 'En-panne' || selectedCondition === 'Accidenté')) {
+                result = 1.49 * distance + 149;
+                packages = "Voie Premium";
+            } else if (selectedVehicleType === 'Citadine' || selectedVehicleType === 'Berline' && selectedCondition === 'En étatde marche') {
+              // alert("ok")
+              result = 0.65 * distance + 59;
+                packages = "Voie Express";
+            } else if (selectedVehicleType === 'Sportive' ||  selectedVehicleType === 'Monospace' || selectedVehicleType === '4×4' && selectedCondition  === 'En étatde marche') {
+              // alert("ok")
+              result = 0.66 * distance + 59;
+                packages = "Voie Express";
+            } else if (selectedVehicleType === '3m3' || selectedVehicleType === '6m3'  && selectedCondition === 'En étatde marche') {
+              // alert("ok")
+              result = 0.69 * distance + 59;
+                packages = "Voie Express";
+            } else if (selectedVehicleType === '9m3' && selectedCondition === 'En étatde marche') {
+              // alert("ok")
+              result = 0.73 * distance + 59;
+                packages = "Voie Express";
+            } else if (selectedVehicleType === '12m3'  && selectedCondition === 'En étatde marche') {
+              // alert("ok")
+              result = 0.76 * distance + 59;
+                packages = "Voie Express";
+            } else if (selectedVehicleType === '15m3' && selectedCondition === 'En étatde marche') {
+              // alert("ok")
+              result = 0.84 * distance + 59;
+                packages = "Voie Express";
+            } else if (selectedVehicleType === '20m3' && selectedCondition === 'En étatde marche') {
+              // alert("ok")
+              result = 0.88 * distance + 59;
+                packages = "Voie Express";
+            } else if (selectedVehicleType === '25m3' || selectedVehicleType === '30m3' || selectedVehicleType === 'Camion-benne'  || selectedVehicleType === 'Camping-car' || selectedVehicleType === 'Van-aménagé' && selectedCondition === 'En étatde marche') {
+              // alert("ok")
+              result = 0.94 * distance + 59;
+                packages = "Voie Express";
+            } else if (selectedVehicleType === '20m3' || selectedVehicleType === '25m3' || selectedVehicleType === '30m3' && (selectedCondition === 'En-panne' || selectedCondition === 'Accidenté')) {
+              // alert("ok")
+              result = 0;
+              packages = "Only Move with Express way";
+            }else {
+                result = 'Invalid selection';
+            }
+
+            displayResult(result, packages);
+        } else {
+            displayResult('Error calculating distance');
+        }
+    });
+}
+
+
+    function displayResult(result, packages) {
+      // alert(result,packages)
+        var resultDiv = document.getElementById('resultDiv');
+        resultDiv.style.textAlign = 'center'; // Center the text
+        resultDiv.style.color = 'green'; // Set text color to yellow
+        if(result != 0)
+        {
+          resultDiv.innerHTML = result ? 'Cost: ' + result.toFixed(2) + ' €' + ' ' + '(' + packages + ')'  : '';
+        }
+        else
+        {
+          resultDiv.style.textAlign = 'center'; // Center the text
+        resultDiv.style.color = 'red'; // Set text color to yellow
+          resultDiv.innerHTML = packages;
+        }
+    }
+</script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @if($showSweetAlert == true)
     <script>
@@ -1104,3 +1246,22 @@ Attention, quel que soit l'état du véhicule, celui-ci ne doit pas avoir de rou
 @endif
 
 @endsection
+
+
+{{-- <option value="Citadine" class="app-font-family">Citadine</option>
+<option value="Berline" class="app-font-family">Berline</option>
+<option value="Sportive" class="app-font-family">Sportive</option>
+<option value="Collection" class="app-font-family">Collection</option>
+<option value="Monospace" class="app-font-family">Monospace</option>
+<option value="4×4" class="app-font-family">SUV ou 4×4</option>
+<option value="3m3" class="app-font-family">Utilitaire 3m3</option>
+<option value="6m3" class="app-font-family">Utilitaire 6m3</option>
+<option value="9m3" class="app-font-family">Utilitaire 9m3</option>
+<option value="12m3" class="app-font-family">Utilitaire 12m3</option>
+<option value="15m3" class="app-font-family">Utilitaire 15m3</option>
+<option value="20m3" class="app-font-family">Utilitaire 20m3</option>
+<option value="25m3" class="app-font-family">Utilitaire 25m3</option>
+<option value="30m3" class="app-font-family">Utilitaire 30m3</option>
+<option value="Camion-benne" class="app-font-family">Camion benne</option>
+<option value="Camping-car" class="app-font-family">Camping-car</option>
+<option value="Van-aménagé" class="app-font-family">Van-aménagé</option> --}}

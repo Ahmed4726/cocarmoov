@@ -86,6 +86,12 @@ Route::middleware('auth')->group(function () {
 
     //Calendar
     Route::get('/calendar', [CalendarController::class,'index'])->name('calendar');
+    Route::get('/getevent', [CalendarController::class,'getEvent'])->name('getevent');
+    Route::post('/createevent',[CalendarController::class,'createEvent'])->name('createevent');
+    Route::post('/deleteevent',[CalendarController::class,'deleteEvent'])->name('deleteevent');
+
+    Route::get('/fullcalender',[CalendarController::class,'index'])->name('admin.calender.show');
+    Route::post('/fullcalenderAjax', [CalendarController::class,'ajax'])->name('ajax');
 
     //Account
     Route::get('/my-account', [AccountController::class,'index'])->name('account');
@@ -105,7 +111,7 @@ Route::middleware('auth')->group(function () {
 
     // Route::view('my-account','admin.calendar')->name('calendar');
 
-    Route::put('/password-update', [PasswordController::class,'password_update'])->name('password.update');
+    // Route::put('/password-update', [PasswordController::class,'password_update'])->name('password.update');
 });
 
 

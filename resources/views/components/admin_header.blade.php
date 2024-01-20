@@ -10,7 +10,7 @@
   .nav-item.active a:hover{
     background-color: #fdcd02; /* Set your desired background color */
     color: #000; /* Set your desired text color */
-  } 
+  }
   .text-hover:hover{
     background-color: #fdcd02; /* Set your desired background color */
     color: #000; /* Set your desired text color */
@@ -141,8 +141,8 @@
             </a>
         </li>
     </ul>
-</li>        
-<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
+</li>
+<li class="nav-item {{ Request::is('show_profile') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-envelope"></i>
         <p>
@@ -158,7 +158,7 @@
             </a>
         </li>
     </ul>
-</li> 
+</li>
 
 <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
@@ -176,8 +176,8 @@
             </a>
         </li>
     </ul>
-</li> 
-<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
+</li>
+<li class="nav-item {{ Request::is('show_profile') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-car"></i>
         <p>
@@ -193,7 +193,7 @@
             </a>
         </li>
     </ul>
-</li> 
+</li>
 <li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-bell"></i>
@@ -210,7 +210,7 @@
             </a>
         </li>
     </ul>
-</li> 
+</li>
 <li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-car-side"></i>
@@ -227,7 +227,7 @@
             </a>
         </li>
     </ul>
-</li> 
+</li>
 <li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-taxi"></i>
@@ -244,7 +244,7 @@
             </a>
         </li>
     </ul>
-</li> 
+</li>
 <li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-certificate"></i>
@@ -261,7 +261,7 @@
             </a>
         </li>
     </ul>
-</li> 
+</li>
 <li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-car"></i>
@@ -278,7 +278,7 @@
             </a>
         </li>
     </ul>
-</li> 
+</li>
 
 <li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
@@ -296,7 +296,7 @@
             </a>
         </li>
     </ul>
-</li> 
+</li>
 <li class="nav-item {{ Request::is('bookings') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-book"></i>
@@ -346,15 +346,15 @@
             </a>
         </li>
     </ul>
-</li> 
+</li>
           <li class="nav-item{{ Request::is('invoices') ? ' active' : '' }}">
     <a href="{{ route('invoice') }}" class="nav-link">
         <i class='fas fa-file-invoice text-dark'></i>
         <p class='text-dark'>Invoicing</p>
     </a>
 </li>
-          <li class="nav-item{{ Request::is('calendar') ? ' active' : '' }}">
-    <a href="{{ route('calendar') }}" class="nav-link">
+          <li class="nav-item{{ Request::is('fullcalendar') ? ' active' : '' }}">
+    <a href="{{ route('admin.calender.show') }}" class="nav-link">
         <i class='fas fa-calendar text-dark'></i>
         <p class='text-dark'>Calendar</p>
     </a>
@@ -371,7 +371,7 @@
               </li>
             </ul>
           </li>
-          
+
           <!-- <li class="nav-item menu-open">
             <a href="#" class="nav-link">
                 <p>Manage <i class="fas fa-angle-down"></i></p>
