@@ -121,7 +121,7 @@ Route::middleware('auth')->group(function () {
 //test route
 
 Route::get('/test', function () {
-    return view('move_vehicle');
+    return view('frontend.move_vehicle');
 });
 
 

@@ -40,24 +40,31 @@
               </ul>
           </li>
 				</ul>
-
-				<button class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;" data-toggle="modal" data-target="#loginModal">
-				<span class="text-dark fw-bold app-font-family">S'identifier</span>
-				</button>
-  <!-- Signup Button -->
-  <button class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;" data-toggle="modal" data-target="#signupModal">
-    <span class="text-dark fw-bold app-font-family">S'inscrire</span>
-  </button>
-
-
+                @if(Auth::check())
+    <!-- Logout Button -->
+    <form action="{{ route('logout') }}" method="post">
+        @csrf
+        <button type="submit" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;">
+            <span class="text-dark fw-bold app-font-family">Logout</span>
+        </button>
+    </form>
+@else
+    <!-- Login Button -->
+    <button class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;" data-toggle="modal" data-target="#loginModal">
+        <span class="text-dark fw-bold app-font-family">S'identifier</span>
+    </button>
+    
+    <!-- Signup Button -->
+    <button class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;" data-toggle="modal" data-target="#signupModal">
+        <span class="text-dark fw-bold app-font-family">S'inscrire</span>
+    </button>
+@endif
 				<!-- <a href="#!" class="btn btn-primary ms-2 ms-lg-3">Sign Up</a> -->
 			</div>
 		</div>
 	</nav>
 </header>
 <!-- /navigation -->
-
-
   <!-- Modal login start -->
   <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

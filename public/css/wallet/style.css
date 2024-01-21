@@ -3766,6 +3766,26 @@
     margin-left: -80px !important;
   }
 }
+
+.form-step {
+  display: none;
+}
+.show-step {
+  display: block;
+}
+#progress-bar {
+  width: 100%;
+  background-color: #ddd;
+  height: 30px;
+  display: flex;
+}
+.progress-step {
+  flex: 1;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  color: #fff;
+}
  .navbar-nav .nav-link {
    padding-right: 0;
    padding-left: 0;
