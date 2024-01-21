@@ -151,9 +151,11 @@
                         </div>
                     </div>
                     @endif
-{{-- @if
-<h3>No package Available</h3>
-@endif --}}
+                    @if($premium_package === null && $express_package === null && $economyPackage === null)
+                    <h3 class="text-center">Aucun forfait disponible</h3>
+                @endif
+                
+                
                     <!-- Repeat the structure for the other two columns (Voie express and Voie premium) -->
 
                 </div>

@@ -66,9 +66,9 @@ class MoveVehicleController extends Controller
             $premium_package = 1.49 * $distance + 149;
             return view('frontend.move_vehicle', compact('car_move', 'express_package', 'economyPackage', 'premium_package'));
         } else {
-            $express_package = 'Invalid selection';
-            $economyPackage = 0.09 * $distance + 49;
-            $premium_package = 1.49 * $distance + 149;
+            $express_package = null;
+            $economyPackage = null;
+            $premium_package = null;
             return view('frontend.move_vehicle', compact('car_move', 'express_package', 'economyPackage', 'premium_package'));
         }
     }
