@@ -2,7 +2,6 @@
 @section('content')
 <head>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP1ZIGPpduFbi1CehT7uDirS9zBDx1sAQ&libraries=places"></script>
-
 </head>
 
 
@@ -107,9 +106,8 @@
 	<div class="input-group">
 			  <div class="select-container">
           <select name="vehicle-type" id="vehicle-type"
-          class="form-control app-font-family"
-         >
-      <option hidden selected class="app-font-family">Type de véhicule</option>
+          class="form-control form-input-border  app-font-family">
+      <option value="" selected class="app-font-family">Type de véhicule</option>
       <option value="Citadine" class="app-font-family">Citadine</option>
       <option value="Berline" class="app-font-family">Berline</option>
       <option value="Sportive" class="app-font-family">Sportive</option>
@@ -137,9 +135,9 @@
 	<div class="input-group">
 			  <div class="select-container">
                 <select name="vehicle-condition" id="vehicle-condition"
-                class="form-control app-font-family"
+                class="form-control form-input-border app-font-family"
                 onchange="calculateAndDisplayResult()">
-                <option hidden selected>Etat du véhicule</option>
+                <option value="" selected>Etat du véhicule</option>
                 <option value="En-état-de-marche" class="app-font-family">En état
                     de marche</option>
                 <option value="En-panne" class="app-font-family">En panne</option>
@@ -151,8 +149,19 @@
 	</div>
   </div>
   <div class="col-lg-12">
-    <div id="resultDiv" class="result-container"></div>
-</div>
+  <h4 class="card-title text-center p-complete-info py-2">Spécifiez votre type de profil</h4>
+	<div class="col-lg-12 col-md-12">
+	<div class="input-group">
+			  <div class="select-container">
+          <select name="vehicle-type" id="vehicle-type"
+          class="form-control form-input-border app-font-family">
+          <option value="" selected class="app-font-family">sélectionner le type de profil</option>
+      <option value="professional" class="app-font-family">Je suis professionnel</option>
+      <option value="private" class="app-font-family">Je suis un particulier</option>
+          </select>
+          <i class="fas fa-caret-down fa-dropdown-icon"></i>
+  </div>
+  </div>
 <div class="text-center">
     <a type="button" 
             class="btn professionall-button-register text-dark mt-3 mb-3" href="#">
