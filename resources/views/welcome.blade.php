@@ -79,7 +79,7 @@
     </div>
   </div>
 </section>
-<section class="section section-2 pt-5 m-0 overflow-hidden">
+<section class="section section-2 pt-5 m-0 overflow-hidden" id="move_car">
   <div class="container">
     <div class="row">
     <p class="fw-bold services-p text-center">1 clic = 1 devis</p>
