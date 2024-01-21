@@ -87,7 +87,8 @@
       <div class="card mt-4 rounded mx-auto card-register p-2" style="width:60%;">
             <div class="card-body">
               <h4 class="card-title text-center p-complete-info py-2">Indiquez vos adresses</h4>
-			  <form action="/action_page.php">
+			  <form action="/calculate" method="POST">
+                @csrf
   <div class="row">
     <div class="col-lg-6 col-md-12">
         <input type="text" class="form-control form-input-border mt-0" id="pickup" placeholder="Adresse d’enlèvement">
@@ -100,6 +101,11 @@
         <input type="hidden" id="delivery-lat" name="delivery_lat">
         <input type="hidden" id="delivery-lng" name="delivery_lng">
      </div>
+     <input type="text" id="pickupName" name="pickup_name" style="display: none;">
+     <input type="text" id="deliveryName" name="delivery_name" style="display: none;" >
+     <input type="hidden" id="distance" name="distance">
+
+
 
   <h4 class="card-title text-center p-complete-info py-2">Spécifiez votre véhicule</h4>
 	<div class="col-lg-6 col-md-12">
@@ -135,8 +141,7 @@
 	<div class="input-group">
 			  <div class="select-container">
                 <select name="vehicle-condition" id="vehicle-condition"
-                class="form-control form-input-border app-font-family"
-                onchange="calculateAndDisplayResult()">
+                class="form-control form-input-border app-font-family">
                 <option value="" selected>Etat du véhicule</option>
                 <option value="En-état-de-marche" class="app-font-family">En état
                     de marche</option>
@@ -153,7 +158,7 @@
 	<div class="col-lg-12 col-md-12">
 	<div class="input-group">
 			  <div class="select-container">
-          <select name="vehicle-type" id="vehicle-type"
+          <select name="vehicle-mover" id="vehicle-mover"
           class="form-control form-input-border app-font-family">
           <option value="" selected class="app-font-family">sélectionner le type de profil</option>
       <option value="professional" class="app-font-family">Je suis professionnel</option>
@@ -163,10 +168,10 @@
   </div>
   </div>
 <div class="text-center">
-    <a type="button" 
-            class="btn professionall-button-register text-dark mt-3 mb-3" href="#">
+    <button type="submit"
+            class="btn professionall-button-register text-dark mt-3 mb-3">
         <b>Calculer</b>
-    </a>
+    </button>
 </div>
 </form>
             </div>
@@ -1124,22 +1129,74 @@ Attention, quel que soit l'état du véhicule, celui-ci ne doit pas avoir de rou
 
 
 <script>
-    function initAutocomplete() {
-        var pickupAutocomplete = new google.maps.places.Autocomplete(document.getElementById('pickup'));
-        var deliveryAutocomplete = new google.maps.places.Autocomplete(document.getElementById('delivery'));
+function initAutocomplete() {
+    var pickupAutocomplete = new google.maps.places.Autocomplete(document.getElementById('pickup'));
+    var deliveryAutocomplete = new google.maps.places.Autocomplete(document.getElementById('delivery'));
 
-        pickupAutocomplete.addListener('place_changed', function () {
-            var place = pickupAutocomplete.getPlace();
-            document.getElementById('pickup-lat').value = place.geometry.location.lat();
-            document.getElementById('pickup-lng').value = place.geometry.location.lng();
-        });
+    pickupAutocomplete.addListener('place_changed', function () {
+        updatePlaceInfo('pickup', 'pickup-lat', 'pickup-lng');
+        calculateDistance();
+    });
 
-        deliveryAutocomplete.addListener('place_changed', function () {
-            var place = deliveryAutocomplete.getPlace();
-            document.getElementById('delivery-lat').value = place.geometry.location.lat();
-            document.getElementById('delivery-lng').value = place.geometry.location.lng();
+    deliveryAutocomplete.addListener('place_changed', function () {
+        updatePlaceInfo('delivery', 'delivery-lat', 'delivery-lng');
+        calculateDistance();
+    });
+
+    // Prevent form submission on pressing Enter key
+    document.getElementById('pickup').addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+        }
+    });
+
+    document.getElementById('delivery').addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+        }
+    });
+
+    function updatePlaceInfo(placeType, latId, lngId) {
+        var autocomplete = (placeType === 'pickup') ? pickupAutocomplete : deliveryAutocomplete;
+        var place = autocomplete.getPlace();
+
+        if (place.geometry) {
+            // Update latitude and longitude hidden fields
+            document.getElementById(latId).value = place.geometry.location.lat();
+            document.getElementById(lngId).value = place.geometry.location.lng();
+
+            // Update name hidden field
+            document.getElementById(`${placeType}Name`).value = place.name;
+        }
+    }
+
+    function calculateDistance() {
+        var service = new google.maps.DistanceMatrixService();
+        var pickup = new google.maps.LatLng(
+            parseFloat(document.getElementById('pickup-lat').value),
+            parseFloat(document.getElementById('pickup-lng').value)
+        );
+        var delivery = new google.maps.LatLng(
+            parseFloat(document.getElementById('delivery-lat').value),
+            parseFloat(document.getElementById('delivery-lng').value)
+        );
+
+        service.getDistanceMatrix({
+            origins: [pickup],
+            destinations: [delivery],
+            travelMode: 'DRIVING',
+            unitSystem: google.maps.UnitSystem.METRIC, // Use METRIC for kilometers
+        }, function (response, status) {
+            if (status === 'OK') {
+                var distance = response.rows[0].elements[0].distance.value / 1000; // Convert meters to kilometers
+                // Update the hidden distance field in the form
+                document.getElementById('distance').value = distance;
+            }
         });
     }
+}
+
+
 
     google.maps.event.addDomListener(window, 'load', initAutocomplete);
 
@@ -1227,7 +1284,7 @@ Attention, quel que soit l'état du véhicule, celui-ci ne doit pas avoir de rou
 
 
     function displayResult(result, packages) {
-      // alert(result,packages)
+      alert("ok")
         var resultDiv = document.getElementById('resultDiv');
         resultDiv.style.textAlign = 'center'; // Center the text
         resultDiv.style.color = 'green'; // Set text color to yellow

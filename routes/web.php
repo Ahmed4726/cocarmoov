@@ -20,6 +20,7 @@ use App\Http\Controllers\AlertController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\TrainingController;
+use App\Http\Controllers\MoveVehicleController;
 
 use App\Http\Controllers\RolesAndPermissionController;
 
@@ -125,7 +126,7 @@ Route::get('/test', function () {
 });
 
 
-
+Route::post('/calculate', [MoveVehicleController::class,'index'])->name('calculate');
 
 
 
