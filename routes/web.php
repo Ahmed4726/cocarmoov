@@ -55,6 +55,7 @@ Route::middleware('auth')->group(function () {
         return view('admin.admin_dashboard');
     })->name('dashboard');
 
+
     //Roles and Permissions
     Route::get('/roles-and-permissions', [RolesAndPermissionController::class,'index'])->name('roles.and.permissions');
     Route::get('/get-permissions/{role_id}', [RolesAndPermissionController::class,'getPermissions'])->name('get.permissions');
@@ -112,6 +113,7 @@ Route::middleware('auth')->group(function () {
     // Route::view('my-account','admin.calendar')->name('calendar');
 
     // Route::put('/password-update', [PasswordController::class,'password_update'])->name('password.update');
+
 });
 
 
@@ -130,6 +132,7 @@ Route::get('/test', function () {
 
 
 //Website
+
 Route::get('/', [WelcomeController::class,'index'])->name('welcome');
 Route::get('/assurance', [InsuranceController::class,'index'])->name('insurance');
 Route::get('/contact', [ContactController::class,'index'])->name('contact_us');

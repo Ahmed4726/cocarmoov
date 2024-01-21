@@ -1,10 +1,8 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
-</head>
+
 <!-- navigation -->
 <header class="navigation bg-tertiary sticky-top">
 	<nav class="navbar navbar-expand-xl navbar-light">
@@ -27,7 +25,7 @@
         <li><a class="dropdown-item header-text-mobile fw-bold app-font-family" href="{{ route('welcome') }}">Particulier</a></li>
     </ul>
 </li>
-					<li class="nav-item"> <a class="nav-link header-text-mobile fw-bold app-font-family" href="about.html">Déplacer un véhicule</a>
+					<li class="nav-item"> <a class="nav-link header-text-mobile fw-bold app-font-family" href="#move_car">Déplacer un véhicule</a>
 					</li>
 					<li class="nav-item"> <a class="nav-link header-text-mobile fw-bold app-font-family" href="{{ route('co-drive') }}">Co-convoyer</a>
 					</li>
@@ -41,6 +39,7 @@
           </li>
 				</ul>
                 @if(Auth::check())
+                
     <!-- Logout Button -->
     <form action="{{ route('logout') }}" method="post">
         @csrf
