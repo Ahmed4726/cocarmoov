@@ -52,7 +52,7 @@
                                         <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4>
                                         <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Faites des économies en proposant vos véhicules à des co-convoyeurs particuliers pour les déplacer pendant qu'ils déménagent ou covoiturent.</b></p>
                                         <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 15 jours en moyenne</p>
-                                        <p id="economyPriceDisplay" class="card-text text-center mt-3 h5 solution-price-eco app-font-family">À partir de {{ $economyPackage }} € TTC</p>
+                                        <p id="economyPriceDisplay" class="card-text text-center mt-3 h5 solution-price-eco app-font-family">À partir de {{ $economyPackage }} € {{ $tax_notation }}</p>
                                         <div class="text-center">
                                             <a type="button" class="btn banner-button-1 text-dark px-4 py-3 mt-4 app-font-family" href="#">
                                                 <b>Rapatrier un véhicule</b>
@@ -73,7 +73,7 @@
                                         <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4>
                                         <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Faites des économies en proposant vos véhicules à des co-convoyeurs particuliers pour les déplacer pendant qu'ils déménagent ou covoiturent.</b></p>
                                         <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 15 jours en moyenne</p>
-                                        <p id="expressPriceDisplay" class="card-text text-center h5 text-light mt-3 solution-price-exp app-font-family">À partir de {{ $express_package }} € TTC</p>
+                                        <p id="expressPriceDisplay" class="card-text text-center h5 text-light mt-3 solution-price-exp app-font-family">À partir de {{ $express_package }} € {{ $tax_notation }}</p>
                                         <div class="text-center">
                                                         <a type="button"
                                     class="btn banner-button-2 mt-4 px-4 py-3 text-dark app-font-family" href="#">
@@ -94,7 +94,7 @@
                                         <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4>
                                         <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Faites des économies en proposant vos véhicules à des co-convoyeurs particuliers pour les déplacer pendant qu'ils déménagent ou covoiturent.</b></p>
                                         <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 15 jours en moyenne</p>
-                                        <p id="premiumPriceDisplay" class="text-center text-light h5 mt-3 solution-price-pre app-font-family">À partir de {{ $premium_package }} € TTC</p>
+                                        <p id="premiumPriceDisplay" class="text-center text-light h5 mt-3 solution-price-pre app-font-family">À partir de {{ $premium_package }} € {{ $tax_notation }}</p>
                                         <div class="text-center">
                                         <a type="button"
                     class="btn banner-button-3 text-dark px-4 py-3 mt-4 app-font-family" href="#">
@@ -214,21 +214,21 @@ function prevStep(step) {
         const economyInitialPrice = parseFloat('{{ $economyPackage }}');
         const economyQuantity = parseFloat(quantityInput.value);
         const totalEconomyPrice = economyInitialPrice * economyQuantity;
-        economyPriceDisplay.textContent = `À partir de ${totalEconomyPrice.toFixed(2)} € TTC`;
+        economyPriceDisplay.textContent = `À partir de ${totalEconomyPrice.toFixed(2)} € {{ $tax_notation }}`;
 
         // Update Express Package Price
         const expressPriceDisplay = document.getElementById('expressPriceDisplay');
         const expressInitialPrice = parseFloat('{{ $express_package }}');
         const expressQuantity = parseFloat(quantityInput.value);
         const totalExpressPrice = expressInitialPrice * expressQuantity;
-        expressPriceDisplay.textContent = `À partir de ${totalExpressPrice.toFixed(2)} € TTC`;
+        expressPriceDisplay.textContent = `À partir de ${totalExpressPrice.toFixed(2)} € {{ $tax_notation }}`;
 
         // Update Premium Package Price
         const premiumPriceDisplay = document.getElementById('premiumPriceDisplay');
         const premiumInitialPrice = parseFloat('{{ $premium_package }}');
         const premiumQuantity = parseFloat(quantityInput.value);
         const totalPremiumPrice = premiumInitialPrice * premiumQuantity;
-        premiumPriceDisplay.textContent = `À partir de ${totalPremiumPrice.toFixed(2)} € TTC`;
+        premiumPriceDisplay.textContent = `À partir de ${totalPremiumPrice.toFixed(2)} € {{ $tax_notation }}`;
     }
 </script>
 

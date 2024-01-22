@@ -12,12 +12,12 @@ class MoveVehicleController extends Controller
         $selectedVehicleType = $car_move['vehicle-type'];
         $selectedCondition = $car_move['vehicle-condition'];
         $distance = $car_move['distance'];
-
         $car_owner = $car_move['vehicle-mover'];
 
         $premium_package = null;
         $express_package = null;
         $economyPackage = null;
+        $tax_notation = null;
 
         if (in_array($selectedVehicleType, ['Citadine', 'Berline', 'Sportive', 'Monospace', '4×4', '3m3', '6m3', '9m3', '12m3', '15m3', 'Camion-benne', 'Camping-car', 'Van-aménagé']) && in_array($selectedCondition, ['En-panne', 'Accidenté'])) {
             $premium_package = 1.49 * $distance + 149;
@@ -27,7 +27,7 @@ class MoveVehicleController extends Controller
             $express_package = 0.94 * $distance + 59;
             $economyPackage = 0.09 * $distance + 49;
         } elseif (in_array($selectedVehicleType, ['20m3', '25m3', '30m3']) && in_array($selectedCondition, ['En-panne', 'Accidenté'])) {
-           
+
         } elseif (in_array($selectedVehicleType, ['Citadine', 'Berline']) && $selectedCondition === 'En-état-de-marche') {
             $express_package = 0.65 * $distance + 59;
             $economyPackage = 0.09 * $distance + 49;
@@ -60,8 +60,14 @@ class MoveVehicleController extends Controller
             $express_package *= 1.2;
             $economyPackage *= 1.2;
         }
+        if ($car_owner === 'professional') {
+            $tax_notation = 'HT';
+        }
+        else {
+            $tax_notation = 'TTC';
+        }
 
-        return view('frontend.move_vehicle', compact('car_move', 'express_package', 'economyPackage', 'premium_package'));
+        return view('frontend.move_vehicle', compact('car_move', 'express_package', 'economyPackage', 'premium_package', 'tax_notation'));
     }
 
 
