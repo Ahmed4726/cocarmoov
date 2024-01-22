@@ -160,7 +160,7 @@
 			  <div class="select-container">
           <select name="vehicle-mover" id="vehicle-mover"
           class="form-control form-input-border app-font-family">
-          <option value="" selected class="app-font-family">sélectionner le type de profil</option>
+          <option value="" selected class="app-font-family">Sélectionner le type de profil</option>
       <option value="professional" class="app-font-family">Je suis professionnel</option>
       <option value="private" class="app-font-family">Je suis un particulier</option>
           </select>
