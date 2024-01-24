@@ -139,6 +139,10 @@
                         <!-- <label for="email">Adresse e-mail</label> -->
                         <input type="email" class="form-control" id="email" name="email" placeholder="entrez votre Adresse e-mail" required>
                     </div>
+                    <div class="form-group">
+                        <!-- <label for="email">Adresse e-mail</label> -->
+            <input type="number" class="form-control" id="Quantity" required min = "1" value = "1" name="quantity">
+                    </div>
                     <!-- Password -->
                     <div class="form-group">
                         <!-- <label for="password">Mot de passe</label> -->

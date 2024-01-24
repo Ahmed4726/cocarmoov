@@ -142,7 +142,7 @@
         </li>
     </ul>
 </li>
-<li class="nav-item {{ Request::is('show_profile') ? 'menu-open menu-is-opening' : '' }}">
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-envelope"></i>
         <p>
@@ -177,7 +177,7 @@
         </li>
     </ul>
 </li>
-<li class="nav-item {{ Request::is('show_profile') ? 'menu-open menu-is-opening' : '' }}">
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-car"></i>
         <p>

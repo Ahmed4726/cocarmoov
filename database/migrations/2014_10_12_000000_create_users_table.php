@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('phone_number');
             $table->string('user_type');
             $table->string('email')->unique();
+            $table->bigInteger('quantity');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

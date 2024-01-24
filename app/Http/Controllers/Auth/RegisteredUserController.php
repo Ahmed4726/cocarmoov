@@ -46,13 +46,9 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'user_type' => $request->user_type,
+            'quantity' => $request->quantity,
         ]);
 
-        if ($user instanceof MustVerifyEmail && ! $user->hasVerifiedEmail()) {
-            $user->getEmailForVerification();
-        }
-
-// dd($user);
         event(new Registered($user));
 
         Auth::login($user);
