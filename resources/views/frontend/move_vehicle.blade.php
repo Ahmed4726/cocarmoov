@@ -54,8 +54,8 @@
                                         <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 15 jours en moyenne</p>
                                         <p id="economyPriceDisplay" class="card-text text-center mt-3 h5 solution-price-eco app-font-family">À partir de {{ $economyPackage }} € {{ $tax_notation }}</p>
                                         <div class="text-center">
-                                            <a type="button" class="btn banner-button-1 text-dark px-4 py-3 mt-4 app-font-family" href="#">
-                                                <b>Rapatrier un véhicule</b>
+                                            <a type="button" class="btn banner-button-1 text-dark px-4 py-3 mt-4 app-font-family package-btn"
+                    data-package="economy" onclick="selectAndProceed('economy')">Rapatrier un véhicule</a>
                                             </a>
                                         </div>
                                     </div>
@@ -75,9 +75,8 @@
                                         <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 15 jours en moyenne</p>
                                         <p id="expressPriceDisplay" class="card-text text-center h5 text-light mt-3 solution-price-exp app-font-family">À partir de {{ $express_package }} € {{ $tax_notation }}</p>
                                         <div class="text-center">
-                                                        <a type="button"
-                                    class="btn banner-button-2 mt-4 px-4 py-3 text-dark app-font-family" href="#">
-                                    <b>Déplacer un véhicule</b></a>
+                                            <a type="button" class="btn banner-button-2 mt-4 px-4 py-3 text-dark app-font-family package-btn"
+                                            data-package="express" onclick="selectAndProceed('express')">Déplacer un véhicule</a>
                                         </div>
                                     </div>
                                 </div>
@@ -96,9 +95,8 @@
                                         <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 15 jours en moyenne</p>
                                         <p id="premiumPriceDisplay" class="text-center text-light h5 mt-3 solution-price-pre app-font-family">À partir de {{ $premium_package }} € {{ $tax_notation }}</p>
                                         <div class="text-center">
-                                        <a type="button"
-                    class="btn banner-button-3 text-dark px-4 py-3 mt-4 app-font-family" href="#">
-                    <b>Transporter un véhicule</b></a>
+                                            <a type="button" class="btn banner-button-3 text-dark px-4 py-3 mt-4 app-font-family package-btn"
+                                            data-package="premium" onclick="selectAndProceed('premium')">Transporter un véhicule</a>
                                         </div>
                                     </div>
                                 </div>
@@ -129,12 +127,10 @@
 <div id="step3" class="form-step">
   <h2>Step 2: Packages</h2>
   <form id="packagesForm">
-    <label>Select Package:</label>
-    <select id="packageSelect">
-      <option value="economy">Economy</option>
-      <option value="express">Express</option>
-      <option value="premium">Premium</option>
-    </select>
+    <label>Selected Package:</label>
+                <p id="selectedPackageDetails"></p>
+                <p id="selectedPackagePrice"></p>
+{{-- price show here in this step of the package and name too --}}
     <button type="button" onclick="prevStep(2)">Previous</button>
     <button type="button" onclick="nextStep(3)">Next</button>
   </form>
@@ -169,6 +165,20 @@
   </form>
 </div>
 <script>
+
+let selectedPackage = '';
+
+function selectPackage(packageType) {
+    // Reset styles for all package buttons
+    $('.package-btn').removeClass('selected-package');
+
+    // Add style to the selected package button
+    $(`.package-btn[data-package="${packageType}"]`).addClass('selected-package');
+
+    // Capture the selected package type
+    selectedPackage = packageType;
+    updatePrices();
+}
 // When going to the next step
 function nextStep(step) {
   document.getElementById(`step${step}`).classList.remove('show-step');
@@ -203,11 +213,16 @@ function prevStep(step) {
     alert('Form submitted successfully!');
   }
 
+  function selectAndProceed(packageType) {
+        selectPackage(packageType);
+        nextStep(2);
+    }
 
 
 
   function updatePrices() {
-        const quantityInput = document.getElementById('Quantity');
+
+    const quantityInput = document.getElementById('Quantity');
 
         // Update Economy Package Price
         const economyPriceDisplay = document.getElementById('economyPriceDisplay');
@@ -229,7 +244,32 @@ function prevStep(step) {
         const premiumQuantity = parseFloat(quantityInput.value);
         const totalPremiumPrice = premiumInitialPrice * premiumQuantity;
         premiumPriceDisplay.textContent = `À partir de ${totalPremiumPrice.toFixed(2)} € {{ $tax_notation }}`;
+
+        // Display the selected package and its price in the second step
+        const selectedPackageDetails = document.getElementById('selectedPackageDetails');
+        const selectedPackagePrice = document.getElementById('selectedPackagePrice');
+
+        selectedPackageDetails.textContent = `Selected Package: ${selectedPackage}`;
+
+        // Determine the total price based on the selected package
+        let totalPackagePrice = 0;
+        switch (selectedPackage) {
+            case 'economy':
+                totalPackagePrice = economyInitialPrice * parseFloat(quantityInput.value);
+                break;
+            case 'express':
+                totalPackagePrice = expressInitialPrice * parseFloat(quantityInput.value);
+                break;
+            case 'premium':
+                totalPackagePrice = premiumInitialPrice * parseFloat(quantityInput.value);
+                break;
+            default:
+                break;
+        }
+        // alert(totalPackagePrice)
+        selectedPackagePrice.textContent = `Total Price: ${totalPackagePrice.toFixed(2)} € {{ $tax_notation }}`;
     }
+
 </script>
 
 

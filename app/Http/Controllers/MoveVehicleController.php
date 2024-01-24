@@ -20,38 +20,38 @@ class MoveVehicleController extends Controller
         $tax_notation = null;
 
         if (in_array($selectedVehicleType, ['Citadine', 'Berline', 'Sportive', 'Monospace', '4×4', '3m3', '6m3', '9m3', '12m3', '15m3', 'Camion-benne', 'Camping-car', 'Van-aménagé']) && in_array($selectedCondition, ['En-panne', 'Accidenté'])) {
-            $premium_package = 1.49 * $distance + 149;
+            $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         } elseif ($selectedVehicleType === 'Collection') {
-            $premium_package = 1.49 * $distance + 149;
+            $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         } elseif (in_array($selectedVehicleType, ['25m3', '30m3', 'Camion-benne', 'Camping-car', 'Van-aménagé']) && $selectedCondition === 'En-état-de-marche') {
-            $express_package = 0.94 * $distance + 59;
-            $economyPackage = 0.09 * $distance + 49;
+            $express_package = number_format(0.94 * $distance + 59, 2, '.', '');
+            $economyPackage = number_format(0.09 * $distance + 49, 2, '.', '');
         } elseif (in_array($selectedVehicleType, ['20m3', '25m3', '30m3']) && in_array($selectedCondition, ['En-panne', 'Accidenté'])) {
-
+            // Handle specific case if needed
         } elseif (in_array($selectedVehicleType, ['Citadine', 'Berline']) && $selectedCondition === 'En-état-de-marche') {
-            $express_package = 0.65 * $distance + 59;
-            $economyPackage = 0.09 * $distance + 49;
-            $premium_package = 1.49 * $distance + 149;
+            $express_package = number_format(0.65 * $distance + 59, 2, '.', '');
+            $economyPackage = number_format(0.09 * $distance + 49, 2, '.', '');
+            $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         } elseif (in_array($selectedVehicleType, ['Sportive', 'Monospace', '4×4']) && $selectedCondition === 'En-état-de-marche') {
-            $express_package = 0.66 * $distance + 59;
-            $economyPackage = 0.09 * $distance + 49;
-            $premium_package = 1.49 * $distance + 149;
+            $express_package = number_format(0.66 * $distance + 59, 2, '.', '');
+            $economyPackage = number_format(0.09 * $distance + 49, 2, '.', '');
+            $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         } elseif (in_array($selectedVehicleType, ['3m3', '6m3']) && $selectedCondition === 'En-état-de-marche') {
-            $express_package = 0.69 * $distance + 59;
-            $economyPackage = 0.09 * $distance + 49;
-            $premium_package = 1.49 * $distance + 149;
+            $express_package = number_format(0.69 * $distance + 59, 2, '.', '');
+            $economyPackage = number_format(0.09 * $distance + 49, 2, '.', '');
+            $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         } elseif ($selectedVehicleType === '9m3' && $selectedCondition === 'En-état-de-marche') {
-            $express_package = 0.73 * $distance + 59;
-            $economyPackage = 0.09 * $distance + 49;
-            $premium_package = 1.49 * $distance + 149;
+            $express_package = number_format(0.73 * $distance + 59, 2, '.', '');
+            $economyPackage = number_format(0.09 * $distance + 49, 2, '.', '');
+            $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         } elseif ($selectedVehicleType === '12m3' && $selectedCondition === 'En-état-de-marche') {
-            $express_package = 0.76 * $distance + 59;
-            $economyPackage = 0.09 * $distance + 49;
-            $premium_package = 1.49 * $distance + 149;
+            $express_package = number_format(0.76 * $distance + 59, 2, '.', '');
+            $economyPackage = number_format(0.09 * $distance + 49, 2, '.', '');
+            $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         } elseif ($selectedVehicleType === '15m3' && $selectedCondition === 'En-état-de-marche') {
-            $express_package = 0.84 * $distance + 59;
-            $economyPackage = 0.09 * $distance + 49;
-            $premium_package = 1.49 * $distance + 149;
+            $express_package = number_format(0.84 * $distance + 59, 2, '.', '');
+            $economyPackage = number_format(0.09 * $distance + 49, 2, '.', '');
+            $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         }
 
         // Multiply packages by 1.2 if $car_owner is equal to $car_move['vehicle-mover']
@@ -60,10 +60,10 @@ class MoveVehicleController extends Controller
             $express_package *= 1.2;
             $economyPackage *= 1.2;
         }
+
         if ($car_owner === 'professional') {
             $tax_notation = 'HT';
-        }
-        else {
+        } else {
             $tax_notation = 'TTC';
         }
 
