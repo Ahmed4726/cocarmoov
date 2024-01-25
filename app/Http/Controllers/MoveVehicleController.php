@@ -59,6 +59,15 @@ class MoveVehicleController extends Controller
             $premium_package *= 1.2;
             $express_package *= 1.2;
             $economyPackage *= 1.2;
+
+            // Format the values using number_format
+            $formatted_premium = number_format($premium_package, 2, '.', '');
+            $formatted_express = number_format($express_package, 2, '.', '');
+            $formatted_economy = number_format($economyPackage, 2, '.', '');
+
+            $premium_package = $formatted_premium;
+            $express_package = $formatted_express;
+            $economyPackage = $formatted_economy;
         }
 
         if ($car_owner === 'professional') {

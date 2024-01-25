@@ -85,7 +85,7 @@
                                                 <div class="row">
                                                         <div class="col-md-3">
                                                     <button onclick="adjustPrice('express', 'decrease')" class="btn btn-danger rounded-pill px-3 py-2">-</button>
-                                                    </div> 
+                                                    </div>
                                                     <div class="col-md-5">
                                                     <p id="expressPriceDisplay">{{ $express_package }} € {{ $tax_notation }}</p>
                                                     </div>
@@ -122,7 +122,7 @@
                                                 <div class="row">
                                                         <div class="col-md-3">
                                                     <button onclick="adjustPrice('premium', 'decrease')" class="btn btn-danger rounded-pill px-3 py-2">-</button>
-                                                    </div> 
+                                                    </div>
                                                     <div class="col-md-5">
                                                     <p id="premiumPriceDisplay">{{ $premium_package }} € {{ $tax_notation }}</p>
                                                     </div>
@@ -250,7 +250,7 @@ function prevStep(step) {
 
   function selectAndProceed(packageType) {
         selectPackage(packageType);
-        nextStep(2);
+        nextStep(3);
     }
 
 
@@ -305,25 +305,30 @@ function prevStep(step) {
         selectedPackagePrice.textContent = `Total Price: ${totalPackagePrice.toFixed(2)} € {{ $tax_notation }}`;
     }
     function adjustPrice(packageType, action) {
-        var priceElement = document.getElementById(packageType + 'PriceDisplay');
-        var currentPrice = parseFloat(priceElement.innerText.replace('€', '').trim());
+    // alert(action)
+    var priceElement = document.getElementById(packageType + 'PriceDisplay');
+    var currentPrice = parseFloat(priceElement.innerText.replace('€', '').trim());
 
-        // Define the step value for price adjustment (you can adjust this value)
-        var step = 10;
+    // Define the step value for price adjustment (you can adjust this value)
+    var step = 10;
 
-        // Define the price range if needed
-        var minPrice = 0;
-        var maxPrice = 1000;
+    // Define the price range if needed
+    var minPrice = 0;
+    var maxPrice = 2000;
 
-        if (action === 'increase' && currentPrice < maxPrice) {
-            currentPrice += step;
-        } else if (action === 'decrease' && currentPrice > minPrice) {
-            currentPrice -= step;
-        }
-
-        // Update the price display
-        priceElement.innerText = currentPrice.toFixed(2) + ' € {{ $tax_notation }}';
+    if (action === 'increase' && currentPrice < maxPrice) {
+        currentPrice += step;
+    } else if (action === 'decrease' && currentPrice > minPrice) {
+        currentPrice -= step;
     }
+
+    // Update the price display
+    priceElement.innerText = currentPrice.toFixed(2) + ' € {{ $tax_notation }}';
+
+    // Prevent the default button behavior
+    event.preventDefault();
+}
+
 
 </script>
 
