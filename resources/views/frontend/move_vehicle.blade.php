@@ -53,13 +53,13 @@
                                         <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 15 jours en moyenne</p>
                                         <p class="card-text text-center text-dark mt-3"><b>Assurance Wakam</b></p>
                                         <div class="form-group">
-                <input type="checkbox" id="checkbox" name="checkbox_name"><span>Voir conditions</span>
+                <input type="checkbox" id="checkbox" name="checkbox_name"><span class="mx-1">Voir conditions</span>
             </div>
                                         <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Ce prix est basé sur des véhicules similaires livrés sur CoCarmoov et les détails de votre annonce. </b></p>
                                         <p class="text-center  mt-3 h5 solution-price-eco app-font-family">{{ $economyPackage }} € {{ $tax_notation }}</p>
                                         <div class="text-center">
                                               <a type="button" class="btn banner-button-1 text-dark px-4 py-3 mt-4 app-font-family package-btn"
-                                                data-package="economy" onclick="selectAndProceed('economy')">Rapatrier un véhicule</a>
+                                                data-package="economy" onclick="selectAndProceed('economy')">Choisir</a>
                                             </a>
                                         </div>
                                     </div>
@@ -77,7 +77,7 @@
 <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 3 jours en moyenne</p>
 <p class="card-text text-center text-dark mt-3"><b>Assurance Generali</b></p>
 <div class="form-group">
-<input type="checkbox" id="checkbox" name="checkbox_name"><span>Voir conditions</span>
+<input type="checkbox" id="checkbox" name="checkbox_name"><span class="mx-1">Voir conditions</span>
 </div>
 <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Ce prix est basé sur des véhicules similaires livrés sur CoCarmoov et les détails de votre annonce. </b></p>
                                         <div class="card-text text-center mt-3 h5 solution-price-exp app-font-family">
@@ -95,9 +95,12 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="checkbox" name="checkbox_name"><span class="mx-1">Services annexes</span>
+                                        </div>
                                         <div class="text-center">
                                             <a type="button" class="btn banner-button-2 px-4 py-3 text-dark app-font-family package-btn"
-                                            data-package="express" onclick="selectAndProceed('express')">Déplacer un véhicule</a>
+                                            data-package="express" onclick="selectAndProceed('express')">Choisir</a>
                                         </div>
                                     </div>
                                 </div>
@@ -113,9 +116,7 @@
 <!-- <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4> -->
 <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 3 jours en moyenne</p>
 <p class="card-text text-center text-dark mt-3"><b>Assurance du transporteur</b></p>
-<div class="form-group">
-<input type="checkbox" id="checkbox" name="checkbox_name"><span>Voir conditions</span>
-</div>
+
 <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Ce prix est basé sur des véhicules similaires livrés sur CoCarmoov et les détails de votre annonce. </b></p>
                                             <div class="card-text text-dark mt-3 h5 solution-price-pre app-font-family">
                                             <div class="price-buttons d-inline">
@@ -132,9 +133,12 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="checkbox" name="checkbox_name"><span class="mx-1">Services annexes</span>
+                                        </div>
                                         <div class="text-center">
                                             <a type="button" class="btn banner-button-3 text-dark px-4 py-3 app-font-family package-btn"
-                                            data-package="premium" onclick="selectAndProceed('premium')">Transporter un véhicule</a>
+                                            data-package="premium" onclick="selectAndProceed('premium')">Choisir</a>
                                         </div>
                                     </div>
                                 </div>
@@ -146,13 +150,13 @@
                             <!-- Repeat the structure for the other two columns (Voie express and Voie premium) -->
                         </div>
                     </div>
+                    <div class="col-md-12 text-center">
+            <button type="button" class="btn btn-primary text-dark" onclick="nextStep(2)">Suivant</button>
+        </div>
                 </div>
             </div>
+           
         </section>
-
-        <div class="col-12">
-            <button type="button" class="btn btn-primary" onclick="nextStep(2)">Next</button>
-        </div>
     </form>
 
 </div>
