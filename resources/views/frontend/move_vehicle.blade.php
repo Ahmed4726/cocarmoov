@@ -22,7 +22,7 @@
             <input type="text" class="form-control" id="toAddress" required value="{{ $car_move['delivery_name'] }}" readonly>
         </div>
 
-        <div class="col-md-2 mb-3">
+        <div class="col-md-3 mb-3">
             <label for="carType" class="form-label">Car Type:</label>
             <input type="text" class="form-control" id="carType" required value="{{ $car_move['vehicle-type'] }}" readonly>
         </div>
@@ -31,10 +31,10 @@
             <label for="carCondition" class="form-label">Car Condition:</label>
             <input type="text" class="form-control" id="carCondition" required value="{{ $car_move['vehicle-condition'] }}" readonly>
         </div>
-        <div class="col-md-1 mb-3">
+        <!-- <div class="col-md-1 mb-3">
             <label for="Quantity" class="form-label">Quantity:</label>
             <input type="number" class="form-control" id="Quantity" required min = "1" value = "1" oninput="updatePrices()">
-        </div>
+        </div> -->
         <h3 class="text-center">Choisissez la formule de Carmoov souhaitée</h3>
         <section class="position-relative m-0">
             <div class="section container">
