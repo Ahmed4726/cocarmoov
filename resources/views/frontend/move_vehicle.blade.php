@@ -38,7 +38,6 @@
         <section class="position-relative m-0">
             <div class="section container">
                 <div class="row justify-content-center">
-        {{-- @if($car_move == ) --}}
         @if (isset($economyPackage) && $economyPackage != null)
                     <div class="container pb-5 m-0">
                         <div class="row align-items-center">
@@ -52,15 +51,15 @@
                                         <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4>
                                         <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Faites des économies en proposant vos véhicules à des co-convoyeurs particuliers pour les déplacer pendant qu'ils déménagent ou covoiturent.</b></p>
                                         <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 15 jours en moyenne</p>
-                                        <p id="economyPriceDisplay" class="card-text text-center mt-3 h5 solution-price-eco app-font-family">À partir de {{ $economyPackage }} € {{ $tax_notation }}</p>
+                                        <p class="text-center  mt-3 h5 solution-price-eco app-font-family">{{ $economyPackage }} € {{ $tax_notation }}</p>
                                         <div class="text-center">
-                                            <a type="button" class="btn banner-button-1 text-dark px-4 py-3 mt-4 app-font-family package-btn"
-                    data-package="economy" onclick="selectAndProceed('economy')">Rapatrier un véhicule</a>
+                                              <a type="button" class="btn banner-button-1 text-dark px-4 py-3 mt-4 app-font-family package-btn"
+                                                data-package="economy" onclick="selectAndProceed('economy')">Rapatrier un véhicule</a>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                    </div>
         @endif
         @if (isset($express_package) && $express_package != null)
                             <div class="col-lg-4 differnce-section text-center mt-4">
@@ -72,16 +71,30 @@
                                         <p class="card-text text-center text-dark mt-3 solution-text"><b>Solution économique</b></p>
                                         <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4>
                                         <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Faites des économies en proposant vos véhicules à des co-convoyeurs particuliers pour les déplacer pendant qu'ils déménagent ou covoiturent.</b></p>
-                                        <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 15 jours en moyenne</p>
-                                        <p id="expressPriceDisplay" class="card-text text-center h5 text-light mt-3 solution-price-exp app-font-family">À partir de {{ $express_package }} € {{ $tax_notation }}</p>
+                                        <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 3 jours en moyenne</p>
+                                        <div class="card-text text-center mt-3 h5 solution-price-exp app-font-family">
+                                        <div class="price-buttons d-inline">
+                                                <div class="row">
+                                                        <div class="col-md-3">
+                                                    <button onclick="adjustPrice('express', 'decrease')" class="btn btn-danger rounded-pill px-3">-</button>
+                                                    </div> 
+                                                    <div class="col-md-5">
+                                                    <p id="expressPriceDisplay">{{ $express_package }} € {{ $tax_notation }}</p>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                    <button onclick="adjustPrice('express', 'increase')" class="btn btn-success rounded-pill px-3">+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="text-center">
-                                            <a type="button" class="btn banner-button-2 mt-4 px-4 py-3 text-dark app-font-family package-btn"
+                                            <a type="button" class="btn banner-button-2 px-4 py-3 text-dark app-font-family package-btn"
                                             data-package="express" onclick="selectAndProceed('express')">Déplacer un véhicule</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            @endif
+        @endif
         @if (isset($premium_package) && $premium_package != null)
                             <div class="col-lg-4 differnce-section text-center mt-4">
                                 <div class="card">
@@ -92,16 +105,30 @@
                                         <p class="card-text text-center text-dark mt-3 solution-text"><b>Solution économique</b></p>
                                         <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4>
                                         <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Faites des économies en proposant vos véhicules à des co-convoyeurs particuliers pour les déplacer pendant qu'ils déménagent ou covoiturent.</b></p>
-                                        <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 15 jours en moyenne</p>
-                                        <p id="premiumPriceDisplay" class="text-center text-light h5 mt-3 solution-price-pre app-font-family">À partir de {{ $premium_package }} € {{ $tax_notation }}</p>
+                                        <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 10 jours en moyenne </p>
+                                        <div class="card-text text-center mt-3 h5 solution-price-pre app-font-family">
+                                            <div class="price-buttons d-inline">
+                                                <div class="row">
+                                                        <div class="col-md-3">
+                                                    <button onclick="adjustPrice('premium', 'decrease')" class="btn btn-danger rounded-pill px-3">-</button>
+                                                    </div> 
+                                                    <div class="col-md-5">
+                                                    <p id="premiumPriceDisplay">{{ $premium_package }} € {{ $tax_notation }}</p>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                    <button onclick="adjustPrice('premium', 'increase')" class="btn btn-success rounded-pill px-3">+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="text-center">
-                                            <a type="button" class="btn banner-button-3 text-dark px-4 py-3 mt-4 app-font-family package-btn"
+                                            <a type="button" class="btn banner-button-3 text-dark px-4 py-3 app-font-family package-btn"
                                             data-package="premium" onclick="selectAndProceed('premium')">Transporter un véhicule</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            @endif
+        @endif
                             @if($premium_package === null && $express_package === null && $economyPackage === null)
                             <h3 class="text-center">Aucun forfait disponible</h3>
                         @endif
@@ -269,9 +296,38 @@ function prevStep(step) {
         // alert(totalPackagePrice)
         selectedPackagePrice.textContent = `Total Price: ${totalPackagePrice.toFixed(2)} € {{ $tax_notation }}`;
     }
+    function adjustPrice(packageType, action) {
+        var priceElement = document.getElementById(packageType + 'PriceDisplay');
+        var currentPrice = parseFloat(priceElement.innerText.replace('€', '').trim());
+
+        // Define the step value for price adjustment (you can adjust this value)
+        var step = 10;
+
+        // Define the price range if needed
+        var minPrice = 0;
+        var maxPrice = 1000;
+
+        if (action === 'increase' && currentPrice < maxPrice) {
+            currentPrice += step;
+        } else if (action === 'decrease' && currentPrice > minPrice) {
+            currentPrice -= step;
+        }
+
+        // Update the price display
+        priceElement.innerText = currentPrice.toFixed(2) + ' € {{ $tax_notation }}';
+    }
 
 </script>
 
 
 
 @endsection
+
+
+
+
+
+
+
+
+

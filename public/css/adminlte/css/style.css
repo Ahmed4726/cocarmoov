@@ -6,3 +6,8 @@
 .nav-link:hover{
     color: #333123;
 }
+
+    .price-buttons {
+        display: inline-block;
+        margin: 0 10px; /* Adjust the margin as needed */
+    }
