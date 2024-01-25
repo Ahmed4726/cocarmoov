@@ -149,13 +149,13 @@
                         @endif
                             <!-- Repeat the structure for the other two columns (Voie express and Voie premium) -->
                         </div>
-                    </div>
+                </div>
                     <div class="col-md-12 text-center">
-            <button type="button" class="btn btn-primary text-dark" onclick="nextStep(2)">Suivant</button>
-        </div>
+                        <button id="nextButton" type="button" class="btn btn-primary text-dark" onclick="nextStep(3)">Suivant</button>
+                    </div>
                 </div>
             </div>
-           
+
         </section>
     </form>
 
@@ -216,6 +216,7 @@ function selectPackage(packageType) {
 
     // Capture the selected package type
     selectedPackage = packageType;
+    updateNextButton();
     updatePrices();
 }
 // When going to the next step
@@ -254,7 +255,7 @@ function prevStep(step) {
 
   function selectAndProceed(packageType) {
         selectPackage(packageType);
-        nextStep(3);
+
     }
 
 
@@ -309,22 +310,115 @@ function prevStep(step) {
         selectedPackagePrice.textContent = `Total Price: ${totalPackagePrice.toFixed(2)} € {{ $tax_notation }}`;
     }
     function adjustPrice(packageType, action) {
-    // alert(action)
+    var cartype = '{{ $selectedVehicleType }}';
+    var distance = '{{ $distance }}';
+    var car_owner = '{{ $car_owner }}';
     var priceElement = document.getElementById(packageType + 'PriceDisplay');
     var currentPrice = parseFloat(priceElement.innerText.replace('€', '').trim());
 
     // Define the step value for price adjustment (you can adjust this value)
-    var step = 10;
-
-    // Define the price range if needed
+    var step = 1;
     var minPrice = 0;
-    var maxPrice = 2000;
-
-    if (action === 'increase' && currentPrice < maxPrice) {
-        currentPrice += step;
-    } else if (action === 'decrease' && currentPrice > minPrice) {
-        currentPrice -= step;
+    var maxPrice = 0;
+    if((cartype == 'Citadine' || cartype == 'Berline') && packageType == 'express')
+    {
+        minPrice = 0.59 * distance + 59;
+        maxPrice = 0.71 * distance + 59;
+        if(car_owner == 'private')
+            {
+                maxPrice *= 1.2;
+                minPrice *= 1.2;
+            }
     }
+    else if((cartype == 'Sportive' || cartype == 'Monospace' || cartype == '4x4') && packageType == 'express')
+    {
+        minPrice  = 0.60 * distance + 59;
+        maxPrice  = 0.72 * distance + 59;
+        if(car_owner == 'private')
+            {
+                maxPrice *= 1.2;
+                minPrice *= 1.2;
+            }
+    }
+    else if((cartype == '3m3' || cartype == '6m3') && packageType == 'express')
+    {
+        minPrice  = 0.63 * distance + 59;
+        maxPrice  = 0.76 * distance + 59;
+        if(car_owner == 'private')
+            {
+                maxPrice *= 1.2;
+                minPrice *= 1.2;
+            }
+    }
+    else if((cartype == '3m3' || cartype == '6m3') && packageType == 'express')
+    {
+        minPrice  = 0.63 * distance + 59;
+        maxPrice  = 0.76 * distance + 59;
+        if(car_owner == 'private')
+            {
+                maxPrice *= 1.2;
+                minPrice *= 1.2;
+            }
+    }
+    else if(cartype == '9m3' && packageType == 'express')
+    {
+        minPrice  = 0.66 * distance + 59;
+        maxPrice  = 0.79 * distance + 59;
+        if(car_owner == 'private')
+            {
+                maxPrice *= 1.2;
+                minPrice *= 1.2;
+            }
+    }
+    else if(cartype == '12m3' && packageType == 'express')
+    {
+        minPrice  = 0.76 * distance + 59;
+        maxPrice  = 0.91 * distance + 59;
+        if(car_owner == 'private')
+            {
+                maxPrice *= 1.2;
+                minPrice *= 1.2;
+            }
+    }
+    else if(cartype == '15m3' && packageType == 'express')
+    {
+        minPrice  = 0.80 * distance + 59;
+        maxPrice  = 0.96 * distance + 59;
+        if(car_owner == 'private')
+            {
+                maxPrice *= 1.2;
+                minPrice *= 1.2;
+            }
+    }
+    else if((cartype == '25m3' || cartype == '30m3' || cartype == 'Camion-benne' || cartype == 'Camping-car' || cartype == 'Van-aménagé') && packageType == 'express')
+    {
+        minPrice  = 0.85 * distance + 59;
+        maxPrice  = 1.02 * distance + 59;
+        if(car_owner == 'private')
+            {
+                maxPrice *= 1.2;
+                minPrice *= 1.2;
+            }
+    }
+    else if((cartype == 'Collection' || cartype == 'Citadine' || cartype == 'Berline' || cartype == 'Sportive' || cartype == 'Monospace' || cartype == '4×4' || cartype == '3m3' || cartype == '6m3' || cartype == '9m3' || cartype == '12m3' || cartype == '15m3' || cartype == 'Camion-benne' || cartype == 'Camping-car' || cartype == 'Van-aménagé') && packageType == 'premium')
+    {
+        minPrice  = 1.19 * distance + 149;
+        maxPrice  = 1.79 * distance + 149;
+        if(car_owner == 'private')
+            {
+                maxPrice *= 1.2;
+                minPrice *= 1.2;
+            }
+    }
+    // Define the price range if needed
+alert(maxPrice)
+            if (action === 'increase' && currentPrice < maxPrice) {
+                currentPrice += step;
+            } else if (action === 'decrease' && currentPrice > minPrice) {
+                currentPrice -= step;
+            }
+
+
 
     // Update the price display
     priceElement.innerText = currentPrice.toFixed(2) + ' € {{ $tax_notation }}';
@@ -333,6 +427,25 @@ function prevStep(step) {
     event.preventDefault();
 }
 
+
+    // Disable the "Suivant" button by default
+    document.addEventListener('DOMContentLoaded', function() {
+        updateNextButton();
+    });
+
+
+        // Function to enable or disable the next button based on the selection
+        function updateNextButton() {
+            // alert(selectedPackage)
+        // Get the next button element
+        var nextButton = document.getElementById('nextButton');
+
+        // Check if any package is selected
+        var isPackageSelected = selectedPackage !== undefined && selectedPackage !== '';
+
+        // Enable or disable the next button based on the selection
+        nextButton.disabled = !isPackageSelected;
+    }
 
 </script>
 

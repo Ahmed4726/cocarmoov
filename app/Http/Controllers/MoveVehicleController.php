@@ -30,6 +30,7 @@ class MoveVehicleController extends Controller
             // Handle specific case if needed
         } elseif (in_array($selectedVehicleType, ['Citadine', 'Berline']) && $selectedCondition === 'En-état-de-marche') {
             $express_package = number_format(0.65 * $distance + 59, 2, '.', '');
+            // dd($express_package);
             $economyPackage = number_format(0.09 * $distance + 49, 2, '.', '');
             $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         } elseif (in_array($selectedVehicleType, ['Sportive', 'Monospace', '4×4']) && $selectedCondition === 'En-état-de-marche') {
@@ -76,7 +77,7 @@ class MoveVehicleController extends Controller
             $tax_notation = 'TTC';
         }
 
-        return view('frontend.move_vehicle', compact('car_move', 'express_package', 'economyPackage', 'premium_package', 'tax_notation'));
+        return view('frontend.move_vehicle', compact('car_move', 'express_package', 'economyPackage', 'premium_package', 'tax_notation', 'selectedVehicleType', 'distance', 'car_owner'));
     }
 
 
