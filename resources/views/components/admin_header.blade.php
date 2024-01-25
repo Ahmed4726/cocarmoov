@@ -107,6 +107,78 @@
             </a>
         </li>
     </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-money-bill-wave nav-icon text-light"></i>
+                <p class="text-light">Chiffre d'affaires total</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-credit-card nav-icon text-light"></i>
+                <p class="text-light">Dépenses totales</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-dollar-sign nav-icon text-light"></i>
+                <p class="text-light">Bénéfice total</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-file-alt nav-icon text-light"></i>
+                <p class="text-light">Rapport de bénéfices</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fas fa-balance-scale nav-icon text-light"></i>
+                <p class="text-light">Rapports de solde</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-shopping-cart nav-icon text-light"></i>
+                <p class="text-light text-hover">Commandes</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-chart-bar nav-icon text-light"></i>
+                <p class="text-light text-hover">Statistiques des commandes</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-users nav-icon text-light"></i>
+                <p class="text-light text-hover">Nombre d'utilisateurs</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul>
 </li>
 <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">

@@ -11,3 +11,13 @@
         display: inline-block;
         margin: 0 10px; /* Adjust the margin as needed */
     }
+    .hover-text {
+        display: none;
+    }
+
+    .eco-h:hover + .hover-text {
+        display: inline-block;
+    }
+
+
+

@@ -35,6 +35,7 @@
             <label for="Quantity" class="form-label">Quantity:</label>
             <input type="number" class="form-control" id="Quantity" required min = "1" value = "1" oninput="updatePrices()">
         </div>
+        <h3 class="text-center">Choisissez la formule de Carmoov souhaitée</h3>
         <section class="position-relative m-0">
             <div class="section container">
                 <div class="row justify-content-center">
@@ -42,15 +43,19 @@
                     <div class="container pb-5 m-0">
                         <div class="row align-items-center">
                             <div class="col-lg-4 differnce-section text-center mt-4">
-                                <div class="card">
-                                    <h3 class="card-header text-center eco-h differnce-section">Voie économique</h3>
+                                <div class="card rounded">
                                     <img src="{{asset('images/wallet/eco.jpg')}}" class="card-img-top rounded" alt="Voie économique">
                                     <div class="card-body">
-                                        <p class="card-text text-center mt-3 text-dark app-font-family fs-5">Vousdéménagezetn’avezpasdeconducteurspourvos véhicules?</p>
-                                        <p class="card-text text-center text-dark mt-3 solution-text"><b>Solution économique</b></p>
-                                        <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4>
-                                        <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Faites des économies en proposant vos véhicules à des co-convoyeurs particuliers pour les déplacer pendant qu'ils déménagent ou covoiturent.</b></p>
+                                    <h3 class="card-text text-center eco-h differnce-section">La formule économique <span>!</span></h3>
+
+                                        <p class="card-text text-center mt-3 text-dark app-font-family fs-5">Co-convoyeur particulier</p>
+                                        <!-- <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4> -->
                                         <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 15 jours en moyenne</p>
+                                        <p class="card-text text-center text-dark mt-3"><b>Assurance Wakam</b></p>
+                                        <div class="form-group">
+                <input type="checkbox" id="checkbox" name="checkbox_name"><span>Voir conditions</span>
+            </div>
+                                        <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Ce prix est basé sur des véhicules similaires livrés sur CoCarmoov et les détails de votre annonce. </b></p>
                                         <p class="text-center  mt-3 h5 solution-price-eco app-font-family">{{ $economyPackage }} € {{ $tax_notation }}</p>
                                         <div class="text-center">
                                               <a type="button" class="btn banner-button-1 text-dark px-4 py-3 mt-4 app-font-family package-btn"
@@ -63,15 +68,18 @@
         @endif
         @if (isset($express_package) && $express_package != null)
                             <div class="col-lg-4 differnce-section text-center mt-4">
-                                <div class="card">
-                                <h3 class="card-header text-center exp-h differnce-section">Voie express</h3>
-                                <img src="{{asset('images/wallet/exp.jpg')}}" class="rounded"/>
+                                <div class="card rounded">
+                                <img src="{{asset('images/wallet/exp.jpg')}}" class="rounded" alt=""/>
                                     <div class="card-body">
-                                    <p class="text-center mt-3 text-dark app-font-family fs-5">Vous vendez un véhicule ou le livrer avec des services à la clé ?</p>
-                                    <p class="text-center text-dark mt-3 solution-text"><b>Solution express</b></p>
-                                    <h4 class="text-center text-dark differnce-section">[Convoyage]</h4>
-                                    <p class="text-center text-dark mt-3 solution-text-p"><b>Satisfaites vos clients ou vous même en toute sérénité dans l'exécution opérationnelle en  louant les   services d'un convoyeur fiable sur CoCarmoov.</b></p>
-                                    <p class="text-center text-dark mt-3 solution-text-p">Sous 3 jours en moyenne</p>
+                                    <h3 class="card-text text-center exp-h differnce-section">La formule express <span>!</span></h3>
+<p class="card-text text-center mt-3 text-dark app-font-family fs-5">Convoyeur professionnel</p>
+<!-- <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4> -->
+<p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 3 jours en moyenne</p>
+<p class="card-text text-center text-dark mt-3"><b>Assurance Generali</b></p>
+<div class="form-group">
+<input type="checkbox" id="checkbox" name="checkbox_name"><span>Voir conditions</span>
+</div>
+<p class="card-text text-center text-dark mt-3 solution-text-p"><b>Ce prix est basé sur des véhicules similaires livrés sur CoCarmoov et les détails de votre annonce. </b></p>
                                         <div class="card-text text-center mt-3 h5 solution-price-exp app-font-family">
                                         <div class="price-buttons d-inline">
                                                 <div class="row">
@@ -97,15 +105,18 @@
         @endif
         @if (isset($premium_package) && $premium_package != null)
                             <div class="col-lg-4 differnce-section text-center mt-4">
-                                <div class="card">
-                                <h3 class="card-header text-center pre-h differnce-section">Voie premium</h3>
+                                <div class="card rounded">
                                     <img src="{{asset('images/wallet/pre.jpg')}}" class="card-img-top rounded" alt="Voie économique">
                                     <div class="card-body">
-                                    <p class="text-center mt-3 text-dark app-font-family fs-5">Vous déplacez un véhicule de collection,desport ouen panne ?</p>
-                                            <p class="text-center text-dark mt-3 solution-text"><b>Solution premium</b></p>
-                                            <h4 class="text-center text-dark differnce-section">[Transport]</h4>
-                                            <p class="text-center text-dark mt-3 solution-text-p"><b>Faites transporter vos véhicules, en marche, en panne ou accidenté, avec une solution à 0 km, de porte à porte, grâce aux camions transporteurs partenaires.</b></p>
-                                            <p class="text-center text-dark mt-3 solution-text-p app-font-family">Sous 10 jours en moyenne </p>
+                                    <h3 class="card-text text-center pre-h differnce-section">La formule premium <span>!</span></h3>
+<p class="card-text text-center mt-3 text-dark app-font-family fs-5">Convoyeur professionnel</p>
+<!-- <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4> -->
+<p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 3 jours en moyenne</p>
+<p class="card-text text-center text-dark mt-3"><b>Assurance du transporteur</b></p>
+<div class="form-group">
+<input type="checkbox" id="checkbox" name="checkbox_name"><span>Voir conditions</span>
+</div>
+<p class="card-text text-center text-dark mt-3 solution-text-p"><b>Ce prix est basé sur des véhicules similaires livrés sur CoCarmoov et les détails de votre annonce. </b></p>
                                             <div class="card-text text-dark mt-3 h5 solution-price-pre app-font-family">
                                             <div class="price-buttons d-inline">
                                                 <div class="row">
