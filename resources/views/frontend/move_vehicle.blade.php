@@ -76,13 +76,13 @@
                                         <div class="price-buttons d-inline">
                                                 <div class="row">
                                                         <div class="col-md-3">
-                                                    <button onclick="adjustPrice('express', 'decrease')" class="btn btn-danger rounded-pill px-3">-</button>
+                                                    <button onclick="adjustPrice('express', 'decrease')" class="btn btn-danger rounded-pill px-3 py-2">-</button>
                                                     </div> 
                                                     <div class="col-md-5">
                                                     <p id="expressPriceDisplay">{{ $express_package }} € {{ $tax_notation }}</p>
                                                     </div>
                                                     <div class="col-md-3">
-                                                    <button onclick="adjustPrice('express', 'increase')" class="btn btn-success rounded-pill px-3">+</button>
+                                                    <button onclick="adjustPrice('express', 'increase')" class="btn btn-success rounded-pill px-3 py-2">+</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -110,13 +110,13 @@
                                             <div class="price-buttons d-inline">
                                                 <div class="row">
                                                         <div class="col-md-3">
-                                                    <button onclick="adjustPrice('premium', 'decrease')" class="btn btn-danger rounded-pill px-3">-</button>
+                                                    <button onclick="adjustPrice('premium', 'decrease')" class="btn btn-danger rounded-pill px-3 py-2">-</button>
                                                     </div> 
                                                     <div class="col-md-5">
                                                     <p id="premiumPriceDisplay">{{ $premium_package }} € {{ $tax_notation }}</p>
                                                     </div>
                                                     <div class="col-md-3">
-                                                    <button onclick="adjustPrice('premium', 'increase')" class="btn btn-success rounded-pill px-3">+</button>
+                                                    <button onclick="adjustPrice('premium', 'increase')" class="btn btn-success rounded-pill px-3 py-2">+</button>
                                                     </div>
                                                 </div>
                                             </div>
