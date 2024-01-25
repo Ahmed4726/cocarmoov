@@ -218,7 +218,6 @@
               <p class="text-center mt-3 text-light app-font-family fs-5">Vous vendez un véhicule ou le livrer avec des services à la clé ?</p>
               <p class="text-center text-light mt-3 solution-text"><b>Solution express</b></p>
                 <h4 class="text-center text-light differnce-section">[Convoyage]</h4>
-
               <p class="text-center text-light mt-3 solution-text-p"><b>Satisfaites  vos clients ou vous même en toute sérénité dans l'exécution opérationnelle en  louant les   services d'un convoyeur fiable sur CoCarmoov.</b></p>
               <p class="text-center text-light mt-3 solution-text-p">Sous 3 jours en moyenne</p>
 
@@ -233,9 +232,9 @@
             <div class="col-lg-4 text-center mt-4">
               <h3 class="text-center pre-h differnce-section">Voie premium</h3>
               <img src="{{asset('images/wallet/pre.jpg')}}" class="rounded"/>
-                            <p class="text-center mt-3 text-light app-font-family fs-5">Vous déplacez un véhicule de collection, de sport ou en panne ?</p>
+              <p class="text-center mt-3 text-light app-font-family fs-5">Vous déplacez un véhicule de collection, de sport ou en panne ?</p>
               <p class="text-center text-light mt-3 solution-text"><b>Solution premium</b></p>
-                <h4 class="text-center text-light differnce-section">[Transport]</h4>
+              <h4 class="text-center text-light differnce-section">[Transport]</h4>
               <p class="text-center text-light mt-3 solution-text-p"><b>Faites transporter vos véhicules, en marche, en panne ou accidenté, avec une solution à 0 km, de porte à porte, grâce aux camions transporteurs partenaires.</b></p>
               <p class="text-center text-light mt-3 solution-text-p app-font-family">Sous 10 jours en moyenne </p>
               <p class="text-center text-light h5 mt-3 solution-price-pre app-font-family">À partir de 179€ TTC</p>

@@ -46,7 +46,7 @@
                                     <h3 class="card-header text-center eco-h differnce-section">Voie économique</h3>
                                     <img src="{{asset('images/wallet/eco.jpg')}}" class="card-img-top rounded" alt="Voie économique">
                                     <div class="card-body">
-                                        <p class="card-text text-center mt-3 text-dark app-font-family fs-5">Vous déménagez et n’avez pas de conducteurs pour vos véhicules ?</p>
+                                        <p class="card-text text-center mt-3 text-dark app-font-family fs-5">Vousdéménagezetn’avezpasdeconducteurspourvos véhicules?</p>
                                         <p class="card-text text-center text-dark mt-3 solution-text"><b>Solution économique</b></p>
                                         <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4>
                                         <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Faites des économies en proposant vos véhicules à des co-convoyeurs particuliers pour les déplacer pendant qu'ils déménagent ou covoiturent.</b></p>
@@ -67,11 +67,11 @@
                                 <h3 class="card-header text-center exp-h differnce-section">Voie express</h3>
                                 <img src="{{asset('images/wallet/exp.jpg')}}" class="rounded"/>
                                     <div class="card-body">
-                                        <p class="card-text text-center mt-3 text-dark app-font-family fs-5">Vous vendez un véhicule ou le livrer avec des services<br> à la clé ?</p>
-                                        <p class="card-text text-center text-dark mt-3 solution-text"><b>Solution économique</b></p>
-                                        <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4>
-                                        <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Faites des économies en proposant vos véhicules à des co-convoyeurs particuliers pour les déplacer pendant qu'ils déménagent ou covoiturent.</b></p>
-                                        <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 3 jours en moyenne</p>
+                                    <p class="text-center mt-3 text-dark app-font-family fs-5">Vous vendez un véhicule ou le livrer avec des services à la clé ?</p>
+                                    <p class="text-center text-dark mt-3 solution-text"><b>Solution express</b></p>
+                                    <h4 class="text-center text-dark differnce-section">[Convoyage]</h4>
+                                    <p class="text-center text-dark mt-3 solution-text-p"><b>Satisfaites vos clients ou vous même en toute sérénité dans l'exécution opérationnelle en  louant les   services d'un convoyeur fiable sur CoCarmoov.</b></p>
+                                    <p class="text-center text-dark mt-3 solution-text-p">Sous 3 jours en moyenne</p>
                                         <div class="card-text text-center mt-3 h5 solution-price-exp app-font-family">
                                         <div class="price-buttons d-inline">
                                                 <div class="row">
@@ -101,12 +101,12 @@
                                 <h3 class="card-header text-center pre-h differnce-section">Voie premium</h3>
                                     <img src="{{asset('images/wallet/pre.jpg')}}" class="card-img-top rounded" alt="Voie économique">
                                     <div class="card-body">
-                                        <p class="card-text text-center mt-3 text-dark app-font-family fs-5">Vous déménagez et n’avez pas de conducteurs pour vos véhicules ?</p>
-                                        <p class="card-text text-center text-dark mt-3 solution-text"><b>Solution économique</b></p>
-                                        <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4>
-                                        <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Faites des économies en proposant vos véhicules à des co-convoyeurs particuliers pour les déplacer pendant qu'ils déménagent ou covoiturent.</b></p>
-                                        <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 10 jours en moyenne </p>
-                                        <div class="card-text text-center mt-3 h5 solution-price-pre app-font-family">
+                                    <p class="text-center mt-3 text-dark app-font-family fs-5">Vous déplacez un véhicule de collection,desport ouen panne ?</p>
+                                            <p class="text-center text-dark mt-3 solution-text"><b>Solution premium</b></p>
+                                            <h4 class="text-center text-dark differnce-section">[Transport]</h4>
+                                            <p class="text-center text-dark mt-3 solution-text-p"><b>Faites transporter vos véhicules, en marche, en panne ou accidenté, avec une solution à 0 km, de porte à porte, grâce aux camions transporteurs partenaires.</b></p>
+                                            <p class="text-center text-dark mt-3 solution-text-p app-font-family">Sous 10 jours en moyenne </p>
+                                            <div class="card-text text-dark mt-3 h5 solution-price-pre app-font-family">
                                             <div class="price-buttons d-inline">
                                                 <div class="row">
                                                         <div class="col-md-3">
@@ -132,10 +132,7 @@
                             @if($premium_package === null && $express_package === null && $economyPackage === null)
                             <h3 class="text-center">Aucun forfait disponible</h3>
                         @endif
-
-
                             <!-- Repeat the structure for the other two columns (Voie express and Voie premium) -->
-
                         </div>
                     </div>
                 </div>
