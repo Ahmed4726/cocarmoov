@@ -58,7 +58,7 @@
                                         <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Ce prix est basé sur des véhicules similaires livrés sur CoCarmoov et les détails de votre annonce. </b></p>
                                         <p class="text-center  mt-3 h5 solution-price-eco app-font-family">{{ $economyPackage }} € {{ $tax_notation }}</p>
                                         <div class="text-center">
-                                              <a type="button" class="btn banner-button-1 text-dark px-4 py-3 mt-4 app-font-family package-btn"
+                                              <a type="button" class="btn banner-button-1 text-dark px-4 py-3 mt-5 app-font-family package-btn"
                                                 data-package="economy" onclick="selectAndProceed('economy')">Choisir</a>
                                             </a>
                                         </div>
@@ -120,7 +120,7 @@
 <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Ce prix est basé sur des véhicules similaires livrés sur CoCarmoov et les détails de votre annonce. </b></p>
                                             <div class="card-text text-dark mt-3 h5 solution-price-pre app-font-family">
                                             <div class="price-buttons d-inline">
-                                                <div class="row">
+                                                <div class="row mb-4">
                                                         <div class="col-md-3">
                                                     <button onclick="adjustPrice('premium', 'decrease')" class="btn btn-danger rounded-pill px-3 py-2">-</button>
                                                     </div>
