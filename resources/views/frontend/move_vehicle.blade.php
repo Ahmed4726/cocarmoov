@@ -1,5 +1,14 @@
 @extends('frontend.frontend_main_layout')
 @section('content')
+
+<style>
+.selected-package {
+    background-color: #4285f4; /* Change this to your desired background color */
+    color: #ffffff; /* Change this to your desired text color */
+    /* Add any other styles you want for the selected package button */
+}
+
+</style>
 <div id="progress-bar">
     <div class="progress-step">1. Formule</div>
     <div class="progress-step">2. Identification</div>
@@ -9,27 +18,27 @@
   </div>
 
 <div class="container">
-<div id="step2" class="form-step show-step">
+<div id="step1" class="form-step show-step">
     <h2 class="mb-4">Step 1: Choose Package</h2>
     <form id="generalInfoForm" class="row g-3">
         <div class="col-md-3 mb-3">
             <label for="fromAddress" class="form-label">From Address:</label>
-            <input type="text" class="form-control" id="fromAddress" required value="{{ $car_move['pickup_name'] }}" readonly>
+            <input type="text" class="form-control" id="fromAddress" value="{{ $car_move['pickup_name'] }}" readonly>
         </div>
 
         <div class="col-md-3 mb-3">
             <label for="toAddress" class="form-label">To Address:</label>
-            <input type="text" class="form-control" id="toAddress" required value="{{ $car_move['delivery_name'] }}" readonly>
+            <input type="text" class="form-control" id="toAddress" value="{{ $car_move['delivery_name'] }}" readonly>
         </div>
 
         <div class="col-md-3 mb-3">
             <label for="carType" class="form-label">Car Type:</label>
-            <input type="text" class="form-control" id="carType" required value="{{ $car_move['vehicle-type'] }}" readonly>
+            <input type="text" class="form-control" id="carType" value="{{ $car_move['vehicle-type'] }}" readonly>
         </div>
 
         <div class="col-md-3 mb-3">
             <label for="carCondition" class="form-label">Car Condition:</label>
-            <input type="text" class="form-control" id="carCondition" required value="{{ $car_move['vehicle-condition'] }}" readonly>
+            <input type="text" class="form-control" id="carCondition" value="{{ $car_move['vehicle-condition'] }}" readonly>
         </div>
         <!-- <div class="col-md-1 mb-3">
             <label for="Quantity" class="form-label">Quantity:</label>
@@ -53,13 +62,13 @@
                                         <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 15 jours en moyenne</p>
                                         <p class="card-text text-center text-dark mt-3"><b>Assurance Wakam</b></p>
                                         <div class="form-group">
-                <input type="checkbox" id="checkbox" name="checkbox_name"><span class="mx-1">Voir conditions</span>
-            </div>
+                                            <input type="checkbox" id="checkbox" name="checkbox_name"><span class="mx-1">Voir conditions</span>
+                                        </div>
                                         <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Ce prix est basé sur des véhicules similaires livrés sur CoCarmoov et les détails de votre annonce. </b></p>
                                         <p class="text-center  mt-3 h5 solution-price-eco app-font-family">{{ $economyPackage }} € {{ $tax_notation }}</p>
                                         <div class="text-center">
                                               <a type="button" class="btn banner-button-1 text-dark px-4 py-3 mt-5 app-font-family package-btn"
-                                                data-package="economy" onclick="selectAndProceed('economy')">Choisir</a>
+                                                data-package="economy" onclick="selectPackage('economy')">Choisir</a>
                                             </a>
                                         </div>
                                     </div>
@@ -72,35 +81,36 @@
                                 <img src="{{asset('images/wallet/exp.jpg')}}" class="rounded" alt=""/>
                                     <div class="card-body">
                                     <h3 class="card-text text-center exp-h differnce-section">La formule express <span>!</span></h3>
-<p class="card-text text-center mt-3 text-dark app-font-family fs-5">Convoyeur professionnel</p>
-<!-- <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4> -->
-<p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 3 jours en moyenne</p>
-<p class="card-text text-center text-dark mt-3"><b>Assurance Generali</b></p>
-<div class="form-group">
-<input type="checkbox" id="checkbox" name="checkbox_name"><span class="mx-1">Voir conditions</span>
-</div>
-<p class="card-text text-center text-dark mt-3 solution-text-p"><b>Ce prix est basé sur des véhicules similaires livrés sur CoCarmoov et les détails de votre annonce. </b></p>
+                                    <p class="card-text text-center mt-3 text-dark app-font-family fs-5">Convoyeur professionnel</p>
+                                    <!-- <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4> -->
+                                    <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 3 jours en moyenne</p>
+                                    <p class="card-text text-center text-dark mt-3"><b>Assurance Generali</b></p>
+                                    <div class="form-group">
+                                    <input type="checkbox" id="checkbox" name="checkbox_name"><span class="mx-1">Voir conditions</span>
+                                    </div>
+                                    <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Ce prix est basé sur des véhicules similaires livrés sur CoCarmoov et les détails de votre annonce. </b></p>
                                         <div class="card-text text-center mt-3 h5 solution-price-exp app-font-family">
                                         <div class="price-buttons d-inline">
                                                 <div class="row">
-                                                        <div class="col-md-3">
-                                                    <button onclick="adjustPrice('express', 'decrease')" class="btn btn-danger rounded-pill px-3 py-2">-</button>
+                                                    <div class="col-md-3">
+                                                        <button onclick="adjustPrice('express', 'decrease')" class="btn btn-danger rounded-pill px-3 py-2">-</button>
                                                     </div>
                                                     <div class="col-md-5">
                                                     <p id="expressPriceDisplay">{{ $express_package }} € {{ $tax_notation }}</p>
                                                     </div>
                                                     <div class="col-md-3">
-                                                    <button onclick="adjustPrice('express', 'increase')" class="btn btn-success rounded-pill px-3 py-2">+</button>
+                                                        <button onclick="adjustPrice('express', 'increase')" class="btn btn-success rounded-pill px-3 py-2">+</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <input type="checkbox" id="checkbox" name="checkbox_name"><span class="mx-1">Services annexes</span>
+                                            <input type="checkbox" id="express_checkbox" name="service_category" onclick="toggleExpressServices()">
+                                            <span for="express_checkbox">Express Services</span>
                                         </div>
                                         <div class="text-center">
                                             <a type="button" class="btn banner-button-2 px-4 py-3 text-dark app-font-family package-btn"
-                                            data-package="express" onclick="selectAndProceed('express')">Choisir</a>
+                                            data-package="express" onclick="selectPackage('express')">Choisir</a>
                                         </div>
                                     </div>
                                 </div>
@@ -112,12 +122,12 @@
                                     <img src="{{asset('images/wallet/pre.jpg')}}" class="card-img-top rounded" alt="Voie économique">
                                     <div class="card-body">
                                     <h3 class="card-text text-center pre-h differnce-section">La formule premium <span>!</span></h3>
-<p class="card-text text-center mt-3 text-dark app-font-family fs-5">Convoyeur professionnel</p>
-<!-- <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4> -->
-<p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 3 jours en moyenne</p>
-<p class="card-text text-center text-dark mt-3"><b>Assurance du transporteur</b></p>
+                                    <p class="card-text text-center mt-3 text-dark app-font-family fs-5">Convoyeur professionnel</p>
+                                    <!-- <h4 class="card-text text-dark text-center differnce-section">[Co-convoyage]</h4> -->
+                                    <p class="card-text text-center text-dark mt-3 solution-text-p app-font-family">Sous 3 jours en moyenne</p>
+                                    <p class="card-text text-center text-dark mt-3"><b>Assurance du transporteur</b></p>
 
-<p class="card-text text-center text-dark mt-3 solution-text-p"><b>Ce prix est basé sur des véhicules similaires livrés sur CoCarmoov et les détails de votre annonce. </b></p>
+                                    <p class="card-text text-center text-dark mt-3 solution-text-p"><b>Ce prix est basé sur des véhicules similaires livrés sur CoCarmoov et les détails de votre annonce. </b></p>
                                             <div class="card-text text-dark mt-3 h5 solution-price-pre app-font-family">
                                             <div class="price-buttons d-inline">
                                                 <div class="row mb-4">
@@ -134,11 +144,12 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <input type="checkbox" id="checkbox" name="checkbox_name"><span class="mx-1">Services annexes</span>
+                                            <input type="checkbox" id="premium_checkbox" name="service_category" onclick="togglePremiumServices()">
+                                            <span for="premium_checkbox">Premium Services</span>
                                         </div>
                                         <div class="text-center">
                                             <a type="button" class="btn banner-button-3 text-dark px-4 py-3 app-font-family package-btn"
-                                            data-package="premium" onclick="selectAndProceed('premium')">Choisir</a>
+                                            data-package="premium" onclick="selectPackage('premium')">Choisir</a>
                                         </div>
                                     </div>
                                 </div>
@@ -151,24 +162,106 @@
                         </div>
                 </div>
                     <div class="col-md-12 text-center">
-                        <button id="nextButton" type="button" class="btn btn-primary text-dark" onclick="nextStep(3)">Suivant</button>
+                        <button id="nextButton" type="button" class="btn btn-primary text-dark" onclick="nextStep(1)">Suivant</button>
                     </div>
                 </div>
             </div>
 
         </section>
+        <div id="premium_services_section" style="display: none;">
+            <div class="form-group">
+                <input type="checkbox" id="premium_trailer_checkbox" name="premium_services" value="{{ $premium_package * 0.5 }}"><span for="premium_trailer_checkbox">Required enclosed car transporter trailer (price calculated ×0.5) [Closed trailer]</span>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="premium_cleaning_checkbox" name="premium_services" value="20"><span for="premium_cleaning_checkbox">Vehicle exterior cleaning (20€ excl. VAT) [Exterior cleaning]</span>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="premium_demonstration_checkbox" name="premium_services" value="20"><span for="premium_demonstration_checkbox">Demonstration (20€ excl. VAT) [Demonstration] </span>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="premium_contract_signature_checkbox" name="premium_services" value="20"><span for="premium_contract_signature_checkbox">Rental contract signature (20€ excl. VAT) [Rental contract signature]</span>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="premium_sale_certificate_checkbox" name="premium_services" value="30"><span for="premium_sale_certificate_checkbox">Sales & assignment certificate signature (30€ excl. VAT) [Sale contract signature]</span>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="premium_vehicle_return_checkbox" name="premium_services"><span for="premium_vehicle_return_checkbox">Return another vehicle after delivering the first (price calculated × 1) ! 3 * [Vehicle return]</span>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="premium_same_collection_address_checkbox" name="premium_services"><span for="premium_same_collection_address_checkbox">Check if same collection address</span>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="premium_extra_checkbox" name="premium_services"><span for="premium_extra_checkbox">Extra **: specify the service and the budget for € excl. VAT [Extra]</span>
+            </div>
+        </div>
+
+        <div id="express_services_section" style="display: none;">
+            <div class="form-group">
+                <input type="checkbox" id="express_plates_checkbox" name="express_services" value="20"><span for="express_plates_checkbox">Required W Garage plates (20€ excl. VAT) ! 1 [W Garage plates]</span>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="express_cleaning_checkbox" name="express_services" value="20"><span for="express_cleaning_checkbox">Vehicle exterior cleaning (20€ excl. VAT) [Exterior cleaning]</span>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="express_refueling_checkbox" name="express_services" value="{{ 2 * ($distance * 0.99) }}"><span for="express_refueling_checkbox">Restore the same fuel level ! 2 (Distance ×0.09€ excl. VAT) [Refueling]</span>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="express_full_cleaning_checkbox" name="express_services" value="30"><span for="express_full_cleaning_checkbox">Vehicle interior & exterior cleaning (30€ excl. VAT) [Full cleaning]</span>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="express_demonstration_checkbox" name="express_services" value="20"><span for="express_demonstration_checkbox">Demonstration (20€ excl. VAT) [Demonstration]</span>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="express_extra_checkbox" name="express_services">
+                <span for="express_extra_checkbox">Extra **: specify the service and the budget for € excl. VAT [Extra]</span>
+            </div>
+
+            <div id="express_extra_fields" style="display:none;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="extra_name">Name:</label>
+                            <input class="form-control" type="text" id="extra_name" name="extra_name[]">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="extra_price">Price:</label>
+                            <input class="form-control" type="number" id="extra_price" name="extra_price[]">
+                        </div>
+                    </div>
+                <div class="col-md-4">
+                    <button class="btn btn-primary mt-2" type="button" id="addMore">+</button>
+                </div>
+            </div>
+
+
+        </div>
     </form>
 
 </div>
 </div>
 
 
-<div id="step3" class="form-step">
-  <h2>Step 2: Packages</h2>
-  <form id="packagesForm">
-    <label>Selected Package:</label>
-                <p id="selectedPackageDetails"></p>
-                <p id="selectedPackagePrice"></p>
+<div id="step2" class="form-step">
+    {{-- sas --}}
+    <h2>Step 2: Packages</h2>
+    <form id="packagesForm">
+        <label>Selected Package:</label>
+                    <p id="selectedPackageDetails"></p>
+                    <p id="selectedPackagePrice"></p>
 {{-- price show here in this step of the package and name too --}}
     <button type="button" onclick="prevStep(2)">Previous</button>
     <button type="button" onclick="nextStep(3)">Next</button>
@@ -203,6 +296,8 @@
     <button type="button" onclick="submitForm()">Submit</button>
   </form>
 </div>
+
+{{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
 <script>
 
 let selectedPackage = '';
@@ -216,15 +311,36 @@ function selectPackage(packageType) {
 
     // Capture the selected package type
     selectedPackage = packageType;
+
+    // Update total price and selected package details
+    updateTotalPrice();
     updateNextButton();
-    updatePrices();
+
+    // Call updateTotalPrice to update the display in the second step
+    updateTotalPrice();
 }
+
+
 // When going to the next step
 function nextStep(step) {
-  document.getElementById(`step${step}`).classList.remove('show-step');
-  document.getElementById(`step${step + 1}`).classList.add('show-step');
-  updateProgressBar(step + 1, false); // Assuming the next step is not completed
+  const currentStepElement = document.getElementById(`step${step}`);
+
+  if (currentStepElement && currentStepElement.classList) {
+    currentStepElement.classList.remove('show-step');
+
+    const nextStepElement = document.getElementById(`step${step + 1}`);
+
+    if (nextStepElement && nextStepElement.classList) {
+      nextStepElement.classList.add('show-step');
+      updateProgressBar(step + 1, false);
+    } else {
+      alert(`Next step element (step${step + 1}) not found or doesn't have classList.`);
+    }
+  } else {
+    alert(`Current step element (step${step}) not found or doesn't have classList.`);
+  }
 }
+
 
 // When going to the previous step
 function prevStep(step) {
@@ -234,12 +350,12 @@ function prevStep(step) {
 }
 
 
-  function updateProgressBar(currentStep, isCompleted) {
+function updateProgressBar(currentStep, isCompleted) {
   const progressSteps = document.querySelectorAll('.progress-step');
   progressSteps.forEach((step, index) => {
     if (index === currentStep) {
       step.style.backgroundColor = isCompleted ? '#fdcd02' : '#ddd';
-    } else if (index < currentStep) {
+    } else if (index > currentStep) {
       step.style.backgroundColor = '#fdcd02';  // Completed step color
     } else {
       step.style.backgroundColor = '#ddd';      // Incomplete step color
@@ -255,71 +371,104 @@ function prevStep(step) {
 
   function selectAndProceed(packageType) {
         selectPackage(packageType);
-
     }
 
 
 
-  function updatePrices() {
 
-    const quantityInput = document.getElementById('Quantity');
+    function togglePremiumServices() {
 
-        // Update Economy Package Price
-        const economyPriceDisplay = document.getElementById('economyPriceDisplay');
-        const economyInitialPrice = parseFloat('{{ $economyPackage }}');
-        const economyQuantity = parseFloat(quantityInput.value);
-        const totalEconomyPrice = economyInitialPrice * economyQuantity;
-        economyPriceDisplay.textContent = `À partir de ${totalEconomyPrice.toFixed(2)} € {{ $tax_notation }}`;
+            var premiumCheckbox = document.getElementById("premium_checkbox");
+            var premiumServicesSection = document.getElementById("premium_services_section");
 
-        // Update Express Package Price
-        const expressPriceDisplay = document.getElementById('expressPriceDisplay');
-        const expressInitialPrice = parseFloat('{{ $express_package }}');
-        const expressQuantity = parseFloat(quantityInput.value);
-        const totalExpressPrice = expressInitialPrice * expressQuantity;
-        expressPriceDisplay.textContent = `À partir de ${totalExpressPrice.toFixed(2)} € {{ $tax_notation }}`;
-
-        // Update Premium Package Price
-        const premiumPriceDisplay = document.getElementById('premiumPriceDisplay');
-        const premiumInitialPrice = parseFloat('{{ $premium_package }}');
-        const premiumQuantity = parseFloat(quantityInput.value);
-        const totalPremiumPrice = premiumInitialPrice * premiumQuantity;
-        premiumPriceDisplay.textContent = `À partir de ${totalPremiumPrice.toFixed(2)} € {{ $tax_notation }}`;
-
-        // Display the selected package and its price in the second step
-        const selectedPackageDetails = document.getElementById('selectedPackageDetails');
-        const selectedPackagePrice = document.getElementById('selectedPackagePrice');
-
-        selectedPackageDetails.textContent = `Selected Package: ${selectedPackage}`;
-
-        // Determine the total price based on the selected package
-        let totalPackagePrice = 0;
-        switch (selectedPackage) {
-            case 'economy':
-                totalPackagePrice = economyInitialPrice * parseFloat(quantityInput.value);
-                break;
-            case 'express':
-                totalPackagePrice = expressInitialPrice * parseFloat(quantityInput.value);
-                break;
-            case 'premium':
-                totalPackagePrice = premiumInitialPrice * parseFloat(quantityInput.value);
-                break;
-            default:
-                break;
+            if (premiumCheckbox.checked) {
+                premiumServicesSection.style.display = "block";
+            } else {
+                premiumServicesSection.style.display = "none";
+            }
         }
-        // alert(totalPackagePrice)
-        selectedPackagePrice.textContent = `Total Price: ${totalPackagePrice.toFixed(2)} € {{ $tax_notation }}`;
+
+        function toggleExpressServices() {
+            var expressCheckbox = document.getElementById("express_checkbox");
+            var expressServicesSection = document.getElementById("express_services_section");
+
+            if (expressCheckbox.checked) {
+                expressServicesSection.style.display = "block";
+            } else {
+                expressServicesSection.style.display = "none";
+            }
+        }
+
+
+    const premiumPriceDisplay = document.getElementById('premiumPriceDisplay');
+    const expressPriceDisplay = document.getElementById('expressPriceDisplay');
+    const checkboxes = document.querySelectorAll('input[name^="express_services"], input[name^="premium_services"]');
+    const expressExtraCheckbox = document.getElementById('express_extra_checkbox');
+    const expressExtraFields = document.getElementById('express_extra_fields');
+    const addMoreButton = document.getElementById('addMore');
+
+    expressExtraCheckbox.addEventListener('change', toggleExtraFields);
+    addMoreButton.addEventListener('click', addMoreFields);
+
+    function toggleExtraFields() {
+        expressExtraFields.style.display = expressExtraCheckbox.checked ? 'block' : 'none';
+        updateTotalPrice();
     }
+
+    function addMoreFields() {
+        const newFields = expressExtraFields.cloneNode(true);
+        expressExtraFields.parentNode.appendChild(newFields);
+    }
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateTotalPrice);
+    });
+
+    function updateTotalPrice() {
+    var totalPremiumPrice = parseFloat('{{ $premium_package }}');
+    var totalExpressPrice = parseFloat('{{ $express_package }}');
+
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            if (checkbox.name.includes('express_services')) {
+                totalExpressPrice += parseFloat(checkbox.value);
+            } else if (checkbox.name.includes('premium_services')) {
+                totalPremiumPrice += parseFloat(checkbox.value);
+            }
+        }
+    });
+
+    premiumPriceDisplay.textContent = `${totalPremiumPrice.toFixed(2)} € {{ $tax_notation }}`;
+    expressPriceDisplay.textContent = `${totalExpressPrice.toFixed(2)} € {{ $tax_notation }}`;
+// alert("ok")
+    // Display selected package details in the next step
+    $('#selectedPackageDetails').text(`Selected Package: ${selectedPackage}`);
+
+    // Display selected package price in the next step
+    var selectedPackagePrice = 0;
+
+    // Add logic to set the price based on the selected package
+    if (selectedPackage === 'premium') {
+        selectedPackagePrice = totalPremiumPrice;
+    } else if (selectedPackage === 'express') {
+        selectedPackagePrice = totalExpressPrice;
+    }
+// alert(selectedPackage)
+    $('#selectedPackagePrice').text(`Selected Package Price: ${selectedPackagePrice.toFixed(2)} € {{ $tax_notation }}`);
+}
+
+
+
     function adjustPrice(packageType, action) {
     var cartype = '{{ $selectedVehicleType }}';
     var distance = '{{ $distance }}';
     var car_owner = '{{ $car_owner }}';
     var priceElement = document.getElementById(packageType + 'PriceDisplay');
     var currentPrice = parseFloat(priceElement.innerText.replace('€', '').trim());
-
-    // Define the step value for price adjustment (you can adjust this value)
     var step = 1;
     var minPrice = 0;
     var maxPrice = 0;
+
+
     if((cartype == 'Citadine' || cartype == 'Berline') && packageType == 'express')
     {
         minPrice = 0.59 * distance + 59;
@@ -410,8 +559,7 @@ function prevStep(step) {
                 minPrice *= 1.2;
             }
     }
-    // Define the price range if needed
-alert(maxPrice)
+
             if (action === 'increase' && currentPrice < maxPrice) {
                 currentPrice += step;
             } else if (action === 'decrease' && currentPrice > minPrice) {
@@ -428,22 +576,14 @@ alert(maxPrice)
 }
 
 
-    // Disable the "Suivant" button by default
+
     document.addEventListener('DOMContentLoaded', function() {
         updateNextButton();
     });
 
-
-        // Function to enable or disable the next button based on the selection
         function updateNextButton() {
-            // alert(selectedPackage)
-        // Get the next button element
         var nextButton = document.getElementById('nextButton');
-
-        // Check if any package is selected
         var isPackageSelected = selectedPackage !== undefined && selectedPackage !== '';
-
-        // Enable or disable the next button based on the selection
         nextButton.disabled = !isPackageSelected;
     }
 
