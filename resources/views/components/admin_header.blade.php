@@ -179,6 +179,174 @@
             </a>
         </li>
     </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-car-side nav-icon text-light"></i>
+                <p class="text-light text-hover">Co-convoyages en cours</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-car-side nav-icon text-light"></i>
+                <p class="text-light text-hover">Convoyages en cours</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-truck-moving nav-icon text-light"></i>
+                <p class="text-light text-hover">Transports en cours</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-percent nav-icon text-light"></i>
+                <p class="text-light text-hover">Taux de conversion</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-money-bill nav-icon text-light"></i>
+                <p class="text-light text-hover">Transactions</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-file-contract nav-icon text-light"></i>
+                <p class="text-light text-hover">Aperçu des commandes</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-bullseye nav-icon text-light"></i>
+                <p class="text-light text-hover">Performances</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul>
 </li>
 <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">

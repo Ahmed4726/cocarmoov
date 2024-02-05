@@ -25,7 +25,7 @@
         <li><a class="dropdown-item header-text-mobile fw-bold app-font-family" href="{{ route('welcome') }}">Particulier</a></li>
     </ul>
 </li>
-					<li class="nav-item"> <a class="nav-link header-text-mobile fw-bold app-font-family" href="#move_car">Déplacer un véhicule</a>
+					<li class="nav-item"> <a class="nav-link header-text-mobile fw-bold app-font-family" href="http://127.0.0.1:8000/#move_car">Déplacer un véhicule</a>
 					</li>
 					<li class="nav-item"> <a class="nav-link header-text-mobile fw-bold app-font-family" href="{{ route('co-drive') }}">Co-convoyer</a>
 					</li>

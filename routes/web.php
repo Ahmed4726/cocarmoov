@@ -40,6 +40,7 @@ use Laratrust\Http\Controllers\RolesController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', [WelcomeController::class,'index'])->name('welcome');
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -134,7 +135,6 @@ Route::post('/calculate', [MoveVehicleController::class,'index'])->name('calcula
 
 //Website
 
-Route::get('/', [WelcomeController::class,'index'])->name('welcome');
 Route::get('/assurance', [InsuranceController::class,'index'])->name('insurance');
 Route::get('/contact', [ContactController::class,'index'])->name('contact_us');
 Route::get('/faq', [FaqController::class,'index'])->name('faq');
