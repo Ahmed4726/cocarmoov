@@ -17,10 +17,12 @@ use App\Http\Controllers\TransporteurController;
 use App\Http\Controllers\PermissionsController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\AlertController;
+use App\Http\Controllers\CardController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\MoveVehicleController;
+use App\Http\Controllers\PaymentController;
 
 use App\Http\Controllers\RolesAndPermissionController;
 
@@ -114,14 +116,20 @@ Route::middleware('auth')->group(function () {
 
     // Route::view('my-account','admin.calendar')->name('calendar');
 
-    // Route::put('/password-update', [PasswordController::class,'password_update'])->name('password.update');
+    // Cards
+    Route::get('/cards', [CardController::class,'showCards'])->name('cards');
+    Route::delete('/cards/{cardId}', [CardController::class,'deleteCard'])->name('delete-card');
 
+    // Route::put('/password-update', [PasswordController::class,'password_update'])->name('password.update');
+    //Stripe Payment
+    Route::get('/payment', [PaymentController::class, 'showPaymentForm']);
+    Route::post('/process-payment', [PaymentController::class, 'processPayment']);
 });
 
 
 
 
-
+Route::post('/login-step',[MoveVehicleController::class,'login'])->name('login.step');
 //test route
 
 Route::get('/test', function () {

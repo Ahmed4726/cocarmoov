@@ -401,7 +401,7 @@
 </li>
 
 <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
+    <a href="/cards" class="nav-link">
         <i class="nav-icon fas fa-credit-card"></i>
         <p>
         Paiements
@@ -410,9 +410,9 @@
     </a>
     <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
+            <a href="/cards" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Orders 1</p>
+                <p class="text-light">Cards</p>
             </a>
         </li>
     </ul>

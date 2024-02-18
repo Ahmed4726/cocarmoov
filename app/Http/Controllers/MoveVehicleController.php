@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Requests\Auth\LoginRequest;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 
@@ -76,13 +78,27 @@ class MoveVehicleController extends Controller
         } else {
             $tax_notation = 'TTC';
         }
+        $isAuthenticated = Auth::check();
 
-        return view('frontend.move_vehicle', compact('car_move', 'express_package', 'economyPackage', 'premium_package', 'tax_notation', 'selectedVehicleType', 'distance', 'car_owner'));
+        return view('frontend.move_vehicle', compact('car_move', 'express_package', 'economyPackage', 'premium_package', 'tax_notation', 'selectedVehicleType', 'distance', 'car_owner','isAuthenticated'));
     }
 
 
 
-    // public function economyPackage()
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+
+            $request->session()->regenerate();
+
+            return response()->json(['success' => true], 200);
+        }
+
+        return response()->json(['fail' => true], 401);
+    }
+    // public function store(LoginRequest $request): RedirectResponse
     // {
 
     // }

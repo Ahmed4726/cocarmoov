@@ -8,13 +8,20 @@
     /* Add any other styles you want for the selected package button */
 }
 
+
+
 </style>
+<head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+</head>
+
 <div id="progress-bar">
     <div class="progress-step">1. Formule</div>
     <div class="progress-step">2. Identification</div>
     <div class="progress-step">3. Détails</div>
     <div class="progress-step">4. Paiement</div>
-    <div class="progress-step">5. Validation</div>
+    {{-- <div class="progress-step">5. Validation</div> --}}
   </div>
 
 <div class="container">
@@ -264,41 +271,105 @@
                     <p id="selectedPackagePrice"></p>
 {{-- price show here in this step of the package and name too --}}
     <button type="button" onclick="prevStep(2)">Previous</button>
-    <button type="button" onclick="nextStep(3)">Next</button>
+    <button type="button" onclick="handleNextStep({{ $isAuthenticated ? 'true' : 'false' }})">Next</button>
+</form>
+</div>
+
+<div id="step3" class="form-step">
+  <h2>Step 3: Authentication</h2>
+  <form id="authenticationForm">
+    <label for="email">Email:</label>
+    <input type="email" id="email1" >
+
+    <label for="password">Password:</label>
+    <input type="password" id="password1" >
+
+    <button type="button" onclick="prevStep(3)">Previous</button>
+    <button type="button" onclick="authenticateUser()">Next</button>
+
   </form>
 </div>
 
 <div id="step4" class="form-step">
-  <h2>Step 3: Authentication</h2>
-  <form id="authenticationForm">
-    <label for="email">Email:</label>
-    <input type="email" id="email" >
-
-    <label for="password">Password:</label>
-    <input type="password" id="password" >
-
-    <button type="button" onclick="prevStep(3)">Previous</button>
-    <button type="button" onclick="nextStep(2)">Next</button>
-
-  </form>
+    <h2>Step 4: Payment</h2>
+    <form id="paymentForm">
+        <div id="card-element">
+            <!-- A Stripe Element will be inserted here. -->
+        </div>
+        <!-- Used to display form errors. -->
+        <div id="card-errors" role="alert"></div>
+        <button type="button" onclick="submitPayment()">Submit Payment</button>
+    </form>
 </div>
 
-<div id="step5" class="form-step">
-  <h2>Step 4: test</h2>
-  <form id="authenticationForm">
-    <label for="email">Email:</label>
-    <input type="email" id="email" required>
-
-    <label for="password">Password:</label>
-    <input type="password" id="password" required>
-
-    <button type="button" onclick="prevStep(3)">Previous</button>
-    <button type="button" onclick="submitForm()">Submit</button>
-  </form>
-</div>
-
-{{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
+<script src="https://js.stripe.com/v3/"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+        var stripe = Stripe('{{ config('services.stripe.key') }}');
+        var elements = stripe.elements();
+        var card = elements.create('card');
+        card.mount('#card-element');
+        // alert(card)
+        card.addEventListener('change', function (event) {
+            var displayError = document.getElementById('card-errors');
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+
+        function submitPayment() {
+            var csrfToken = $('meta[name="csrf-token"]').attr('content');
+            // alert(csrfToken)
+            stripe.createPaymentMethod({
+                type: 'card',
+                card: card,
+            }).then(function (result) {
+                // alert(result)
+                if (result.error) {
+                    var errorElement = document.getElementById('card-errors');
+                    errorElement.textContent = result.error.message;
+                } else {
+                    var paymentMethodId = result.paymentMethod.id;
+                    $.ajax({
+                        url: '/process-payment',
+                        type: 'POST',
+                        headers: {
+            'X-CSRF-TOKEN': csrfToken,
+        },
+                        data: {
+                            paymentMethodId: paymentMethodId,
+                        },
+                        success: function (response) {
+                            if (response.success) {
+                                alert('Payment successful! Payment Intent ID: ' + response.paymentIntentId);
+                                // Redirect or show a success message
+                            } else {
+                                alert('Payment failed. Please try again.');
+                                // Handle payment failure
+                            }
+                        },
+                        error: function (error) {
+                            console.error('Error:', error);
+                            alert('An error occurred during payment. Please try again.');
+                            // Handle payment error
+                        }
+                    });
+                }
+            });
+        }
+    // });
+updateProgressBar(1,true);
+// $(document).ready(function () {
+//     alert('ok')
+//       // Your progress bar update function call
+
+//     });
+
 
 let selectedPackage = '';
 
@@ -320,6 +391,25 @@ function selectPackage(packageType) {
     updateTotalPrice();
 }
 
+function handleNextStep(isAuthenticated) {
+    // alert(isAuthenticated)
+    var Step = '';
+    if(isAuthenticated == true)
+    {
+        Step = 3;
+    }
+            // Use the 'isAuthenticated' variable to determine the next step
+
+    // alert(Step)
+    else
+    {
+        Step = 2;
+    }
+
+            // Call the nextStep function with the determined step
+            nextStep(Step);
+        }
+
 
 // When going to the next step
 function nextStep(step) {
@@ -332,7 +422,7 @@ function nextStep(step) {
 
     if (nextStepElement && nextStepElement.classList) {
       nextStepElement.classList.add('show-step');
-      updateProgressBar(step + 1, false);
+      updateProgressBar(step, false);
     } else {
       alert(`Next step element (step${step + 1}) not found or doesn't have classList.`);
     }
@@ -354,14 +444,62 @@ function updateProgressBar(currentStep, isCompleted) {
   const progressSteps = document.querySelectorAll('.progress-step');
   progressSteps.forEach((step, index) => {
     if (index === currentStep) {
-      step.style.backgroundColor = isCompleted ? '#fdcd02' : '#ddd';
+      step.style.backgroundColor = isCompleted ? '#ddd' : '#fdcd02';
     } else if (index > currentStep) {
-      step.style.backgroundColor = '#fdcd02';  // Completed step color
+      step.style.backgroundColor = '#ddd';  // Completed step color
     } else {
-      step.style.backgroundColor = '#ddd';      // Incomplete step color
+      step.style.backgroundColor = '#fdcd02';      // Incomplete step color
     }
   });
 }
+
+
+function authenticateUser() {
+    var email = $('#email1').val();
+    var password = $('#password1').val();
+
+    // Get the CSRF token value from the meta tag
+    var csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+    // Use $.ajax to make a POST request
+    $.ajax({
+        url: '/login-step',
+        type: 'POST',
+        headers: {
+            'X-CSRF-TOKEN': csrfToken,
+        },
+        data: {
+            email: email,
+            password: password,
+        },
+        success: function(response) {
+            // Handle the response from the server
+            if (response.success) {
+                // If authentication is successful, proceed to the next step
+                nextStep(3);  // You need to define the nextStep function
+            } else if (response.fail) {
+                // If authentication fails, display an error message with SweetAlert
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Authentication Failed',
+                    text: 'Email and password do not match or are incorrect. Please try again.',
+                });
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error('Error:', errorThrown);
+            // Handle the error, e.g., display an error message
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'An error occurred during authentication. Please try again later.',
+            });
+        }
+    });
+}
+
+
+
 
 
   function submitForm() {
