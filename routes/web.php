@@ -126,7 +126,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/process-payment', [PaymentController::class, 'processPayment']);
 });
 
-
+Route::get('/get-csrf-token', function () {
+    return response()->json(['csrf_token' => csrf_token()]);
+});
 
 
 Route::post('/login-step',[MoveVehicleController::class,'login'])->name('login.step');

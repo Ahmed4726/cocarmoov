@@ -26,6 +26,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): JsonResponse
     {
+        // dd($request);
         if ($request->authenticate()) {
             // If authentication is successful
             $request->session()->regenerate();
@@ -35,7 +36,7 @@ class AuthenticatedSessionController extends Controller
             return response()->json(['error' => 'Login failed.'], 401);
         }
     }
-    
+
 
     /**
      * Destroy an authenticated session.

@@ -27,33 +27,33 @@ class MoveVehicleController extends Controller
             $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         } elseif (in_array($selectedVehicleType, ['25m3', '30m3', 'Camion-benne', 'Camping-car', 'Van-aménagé']) && $selectedCondition === 'En-état-de-marche') {
             $express_package = number_format(0.94 * $distance + 59, 2, '.', '');
-            $economyPackage = number_format(0.09 * $distance + 49, 2, '.', '');
+            $economyPackage = number_format(0.10 * $distance + 49, 2, '.', '');
         } elseif (in_array($selectedVehicleType, ['20m3', '25m3', '30m3']) && in_array($selectedCondition, ['En-panne', 'Accidenté'])) {
             // Handle specific case if needed
         } elseif (in_array($selectedVehicleType, ['Citadine', 'Berline']) && $selectedCondition === 'En-état-de-marche') {
             $express_package = number_format(0.65 * $distance + 59, 2, '.', '');
             // dd($express_package);
-            $economyPackage = number_format(0.09 * $distance + 49, 2, '.', '');
+            $economyPackage = number_format(0.10 * $distance + 49, 2, '.', '');
             $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         } elseif (in_array($selectedVehicleType, ['Sportive', 'Monospace', '4×4']) && $selectedCondition === 'En-état-de-marche') {
             $express_package = number_format(0.66 * $distance + 59, 2, '.', '');
-            $economyPackage = number_format(0.09 * $distance + 49, 2, '.', '');
+            $economyPackage = number_format(0.10 * $distance + 49, 2, '.', '');
             $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         } elseif (in_array($selectedVehicleType, ['3m3', '6m3']) && $selectedCondition === 'En-état-de-marche') {
             $express_package = number_format(0.69 * $distance + 59, 2, '.', '');
-            $economyPackage = number_format(0.09 * $distance + 49, 2, '.', '');
+            $economyPackage = number_format(0.10 * $distance + 49, 2, '.', '');
             $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         } elseif ($selectedVehicleType === '9m3' && $selectedCondition === 'En-état-de-marche') {
             $express_package = number_format(0.73 * $distance + 59, 2, '.', '');
-            $economyPackage = number_format(0.09 * $distance + 49, 2, '.', '');
+            $economyPackage = number_format(0.10 * $distance + 49, 2, '.', '');
             $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         } elseif ($selectedVehicleType === '12m3' && $selectedCondition === 'En-état-de-marche') {
             $express_package = number_format(0.76 * $distance + 59, 2, '.', '');
-            $economyPackage = number_format(0.09 * $distance + 49, 2, '.', '');
+            $economyPackage = number_format(0.10 * $distance + 49, 2, '.', '');
             $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         } elseif ($selectedVehicleType === '15m3' && $selectedCondition === 'En-état-de-marche') {
             $express_package = number_format(0.84 * $distance + 59, 2, '.', '');
-            $economyPackage = number_format(0.09 * $distance + 49, 2, '.', '');
+            $economyPackage = number_format(0.10 * $distance + 49, 2, '.', '');
             $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         }
 

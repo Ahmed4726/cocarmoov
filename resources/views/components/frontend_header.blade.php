@@ -39,7 +39,7 @@
           </li>
 				</ul>
                 @if(Auth::check())
-                
+
     <!-- Logout Button -->
     <form action="{{ route('logout') }}" method="post">
         @csrf
@@ -52,7 +52,7 @@
     <button class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;" data-toggle="modal" data-target="#loginModal">
         <span class="text-dark fw-bold app-font-family">S'identifier</span>
     </button>
-    
+
     <!-- Signup Button -->
     <button class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;" data-toggle="modal" data-target="#signupModal">
         <span class="text-dark fw-bold app-font-family">S'inscrire</span>
@@ -120,58 +120,82 @@
                 <!-- Your Laravel registration form -->
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
+
                     <!-- Name -->
                     <div class="form-group">
-                        <!-- <label for="name">Prénom</label> -->
-                        <input type="text" class="form-control" id="name" name="last_name" placeholder="entrez votre Prénom" required autofocus>
+                        <input type="text" class="form-control" id="name" name="last_name" placeholder="Entrez votre Prénom"  autofocus>
+                        @error('last_name')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
                     </div>
 
-					<div class="form-group">
-                        <!-- <label for="name">Nom</label> -->
-                        <input type="text" class="form-control" id="name" name="family_name" placeholder="entrez votre Nom" required>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="family_name" placeholder="Entrez votre Nom" >
+                        @error('family_name')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
                     </div>
-					<div class="form-group">
-                        <!-- <label for="name">Numéro de téléphone</label> -->
-                        <input type="text" class="form-control" id="name" name="phone_number" placeholder="entrez votre Numéro de téléphone" required>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="phone_number" placeholder="Entrez votre Numéro de téléphone" >
+                        @error('phone_number')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
                     </div>
+
                     <!-- Email Address -->
                     <div class="form-group">
-                        <!-- <label for="email">Adresse e-mail</label> -->
-                        <input type="email" class="form-control" id="email" name="email" placeholder="entrez votre Adresse e-mail" required>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre Adresse e-mail" >
+                        @error('email')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
                     </div>
-                    <div class="form-group">
-                        <!-- <label for="email">Adresse e-mail</label> -->
-            <input type="number" class="form-control" id="Quantity" required min = "1" value = "1" name="quantity">
-                    </div>
+
+                    {{-- <div class="form-group">
+                        <input type="number" class="form-control" id="Quantity" min="1" value="1" name="quantity">
+                    </div> --}}
+
                     <!-- Password -->
                     <div class="form-group">
-                        <!-- <label for="password">Mot de passe</label> -->
-                        <input type="password" class="form-control" id="password" name="password" placeholder="entrez votre Mot de passe" required>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Entrez votre Mot de passe">
+                        @error('password')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
                     </div>
+
                     <!-- Confirm Password -->
                     <div class="form-group">
-                        <!-- <label for="password_confirmation">Confirmer Mot de passe</label> -->
-                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirmer votre Mot de passe" required>
+                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirmez votre Mot de passe" >
+                        @error('password_confirmation')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
                     </div>
-					<div class="form-group">
-						<!-- <label for="user_type">Type d'utilisateur</label> -->
-						<select class="form-control" name="user_type" id="user_type">
-							<option selected value="">Choisissez votre rôle</option>
-							<option value="Particulier">Particulier</option>
-							<option value="professionnel">Professionnel</option>
-							<option value="Co-convoyeur">Co-convoyeur</option>
-							<option value="Convoyeur">Convoyeur</option>
-							<option value="Transporteur">Transporteur</option>
-						</select>
-					</div>
-                                <div class="form-group">
-                <input type="checkbox" id="checkbox" name="checkbox_name"><span>J'accepte les Conditions Générales d'Utilisation</span>
-            </div>
 
+                    <div class="form-group">
+                        <select class="form-control" name="user_type" id="user_type">
+                            <option selected value="">Choisissez votre rôle</option>
+                            <option value="Particulier">Particulier</option>
+                            <option value="professionnel">Professionnel</option>
+                            <option value="Co-convoyeur">Co-convoyeur</option>
+                            <option value="Convoyeur">Convoyeur</option>
+                            <option value="Transporteur">Transporteur</option>
+                        </select>
+                        @error('user_type')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <input type="checkbox" id="checkbox" name="checkbox_name"><span>J'accepte les Conditions Générales d'Utilisation</span>
+                        @error('checkbox_name')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
 
                     <!-- Sign Up button -->
                     <button type="submit" class="btn btn-warning" style="width:100%;">S'inscrire</button>
                 </form>
+
             </div>
         </div>
     </div>

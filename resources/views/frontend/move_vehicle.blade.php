@@ -13,6 +13,7 @@
 </style>
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token1" content="{{ csrf_token() }}">
 
 </head>
 
@@ -306,6 +307,28 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 
+// Function to fetch CSRF token
+function fetchCsrfToken(callback) {
+    $.ajax({
+        url: '/get-csrf-token',
+        method: 'GET',
+        success: function (response) {
+            if (response.csrf_token) {
+                callback(response.csrf_token);
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error('Error fetching CSRF token:', error);
+        },
+    });
+}
+
+
+
+// var csrfToken = $('meta[name="csrf-token"]').attr('content');
+// var csrfToken1 = $('meta[name="csrf-token1"]').attr('content');
+// alert(csrfToken, csrfToken1)
+updateProgressBar(1,true);
 
 // document.addEventListener('DOMContentLoaded', function () {
         var stripe = Stripe('{{ config('services.stripe.key') }}');
@@ -322,48 +345,48 @@
             }
         });
 
-        function submitPayment() {
-            var csrfToken = $('meta[name="csrf-token"]').attr('content');
-            // alert(csrfToken)
-            stripe.createPaymentMethod({
-                type: 'card',
-                card: card,
-            }).then(function (result) {
-                // alert(result)
-                if (result.error) {
-                    var errorElement = document.getElementById('card-errors');
-                    errorElement.textContent = result.error.message;
-                } else {
-                    var paymentMethodId = result.paymentMethod.id;
-                    $.ajax({
-                        url: '/process-payment',
-                        type: 'POST',
-                        headers: {
-            'X-CSRF-TOKEN': csrfToken,
-        },
-                        data: {
-                            paymentMethodId: paymentMethodId,
-                        },
-                        success: function (response) {
-                            if (response.success) {
-                                alert('Payment successful! Payment Intent ID: ' + response.paymentIntentId);
-                                // Redirect or show a success message
-                            } else {
-                                alert('Payment failed. Please try again.');
-                                // Handle payment failure
-                            }
-                        },
-                        error: function (error) {
-                            console.error('Error:', error);
-                            alert('An error occurred during payment. Please try again.');
-                            // Handle payment error
+// Function to submit payment
+function submitPayment() {
+    fetchCsrfToken(function (csrfToken) {
+        stripe.createPaymentMethod({
+            type: 'card',
+            card: card,
+        }).then(function (result) {
+            if (result.error) {
+                var errorElement = document.getElementById('card-errors');
+                errorElement.textContent = result.error.message;
+            } else {
+                var paymentMethodId = result.paymentMethod.id;
+                $.ajax({
+                    url: '/process-payment',
+                    type: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': csrfToken,
+                    },
+                    data: {
+                        paymentMethodId: paymentMethodId,
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            alert('Payment successful! Payment Intent ID: ' + response.paymentIntentId);
+                            // Redirect or show a success message
+                        } else {
+                            alert('Payment failed. Please try again.');
+                            // Handle payment failure
                         }
-                    });
-                }
-            });
-        }
+                    },
+                    error: function (error) {
+                        console.error('Error:', error);
+                        alert('An error occurred during payment. Please try again.');
+                        // Handle payment error
+                    }
+                });
+            }
+        });
+    });
+}
     // });
-updateProgressBar(1,true);
+
 // $(document).ready(function () {
 //     alert('ok')
 //       // Your progress bar update function call
@@ -398,14 +421,10 @@ function handleNextStep(isAuthenticated) {
     {
         Step = 3;
     }
-            // Use the 'isAuthenticated' variable to determine the next step
-
-    // alert(Step)
     else
     {
         Step = 2;
     }
-
             // Call the nextStep function with the determined step
             nextStep(Step);
         }
@@ -454,47 +473,45 @@ function updateProgressBar(currentStep, isCompleted) {
 }
 
 
+// Function to authenticate user
 function authenticateUser() {
-    var email = $('#email1').val();
-    var password = $('#password1').val();
+    fetchCsrfToken(function (csrfToken) {
+        var email = $('#email1').val();
+        var password = $('#password1').val();
 
-    // Get the CSRF token value from the meta tag
-    var csrfToken = $('meta[name="csrf-token"]').attr('content');
-
-    // Use $.ajax to make a POST request
-    $.ajax({
-        url: '/login-step',
-        type: 'POST',
-        headers: {
-            'X-CSRF-TOKEN': csrfToken,
-        },
-        data: {
-            email: email,
-            password: password,
-        },
-        success: function(response) {
-            // Handle the response from the server
-            if (response.success) {
-                // If authentication is successful, proceed to the next step
-                nextStep(3);  // You need to define the nextStep function
-            } else if (response.fail) {
-                // If authentication fails, display an error message with SweetAlert
+        $.ajax({
+            url: '/login-step',
+            type: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': csrfToken,
+            },
+            data: {
+                email: email,
+                password: password,
+            },
+            success: function (response) {
+                if (response.success) {
+                    // If authentication is successful, proceed to the next step
+                    nextStep(3);  // You need to define the nextStep function
+                } else if (response.fail) {
+                    // If authentication fails, display an error message with SweetAlert
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Authentication Failed',
+                        text: 'Email and password do not match or are incorrect. Please try again.',
+                    });
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error('Error:', errorThrown);
+                // Handle the error, e.g., display an error message
                 Swal.fire({
                     icon: 'error',
-                    title: 'Authentication Failed',
-                    text: 'Email and password do not match or are incorrect. Please try again.',
+                    title: 'Error',
+                    text: 'An error occurred during authentication. Please try again later.',
                 });
             }
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.error('Error:', errorThrown);
-            // Handle the error, e.g., display an error message
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: 'An error occurred during authentication. Please try again later.',
-            });
-        }
+        });
     });
 }
 
