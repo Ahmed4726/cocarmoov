@@ -1,6 +1,8 @@
 @extends('admin.admin_layout')
 @section('content')
 <head>
+
+        <meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
           .pac-container {
   z-index: 9999;
@@ -51,7 +53,7 @@
                                             </div>
                                             <div class="modal-body">
                                                 <form class="row" id="roleForm">
-                                                    @csrf
+                                                    {{-- @csrf --}}
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="city_of_collection">Ville de collecte :</label>
