@@ -23,7 +23,8 @@ use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\MoveVehicleController;
 use App\Http\Controllers\PaymentController;
-
+use App\Http\Controllers\ListingController;
+use App\Http\Controllers\MissionController;
 use App\Http\Controllers\RolesAndPermissionController;
 
 
@@ -124,6 +125,16 @@ Route::middleware('auth')->group(function () {
     //Stripe Payment
     Route::get('/payment', [PaymentController::class, 'showPaymentForm']);
     Route::post('/process-payment', [PaymentController::class, 'processPayment']);
+
+    // Car Listing
+    Route::post('/listing', [ListingController::class, 'createListing']);
+    Route::get('/editListing/{id}', [ListingController::class, 'edit'])->name('editListing');
+    Route::get('/deleteListing/{id}', [ListingController::class, 'delete'])->name('deleteListing');
+    Route::get('/carmoovs', [ListingController::class, 'index']);
+
+    // CarMove
+    Route::get('/missions', [MissionController::class, 'index']);
+
 });
 
 Route::get('/get-csrf-token', function () {

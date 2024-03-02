@@ -11,6 +11,7 @@ class MoveVehicleController extends Controller
     public function index(Request $request)
     {
         $car_move = $request->all();
+        // dd($car_move);
         $selectedVehicleType = $car_move['vehicle-type'];
         $selectedCondition = $car_move['vehicle-condition'];
         $distance = $car_move['distance'];

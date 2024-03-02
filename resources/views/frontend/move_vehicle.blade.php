@@ -22,7 +22,7 @@
     <div class="progress-step">2. Identification</div>
     <div class="progress-step">3. Détails</div>
     <div class="progress-step">4. Paiement</div>
-    {{-- <div class="progress-step">5. Validation</div> --}}
+    <div class="progress-step">5. Validation</div>
   </div>
 
 <div class="container">
@@ -170,7 +170,7 @@
                         </div>
                 </div>
                     <div class="col-md-12 text-center">
-                        <button id="nextButton" type="button" class="btn btn-primary text-dark" onclick="nextStep(1)">Suivant</button>
+                        <button id="nextButton" type="button" class="btn btn-primary text-dark" onclick="handleNextStep({{ $isAuthenticated ? 'true' : 'false' }})">Suivant</button>
                     </div>
                 </div>
             </div>
@@ -264,31 +264,92 @@
 
 
 <div id="step2" class="form-step">
+    <h2>Step 2: Authentication</h2>
+    <form id="authenticationForm">
+      <label for="email">Email:</label>
+      <input type="email" id="email1" >
+
+      <label for="password">Password:</label>
+      <input type="password" id="password1" >
+
+      <button type="button" onclick="prevStep(2)">Previous</button>
+      <button type="button" onclick="authenticateUser()">Next</button>
+
+    </form>
+  </div>
+
+
+<div id="step3" class="form-step">
     {{-- sas --}}
-    <h2>Step 2: Packages</h2>
+    <h2>Step 3: Packages</h2>
     <form id="packagesForm">
         <label>Selected Package:</label>
                     <p id="selectedPackageDetails"></p>
                     <p id="selectedPackagePrice"></p>
-{{-- price show here in this step of the package and name too --}}
-    <button type="button" onclick="prevStep(2)">Previous</button>
-    <button type="button" onclick="handleNextStep({{ $isAuthenticated ? 'true' : 'false' }})">Next</button>
-</form>
-</div>
-
-<div id="step3" class="form-step">
-  <h2>Step 3: Authentication</h2>
-  <form id="authenticationForm">
-    <label for="email">Email:</label>
-    <input type="email" id="email1" >
-
-    <label for="password">Password:</label>
-    <input type="password" id="password1" >
-
-    <button type="button" onclick="prevStep(3)">Previous</button>
-    <button type="button" onclick="authenticateUser()">Next</button>
-
-  </form>
+        {{-- price show here in this step of the package and name too --}}
+        <h2>Availability Details</h2>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <label for="fromAddress" class="form-label">From Address:</label>
+                <input type="text" class="form-control" id="fromAddress" value="{{ $car_move['pickup_name'] }}" readonly>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="toAddress" class="form-label">To Address:</label>
+                <input type="text" class="form-control" id="toAddress" value="{{ $car_move['delivery_name'] }}" readonly>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="collectionDate">Collection No Earlier Than</label>
+                <input class="form-control" type="datetime-local" name="collectionDate" id="collectionDate" value="yyyy-mm-dd">
+                {{-- <input class="form-control" type="time" name="collectiontime" id="collectiontime" value="hh:mm"> --}}
+            </div>
+            <div class="col-lg-6">
+                <label for="deliveryDate">Delivery No later Than</label>
+                <input class="form-control" type="datetime-local" name="deliveryDate" id="deliveryDate" placeholder="date...">
+                {{-- <input class="form-control" type="time" name="deliverytime" id="deliverytime" placeholder="hrs"> --}}
+            </div>
+        </div>
+        <h2>Vehicle Details</h2>
+        <div class="row">
+            <div class="col-md-2 mb-2">
+                <label for="carType" class="form-label">Car Type:</label>
+                <input type="text" class="form-control" id="carType" value="{{ $car_move['vehicle-type'] }}" readonly>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="carType" class="form-label">Make and Model</label>
+                <input type="text" class="form-control" id="make_and_model" name="make_and_model" >
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="carType" class="form-label">Number Plate</label>
+                <input type="text" class="form-control" id="number_plate" name="number_plate" placeholder="AA99 AAA">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="carType" class="form-label">Seating Capacity</label>
+                <select class="form-control" name="seating_capacity" id="seating_capacity">
+                    <option value="">Choose</option>
+                    <option value="2">2 seats</option>
+                    <option value="3">3 seats</option>
+                    <option value="4">4 seats</option>
+                    <option value="5">5 seats</option>
+                    <option value="6">6 seats</option>
+                    <option value="7">7 seats</option>
+                    <option value="8">8 seats</option>
+                    <option value="9">9 seats</option>
+                </select>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="carType" class="form-label">GearBox</label>
+                <select class="form-control" name="GearBox" id="GearBox">
+                    <option value="">Transmission</option>
+                    <option value="Manual">Manual</option>
+                    <option value="Automatic">Automatic</option>
+                </select>
+            </div>
+        </div>
+            <button class="btn btn-warning" type="button" onclick="prevStep(3)">Previous</button>
+            <button class="btn btn-warning" type="button" onclick="nextStep(3)">Next</button>
+        </form>
 </div>
 
 <div id="step4" class="form-step">
@@ -299,8 +360,55 @@
         </div>
         <!-- Used to display form errors. -->
         <div id="card-errors" role="alert"></div>
-        <button type="button" onclick="submitPayment()">Submit Payment</button>
+        <button type="button" class="btn btn-warning" onclick="submitPayment()">Submit Payment</button>
     </form>
+</div>
+
+<div id="step5" class="form-step">
+    <h2>Step 5: Validation</h2>
+<form id="hiddenValuesForm">
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Address Details</h5>
+            <input type="text" class="form-control mb-2" name="FromAddress" id="hiddenFromAddress" placeholder="From Address" readonly>
+            <input type="text" class="form-control mb-2" name="ToAddress" id="hiddenToAddress" placeholder="To Address" readonly>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Vehicle Details</h5>
+            <input type="text" class="form-control mb-2" name="CarType" id="hiddenCarType" placeholder="Car Type" readonly>
+            <input type="text" class="form-control mb-2" name="CarCondition" id="hiddenCarCondition" placeholder="Car Condition" readonly>
+            <input type="text" class="form-control mb-2" name="make_and_model" id="hidden_make_and_model" placeholder="Make and Model" readonly>
+            <input type="text" class="form-control mb-2" name="number_plate" id="hidden_number_plate" placeholder="Number Plate" readonly>
+            <input type="text" class="form-control mb-2" name="seating_capacity" id="hidden_seating_capacity" placeholder="Seating Capacity" readonly>
+            <input type="text" class="form-control mb-2" name="GearBox" id="hiddenGearBox" placeholder="GearBox" readonly>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Package Details</h5>
+            <input type="text" class="form-control mb-2" name="SelectedPackage" id="hiddenSelectedPackage" placeholder="Selected Package" readonly>
+            <input type="text" class="form-control mb-2" name="PackageAmount" id="hiddenPackageAmount" placeholder="Package Amount" readonly>
+            <input type="text" class="form-control mb-2" name="addon1" id="hiddenaddon1" placeholder="Addon 1" readonly>
+            <input type="text" class="form-control mb-2" name="addon2" id="hiddenaddon2" placeholder="Addon 2" readonly>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Move Dates</h5>
+            <input type="datetime-local" class="form-control mb-2" name="CarMoveDepartureDateFrom" id="hiddenCarMoveDepartureDateFrom" placeholder="Departure Date From" readonly>
+            <input type="datetime-local" class="form-control mb-2" name="CarMoveDepartureDateTo" id="hiddenCarMoveDepartureDateTo" placeholder="Departure Date To" readonly>
+        </div>
+    </div>
+
+    <button class="btn btn-warning" type="button" onclick="sendAllFormData()">List my Car</button>
+
+</form>
 </div>
 
 <script src="https://js.stripe.com/v3/"></script>
@@ -347,6 +455,7 @@ updateProgressBar(1,true);
 
 // Function to submit payment
 function submitPayment() {
+    // alert('ok')
     fetchCsrfToken(function (csrfToken) {
         stripe.createPaymentMethod({
             type: 'card',
@@ -370,6 +479,9 @@ function submitPayment() {
                         if (response.success) {
                             alert('Payment successful! Payment Intent ID: ' + response.paymentIntentId);
                             // Redirect or show a success message
+                            storeHiddenValues();
+                            // sendAllFormData();
+                            nextStep(4);
                         } else {
                             alert('Payment failed. Please try again.');
                             // Handle payment failure
@@ -419,11 +531,11 @@ function handleNextStep(isAuthenticated) {
     var Step = '';
     if(isAuthenticated == true)
     {
-        Step = 3;
+        Step = 2;
     }
     else
     {
-        Step = 2;
+        Step = 1;
     }
             // Call the nextStep function with the determined step
             nextStep(Step);
@@ -432,6 +544,12 @@ function handleNextStep(isAuthenticated) {
 
 // When going to the next step
 function nextStep(step) {
+    // alert(step)
+    if(step == 2)
+    {
+        // alert(step)
+        $('#step1').addClass('d-none');
+    }
   const currentStepElement = document.getElementById(`step${step}`);
 
   if (currentStepElement && currentStepElement.classList) {
@@ -453,6 +571,10 @@ function nextStep(step) {
 
 // When going to the previous step
 function prevStep(step) {
+    if(step == 2)
+    {
+        $('#step1').removeClass('d-none');
+    }
   document.getElementById(`step${step}`).classList.remove('show-step');
   document.getElementById(`step${step - 1}`).classList.add('show-step');
   updateProgressBar(step - 1, true); // Assuming the previous step is completed
@@ -492,7 +614,7 @@ function authenticateUser() {
             success: function (response) {
                 if (response.success) {
                     // If authentication is successful, proceed to the next step
-                    nextStep(3);  // You need to define the nextStep function
+                    nextStep(2);  // You need to define the nextStep function
                 } else if (response.fail) {
                     // If authentication fails, display an error message with SweetAlert
                     Swal.fire({
@@ -561,6 +683,8 @@ function authenticateUser() {
     const expressExtraCheckbox = document.getElementById('express_extra_checkbox');
     const expressExtraFields = document.getElementById('express_extra_fields');
     const addMoreButton = document.getElementById('addMore');
+    var selectedPackagePrice = 0;
+
 
     expressExtraCheckbox.addEventListener('change', toggleExtraFields);
     addMoreButton.addEventListener('click', addMoreFields);
@@ -599,8 +723,11 @@ function authenticateUser() {
     $('#selectedPackageDetails').text(`Selected Package: ${selectedPackage}`);
 
     // Display selected package price in the next step
-    var selectedPackagePrice = 0;
 
+if(selectedPackage === 'economy')
+{
+    selectedPackagePrice = parseFloat('{{ $economyPackage }}');
+}
     // Add logic to set the price based on the selected package
     if (selectedPackage === 'premium') {
         selectedPackagePrice = totalPremiumPrice;
@@ -742,6 +869,67 @@ function authenticateUser() {
         nextButton.disabled = !isPackageSelected;
     }
 
+
+
+
+    function storeHiddenValues() {
+        // alert('ok')
+    // Store values in the hidden form
+    document.getElementById('hiddenFromAddress').value = document.getElementById('fromAddress').value;
+    document.getElementById('hiddenToAddress').value = document.getElementById('toAddress').value;
+    document.getElementById('hiddenCarType').value = document.getElementById('carType').value;
+    document.getElementById('hiddenCarCondition').value = document.getElementById('carCondition').value;
+
+    // Store values from the additional form fields
+    document.getElementById('hidden_make_and_model').value = document.getElementById('make_and_model').value;
+    document.getElementById('hidden_number_plate').value = document.getElementById('number_plate').value;
+    document.getElementById('hidden_seating_capacity').value = document.getElementById('seating_capacity').value;
+    document.getElementById('hiddenGearBox').value = document.getElementById('GearBox').value;
+
+
+    document.getElementById('hiddenSelectedPackage').value = selectedPackage;
+    document.getElementById('hiddenPackageAmount').value = selectedPackagePrice;
+
+    // // Add more lines to store values for additional addons in the selected package
+    // document.getElementById('hiddenAddon1').value = "Addon1";
+    // document.getElementById('hiddenAddon2').value = "Addon2";
+
+    document.getElementById('hiddenCarMoveDepartureDateFrom').value = document.getElementById('collectionDate').value;
+    document.getElementById('hiddenCarMoveDepartureDateTo').value = document.getElementById('deliveryDate').value;
+    }
+
+
+    function sendAllFormData() {
+        storeHiddenValues();
+        // Ajax call to send all form data to Laravel controller
+        sendDataToController('/listing', 'POST', new FormData(document.getElementById('hiddenValuesForm')));
+    }
+
+    function sendDataToController(url, method, data) {
+        alert(data)
+        fetchCsrfToken(function (csrfToken) {
+            // alert(data)
+        // Ajax call to send data to Laravel controller
+        // You may need to adjust the URL and other parameters based on your Laravel routes
+        fetch(url, {
+            method: method,
+            body: data,
+            headers: {
+                'X-CSRF-TOKEN': csrfToken,
+            },
+        })
+
+        .then(response => response.json())
+        .then(data => {
+            alert('Success:', data);
+            // Handle success, e.g., show a success message or redirect
+        })
+        .catch((error) => {
+            alert('Error:', error);
+            // Handle error, e.g., show an error message
+        });
+    });
+    }
 </script>
 
 

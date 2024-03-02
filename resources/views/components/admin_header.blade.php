@@ -358,9 +358,9 @@
     </a>
     <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
+            <a href="/carmoovs" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light text-hover">Orders 1</p>
+                <p class="text-light text-hover">CarMoovs</p>
             </a>
         </li>
     </ul>
