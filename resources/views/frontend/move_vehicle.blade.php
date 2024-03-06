@@ -906,7 +906,7 @@ if(selectedPackage === 'economy')
     }
 
     function sendDataToController(url, method, data) {
-        alert(data)
+        // alert(data)
         fetchCsrfToken(function (csrfToken) {
             // alert(data)
         // Ajax call to send data to Laravel controller
@@ -918,11 +918,15 @@ if(selectedPackage === 'economy')
                 'X-CSRF-TOKEN': csrfToken,
             },
         })
-
         .then(response => response.json())
         .then(data => {
-            alert('Success:', data);
-            // Handle success, e.g., show a success message or redirect
+            if (data.success) {
+                // Redirect to a specific URL upon success
+                window.location.href = '/carmoovs'; // Change the URL as needed
+            } else {
+                // Handle error, e.g., show an error message
+                alert('Error:', data.message);
+            }
         })
         .catch((error) => {
             alert('Error:', error);

@@ -32,5 +32,13 @@ class ListingController extends Controller
         $listing->car_move_departure_date_to = $request->CarMoveDepartureDateTo;
 
         $listing->save();
+
+        return response()->json(['success' => true, 'message' => 'Listing created successfully']);
+    }
+
+    public function delete($id)
+    {
+        $listing = Car::where('id',$id)->delete();
+        return redirect()->route('listings.index');
     }
 }

@@ -130,10 +130,11 @@ Route::middleware('auth')->group(function () {
     Route::post('/listing', [ListingController::class, 'createListing']);
     Route::get('/editListing/{id}', [ListingController::class, 'edit'])->name('editListing');
     Route::get('/deleteListing/{id}', [ListingController::class, 'delete'])->name('deleteListing');
-    Route::get('/carmoovs', [ListingController::class, 'index']);
+    Route::get('/carmoovs', [ListingController::class, 'index'])->name('listings.index');
 
     // CarMove
     Route::get('/missions', [MissionController::class, 'index']);
+    Route::get('/booking/{id}', [MissionController::class, 'booking'])->name('booking');
 
 });
 
