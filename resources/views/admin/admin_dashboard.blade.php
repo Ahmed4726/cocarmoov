@@ -6,7 +6,13 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
+        @php
+        $user=auth()->user()->email_verified_at;
+        @endphp
+       @if ($user == null)
+      <p class="bg-secondary px-2">Your email address is not verified please verfiy your email <a method='post' href="{{route('verification.send')}}" style="color: #FDCD02 !important;">Click here</a></p>
+      @endif
+      <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0 font-monospace">Tableau de bord</h1>
           </div><!-- /.col -->
