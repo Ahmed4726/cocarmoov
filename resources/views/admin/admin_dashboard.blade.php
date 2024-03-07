@@ -10,8 +10,12 @@
         $user=auth()->user()->email_verified_at;
         @endphp
        @if ($user == null)
-      <p class="bg-secondary px-2">Your email address is not verified please verfiy your email <a method='post' href="{{route('verification.send')}}" style="color: #FDCD02 !important;">Click here</a></p>
-      @endif
+       <form method="post" action="{{ route('verification.send') }}" class="d-flex align-items-center">
+        <span>Your email address is not verified. Please verify your email</span>
+        @csrf
+        <button type="submit" class="btn btn-link" style="color: #FDCD02 !important; margin-left: 5px;">Click here</button>
+    </form>
+          @endif
       <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0 font-monospace">Tableau de bord</h1>
@@ -86,7 +90,7 @@
         </div>
         <!-- /.row -->
         <!-- Main row -->
-            <!-- /.card -->  
+            <!-- /.card -->
             <div class="row">
           <!-- Left col -->
           <section class="col-lg-6 connectedSortable">
@@ -161,7 +165,7 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">
-                  Latest jobs added 
+                  Latest jobs added
                 </h3>
                 <!-- <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
@@ -227,7 +231,7 @@
             </div>
 </section>
 </div>
-            <!-- /.card -->         
+            <!-- /.card -->
   <!-- /.content-wrapper -->
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -236,6 +240,6 @@
   <!-- /.control-sidebar -->
 </div>
     </section>
-  </div>    
+  </div>
 <!-- ./wrapper -->
 @endsection
