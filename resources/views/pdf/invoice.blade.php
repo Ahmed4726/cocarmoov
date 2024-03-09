@@ -1,111 +1,154 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Invoice #{{ $invoice->id }}</title>
+@extends('admin.admin_layout')
+@section('content')
+<div class="wrapper">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+         
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <section class="content">
+<style type="text/css">
+    .invoice-title h2, .invoice-title h3 {
+    display: inline-block;
+}
 
-    <style>
-        /* Add your custom styles here */
-        body {
-            font-family: Arial, sans-serif;
-        }
+.table > tbody > tr > .no-line {
+    border-top: none;
+}
 
-        .invoice-header {
-            background-color: #f5f5f5;
-            padding: 10px;
-        }
+.table > thead > tr > .no-line {
+    border-bottom: none;
+}
 
-        .invoice-details {
-            margin-top: 20px;
-        }
-
-        .invoice-details td {
-            padding: 5px;
-        }
-
-        .invoice-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        .invoice-table th, .invoice-table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-
-        .invoice-footer {
-            margin-top: 20px;
-            text-align: right;
-        }
+.table > tbody > tr > .thick-line {
+    border-top: 2px solid;
+}
     </style>
-</head>
-<body>
-    <div class="logo">
-        <img src="{{ asset('/images/wallet/footer-2.png') }}" alt="" class="img-fluid" width="350" height="100">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+    		<div class="invoice-title">
+    			<h2>Invoice</h2>
+    		</div>
+        </div>
+        <div class="col-md-6">
+        <h3 class="text-right">Order # 12345</h3>
+        </div>
+        </div>
+    		<hr>
+    		<div class="row">
+    			<div class="col-md-6">
+    				<address>
+    				<strong>Billed To:</strong><br>
+    					John Smith<br>
+    					1234 Main<br>
+    					Apt. 4B<br>
+    					Springfield, ST 54321
+    				</address>
+    			</div>
+    			<div class="col-md-6">
+    				<address class="text-right">
+        			<strong>Shipped To:</strong><br>
+    					Jane Smith<br>
+    					1234 Main<br>
+    					Apt. 4B<br>
+    					Springfield, ST 54321
+    				</address>
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div class="col-md-6">
+    				<address>
+    					<strong>Payment Method:</strong><br>
+    					Visa ending **** 4242<br>
+    					jsmith@email.com
+    				</address>
+    			</div>
+    			<div class="col-md-6 ">
+    				<address class="text-right">
+    					<strong>Order Date:</strong><br>
+    					March 7, 2014<br><br>
+    				</address>
+    			</div>
+    		</div>
+    	</div>
     </div>
-    <div class="invoice-header">
-        <h1>Invoice #{{ $invoice->id }}</h1>
+    
+    <div class="row">
+    	<div class="col-md-12">
+    		<div class="panel panel-default">
+    			<div class="panel-heading">
+    				<h3 class="panel-title"><strong>Order summary</strong></h3>
+    			</div>
+    			<div class="panel-body">
+    				<div class="table-responsive">
+    					<table class="table table-condensed">
+    						<thead>
+                                <tr>
+        							<td><strong>Item</strong></td>
+        							<td class="text-center"><strong>Price</strong></td>
+        							<td class="text-center"><strong>Quantity</strong></td>
+        							<td class="text-right"><strong>Totals</strong></td>
+                                </tr>
+    						</thead>
+    						<tbody>
+    							<!-- foreach ($order->lineItems as $line) or some such thing here -->
+    							<tr>
+    								<td>BS-200</td>
+    								<td class="text-center">$10.99</td>
+    								<td class="text-center">1</td>
+    								<td class="text-right">$10.99</td>
+    							</tr>
+                                <tr>
+        							<td>BS-400</td>
+    								<td class="text-center">$20.00</td>
+    								<td class="text-center">3</td>
+    								<td class="text-right">$60.00</td>
+    							</tr>
+                                <tr>
+            						<td>BS-1000</td>
+    								<td class="text-center">$600.00</td>
+    								<td class="text-center">1</td>
+    								<td class="text-right">$600.00</td>
+    							</tr>
+    							<tr>
+    								<td class="thick-line"></td>
+    								<td class="thick-line"></td>
+    								<td class="thick-line text-center"><strong>Subtotal</strong></td>
+    								<td class="thick-line text-right">$670.99</td>
+    							</tr>
+    							<tr>
+    								<td class="no-line"></td>
+    								<td class="no-line"></td>
+    								<td class="no-line text-center"><strong>Shipping</strong></td>
+    								<td class="no-line text-right">$15</td>
+    							</tr>
+    							<tr>
+    								<td class="no-line"></td>
+    								<td class="no-line"></td>
+    								<td class="no-line text-center"><strong>Total</strong></td>
+    								<td class="no-line text-right">$685.99</td>
+    							</tr>
+    						</tbody>
+    					</table>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
     </div>
-
-    <div class="invoice-details">
-        <table>
-            <tr>
-                <td><strong>Pickup Address:</strong></td>
-                <td>{{ $invoice->pickup_address }}</td>
-            </tr>
-            <tr>
-                <td><strong>Last Name:</strong></td>
-                <td>{{ $invoice->last_name }}</td>
-            </tr>
-            <tr>
-                <td><strong>Family Name:</strong></td>
-                <td>{{ $invoice->family_name }}</td>
-            </tr>
-            <tr>
-                <td><strong>Amount:</strong></td>
-                <td>{{ $invoice->amount }}</td>
-            </tr>
-            <tr>
-                <td><strong>Status:</strong></td>
-                <td>{{ $invoice->status }}</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="invoice-table">
-        <table>
-            <thead>
-                <th scope="col">Item</th>
-                <th scope="col">Description</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Price</th>
-                <th scope="col">Total</th>
-            </thead>
-            <tbody>
-                <!-- Add your invoice line items here -->
-                <tr>
-                    <td>Item 1</td>
-                    <td>Description 1</td>
-                    <td>2</td>
-                    <td>$50.00</td>
-                    <td>$100.00</td>
-                </tr>
-                <tr>
-                    <td>Item 2</td>
-                    <td>Description 2</td>
-                    <td>1</td>
-                    <td>$75.00</td>
-                    <td>$75.00</td>
-                </tr>
-                <!-- Adjust the data based on your invoice structure -->
-            </tbody>
-        </table>
-    </div>
-
-    <div class="invoice-footer">
-        <p>Total Amount: ${{ $invoice->amount }}</p>
-    </div>
-</body>
-</html>
+</div>
+</section>
+<link href="//netdna.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+@endsection
