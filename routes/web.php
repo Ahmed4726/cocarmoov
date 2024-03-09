@@ -111,6 +111,8 @@ Route::middleware('auth')->group(function () {
 
     //Invoices
     Route::get('/invoices', [InvoiceController::class,'index'])->name('invoice');
+    Route::get('/view-invoice/{id}',[InvoiceController::class,'view'])->name('view.invoice');
+    Route::get('/download-invoice/{id}',[InvoiceController::class,'download'])->name('download.invoice');
 
     //Training certifications
     Route::get('/certifications', [TrainingController::class,'index'])->name('certification');
@@ -133,8 +135,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/carmoovs', [ListingController::class, 'index'])->name('listings.index');
 
     // CarMove
-    Route::get('/missions', [MissionController::class, 'index']);
+    Route::get('/missions', [MissionController::class, 'index'])->name('missions');
     Route::get('/booking/{id}', [MissionController::class, 'booking'])->name('booking');
+    Route::post('/book-ride', [MissionController::class, 'bookRide'])->name('ride');
+
+
 
 });
 

@@ -25,7 +25,7 @@
                 <h3 class="card-title">
                 Invoices
                 </h3>
-              
+
                 <!-- <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
                     <li class="nav-item">
@@ -61,27 +61,38 @@
             <button type="button" class="btn btn-primary text-dark text-bold"
                                         style="background-color: #FDCD02; border:none;">Search</button>
             </div>
-           
+
         </div>
 
         <!-- Add more form rows as needed -->
 
         <!-- Submit Button -->
-       
+
     </form>
 </div>
-              <table class="table table-bordered table-striped">
-                            <thead>
-                                <th scope='col'>Professional Driver</th>
-                                <th scope='col'>Activity</th>
-                                <th scope='col'>Status</th>
-                                <th scope='col'>Amount</th>
-                                <th scope='col'>Action</th>
-                            </thead>
-                            <tbody>
-                              
-                            </tbody>
-                        </table>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <th scope='col'>ID</th>
+                            <th scope='col'>PickUp Location</th>
+                            <th scope='col'>Status</th>
+                            <th scope='col'>Amount</th>
+                            <th scope='col'>Action</th>
+                        </thead>
+                        <tbody>
+                            @foreach ($invoices as $invoice)
+                            <tr>
+                                <td>{{ $invoice->id }}</td>
+                                <td>{{ $invoice->pickup_address }}</td>
+                                <td>{{ $invoice->status }}</td>
+                                <td>{{ $invoice->amount }}</td>
+                                <td>
+                                    View on next tab in PDF <a href="{{ route('view.invoice', ['id' => $invoice->id]) }}" target="_blank">here</a>
+                                    Download in PDF <a href="{{ route('download.invoice', ['id' => $invoice->id]) }}">here</a>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
               </div><!-- /.card-body -->
             </div>

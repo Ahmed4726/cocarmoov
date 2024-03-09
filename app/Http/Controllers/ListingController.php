@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Car;
+use App\Models\Invoice;
 
 class ListingController extends Controller
 {
@@ -30,8 +31,19 @@ class ListingController extends Controller
         $listing->package_amount = $request->PackageAmount;
         $listing->car_move_departure_date_from = $request->CarMoveDepartureDateFrom;
         $listing->car_move_departure_date_to = $request->CarMoveDepartureDateTo;
+        $listing->status = 'Available';
 
         $listing->save();
+
+        $invoice = new Invoice();
+        $invoice->user_id = auth()->user()->id;
+        $invoice->car_id = $listing->id;
+        $invoice->pickup_address = $request->FromAddress;
+        $invoice->package = $request->SelectedPackage;
+        $invoice->amount = $request->PackageAmount;
+        $invoice->status = 'UnPaid';
+
+        $invoice->save();
 
         return response()->json(['success' => true, 'message' => 'Listing created successfully']);
     }
