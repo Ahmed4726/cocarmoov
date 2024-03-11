@@ -1,5 +1,9 @@
-@extends('admin.admin_layout')
-@section('content')
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+
 <div class="wrapper">
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -8,7 +12,7 @@
       <div class="container">
         <div class="row mb-2">
           <div class="col-sm-6">
-         
+
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -83,7 +87,7 @@
     		</div>
     	</div>
     </div>
-    
+
     <div class="row">
     	<div class="col-md-12">
     		<div class="panel panel-default">
@@ -148,7 +152,5 @@
     </div>
 </div>
 </section>
-<link href="//netdna.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-@endsection
+<script src="code.jquery.com/jquery-1.11.1.min.js"></script>
+

@@ -137,7 +137,7 @@ Route::middleware('auth')->group(function () {
     // CarMove
     Route::get('/missions', [MissionController::class, 'index'])->name('missions');
     Route::get('/booking/{id}', [MissionController::class, 'booking'])->name('booking');
-    Route::post('/book-ride', [MissionController::class, 'bookRide'])->name('ride');
+    Route::post('/book-ride', [MissionController::class, 'bookRide'])->name('book-ride');
 
 
 

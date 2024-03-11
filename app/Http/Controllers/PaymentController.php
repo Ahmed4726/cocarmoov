@@ -25,27 +25,19 @@ class PaymentController extends Controller
         $user = Auth::user();
 
         // Create or retrieve a Stripe Customer associated with the user
-        $stripeCustomerId = $user->stripe_customer_id;
+        // $stripeCustomerId = $user->stripe_customer_id;
 
-        if (!$stripeCustomerId) {
+        // if (!$stripeCustomerId) {
             $customer = Customer::create([
                 'payment_method' => $request->paymentMethodId,
                 'email' => $user->email,
             ]);
-
+            // dd($customer->payment_method);
             $stripeCustomerId = $customer->id;
             $user->stripe_customer_id = $stripeCustomerId;
             $user->save();
-        }
-        $paymentIntent = PaymentIntent::create([
-            'amount' => 1 * 100,
-            'currency' => 'usd',
-            'payment_method' => $request->paymentMethodId,
-            'confirmation_method' => 'manual',
-            'confirm' => true,
-            'customer' => $stripeCustomerId,
-            'return_url' =>  route('dashboard'),
-        ]);
+        // }
+
 
         return response()->json(['success' => true, 'paymentIntentId' => $request->paymentMethodId]);
     }

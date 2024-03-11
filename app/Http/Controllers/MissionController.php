@@ -6,6 +6,7 @@ use App\Models\Car;
 use App\Models\Invoice;
 use App\Models\Mission;
 use Illuminate\Http\Request;
+use Stripe\Customer;
 use Stripe\Stripe;
 use Stripe\PaymentIntent;
 
@@ -13,7 +14,7 @@ class MissionController extends Controller
 {
     public function index()
     {
-        $missions = Car::get();
+        $missions = Car::where('status','Available')->get();
         return view('missions.index',compact('missions'));
     }
 
@@ -25,6 +26,9 @@ class MissionController extends Controller
 
     public function bookRide(Request $request)
     {
+
+        $stripe = new \Stripe\StripeClient(config('services.stripe.secret'));
+        // dd($request);
         Stripe::setApiKey(config('services.stripe.secret'));
 
         $mission = new Mission();
@@ -37,25 +41,30 @@ class MissionController extends Controller
         $mission->save();
 
         // Ride Status
-        $car = Car::where('car_id', $request->car_id);
-
+        $car = Car::findOrFail($request->car_id);
         $car->status = 'Booked';
         $car->save();
-
+        // dd('not ok');
         // Payment
         $stripeCustomerId = auth()->user()->stripe_customer_id;
+        $paymentMethod = $stripe->paymentMethods->all([
+            'customer' => $stripeCustomerId,
+            'type' => 'card',
+          ]);
+        $paymentMethodId = $paymentMethod->data['0']['id'];
+
         $paymentIntent = PaymentIntent::create([
             'amount' => $request->amount * 100,
             'currency' => 'usd',
-            'payment_method' => $request->paymentMethodId,
-            'confirmation_method' => 'manual',
-            'confirm' => true,
+            'payment_method' => $paymentMethodId,
+            'automatic_payment_methods' => ['enabled' => true],
             'customer' => $stripeCustomerId,
         ]);
 
-        // Invoice Status
-        $invoice = Invoice::where('car_id',$request->car_id);
 
+        // Invoice Status
+        $invoice = Invoice::where('car_id', $request->car_id)->first();
+        // dd($invoice->status);
         $invoice->status = 'Paid';
         $invoice->save();
 
