@@ -55,7 +55,8 @@ class RegisteredUserController extends Controller
             'phone_number' => $request->phone_number,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'user_type' => $request->user_type
+            'user_type' => $request->user_type,
+            'note' => 'Submit all documents to complete your profile'
             // 'quantity' => $request->quantity,
         ]);
 

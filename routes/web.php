@@ -84,8 +84,11 @@ Route::middleware('auth')->group(function () {
     //profile
     Route::get('/show_profile', [ProfileController::class,'index'])->name('profile.index');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::post('/profile-update', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/pending-profiles',[ProfileController::class, 'pendingProfiles'])->name('profile.pending');
+    Route::get('/pending-profile-detail/{id}',[ProfileController::class, 'pendingProfilesDetails'])->name('profile.pending.details');
+    Route::post('/profile-decision',[ProfileController::class, 'profileStatus'])->name('profile.status');
 
     //Bookings
     Route::get('/bookings', [BookingController::class,'index'])->name('bookings');

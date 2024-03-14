@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\CarListed;
 use Illuminate\Http\Request;
 use App\Models\Car;
 use App\Models\Invoice;
+use Dompdf\Dompdf;
+use Illuminate\Support\Facades\Mail;
 
 class ListingController extends Controller
 {
@@ -44,6 +47,16 @@ class ListingController extends Controller
         $invoice->status = 'UnPaid';
 
         $invoice->save();
+
+
+        $pdf = new Dompdf();
+        $pdf->loadHtml(view('pdf.invoice', compact('invoice')));
+        $pdf->setPaper('A4', 'portrait');
+        $pdf->render();
+        $pdfContent = $pdf->output();
+
+
+        Mail::to(auth()->user()->email)->send(new CarListed($listing, $pdfContent));
 
         return response()->json(['success' => true, 'message' => 'Listing created successfully']);
     }

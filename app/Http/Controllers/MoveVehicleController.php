@@ -22,6 +22,12 @@ class MoveVehicleController extends Controller
         $economyPackage = null;
         $tax_notation = null;
 
+        $stripe_customer_id = null;
+        if (auth()->check()) {
+            $stripe_customer_id = auth()->user()->stripe_customer_id;
+        }
+
+
         if (in_array($selectedVehicleType, ['Citadine', 'Berline', 'Sportive', 'Monospace', '4×4', '3m3', '6m3', '9m3', '12m3', '15m3', 'Camion-benne', 'Camping-car', 'Van-aménagé']) && in_array($selectedCondition, ['En-panne', 'Accidenté'])) {
             $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         } elseif ($selectedVehicleType === 'Collection') {
@@ -81,7 +87,7 @@ class MoveVehicleController extends Controller
         }
         $isAuthenticated = Auth::check();
 
-        return view('frontend.move_vehicle', compact('car_move', 'express_package', 'economyPackage', 'premium_package', 'tax_notation', 'selectedVehicleType', 'distance', 'car_owner','isAuthenticated'));
+        return view('frontend.move_vehicle', compact('car_move', 'express_package', 'economyPackage', 'premium_package', 'tax_notation', 'selectedVehicleType', 'distance', 'car_owner','isAuthenticated','stripe_customer_id'));
     }
 
 

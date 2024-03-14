@@ -348,7 +348,7 @@
             </div>
         </div>
             <button class="btn btn-warning" type="button" onclick="prevStep(3)">Previous</button>
-            <button class="btn btn-warning" type="button" onclick="nextStep(3)">Next</button>
+            <button class="btn btn-warning" type="button" onclick="handleStep({{ $stripe_customer_id ? 'true' : 'false' }})">Next</button>
         </form>
 </div>
 
@@ -405,9 +405,10 @@
             <input type="datetime-local" class="form-control mb-2" name="CarMoveDepartureDateTo" id="hiddenCarMoveDepartureDateTo" placeholder="Departure Date To" readonly>
         </div>
     </div>
-
-    <button class="btn btn-warning" type="button" onclick="sendAllFormData()">List my Car</button>
-
+    <br>
+    <div class="text-center">
+        <button class="btn btn-warning" type="button" onclick="sendAllFormData()">List my Car</button>
+    </div>
 </form>
 </div>
 
@@ -452,6 +453,21 @@ updateProgressBar(1,true);
                 displayError.textContent = '';
             }
         });
+
+        function handleStep(hasStripeCustomerId) {
+            var Step = '';
+            if(!hasStripeCustomerId) {
+                Step = 3;
+            } else {
+                Step = 4;
+                storeHiddenValues();
+            }
+
+            nextStep(Step);
+        }
+
+
+
 
 // Function to submit payment
 function submitPayment() {
@@ -549,6 +565,10 @@ function nextStep(step) {
     {
         // alert(step)
         $('#step1').addClass('d-none');
+    }
+    if(step == 4)
+    {
+        $('#step3').addClass('d-none');
     }
   const currentStepElement = document.getElementById(`step${step}`);
 

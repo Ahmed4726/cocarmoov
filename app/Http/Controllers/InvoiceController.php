@@ -17,7 +17,8 @@ class InvoiceController extends Controller
         if($user_id == 1)
         {
             $invoices = Invoice::leftJoin('users','users.id','=','invoices.user_id')
-                                ->select('invoices.id','invoices.pickup_address','users.last_name','users.family_name','invoices.amount','invoices.status')
+                                ->leftJoin('cars','cars.id','=','invoices.car_id')
+                                ->select('invoices.id','invoices.pickup_address','users.last_name','users.family_name','invoices.amount','invoices.status','cars.to_address')
                                 ->get();
         }
         else
@@ -31,9 +32,10 @@ class InvoiceController extends Controller
     public function view($id)
     {
         $invoice = Invoice::leftJoin('users', 'users.id', '=', 'invoices.user_id')
-            ->where('invoices.id', $id)
-            ->select('invoices.id', 'invoices.pickup_address', 'users.last_name', 'users.family_name', 'invoices.amount', 'invoices.status')
-            ->first();
+                            ->leftJoin('cars','cars.id','=','invoices.car_id')
+                            ->select('invoices.id','invoices.pickup_address','users.last_name','users.family_name','invoices.amount','invoices.status','cars.to_address')
+                            ->where('invoices.id', $id)
+                            ->first();
 
         // Check if the invoice exists
         if (!$invoice) {
