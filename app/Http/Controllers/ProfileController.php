@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Mail\AdminProfileNotificationEmail;
+use App\Mail\ProfileStatusEmail;
+use App\Mail\UserProfileNotificationEmail;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
@@ -67,7 +71,11 @@ class ProfileController extends Controller
         }
 
         $user->status = 'Under Review';
+        $user->note = 'Thank You for providing your details! Your profile is Under Review';
         $user->save();
+
+        Mail::to('admin123@gmail.com')->send(new AdminProfileNotificationEmail($user, $request->all()));
+        Mail::to($user->email)->send(new UserProfileNotificationEmail($user, $request->all()));
 
         // Redirect or return a response here
         // return true;
@@ -128,6 +136,8 @@ class ProfileController extends Controller
         $profile->status = $status;
 
         $profile->save();
+
+        Mail::to($profile->email)->send(new ProfileStatusEmail($profile, $profile->note));
 
         return redirect()->route('profile.pending');
     }

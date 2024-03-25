@@ -26,8 +26,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ListingController;
 use App\Http\Controllers\MissionController;
 use App\Http\Controllers\RolesAndPermissionController;
-
-
+use App\Http\Controllers\WithdrawalController;
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Support\Facades\Route;
@@ -142,8 +141,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/booking/{id}', [MissionController::class, 'booking'])->name('booking');
     Route::post('/book-ride', [MissionController::class, 'bookRide'])->name('book-ride');
 
-
-
+    Route::get('/balance', [WithdrawalController::class, 'index'])->name('balance');
+    Route::post('/withdraw', [WithdrawalController::class, 'withdraw'])->name('withdraw');
 });
 
 Route::get('/get-csrf-token', function () {

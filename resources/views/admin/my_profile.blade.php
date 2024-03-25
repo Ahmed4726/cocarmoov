@@ -163,6 +163,11 @@
                     <label for="birthday">Numéro de carte bancaire</label>
                     <input type="text" class="form-control" id="card_number" name="card_number" value="{{ $user->card_number }}">
                     </div>
+                    <div class="form-group">
+                        <label for="birthday">Stripe account ID</label>
+                        <input type="text" class="form-control" id="stripe_account_id" name="stripe_account_id" value="{{ $user->stripe_account_id }}">
+                    </div>
+
                     <!-- /.post -->
                     <h2>Fichiers</h2>
 

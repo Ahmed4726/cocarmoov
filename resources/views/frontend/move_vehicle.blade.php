@@ -444,6 +444,7 @@ updateProgressBar(1,true);
         var elements = stripe.elements();
         var card = elements.create('card');
         card.mount('#card-element');
+        // alert(stripe)
         // alert(card)
         card.addEventListener('change', function (event) {
             var displayError = document.getElementById('card-errors');

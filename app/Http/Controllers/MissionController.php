@@ -2,13 +2,23 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Car;
 use App\Models\Invoice;
 use App\Models\Mission;
+use App\Models\User;
+use Dompdf\Dompdf;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Stripe\Customer;
 use Stripe\Stripe;
 use Stripe\PaymentIntent;
+use App\Mail\CarBooked;
+use App\Mail\CarDriver;
+use App\Models\Balance;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use Stripe\PaymentMethod;
+use Stripe\StripeClient;
 
 class MissionController extends Controller
 {
@@ -26,10 +36,8 @@ class MissionController extends Controller
 
     public function bookRide(Request $request)
     {
-
-        $stripe = new \Stripe\StripeClient(config('services.stripe.secret'));
-        // dd($request);
         Stripe::setApiKey(config('services.stripe.secret'));
+        $stripe = new StripeClient(config('services.stripe.secret'));
 
         $mission = new Mission();
         $mission->user_id = auth()->user()->id;
@@ -44,22 +52,22 @@ class MissionController extends Controller
         $car = Car::findOrFail($request->car_id);
         $car->status = 'Booked';
         $car->save();
-        // dd('not ok');
-        // Payment
-        $stripeCustomerId = auth()->user()->stripe_customer_id;
-        $paymentMethod = $stripe->paymentMethods->all([
-            'customer' => $stripeCustomerId,
-            'type' => 'card',
-          ]);
-        $paymentMethodId = $paymentMethod->data['0']['id'];
 
-        $paymentIntent = PaymentIntent::create([
-            'amount' => $request->amount * 100,
-            'currency' => 'usd',
-            'payment_method' => $paymentMethodId,
-            'automatic_payment_methods' => ['enabled' => true],
-            'customer' => $stripeCustomerId,
-        ]);
+        // Payment
+        $car_owner = User::where('id', $request->owner_id)->first();
+        $customer = Customer::retrieve($car_owner->stripe_customer_id);
+
+        $paymentMethod = PaymentMethod::all(['customer' => $car_owner->stripe_customer_id, 'type' => 'card']);
+
+            $paymentMethodId = $paymentMethod->data['0']['id'];
+            $paymentIntent = PaymentIntent::create([
+                'amount' => $request->amount * 100,
+                'currency' => 'usd',
+                'payment_method' => $paymentMethodId, // Use the correct Payment Method ID here
+                'customer' => $car_owner->stripe_customer_id,
+                'confirm' => true, // This is required to confirm the PaymentIntent
+                'return_url' => route('welcome'),
+            ]);
 
 
         // Invoice Status
@@ -68,6 +76,29 @@ class MissionController extends Controller
         $invoice->status = 'Paid';
         $invoice->save();
 
+
+        $pdf = new Dompdf();
+        $pdf->loadHtml(view('pdf.invoice', compact('invoice')));
+        $pdf->setPaper('A4', 'portrait');
+        $pdf->render();
+        $pdfContent = $pdf->output();
+
+        // $car_owner = User::where('id', $request->owner_id)->first();
+
+        $listing = Car::where('id', $request->car_id)->first();
+
+        $driver = User::where('id', auth()->user()->id)->first();
+
+        Mail::to($car_owner->email)->send(new CarBooked($listing, $pdfContent, $driver, $mission));
+
+        Mail::to($driver->email)->send(new CarDriver($listing, $pdfContent, $car_owner, $mission));
+
+        $balance = new Balance();
+        $balance->user_id = auth()->user()->id;
+        $balance->amount = $request->amount - ($request->amount * 20 / 100);
+        $balance->status = 'Pending';
+
+        $balance->save();
 
         return redirect()->route('missions');
     }

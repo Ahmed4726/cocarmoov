@@ -19,23 +19,36 @@ class PaymentController extends Controller
     public function processPayment(Request $request)
     {
         // dd("ok");
-        Stripe::setApiKey(config('services.stripe.secret'));
+// Set the Stripe API key
+Stripe::setApiKey(config('services.stripe.secret'));
 
-        // Get the authenticated user
-        $user = Auth::user();
+            // Get the authenticated user
+            $user = Auth::user();
 
-        // Create or retrieve a Stripe Customer associated with the user
-        // $stripeCustomerId = $user->stripe_customer_id;
+            // Create a new Stripe Connected Account
+            $connectedAccount = \Stripe\Account::create([
+                'type' => 'standard', // or 'express' or 'custom', depending on your use case
+            ]);
 
-        // if (!$stripeCustomerId) {
+            // dd($connectedAccount);
+            // Create or retrieve a Stripe Customer associated with the user
             $customer = Customer::create([
                 'payment_method' => $request->paymentMethodId,
                 'email' => $user->email,
+                'metadata' => [
+                    'connected_account_id' => $connectedAccount->id,
+                ],
             ]);
-            // dd($customer->payment_method);
+
+            // dd($customer);
+            // Get the Stripe Customer ID
             $stripeCustomerId = $customer->id;
+
+            // Save the Stripe Customer ID to the user model
             $user->stripe_customer_id = $stripeCustomerId;
+            $user->stripe_account_id = $connectedAccount->id;
             $user->save();
+
         // }
 
 
