@@ -20,6 +20,7 @@ use App\Http\Controllers\AlertController;
 use App\Http\Controllers\CardController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\PasswordController;
+use App\Http\Controllers\SocialauthController;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\MoveVehicleController;
 use App\Http\Controllers\PaymentController;
@@ -58,7 +59,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/main-dashboard', function () {
         return view('admin.admin_dashboard');
     })->name('dashboard');
-
 
     //Roles and Permissions
     Route::get('/roles-and-permissions', [RolesAndPermissionController::class,'index'])->name('roles.and.permissions');
@@ -144,6 +144,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/balance', [WithdrawalController::class, 'index'])->name('balance');
     Route::post('/withdraw', [WithdrawalController::class, 'withdraw'])->name('withdraw');
 });
+//Social auth
+Route::get('login/{provider}',[SocialauthController::class, 'redirectToProvider']);
+Route::get('login/{provider}/callback',[SocialauthController::class, 'handleProviderCallback']);
 
 Route::get('/get-csrf-token', function () {
     return response()->json(['csrf_token' => csrf_token()]);

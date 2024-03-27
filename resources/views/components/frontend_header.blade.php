@@ -88,7 +88,7 @@
                         <!-- <label for="password">Mot de passe</label> -->
                         <input type="password" class="form-control" id="password" name="password" placeholder="entrez votre Mot de passe"  required>
                     </div>
-					<br>
+				
                     <!-- Remember Me -->
                     <!-- <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="remember_me" name="remember">
@@ -96,11 +96,47 @@
                     </div> -->
                     <!-- Forgot Password Link -->
                     <div class="form-group">
-                        <a href="{{ route('password.request') }}" class="text-muted">Forgot your password?</a>
+                    <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12 text-end">
+            <a href="{{ route('password.request') }}">Mot de passe oublié ?<span style="color:#fdcd02"></span></a>
+        </div>
+    </div>
+</div>
                     </div>
                     <!-- Login button -->
                     <button type="submit" class="btn btn-warning" style="width:100%;">Connexion</button>
                 </form>
+                <div class="container">
+                <div class="row justify-content-center">
+        <div class="col-md-6 text-center mt-2">
+        <p>--------- ou avec ---------</p>
+        <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <a href="{{ url('login/google') }}" class="text-decoration-none me-3">
+                                        <img src="{{ asset('images/wallet/google..png') }}" width="60%" height="auto">
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" class="text-decoration-none me-3">
+                                    <img src="{{ asset('images/wallet/facebook..png') }}" width="60%" height="auto">
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                <img src="{{ asset('images/wallet/apple..png') }}" width="60%" height="auto">
+                                       
+                                    </a>
+                                </div>
+                            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <a href="{{ route('register') }}" class="text-muted">Pas de compte ?<span style="color:#fdcd02"> S’inscrire</span></a>
+        </div>
+    </div>
+
+</div>
             </div>
         </div>
     </div>
@@ -185,8 +221,9 @@
                         @enderror
                     </div>
 
+                    <i class="fas fa-check rounded p-1" style="background-color:#fdcd02; color:white"></i> En vous inscrivant, vous acceptez nos <a href="https://cocarmoov.fr/mentions-legales">Conditions Générales d’Utilisation</a> et notre <a href="https://cocarmoov.fr/politique-de-confidentialite">Politique de confidentialité</a>.</li>
                     <div class="form-group">
-                        <input type="checkbox" id="checkbox" name="checkbox_name"><span>J'accepte les Conditions Générales d'Utilisation</span>
+                        <input type="checkbox" id="checkbox" name="checkbox_name"><span>Je ne souhaite pas recevoir d’informations, de bons plans et de cadeaux de CoCarmoov.</span>
                         @error('checkbox_name')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
@@ -195,7 +232,35 @@
                     <!-- Sign Up button -->
                     <button type="submit" class="btn btn-warning" style="width:100%;">S'inscrire</button>
                 </form>
-
+                <div class="container">
+                <div class="row justify-content-center">
+        <div class="col-md-6 text-center mt-2">
+        <p>--------- ou avec ---------</p>
+        <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <a href="{{ url('login/google') }}" class="text-decoration-none me-3">
+                                        <img src="{{ asset('images/wallet/google..png') }}" width="60%" height="auto">
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" class="text-decoration-none me-3">
+                                    <img src="{{ asset('images/wallet/facebook..png') }}" width="60%" height="auto">
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                <img src="{{ asset('images/wallet/apple..png') }}" width="60%" height="auto">
+                                       
+                                    </a>
+                                </div>
+                            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <a href="{{ route('login') }}" class="text-muted">Déjà un compte ?<span style="color:#fdcd02"> S’identifier</span></a>  
+        </div>
+    </div>
+                </div>
             </div>
         </div>
     </div>
