@@ -29,10 +29,10 @@
         <a href="#" class="nav-link">Rechercher un Co-convoyage</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Tableau de bord</a>
+        <a href="{{route('dashboard')}}" class="nav-link">Tableau de bord</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Rechercher un Carmoov</a>
+        <a href="{{ route('missions') }}" class="nav-link">Rechercher un Carmoov</a>
       </li>
     </ul>
 
@@ -90,7 +90,7 @@
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <ul class="nav nav-pills nav-sidebar flex-column pb-3" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item {{ Request::is('main-dashboard') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -348,75 +348,42 @@
         </li>
     </ul>
 </li>
-<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
+<li class="nav-item {{ Request::is('carmoovs') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="/carmoovs" class="nav-link">
         <i class="nav-icon fas fa-car"></i>
         <p>
-        Carmoovs
-            <i class="right fas fa-angle-left"></i>
+            Carmoovs
         </p>
     </a>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="/carmoovs" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light text-hover">CarMoovs</p>
-            </a>
-        </li>
-    </ul>
 </li>
+
 <li class="nav-item {{ Request::is('show_profile') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
+    <a href="{{ route('profile.index') }}" class="nav-link">
         <i class="nav-icon fas fa-user"></i>
         <p>
-        Profil
-            <i class="right fas fa-angle-left"></i>
+            Profil
         </p>
     </a>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('show_profile') ? 'active' : '' }} text-hover rounded">
-            <a href="{{route('profile.index')}}" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Orders 1</p>
-            </a>
-        </li>
-    </ul>
 </li>
+
 <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-envelope"></i>
         <p>
-        Demandes
-            <i class="right fas fa-angle-left"></i>
+            Demandes
         </p>
     </a>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="far fa-circle nav-icon text-dark"></i>
-                <p class="text-dark">Orders 1</p>
-            </a>
-        </li>
-    </ul>
 </li>
 
 <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="/cards" class="nav-link">
         <i class="nav-icon fas fa-credit-card"></i>
         <p>
-        Paiements
-            <i class="right fas fa-angle-left"></i>
+            Paiements
         </p>
     </a>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="/cards" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Cards</p>
-            </a>
-        </li>
-    </ul>
 </li>
+
 <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-car"></i>
@@ -435,23 +402,15 @@
     </ul>
 </li>
 <li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
+    <a href="{{ route('alerts') }}" class="nav-link">
         <i class="nav-icon fas fa-bell"></i>
         <p>
-        Alertes
-            <i class="right fas fa-angle-left"></i>
+            Alertes
         </p>
     </a>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('alerts') ? 'active' : '' }} text-hover rounded">
-            <a href="{{ route('alerts') }}" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Orders 1</p>
-            </a>
-        </li>
-    </ul>
 </li>
-<li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
+
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-car-side"></i>
         <p>
@@ -460,7 +419,7 @@
         </p>
     </a>
     <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('alerts') ? 'active' : '' }} text-hover rounded">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="{{ route('alerts') }}" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
                 <p class="text-light">Orders 1</p>
@@ -468,7 +427,7 @@
         </li>
     </ul>
 </li>
-<li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-taxi"></i>
         <p>
@@ -477,7 +436,7 @@
         </p>
     </a>
     <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('alerts') ? 'active' : '' }} text-hover rounded">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="{{ route('alerts') }}" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
                 <p class="text-light">Orders 1</p>
@@ -485,7 +444,7 @@
         </li>
     </ul>
 </li>
-<li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-certificate"></i>
         <p>
@@ -494,7 +453,7 @@
         </p>
     </a>
     <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('alerts') ? 'active' : '' }} text-hover rounded">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="{{ route('alerts') }}" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
                 <p class="text-light">Orders 1</p>
@@ -502,7 +461,7 @@
         </li>
     </ul>
 </li>
-<li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-car"></i>
         <p>
@@ -511,7 +470,7 @@
         </p>
     </a>
     <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('alerts') ? 'active' : '' }} text-hover rounded">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="{{ route('alerts') }}" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
                 <p class="text-light">Orders 1</p>
@@ -520,7 +479,7 @@
     </ul>
 </li>
 
-<li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-shipping-fast"></i>
         <p>
@@ -529,7 +488,7 @@
         </p>
     </a>
     <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('alerts') ? 'active' : '' }} text-hover rounded">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="{{ route('alerts') }}" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
                 <p class="text-light">Orders 1</p>
@@ -541,7 +500,7 @@
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-book"></i>
         <p>
-        Bookings
+        Réservations
             <i class="right fas fa-angle-left"></i>
         </p>
     </a>
@@ -554,7 +513,7 @@
         </li>
     </ul>
 </li>
-<li class="nav-item {{ Request::is('roles-and-permissions','/get-permissions/{role_id}','roles') ? 'menu-open menu-is-opening' : '' }}">
+<li class="nav-item {{ Request::is('roles-and-permissions','permissions','roles') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-key"></i>
         <p>
@@ -579,7 +538,7 @@
         </li>
     </ul>
     <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('/permissions') ? 'active' : '' }} text-hover rounded">
+        <li class="nav-item {{ Request::is('permissions') ? 'active' : '' }} text-hover rounded">
             <a href="{{ route('permissions') }}" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
                 <p class="text-light">Autorisations</p>
@@ -587,26 +546,28 @@
         </li>
     </ul>
 </li>
-          <li class="nav-item{{ Request::is('invoices') ? ' active' : '' }}">
-    <a href="{{ route('invoice') }}" class="nav-link">
-        <i class='fas fa-file-invoice text-dark'></i>
-        <p class='text-dark'>Invoicing</p>
+         
+<li class="nav-item {{ Request::is('invoices') ? 'menu-open menu-is-opening' : '' }}">
+<a href="{{ route('invoice') }}" class="nav-link">
+        <i class='fas fa-file-invoice text-light'></i>
+        <p class='text-light'> Invoicing</p>
     </a>
 </li>
-          <li class="nav-item{{ Request::is('fullcalendar') ? ' active' : '' }}">
+
+          <!-- <li class="nav-item{{ Request::is('fullcalendar') ? ' active' : '' }}">
     <a href="#" class="nav-link">
         <i class='fas fa-calendar text-dark'></i>
         <p class='text-dark'>Calendar</p>
     </a>
-</li>
+</li> -->
 
 
           <li class="nav-item menu-open">
-            <ul class="nav nav-treeview rounded" style='background-color:#fdcd02;'>
+            <ul class="nav nav-treeview rounded">
               <li class="nav-item">
                 <a href="{{route('certification')}}" class="nav-link">
-                  <i class='fas fa-bell text-dark'></i>
-                  <p class='text-dark'>Training space</p>
+                  <i class='fas fa-bell text-light'></i>
+                  <p class='text-light'>Training space</p>
                 </a>
               </li>
             </ul>
