@@ -16,8 +16,8 @@ Route::middleware('guest')->group(function () {
     // Route::get('/show-sweetalert', function () {
     //     return view('sweetalert.show');
     // })->name('sweetalert');
-    Route::get('/sweetalert', [WelcomeController::class,'sweetalert'])->name('sweetalert');
-    Route::get('/', [WelcomeController::class,'index'])->name('welcome');
+    // Route::get('/sweetalert', [WelcomeController::class,'sweetalert'])->name('sweetalert');
+    // Route::get('/', [WelcomeController::class,'index'])->name('welcome');
     Route::get('register', [RegisteredUserController::class, 'create'])
                 ->name('register');
 
@@ -28,6 +28,8 @@ Route::middleware('guest')->group(function () {
 
     Route::post('login', [AuthenticatedSessionController::class, 'store'])
                 ->name('logged_in');
+
+    Route::post('login', [AuthenticatedSessionController::class, 'storeLogin'])->name('logoin');
 
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
                 ->name('password.request');

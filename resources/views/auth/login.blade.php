@@ -46,7 +46,7 @@
 </div>
                     <div class="card mx-auto rounded">
                         <div class="card-body">
-                            <form id="loginForm" method="POST" action="{{ route('login') }}">
+                            <form id="loginForm" method="POST" action="{{ route('logoin') }}">
                                 @csrf
                                 <!-- Email Address -->
                                 <div class="form-group">
@@ -58,7 +58,7 @@
                                     <!-- <label for="password">Mot de passe</label> -->
                                     <input type="password" class="form-control" id="password" name="password" placeholder="entrez votre Mot de passe" required>
                                 </div>
-                                
+
                                 <!-- Remember Me -->
                                 <!-- <div class="form-group form-check">
                                     <input type="checkbox" class="form-check-input" id="remember_me" name="remember">
@@ -73,9 +73,9 @@
         </div>
     </div>
 </div>
- 
+
                                     <!-- <a href="{{ route('password.request') }}" class="text-muted text-end"><span style="color:#fdcd02"> </span></a> -->
-                                   
+
                                 </div>
                                 <!-- Login button -->
                                 <button type="submit" class="btn btn-warning" style="width:100%;">Connexion</button>
@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="col-md-4">
                                 <img src="{{ asset('images/wallet/apple..png') }}" width="60%" height="auto">
-                                       
+
                                     </a>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@
     </div>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>	
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- # JS Plugins -->
 <script src="{{asset('plugins/wallet/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('plugins/wallet/bootstrap/bootstrap.min.js')}}"></script>
@@ -131,7 +131,7 @@
 </body>
 </html>
     <!-- Session Status -->
- 
 
-   
+
+
 
