@@ -11,7 +11,7 @@
         @endphp
        @if ($user == null)
        <form method="post" action="{{ route('verification.send') }}" class="d-flex align-items-center">
-        <span>Your email address is not verified. Please verify your email</span>
+        <span class="bg-secondary">Your email address is not verified. Please verify your email</span>
         @csrf
         <button type="submit" class="btn btn-link" style="color: #FDCD02 !important; margin-left: 5px;">Click here</button>
     </form>

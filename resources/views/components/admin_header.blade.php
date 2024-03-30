@@ -22,18 +22,31 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{ route('insurance') }}" class="nav-link">Assistance</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Rechercher un Co-convoyage</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{route('dashboard')}}" class="nav-link">Tableau de bord</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{ route('missions') }}" class="nav-link">Rechercher un Carmoov</a>
-      </li>
+      <div class="toggle-mobile-button d-block d-sm-none">
+    <button class="navbar-toggler p-1 m-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a href="{{ route('insurance') }}" class="nav-link">Assistance</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Rechercher un Co-convoyage</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ route('dashboard') }}" class="nav-link">Tableau de bord</a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ route('missions') }}" class="nav-link">Rechercher un Carmoov</a>
+        </li>
+    </ul>
+</div>
+
+
+
     </ul>
 
     <!-- Right navbar links -->
@@ -615,13 +628,14 @@
   <script>
     function confirmLogout() {
         Swal.fire({
-            title: 'Are you sure?',
-            text: 'You will be logged out!',
+            title: 'Es-tu sûr?',
+            text: 'Vous serez déconnecté !',
             icon: 'warning',
             showCancelButton: true,
+            cancelButtonText: 'Annuler', 
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, log me out!'
+            confirmButtonText: 'Oui, déconnectez-moi !'
         }).then((result) => {
             if (result.isConfirmed) {
                 // If confirmed, submit the form
