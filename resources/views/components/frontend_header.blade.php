@@ -88,7 +88,7 @@
                         <!-- <label for="password">Mot de passe</label> -->
                         <input type="password" class="form-control" id="password" name="password" placeholder="entrez votre Mot de passe"  required>
                     </div>
-				
+
                     <!-- Remember Me -->
                     <!-- <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="remember_me" name="remember">
@@ -124,7 +124,7 @@
                                 </div>
                                 <div class="col-md-4">
                                 <img src="{{ asset('images/wallet/apple..png') }}" width="60%" height="auto">
-                                       
+
                                     </a>
                                 </div>
                             </div>
@@ -249,7 +249,7 @@
                                 </div>
                                 <div class="col-md-4">
                                 <img src="{{ asset('images/wallet/apple..png') }}" width="60%" height="auto">
-                                       
+
                                     </a>
                                 </div>
                             </div>
@@ -257,7 +257,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-md-6 text-center">
-            <a href="{{ route('logged_in') }}" class="text-muted">Déjà un compte ?<span style="color:#fdcd02"> S’identifier</span></a>  
+            <a href="{{ route('login') }}" class="text-muted">Déjà un compte ?<span style="color:#fdcd02"> S’identifier</span></a>
         </div>
     </div>
                 </div>
@@ -282,7 +282,7 @@
             body: new URLSearchParams(new FormData(form)),
         })
         .then(response => {
-            if (response.status === 401) {
+            if (response.status === 200) {
                 // If login is successful, show success message
                 Swal.fire({
                     icon: 'success',
@@ -293,7 +293,7 @@
                     // Redirect to the dashboard after user confirms
                     window.location.href = '{{ route("dashboard") }}';
                 });
-            } else if (response.status === 200) {
+            } else if (response.status === 401) {
                 // If login fails, show error message
                 Swal.fire({
                     icon: 'error',
