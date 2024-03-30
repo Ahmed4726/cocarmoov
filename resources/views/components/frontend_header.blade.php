@@ -257,7 +257,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-md-6 text-center">
-            <a href="{{ route('login') }}" class="text-muted">Déjà un compte ?<span style="color:#fdcd02"> S’identifier</span></a>  
+            <a href="{{ route('logged_in') }}" class="text-muted">Déjà un compte ?<span style="color:#fdcd02"> S’identifier</span></a>  
         </div>
     </div>
                 </div>
