@@ -128,6 +128,86 @@
             </a>
         </li>
     </ul>
+    <!-- private individual driver -->
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-money-bill-wave nav-icon text-light"></i>
+                <p class="text-light">Co-convoyages en cours</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-money-bill-wave nav-icon text-light"></i>
+                <p class="text-light">Demandes envoyées</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-money-bill-wave nav-icon text-light"></i>
+                <p class="text-light">    Propositions envoyées
+</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-money-bill-wave nav-icon text-light"></i>
+                <p class="text-light">    Rechercher un véhicule
+</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-money-bill-wave nav-icon text-light"></i>
+                <p class="text-light">    Créer une alerte
+</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-money-bill-wave nav-icon text-light"></i>
+                <p class="text-light">    Paiements en cours
+</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-money-bill-wave nav-icon text-light"></i>
+                <p class="text-light">    Paiements de l'année
+</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-money-bill-wave nav-icon text-light"></i>
+                <p class="text-light">    Économies de l'année
+</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-money-bill-wave nav-icon text-light"></i>
+                <p class="text-light">     Voir mon profil
+</p>
+            </a>
+        </li>
+    </ul>
     <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
@@ -248,7 +328,55 @@
             </a>
         </li>
     </ul>
-    <ul class="nav nav-treeview">
+    <!-- <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul> -->
+    <!-- <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul> -->
+    <!-- <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul> -->
+    <!-- <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul> -->
+    <!-- <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul> -->
+    <!-- <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="fas fa-road nav-icon text-light"></i>
+                <p class="text-light text-hover">Kilomètres parcourus</p>
+            </a>
+        </li>
+    </ul> -->
+    <!-- <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="fas fa-road nav-icon text-light"></i>
@@ -263,8 +391,8 @@
                 <p class="text-light text-hover">Kilomètres parcourus</p>
             </a>
         </li>
-    </ul>
-    <ul class="nav nav-treeview">
+    </ul> -->
+    <!-- <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="fas fa-road nav-icon text-light"></i>
@@ -279,8 +407,8 @@
                 <p class="text-light text-hover">Kilomètres parcourus</p>
             </a>
         </li>
-    </ul>
-    <ul class="nav nav-treeview">
+    </ul> -->
+    <!-- <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="fas fa-road nav-icon text-light"></i>
@@ -295,63 +423,15 @@
                 <p class="text-light text-hover">Kilomètres parcourus</p>
             </a>
         </li>
-    </ul>
-    <ul class="nav nav-treeview">
+    </ul> -->
+    <!-- <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="fas fa-road nav-icon text-light"></i>
                 <p class="text-light text-hover">Kilomètres parcourus</p>
             </a>
         </li>
-    </ul>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="fas fa-road nav-icon text-light"></i>
-                <p class="text-light text-hover">Kilomètres parcourus</p>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="fas fa-road nav-icon text-light"></i>
-                <p class="text-light text-hover">Kilomètres parcourus</p>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="fas fa-road nav-icon text-light"></i>
-                <p class="text-light text-hover">Kilomètres parcourus</p>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="fas fa-road nav-icon text-light"></i>
-                <p class="text-light text-hover">Kilomètres parcourus</p>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="fas fa-road nav-icon text-light"></i>
-                <p class="text-light text-hover">Kilomètres parcourus</p>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="fas fa-road nav-icon text-light"></i>
-                <p class="text-light text-hover">Kilomètres parcourus</p>
-            </a>
-        </li>
-    </ul>
+    </ul> -->
     <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
@@ -361,6 +441,9 @@
         </li>
     </ul>
 </li>
+
+<!-- Private car owner permissions-->
+
 <li class="nav-item {{ Request::is('carmoovs') ? 'menu-open menu-is-opening' : '' }}">
     <a href="/carmoovs" class="nav-link">
         <i class="nav-icon fas fa-car"></i>
@@ -369,16 +452,836 @@
         </p>
     </a>
 </li>
-
 <li class="nav-item {{ Request::is('show_profile') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="{{ route('profile.index') }}" class="nav-link">
+    <a href="#" class="nav-link">
         <i class="nav-icon fas fa-user"></i>
         <p>
-            Profil
+        Profil
+            <i class="right fas fa-angle-left"></i>
         </p>
     </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('show_profile') ? 'active' : '' }} text-hover rounded">
+            <a href="{{route('profile.index')}}" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Mes informations</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Voir mon profil</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Notifications</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light"> Inviter une connaissance</p>
+            </a>
+        </li>
+    </ul>
+    <!-- private individual driver -->
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">  Inviter un ami</p>
+            </a>
+        </li>
+    </ul>
+   
+</li>
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-user"></i>
+        <p>
+        Publier un Carmoov
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('show_profile') ? 'active' : '' }} text-hover rounded">
+            <a href="{{route('profile.index')}}" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Calculer un devis</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Publier un Carmoov</p>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-user"></i>
+        <p>
+        Commandes
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Modifier le Carmoov</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Documents de mission</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Détails</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Confirmer la livraison</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Laisser un avis</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Reçus des dépenses</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Voir mes Carmoovs</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Carmoovs en cours</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Carmoovs archivés</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Remettre en ligne</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Signaler un problème</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Carmooveur absent</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Livraison tardive</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Pas de remise carburant</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Excès de kilométrage</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Service annexe absent</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Dommage extérieur</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Dommage intérieur</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Une amende</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Un autre problème</p>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-user"></i>
+        <p>
+        Propositions
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Propositions reçues</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Propositions non lues</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Propositions en attente</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Propositions traitées</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Accepter la réservation</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Rejeter la réservation</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Accepter le prix</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Rejeter le prix</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Accepter les dates</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Rejeter les dates</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Accepter la durée</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Rejeter la durée</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Accepter le kilométrage</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Rejeter le kilométrage</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Profil du Carmooveur</p>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-user"></i>
+        <p>
+        Paiements
+        
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Historique des paiements</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Paiements en cours</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Détails</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Télécharger la facture</p>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-user"></i>
+        <p>
+        Assistance
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Voir la FAQ</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Contacter CoCarmoov</p>
+            </a>
+        </li>
+    </ul>
 </li>
 
+<!-- private individual driver -->
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-user"></i>
+        <p>
+        Rechercher un Carmoov
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Offres de Co-convoyage</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Rechercher un Carmoov</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Co-convoyages sur carte</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Détails</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Profil du Client</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Filtrer</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Demander à réserver</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Proposer un kilométrage</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Proposer des dates</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Proposer une durée</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Réserver</p>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-user"></i>
+        <p>
+        Réservations
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Détails</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Télécharger le contrat</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Photos d'enlèvement</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Confirmer l'enlèvement</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Confirmer la livraison</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Photos de livraison</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Contrat signé</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Déclarer les frais</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Nombre de covoiturés</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Gains du covoiturage</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Nombre de colis-voiturage</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Gains du colis-voiturage</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Clôturer</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Laisser un avis</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Voir mes Co-convoyages</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Co-convoyages en cours</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Historique des Co-convoyages</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Signaler un problème</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Contact injoignable</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Adresse incorrecte</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Véhicule absent</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Description erronée</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Hors normes routières</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Véhicule en réserve</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Une panne</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Un autre problème</p>
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-user"></i>
+        <p>
+        Propositions
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Demandes envoyées</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Propositions envoyées</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Réserver</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Annuler la demande</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Réserver</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Proposer un kilométrage</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Proposer des dates</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Proposer une durée</p>
+            </a>
+        </li>
+    </ul>
+</li>
 <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-envelope"></i>
@@ -397,23 +1300,15 @@
     </a>
 </li>
 
-<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
+<li class="nav-item {{ Request::is('#') ? 'active' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-car"></i>
         <p>
-        Co-convoyages
-            <i class="right fas fa-angle-left"></i>
+            Co-convoyages
         </p>
     </a>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Orders 1</p>
-            </a>
-        </li>
-    </ul>
 </li>
+
 <li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
     <a href="{{ route('alerts') }}" class="nav-link">
         <i class="nav-icon fas fa-bell"></i>
@@ -423,109 +1318,58 @@
     </a>
 </li>
 
-<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
+<li class="nav-item {{ Request::is('#') ? 'active' : '' }}">
+    <a href="{{ route('alerts') }}" class="nav-link">
         <i class="nav-icon fas fa-car-side"></i>
         <p>
-        Proposer un Carmoov
-            <i class="right fas fa-angle-left"></i>
+            Proposer un Carmoov
         </p>
     </a>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="{{ route('alerts') }}" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Orders 1</p>
-            </a>
-        </li>
-    </ul>
-</li>
-<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-taxi"></i>
-        <p>
-        Rechercher un Carmoov
-            <i class="right fas fa-angle-left"></i>
-        </p>
-    </a>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="{{ route('alerts') }}" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Orders 1</p>
-            </a>
-        </li>
-    </ul>
-</li>
-<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-certificate"></i>
-        <p>
-        Certifications
-            <i class="right fas fa-angle-left"></i>
-        </p>
-    </a>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="{{ route('alerts') }}" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Orders 1</p>
-            </a>
-        </li>
-    </ul>
-</li>
-<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-car"></i>
-        <p>
-        Convoyages
-            <i class="right fas fa-angle-left"></i>
-        </p>
-    </a>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="{{ route('alerts') }}" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Orders 1</p>
-            </a>
-        </li>
-    </ul>
 </li>
 
-<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
+<li class="nav-item {{ Request::is('#') ? 'active' : '' }}">
+    <a href="{{ route('alerts') }}" class="nav-link">
+        <i class="nav-icon fas fa-taxi"></i>
+        <p>
+            Rechercher un Carmoov
+        </p>
+    </a>
+</li>
+
+<li class="nav-item {{ Request::is('#') ? 'active' : '' }}">
+    <a href="{{ route('alerts') }}" class="nav-link">
+        <i class="nav-icon fas fa-certificate"></i>
+        <p>
+            Certifications
+        </p>
+    </a>
+</li>
+
+<li class="nav-item">
+    <a href="{{ route('alerts') }}" class="nav-link {{ Request::is('#') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-car"></i>
+        <p>
+            Convoyages
+        </p>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="{{ route('alerts') }}" class="nav-link {{ Request::is('#') ? 'active' : '' }}">
         <i class="nav-icon fas fa-shipping-fast"></i>
         <p>
-        Transports
-            <i class="right fas fa-angle-left"></i>
+            Transports
         </p>
     </a>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="{{ route('alerts') }}" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Orders 1</p>
-            </a>
-        </li>
-    </ul>
 </li>
-<li class="nav-item {{ Request::is('bookings') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-book"></i>
+<!-- <li class="nav-item">
+    <a href="{{ route('alerts') }}" class="nav-link {{ Request::is('#') ? 'active' : '' }}">
+        <i class="nav-icon fas fa-shipping-fast"></i>
         <p>
-        Réservations
-            <i class="right fas fa-angle-left"></i>
+            Transports
         </p>
     </a>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('bookings') ? 'active' : '' }} text-hover rounded">
-            <a href="{{ route('bookings') }}" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Orders 1</p>
-            </a>
-        </li>
-    </ul>
-</li>
+</li> -->
+
 <li class="nav-item {{ Request::is('roles-and-permissions','permissions','roles') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-key"></i>

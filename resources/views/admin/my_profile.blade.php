@@ -53,23 +53,23 @@
                     <label class="form-label" for="note">Note from admin</label>
                     <input class="form-control" name="note" id="note" value="{{$user->note}}" readonly>
                 @endif
-                      Status:  <span style="color:
-                      @switch($user->status)
-                          @case('Pending')
-                              orange; /* Or any other color for pending status */
-                              @break
-                          @case('Under Review')
-                              blue; /* Or any other color for under review status */
-                              @break
-                          @case('Verified')
-                              green; /* Or any other color for verified status */
-                              @break
-                          @default
-                              black; /* Default color */
-                      @endswitch
-                  ">
-                      {{ $user->status }}
-                  </span>
+                Status: <span style="color:
+    @switch($user->status)
+        @case('Pending')
+            orange; /* Or any other color for pending status */
+            @break
+        @case('Under Review')
+            blue; /* Or any other color for under review status */
+            @break
+        @case('Verified')
+            green; /* Or any other color for verified status */
+            @break
+        @default
+            black; /* Default color */
+    @endswitch
+">
+    {{ $user->status }}
+</span>
                 <form id="profile_form" method="POST" action="/profile-update" enctype="multipart/form-data">
                         @csrf
                     <!-- Email Address -->
@@ -338,11 +338,11 @@
                         @endif
                         <input type="file" class="form-control" name="vehicle_condition_test" id="vehicle_condition_test" onchange="previewImage(this, 'vehicle_condition_testPreview')">
                     </div>
-
-                    <div class="text-center">
-                        <button class="btn btn-warning" type="submit">Submit Profile</button>
-                    </div>
-
+                    @if($user->status == 'Pending' || $user->status == 'Under review')
+    <div class="text-center">
+        <button class="btn btn-warning" type="submit">Submit Profile</button>
+    </div>
+@endif
 
                             <!-- /.post -->
                         </div>

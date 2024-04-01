@@ -11,6 +11,8 @@
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="{{ asset('images/wallet/favicon.jpg') }}" type="image/x-icon">
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="{{ asset('plugins/adminlte/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
   <!-- iCheck -->
