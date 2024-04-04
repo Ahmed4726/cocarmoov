@@ -3,6 +3,24 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <style>
+
+    /* CSS for hiding the options by default and showing them on hover */
+.assistance-options {
+    display: none;
+    position: absolute;
+    /* z-index: 1; */
+}
+
+.assistance:hover .assistance-options {
+    display: block;
+}
+
+/* Style for the assistance trigger */
+.assistance-trigger {
+    cursor: pointer;
+    /* Add more styles as needed */
+}
+
   .nav-item.active a {
     background-color: #fdcd02; /* Set your desired background color */
     color: #000; /* Set your desired text color */
@@ -29,12 +47,21 @@
 </div>
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav">
+    {{-- <ul class="navbar-nav"> --}}
         @if (check_persmission('Assistance'))
-        <li class="nav-item">
-            <a href="{{ route('insurance') }}" class="nav-link">Assistance</a>
-        </li>
+            <div class="assistance">
+                <span class="assistance-trigger">Assistance</span>
+                <ul class="assistance-options">
+                    <li class="nav-item">
+                        <a href="{{ route('faq') }}" class="nav-link">Voir la FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('contact_us') }}" class="nav-link">Contacter CoCarmoov</a>
+                    </li>
+                {{-- </ul> --}}
+            </div>
         @endif
+
         {{-- @if (check_persmission('')) --}}
         {{-- <li class="nav-item">
             <a href="#" class="nav-link">Rechercher un Co-convoyage</a>
@@ -972,16 +999,22 @@
 @endif
 
 @if (check_persmission('Paiements'))
-<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-user"></i>
-        <p>
-        Paiements
-
-            <i class="right fas fa-angle-left"></i>
-        </p>
-    </a>
-    <ul class="nav nav-treeview">
+<li class="nav-item {{ Request::is('invoices') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="{{ route('invoice') }}" class="nav-link">
+            <i class='nav-icon fas fa-file-invoice'></i>
+            <p>
+                Paiements
+            </p>
+        </a>
+        {{-- <li class="nav-item {{ Request::is('carmoovs') ? 'menu-open menu-is-opening' : '' }}">
+            <a href="/carmoovs" class="nav-link">
+                <i class="nav-icon fas fa-car"></i>
+                <p>
+                    Carmoovs
+                </p>
+            </a>
+        </li> --}}
+    {{-- <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
@@ -1012,7 +1045,7 @@
                 <p class="text-light">Télécharger la facture</p>
             </a>
         </li>
-    </ul>
+    </ul> --}}
 </li>
 @endif
 {{-- @if (check_persmission('Assistance'))
@@ -1557,12 +1590,12 @@
     </ul>
 </li>
 
-<li class="nav-item {{ Request::is('invoices') ? 'menu-open menu-is-opening' : '' }}">
+{{-- <li class="nav-item {{ Request::is('invoices') ? 'menu-open menu-is-opening' : '' }}">
 <a href="{{ route('invoice') }}" class="nav-link">
         <i class='fas fa-file-invoice text-light'></i>
         <p class='text-light'> Invoicing</p>
     </a>
-</li>
+</li> --}}
 
           <!-- <li class="nav-item{{ Request::is('fullcalendar') ? ' active' : '' }}">
     <a href="#" class="nav-link">

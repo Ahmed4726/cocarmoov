@@ -4,9 +4,10 @@
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
-          .pac-container {
-  z-index: 9999;
-}
+          .pac-container
+          {
+            z-index: 9999;
+          }
     </style>
 </head>
 <div class="wrapper">

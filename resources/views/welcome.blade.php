@@ -1248,7 +1248,7 @@ function initAutocomplete() {
         }
     }
 </script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{{-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @if($showSweetAlert == true)
     <script>
         Swal.fire({
@@ -1257,7 +1257,7 @@ function initAutocomplete() {
             text: 'Please Log In to access this page',
         });
     </script>
-@endif
+@endif --}}
 
 @endsection
 
