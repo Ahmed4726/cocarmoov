@@ -267,6 +267,54 @@
     <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Taux de réponse</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Incidents signalés</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Économies réalisées</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Notes et commentaires</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Nombre d'offres annuelles</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Carmoovs notés 5/5</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
                 <i class="fas fa-road nav-icon text-light"></i>
                 <p class="text-light text-hover">Kilomètres parcourus</p>
             </a>
@@ -572,6 +620,14 @@
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Télécharger les documents</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
                 <p class="text-light">Laisser un avis</p>
             </a>
         </li>
@@ -596,6 +652,14 @@
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Carmoovs en ligne</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
                 <p class="text-light">Carmoovs en cours</p>
             </a>
         </li>
@@ -605,6 +669,14 @@
             <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
                 <p class="text-light">Carmoovs archivés</p>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav nav-treeview">
+        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
+            <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon text-light"></i>
+                <p class="text-light">Annuler le Carmoov</p>
             </a>
         </li>
     </ul>
