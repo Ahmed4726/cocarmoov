@@ -1,8 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
+
 function check_persmission($permission_name)
 {
-    $user_role_id = auth()->user()->role_id;
+    $user_role_id = auth()->user()->user_type;
 
     // Get the permission id based on the permission name
     $permissionId = DB::table('permissions')
@@ -16,9 +18,9 @@ function check_persmission($permission_name)
 
     // Check if the user's role has the specified permission
     $hasPermission = DB::table('permission_role')
-        ->where('role_id', $user_role_id)
-        ->where('permission_id', $permissionId)
-        ->exists();
+                        ->where('role_id', $user_role_id)
+                        ->where('permission_id', $permissionId)
+                        ->exists();
 
     return $hasPermission;
 }

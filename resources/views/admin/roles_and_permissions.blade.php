@@ -74,7 +74,7 @@
                             // Append checkboxes for each permission
                             $.each(permissions, function(index, permission) {
                                 var checked = userPermissions.includes(permission.id) ? 'checked' : '';
-                                var checkbox = '<div class="form-check"><input class="form-check-input" type="checkbox" value="' + permission.id + '" name="permissions[]" ' + checked + '><label class="form-check-label">' + permission.name + '</label></div>';
+                                var checkbox = '<div class="form-check"><input class="form-check-input" type="checkbox" value="' + permission.id + '" name="permissions[]" ' + checked + '><label class="form-check-label">' + permission.name + ' ' + '('  + permission.description + ')' + '</label></div>';
                                 $('#permissionsContainer').append(checkbox);
                             });
                         },
@@ -108,6 +108,8 @@
                                 confirmButtonText: 'OK'
                             }).then((result) => {
                                 if (result.isConfirmed) {
+
+                                    window.location.reload();
                                     // Redirect or perform any other action if needed
                                 }
                             });

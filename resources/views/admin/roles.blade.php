@@ -272,11 +272,12 @@
                                     'Content-Type': 'application/json',
                                 },
                             })
-                                .then(response => response.json())
-                                .then(data => {
-                                    Swal.fire('Deleted!', data.message, 'success');
-                                    // Optionally, you can update the UI to remove the deleted role row
-                                })
+                            .then(response => response.json())
+                            .then(data => {
+                                Swal.fire('Deleted!', data.message, 'success');
+                                // Optionally, you can update the UI to remove the deleted role row
+                                window.location.reload(); // Reload the page
+                            })
                                 .catch(error => {
                                     console.error('Error:', error);
                                     Swal.fire('Error!', 'An error occurred while deleting the role.', 'error');

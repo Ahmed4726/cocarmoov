@@ -2,12 +2,11 @@
 
 namespace App\View\Components;
 
-use App\Models\Role;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class frontend_header extends Component
+class admin_main_header extends Component
 {
     /**
      * Create a new component instance.
@@ -22,6 +21,6 @@ class frontend_header extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.frontend_header');
+        return view('components.admin_main_header');
     }
 }

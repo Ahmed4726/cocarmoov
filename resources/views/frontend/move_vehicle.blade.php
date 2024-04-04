@@ -8,6 +8,39 @@
     /* Add any other styles you want for the selected package button */
 }
 
+/* Style for the payment form */
+#paymentForm {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Style for the card element */
+#card-element {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style for form errors */
+#card-errors {
+    color: #dc3545;
+    margin-bottom: 20px;
+}
+
+/* Style for the submit button */
+.btn-warning {
+    background-color: #ffc107;
+    color: #212529;
+    border-color: #ffc107;
+}
+
+.btn-warning:hover {
+    background-color: #ffca2c;
+    color: #212529;
+    border-color: #ffca2c;
+}
 
 
 </style>
@@ -345,11 +378,9 @@
     <label for="user_type">Rôle:</label>
     <select class="form-control" name="user_type" id="user_type">
         <option selected value="">Choisissez votre rôle</option>
-        <option value="Particulier">Particulier</option>
-        <option value="professionnel">Professionnel</option>
-        <option value="Co-convoyeur">Co-convoyeur</option>
-        <option value="Convoyeur">Convoyeur</option>
-        <option value="Transporteur">Transporteur</option>
+        @foreach($roles as $role)
+            <option value="{{ $role->id }}">{{ $role->name }}</option>
+        @endforeach
     </select>
     @error('user_type')
         <span class="text-danger">{{ $message }}</span>
@@ -445,20 +476,21 @@
             </div>
         </div>
             <button class="btn btn-warning" type="button" onclick="prevStep(3)">Previous</button>
-            <button class="btn btn-warning" type="button" onclick="handleStep({{ $stripe_customer_id ? 'true' : 'false' }})">Next</button>
+            <button class="btn btn-warning" type="button" onclick="handleStep({{ $stripe_customer_id != null ? 'true' : 'false' }})">Next</button>
         </form>
 </div>
 
 <div id="step4" class="form-step">
     <h2>Step 4: Payment</h2>
     <form id="paymentForm">
-        <div id="card-element">
+        <div id="card-element" class="form-control">
             <!-- A Stripe Element will be inserted here. -->
         </div>
         <!-- Used to display form errors. -->
         <div id="card-errors" role="alert"></div>
         <button type="button" class="btn btn-warning" onclick="submitPayment()">Submit Payment</button>
     </form>
+
 </div>
 
 <div id="step5" class="form-step">

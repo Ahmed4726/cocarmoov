@@ -36,9 +36,9 @@
         </li>
         @endif
         {{-- @if (check_persmission('')) --}}
-        {{-- <li class="nav-item">
+        <li class="nav-item">
             <a href="#" class="nav-link">Rechercher un Co-convoyage</a>
-        </li> --}}
+        </li>
         {{-- @endif --}}
         @if (check_persmission('Tableau de bord'))
         <li class="nav-item">
@@ -85,7 +85,7 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
-      {{-- <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
           <i class="fas fa-search"></i>
         </a>
@@ -104,7 +104,7 @@
             </div>
           </form>
         </div>
-      </li> --}}
+      </li>
       <form id="logout-form" method="POST" action="{{ route('logout') }}">
     @csrf
     <button type="button" class="nav-link" role="button" style="border: none; background-color: transparent;" onclick="confirmLogout()">
@@ -156,7 +156,7 @@
         </li>
     </ul>
     @endif
-    {{-- <ul class="nav nav-treeview">
+    <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="fas fa-money-bill-wave nav-icon text-light"></i>
@@ -198,7 +198,7 @@
 </p>
             </a>
         </li>
-    </ul> --}}
+    </ul>
     {{-- <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
@@ -252,8 +252,7 @@
         </li>
     </ul>
     @endif
-
-    {{-- <ul class="nav nav-treeview">
+    <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="fas fa-credit-card nav-icon text-light"></i>
@@ -306,54 +305,6 @@
             <a href="#" class="nav-link">
                 <i class="fas fa-users nav-icon text-light"></i>
                 <p class="text-light text-hover">Nombre d'utilisateurs</p>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Taux de réponse</p>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Incidents signalés</p>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Économies réalisées</p>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Notes et commentaires</p>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Nombre d'offres annuelles</p>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Carmoovs notés 5/5</p>
             </a>
         </li>
     </ul>
@@ -421,7 +372,7 @@
                 <p class="text-light text-hover">Performances</p>
             </a>
         </li>
-    </ul> --}}
+    </ul>
     <!-- <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
@@ -526,14 +477,14 @@
             </a>
         </li>
     </ul> -->
-    {{-- <ul class="nav nav-treeview">
+    <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="fas fa-road nav-icon text-light"></i>
                 <p class="text-light text-hover">Kilomètres parcourus</p>
             </a>
         </li>
-    </ul> --}}
+    </ul>
 </li>
 
 <!-- Private car owner permissions-->
@@ -546,16 +497,6 @@
         </p>
     </a>
 </li>
-@if (check_persmission('Commandes'))
-<li class="nav-item {{ Request::is('carmoovs') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-car"></i>
-        <p>
-            Commandes
-        </p>
-    </a>
-</li>
-@endif
 @if (check_persmission('Profil'))
 <li class="nav-item {{ Request::is('show_profile') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
@@ -565,14 +506,14 @@
             <i class="right fas fa-angle-left"></i>
         </p>
     </a>
-    {{-- <ul class="nav nav-treeview">
+    <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('show_profile') ? 'active' : '' }} text-hover rounded">
             <a href="{{route('profile.index')}}" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
                 <p class="text-light">Mes informations</p>
             </a>
         </li>
-    </ul> --}}
+    </ul>
     @if (check_persmission('Profil'))
     <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
@@ -583,7 +524,6 @@
         </li>
     </ul>
     @endif
-
     <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
@@ -592,28 +532,27 @@
             </a>
         </li>
     </ul>
-    {{-- <ul class="nav nav-treeview">
+    <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
                 <p class="text-light"> Inviter une connaissance</p>
             </a>
         </li>
-    </ul> --}}
+    </ul>
     <!-- private individual driver -->
-    {{-- <ul class="nav nav-treeview">
+    <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
                 <p class="text-light">  Inviter un ami</p>
             </a>
         </li>
-    </ul> --}}
+    </ul>
 
 </li>
 @endif
-
-{{-- <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-user"></i>
         <p>
@@ -637,8 +576,8 @@
             </a>
         </li>
     </ul>
-</li> --}}
-{{-- <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
+</li>
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-user"></i>
         <p>
@@ -682,14 +621,6 @@
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Télécharger les documents</p>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
                 <p class="text-light">Laisser un avis</p>
             </a>
         </li>
@@ -701,7 +632,7 @@
                 <p class="text-light">Reçus des dépenses</p>
             </a>
         </li>
-    </ul> --}}
+    </ul>
     @if (check_persmission('Voir mes Carmoovs'))
     <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
@@ -717,32 +648,16 @@
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Carmoovs en ligne</p>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
                 <p class="text-light">Carmoovs en cours</p>
             </a>
         </li>
     </ul>
     @endif
-    {{-- <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Carmoovs archivés</p>
-            </a>
-        </li>
-    </ul>
     <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Annuler le Carmoov</p>
+                <p class="text-light">Carmoovs archivés</p>
             </a>
         </li>
     </ul>
@@ -834,8 +749,8 @@
             </a>
         </li>
     </ul>
-</li> --}}
-@if (check_persmission('Propositions'))
+</li>
+
 <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-user"></i>
@@ -872,7 +787,7 @@
         </li>
     </ul>
     @endif
-    {{-- <ul class="nav nav-treeview">
+    <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
@@ -967,10 +882,8 @@
                 <p class="text-light">Profil du Carmooveur</p>
             </a>
         </li>
-    </ul> --}}
+    </ul>
 </li>
-@endif
-
 @if (check_persmission('Paiements'))
 <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
@@ -1015,7 +928,7 @@
     </ul>
 </li>
 @endif
-{{-- @if (check_persmission('Assistance'))
+@if (check_persmission('Assistance'))
 <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-user"></i>
@@ -1041,9 +954,9 @@
         </li>
     </ul>
 </li>
-@endif --}}
+@endif
 <!-- private individual driver -->
-{{-- <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-user"></i>
         <p>
@@ -1139,7 +1052,7 @@
             </a>
         </li>
     </ul>
-</li> --}}
+</li>
 @if (check_persmission('Réservations'))
 <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
@@ -1149,7 +1062,7 @@
             <i class="right fas fa-angle-left"></i>
         </p>
     </a>
-    {{-- <ul class="nav nav-treeview">
+    <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon text-light"></i>
@@ -1356,11 +1269,10 @@
                 <p class="text-light">Un autre problème</p>
             </a>
         </li>
-    </ul> --}}
+    </ul>
 </li>
 @endif
-
-{{-- @if (check_persmission('Propositions'))
+@if (check_persmission('Propositions'))
 <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-user"></i>
@@ -1434,15 +1346,15 @@
         </li>
     </ul>
 </li>
-@endif --}}
-{{-- <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
+@endif
+<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-envelope"></i>
         <p>
             Demandes
         </p>
     </a>
-</li> --}}
+</li>
 
 {{-- <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="/cards" class="nav-link">
@@ -1453,14 +1365,14 @@
     </a>
 </li>
 @endif --}}
-{{-- <li class="nav-item {{ Request::is('#') ? 'active' : '' }}">
+<li class="nav-item {{ Request::is('#') ? 'active' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-car"></i>
         <p>
             Co-convoyages
         </p>
     </a>
-</li> --}}
+</li>
 @if (check_persmission('Alertes'))
 <li class="nav-item {{ Request::is('alerts') ? 'menu-open menu-is-opening' : '' }}">
     <a href="{{ route('alerts') }}" class="nav-link">
@@ -1471,7 +1383,7 @@
     </a>
 </li>
 @endif
-{{-- <li class="nav-item {{ Request::is('#') ? 'active' : '' }}">
+<li class="nav-item {{ Request::is('#') ? 'active' : '' }}">
     <a href="{{ route('alerts') }}" class="nav-link">
         <i class="nav-icon fas fa-car-side"></i>
         <p>
@@ -1487,8 +1399,8 @@
             Rechercher un Carmoov
         </p>
     </a>
-</li> --}}
-@if (check_persmission('Certifications'))
+</li>
+@if (check_persmission('Assistance'))
 <li class="nav-item {{ Request::is('#') ? 'active' : '' }}">
     <a href="{{ route('alerts') }}" class="nav-link">
         <i class="nav-icon fas fa-certificate"></i>
@@ -1498,7 +1410,7 @@
     </a>
 </li>
 @endif
-{{-- <li class="nav-item">
+<li class="nav-item">
     <a href="{{ route('alerts') }}" class="nav-link {{ Request::is('#') ? 'active' : '' }}">
         <i class="nav-icon fas fa-car"></i>
         <p>
@@ -1513,7 +1425,7 @@
             Transports
         </p>
     </a>
-</li> --}}
+</li>
 <!-- <li class="nav-item">
     <a href="{{ route('alerts') }}" class="nav-link {{ Request::is('#') ? 'active' : '' }}">
         <i class="nav-icon fas fa-shipping-fast"></i>
@@ -1583,18 +1495,6 @@
             </ul>
           </li>
 
-
-{{-- <li>
-<ul class="nav nav-treeview">
-    <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-        <a href="#" class="nav-link">
-            <i class="fas fa-shopping-cart nav-icon text-light"></i>
-            <p class="text-light text-hover">Commandes</p>
-        </a>
-    </li>
-</ul>
-</li>
-@endif --}}
           <!-- <li class="nav-item menu-open">
             <a href="#" class="nav-link">
                 <p>Manage <i class="fas fa-angle-down"></i></p>

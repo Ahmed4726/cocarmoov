@@ -99,18 +99,18 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="user_type">Choisissez votre rôle</label>
                         <select class="form-control" name="user_type" id="user_type">
                             <option selected value="">Choisissez votre rôle</option>
-                            <option value="Particulier">Particulier</option>
-                            <option value="professionnel">Professionnel</option>
-                            <option value="Co-convoyeur">Co-convoyeur</option>
-                            <option value="Convoyeur">Convoyeur</option>
-                            <option value="Transporteur">Transporteur</option>
+                            @foreach($roles as $role)
+                                <option value="{{ $role->id }}">{{ $role->name }}</option>
+                            @endforeach
                         </select>
                         @error('user_type')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
+
                     <i class="fas fa-check rounded p-1" style="background-color:#fdcd02; color:white"></i> En vous inscrivant, vous acceptez nos <a href="https://cocarmoov.fr/mentions-legales">Conditions Générales d’Utilisation</a> et notre <a href="https://cocarmoov.fr/politique-de-confidentialite">Politique de confidentialité</a>.</li>
                     <div class="form-group">
                         <input type="checkbox" id="checkbox" name="checkbox_name"><span>Je ne souhaite pas recevoir d’informations, de bons plans et de cadeaux de CoCarmoov.</span>
@@ -138,7 +138,7 @@
                                 </div>
                                 <div class="col-md-4">
                                 <img src="{{ asset('images/wallet/apple..png') }}" width="60%" height="auto">
-                                       
+
                                     </a>
                                 </div>
                             </div>
@@ -146,7 +146,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-md-6 text-center">
-            <a href="{{ route('login') }}" class="text-muted">Déjà un compte ?<span style="color:#fdcd02"> S’identifier</span></a>  
+            <a href="{{ route('login') }}" class="text-muted">Déjà un compte ?<span style="color:#fdcd02"> S’identifier</span></a>
         </div>
     </div>
 </div>
@@ -158,7 +158,7 @@
     </div>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>	
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- # JS Plugins -->
 <script src="{{asset('plugins/wallet/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('plugins/wallet/bootstrap/bootstrap.min.js')}}"></script>
@@ -171,7 +171,7 @@
 </body>
 </html>
     <!-- Session Status -->
- 
 
-   
+
+
 

@@ -60,37 +60,17 @@ Route::middleware('auth')->group(function () {
         return view('admin.admin_dashboard');
     })->name('dashboard');
 
-    //Roles and Permissions
-    Route::get('/roles-and-permissions', [RolesAndPermissionController::class,'index'])->name('roles.and.permissions');
-    Route::get('/get-permissions/{role_id}', [RolesAndPermissionController::class,'getPermissions'])->name('get.permissions');
-    Route::post('/save-permissions', [RolesAndPermissionController::class,'savePermission'])->name('save.Permission');
 
-    //Permissions
-    Route::get('/permissions', [PermissionsController::class,'index'])->name('permissions');
-    Route::post('/add-new-permissions', [PermissionsController::class,'newPermission'])->name('add.new.permission');
-    Route::get('/edit-permission/{id}', [PermissionsController::class,'edit'])->name('edit.Permission');
-    Route::put('/update-permission/{id}', [PermissionsController::class,'update'])->name('update.Permission');
-    Route::post('/delete-permission/{id}', [PermissionsController::class,'destroy'])->name('delete.permission');
-    // Route::get('/permissions', [permissionsController::class,'index'])->name('permissions');
-
-    //Roles
-    Route::get('/roles', [RoleController::class,'index'])->name('roles');
-    Route::post('/add-new-role', [RoleController::class,'newRole'])->name('add.new.role');
-    Route::get('/edit-role/{id}', [RoleController::class,'edit'])->name('edit.role');
-    Route::put('/update-role/{id}', [RoleController::class,'update'])->name('update.role');
-    Route::post('/delete-role/{id}', [RoleController::class,'destroy'])->name('delete.role');
 
     //profile
-    Route::get('/show_profile', [ProfileController::class,'index'])->name('profile.index');
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::post('/profile-update', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::get('/pending-profiles',[ProfileController::class, 'pendingProfiles'])->name('profile.pending');
-    Route::get('/pending-profile-detail/{id}',[ProfileController::class, 'pendingProfilesDetails'])->name('profile.pending.details');
-    Route::post('/profile-decision',[ProfileController::class, 'profileStatus'])->name('profile.status');
+    Route::get('/show_profile', [ProfileController::class,'index'])->name('profile.index')->middleware('CanAccess:Profil');
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit')->middleware('CanAccess:Profil');
+    Route::post('/profile-update', [ProfileController::class, 'update'])->name('profile.update')->middleware('CanAccess:Profil');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy')->middleware('CanAccess:Profil');
+
 
     //Bookings
-    Route::get('/bookings', [BookingController::class,'index'])->name('bookings');
+    Route::get('/bookings', [BookingController::class,'index'])->name('bookings')->middleware('CanAccess:Réservations');
 
     //Calendar
     Route::get('/calendar', [CalendarController::class,'index'])->name('calendar');
@@ -105,11 +85,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/my-account', [AccountController::class,'index'])->name('account');
 
     //Alerts
-    Route::get('/alerts', [AlertController::class,'index'])->name('alerts');
-    Route::post('/add-alert',[AlertController::class,'addNew'])->name('add.new.alert');
-    Route::get('/edit-alert/{id}', [AlertController::class,'edit'])->name('edit.alert');
-    Route::put('/update-alert/{id}', [AlertController::class,'update'])->name('update.alert');
-    Route::post('/delete-alert/{id}',[AlertController::class,'destroy'])->name('alert.delete');
+    Route::get('/alerts', [AlertController::class,'index'])->name('alerts')->middleware('CanAccess:Alertes');
+    Route::post('/add-alert',[AlertController::class,'addNew'])->name('add.new.alert')->middleware('CanAccess:Alertes');
+    Route::get('/edit-alert/{id}', [AlertController::class,'edit'])->name('edit.alert')->middleware('CanAccess:Alertes','CanAccessRecord:alert');
+    Route::put('/update-alert/{id}', [AlertController::class,'update'])->name('update.alert')->middleware('CanAccess:Alertes');
+    Route::post('/delete-alert/{id}',[AlertController::class,'destroy'])->name('alert.delete')->middleware('CanAccess:Alertes');
 
     //Invoices
     Route::get('/invoices', [InvoiceController::class,'index'])->name('invoice');
@@ -117,7 +97,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/download-invoice/{id}',[InvoiceController::class,'download'])->name('download.invoice');
 
     //Training certifications
-    Route::get('/certifications', [TrainingController::class,'index'])->name('certification');
+    Route::get('/certifications', [TrainingController::class,'index'])->name('certification')->middleware('CanAccess:Certifications');
 
     // Route::view('my-account','admin.calendar')->name('calendar');
 
@@ -132,7 +112,7 @@ Route::middleware('auth')->group(function () {
 
     // Car Listing
     Route::post('/listing', [ListingController::class, 'createListing']);
-    Route::get('/editListing/{id}', [ListingController::class, 'edit'])->name('editListing');
+    Route::get('/editListing/{id}', [ListingController::class, 'edit'])->name('editListing')->middleware('CanAccessRecord:listing');
     Route::get('/duplicateListing/{id}', [ListingController::class, 'duplicate'])->name('duplicateListing');
     Route::post('/duplicateListingCar/{id}', [ListingController::class, 'duplicateCar'])->name('duplicateListingCar');
     Route::post('/updateListing/{id}', [ListingController::class, 'update'])->name('updateListing');
@@ -154,6 +134,37 @@ Route::get('login/{provider}/callback',[SocialauthController::class, 'handleProv
 
 Route::get('/get-csrf-token', function () {
     return response()->json(['csrf_token' => csrf_token()]);
+});
+
+
+// Admin Routes
+Route::group(['middleware' => 'Admin'], function () {
+    // Admin-only routes here
+    // Route::get('/alerts', [AlertController::class,'index'])->name('alerts')->middleware('CanAccess:Alertes');
+
+        //Roles and Permissions
+        Route::get('/roles-and-permissions', [RolesAndPermissionController::class,'index'])->name('roles.and.permissions');
+        Route::get('/get-permissions/{role_id}', [RolesAndPermissionController::class,'getPermissions'])->name('get.permissions');
+        Route::post('/save-permissions', [RolesAndPermissionController::class,'savePermission'])->name('save.Permission');
+
+        //Permissions
+        Route::get('/permissions', [PermissionsController::class,'index'])->name('permissions');
+        Route::post('/add-new-permissions', [PermissionsController::class,'newPermission'])->name('add.new.permission');
+        Route::get('/edit-permission/{id}', [PermissionsController::class,'edit'])->name('edit.Permission');
+        Route::put('/update-permission/{id}', [PermissionsController::class,'update'])->name('update.Permission');
+        Route::post('/delete-permission/{id}', [PermissionsController::class,'destroy'])->name('delete.permission');
+        // Route::get('/permissions', [permissionsController::class,'index'])->name('permissions');
+
+        //Roles
+        Route::get('/roles', [RoleController::class,'index'])->name('roles');
+        Route::post('/add-new-role', [RoleController::class,'newRole'])->name('add.new.role');
+        Route::get('/edit-role/{id}', [RoleController::class,'edit'])->name('edit.role');
+        Route::put('/update-role/{id}', [RoleController::class,'update'])->name('update.role');
+        Route::post('/delete-role/{id}', [RoleController::class,'destroy'])->name('delete.role');
+
+        Route::get('/pending-profiles',[ProfileController::class, 'pendingProfiles'])->name('profile.pending');
+        Route::get('/pending-profile-detail/{id}',[ProfileController::class, 'pendingProfilesDetails'])->name('profile.pending.details');
+        Route::post('/profile-decision',[ProfileController::class, 'profileStatus'])->name('profile.status');
 });
 
 
@@ -212,7 +223,7 @@ Route::get('/mentions-legales', function () {
 Route::get('/transporteur', function () {
     return view('frontend.transporteurs');
 })->name('transporteur');
-
+Route::view('access-denied','access_denied');
 Route::get('/generate-cgv', [PDFController::class, 'generateCGVPDF'])->name('generate-cgv');
 Route::get('/generate-cgu', [PDFController::class, 'generateCGUPDF'])->name('generate-cgu');
 require __DIR__.'/auth.php';

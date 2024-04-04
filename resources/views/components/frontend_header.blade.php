@@ -207,14 +207,19 @@
                         @enderror
                     </div>
 
+                    @php
+                    
+                    use App\Models\Role;
+
+                    $roles = Role::where('name', '!=', 'Admin')->get();
+
+                    @endphp
                     <div class="form-group">
                         <select class="form-control" name="user_type" id="user_type">
                             <option selected value="">Choisissez votre rôle</option>
-                            <option value="Particulier">Particulier</option>
-                            <option value="professionnel">Professionnel</option>
-                            <option value="Co-convoyeur">Co-convoyeur</option>
-                            <option value="Convoyeur">Convoyeur</option>
-                            <option value="Transporteur">Transporteur</option>
+                            @foreach($roles as $role)
+                                <option value="{{ $role->id }}">{{ $role->name }}</option>
+                            @endforeach
                         </select>
                         @error('user_type')
                             <span class="text-danger">{{ $message }}</span>
