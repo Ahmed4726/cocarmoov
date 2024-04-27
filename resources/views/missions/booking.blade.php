@@ -3,9 +3,9 @@
 <div class="container-fluid pt-3 pb-4" style="background-color: #333132;">
 <h2 class="text-center text-light"><b> {{ $mission->from_address }} - {{ $mission->to_address }}</b></h2>
 <p class="text-center text-light">#{{ $mission['id'] }}</p>
-<div class="row"> 
+<div class="row">
     <div class="col-md-4 col-sm-12">
-        
+
     </div>
     <div class="col-md-4 col-sm-12">
 
@@ -46,16 +46,67 @@
             <input class="form-control" type="datetime-local" name="delivery_time" id="delivery_time">
         </div>
     </div>
-    
+
     <input type="hidden" name="car_id" id="car_id" value="{{ $mission['id'] }}">
     <input type="hidden" name="amount" id="amount" value="{{ $mission['package_amount'] }}">
     <input type="hidden" name="owner_id" id="owner_id" value="{{ $mission['user_id'] }}">
-    <div class="text-center">            
+    <div class="text-center">
     <button class="btn btn-warning mt-2" type="submit">Book for €{{ $mission['package_amount'] }}</button>
+
     </div>
 </form>
 
-
+<!-- Modal -->
+<div class="modal fade" id="offerModal" tabindex="-1" aria-labelledby="offerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="offerModalLabel">Make an Offer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+            <form action="/add-perposals" method="POST">
+                @csrf
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label" for="pick_up_time">Pickup-Time</label>
+                            <input class="form-control" type="datetime-local" name="pick_up_time" id="pick_up_time">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="delivery_time">Delivery-Time</label>
+                            <input class="form-control" type="datetime-local" name="delivery_time" id="delivery_time">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-label" for="pick_up_time">Actual Amount</label>
+                        <input class="form-control" name="amount" id="amount" value="{{ $mission['package_amount'] }}" disabled>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="pick_up_time">Offer Amount</label>
+                        <input class="form-control" type="number" name="offer_amount" id="offer_amount">
+                    </div>
+                    <input type="hidden" name="car_id" id="car_id" value="{{ $mission['id'] }}">
+                    <input type="hidden" name="owner_id" id="owner_id" value="{{ $mission['user_id'] }}">
+                </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Submit Offer</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="text-center">
+    <button class="btn btn-primary mt-2" type="button" data-bs-toggle="modal" data-bs-target="#offerModal">Make an Offer</button>
+</div>
         </div>
     </div>
     </div>
@@ -64,7 +115,7 @@
         <div class="col-md-12">
     <div class="card rounded mt-3">
     <div class="card-header"><h3 class="text-center">Vehicle</h3></div>
-        <div class="card-body">   
+        <div class="card-body">
     <div class="row">
         <div class="col-md-12 text-center">
         <img src="{{ asset('/dist/img/cars/Citadine.png') }}" alt="test" class="img-fluid" width="200" height="200">
@@ -100,7 +151,7 @@
         <div class="col-md-12">
     <div class="card rounded mt-3">
         <div class="card-header"><h3 class="text-center">Insurance and Conditions</h3></div>
-        <div class="card-body"> 
+        <div class="card-body">
     <div class="row">
         <div class="col-md-12">
             <p class="text-center">Vehicle image</p>
@@ -136,7 +187,7 @@
         <div class="col-md-12">
     <div class="card rounded mt-3">
         <div class="card-header"><h3 class="text-center">Penalties</h3></div>
-        <div class="card-body"> 
+        <div class="card-body">
     <div class="row">
         <div class="col-md-12 text-center">
             <h4>For economic formula</h4>
@@ -147,13 +198,13 @@
         <div class="col-md-12 text-center">
             <h4>For express/premium formula</h4>
       <p>Annulation du carmoov après réservation du carmooveur, moins de 72h avant le départ, une pénalité de 50%.</p>
-    <p>Annulation du carmoov après réservation du carmooveur, moins de 24h avant le départ, pénalité de 70%.</p>    
+    <p>Annulation du carmoov après réservation du carmooveur, moins de 24h avant le départ, pénalité de 70%.</p>
     </div>
     </div>
         </div>
     </div>
     </div>
     </div>
-    
+
 </div>
 @endsection

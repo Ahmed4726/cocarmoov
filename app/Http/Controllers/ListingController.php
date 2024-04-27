@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\CarListed;
 use App\Mail\RideCancellationNotification;
+use App\Models\Balance;
 use Illuminate\Http\Request;
 use App\Models\Car;
 use App\Models\Invoice;
@@ -163,6 +164,31 @@ class ListingController extends Controller
         Mail::to(auth()->user()->email)->send(new CarListed($newListing, $pdfContent));
 
         return redirect()->route('listings.index')->with('success', 'Listing duplicated successfully');
+
+    }
+
+    public function confirmDelivery($id)
+    {
+        $car = Car::leftJoin('missions', 'missions.car_id', '=', 'cars.id')
+                    ->where('cars.id',$id)
+                    ->select('missions.back_photos as back_photos','missions.front_photos as front_photos','missions.id as mission_id', 'cars.id as car_id')
+                    ->first();
+
+        return view('admin.confirm-delivery',compact('car'));
+    }
+
+    public function confirm(Request $request)
+    {
+        $car = Car::find($request->car_id);
+        $car->status = 'Completed';
+        $car->save();
+
+        $balance = Balance::where('car_id',$request->car_id)->first();
+        $balance->status = 'Available';
+        $balance->save();
+
+        return redirect()->route('listings.index')->with('success', 'Car Delivery Confirmed and completed successfully');
+
 
     }
 

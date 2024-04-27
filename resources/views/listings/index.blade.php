@@ -48,9 +48,17 @@
                                 <a href="{{ route('editListing', ['id' => $listing->id]) }}" class="btn btn-primary">Edit</a>
                                 <a href="{{ route('deleteListing', ['id' => $listing->id]) }}" class="btn btn-danger">Delete</a>
                                 <a href="{{ route('duplicateListing', ['id' => $listing->id]) }}" class="btn btn-warning">Duplicate</a>
+                            @elseif ($listing->status == 'On-Move')
+                                <a href="{{ route('duplicateListing', ['id' => $listing->id]) }}" class="btn btn-warning">Duplicate</a>
+                            @elseif ($listing->status == 'Delivered')
+                                <a href="{{ route('duplicateListing', ['id' => $listing->id]) }}" class="btn btn-warning">Duplicate</a>
+                                <a href="{{ route('confirmDelivery', ['id' => $listing->id]) }}" class="btn btn-primary">Confirm-Delivery</a>
+                                <a href="{{ route('Report-issue', ['id' => $listing->id]) }}" class="btn btn-danger">Report-issue</a>
+                            @elseif ($listing->status == 'Completed')
+                                <a href="{{ route('duplicateListing', ['id' => $listing->id]) }}" class="btn btn-danger">Duplicate</a>
                             @else
-                            <a href="#" class="btn btn-danger cancelButton" data-listing-id="{{ $listing->id }}">Cancel</a>
-                            <a href="{{ route('duplicateListing', ['id' => $listing->id]) }}" class="btn btn-warning">Duplicate</a>
+                                <a href="#" class="btn btn-danger cancelButton" data-listing-id="{{ $listing->id }}">Cancel</a>
+                                <a href="{{ route('duplicateListing', ['id' => $listing->id]) }}" class="btn btn-warning">Duplicate</a>
                             @endif
 
                         </div>

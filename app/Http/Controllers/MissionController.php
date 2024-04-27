@@ -35,7 +35,7 @@ class MissionController extends Controller
         $from_address = Car::where('from_address', $mission->from_address)->first();
         return view('missions.booking', compact('mission', 'from_address'));
     }
-    
+
 
     public function bookRide(Request $request)
     {
@@ -100,7 +100,7 @@ class MissionController extends Controller
         $balance->user_id = auth()->user()->id;
         $balance->amount = $request->amount - ($request->amount * 20 / 100);
         $balance->status = 'Pending';
-
+        $balance->car_id = $request->car_id;
         $balance->save();
 
         return redirect()->route('missions');

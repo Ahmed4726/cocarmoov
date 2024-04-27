@@ -5,21 +5,21 @@
 <style>
 
     /* CSS for hiding the options by default and showing them on hover */
-.assistance-options {
+/* .assistance-options {
     display: none;
     position: absolute;
-    /* z-index: 1; */
+    z-index: 1;
 }
 
 .assistance:hover .assistance-options {
     display: block;
-}
+} */
 
 /* Style for the assistance trigger */
-.assistance-trigger {
+/* .assistance-trigger {
     cursor: pointer;
-    /* Add more styles as needed */
-}
+
+} */
 
   .nav-item.active a {
     background-color: #fdcd02; /* Set your desired background color */
@@ -47,19 +47,11 @@
 </div>
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    {{-- <ul class="navbar-nav"> --}}
+    <ul class="navbar-nav">
         @if (check_persmission('Assistance'))
-            <div class="assistance">
-                <span class="assistance-trigger">Assistance</span>
-                <ul class="assistance-options">
-                    <li class="nav-item">
-                        <a href="{{ route('faq') }}" class="nav-link">Voir la FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('contact_us') }}" class="nav-link">Contacter CoCarmoov</a>
-                    </li>
-                {{-- </ul> --}}
-            </div>
+        <li class="nav-item">
+            <a href="{{ route('insurance') }}" class="nav-link">Assistance</a>
+        </li>
         @endif
 
         {{-- @if (check_persmission('')) --}}
@@ -1174,12 +1166,12 @@
     </ul>
 </li> --}}
 @if (check_persmission('Réservations'))
-<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
+<li class="nav-item {{ Request::is('/bookings') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="/bookings" class="nav-link">
         <i class="nav-icon fas fa-user"></i>
         <p>
         Réservations
-            <i class="right fas fa-angle-left"></i>
+            {{-- <i class="right fas fa-angle-left"></i> --}}
         </p>
     </a>
     {{-- <ul class="nav nav-treeview">

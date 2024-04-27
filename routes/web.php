@@ -18,6 +18,7 @@ use App\Http\Controllers\PermissionsController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\AlertController;
 use App\Http\Controllers\CardController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\SocialauthController;
@@ -26,6 +27,7 @@ use App\Http\Controllers\MoveVehicleController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ListingController;
 use App\Http\Controllers\MissionController;
+use App\Http\Controllers\ProposalController;
 use App\Http\Controllers\RolesAndPermissionController;
 use App\Http\Controllers\WithdrawalController;
 use Illuminate\Support\Facades\Auth;
@@ -56,9 +58,7 @@ Route::get('/', [WelcomeController::class,'index'])->name('welcome');
 //     return view('admin.admin_dashboard');
 // });
 Route::middleware('auth')->group(function () {
-    Route::get('/main-dashboard', function () {
-        return view('admin.admin_dashboard');
-    })->name('dashboard');
+    Route::get('/main-dashboard', [DashboardController::class,'index'])->name('dashboard');
 
 
 
@@ -71,6 +71,10 @@ Route::middleware('auth')->group(function () {
 
     //Bookings
     Route::get('/bookings', [BookingController::class,'index'])->name('bookings')->middleware('CanAccess:Réservations');
+    Route::get('/pick-up-car/{id}',[BookingController::class,'pickUp'])->name('pick-up-car')->middleware('CanAccess:Réservations');
+    Route::get('/deliver-a-car/{id}',[BookingController::class,'delivery'])->name('deliver-a-car')->middleware('CanAccess:Réservations');
+    Route::post('/confirm-pickup',[BookingController::class,'confirmPickUp'])->name('confirm.pickup')->middleware('CanAccess:Réservations');
+    Route::post('/confirm-delivery',[BookingController::class,'confirmDelivery'])->name('confirm.delivery')->middleware('CanAccess:Réservations');
 
     //Calendar
     Route::get('/calendar', [CalendarController::class,'index'])->name('calendar');
@@ -90,6 +94,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/edit-alert/{id}', [AlertController::class,'edit'])->name('edit.alert')->middleware('CanAccess:Alertes','CanAccessRecord:alert');
     Route::put('/update-alert/{id}', [AlertController::class,'update'])->name('update.alert')->middleware('CanAccess:Alertes');
     Route::post('/delete-alert/{id}',[AlertController::class,'destroy'])->name('alert.delete')->middleware('CanAccess:Alertes');
+
+
+    //Perposals
+    Route::get('/perposals', [ProposalController::class,'index'])->name('Propositions')->middleware('CanAccess:Propositions');
+    Route::post('/add-perposals',[ProposalController::class,'addProposals'])->name('add.new.Propositions')->middleware('CanAccess:Propositions');
+    // Route::get('/edit-perposals/{id}', [ProposalController::class,'edit'])->name('edit.Propositions')->middleware('CanAccess:Propositions','CanAccessRecord:Propositions');
+    // Route::put('/update-perposals/{id}', [ProposalController::class,'update'])->name('update.Propositions')->middleware('CanAccess:Propositions');
+    // Route::post('/delete-perposals/{id}',[ProposalController::class,'destroy'])->name('Propositions.delete')->middleware('CanAccess:Propositions');
+
 
     //Invoices
     Route::get('/invoices', [InvoiceController::class,'index'])->name('invoice');
@@ -119,10 +132,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/cancelListing/{id}', [ListingController::class, 'cancel'])->name('cancelListing');
     Route::get('/deleteListing/{id}', [ListingController::class, 'delete'])->name('deleteListing');
     Route::get('/carmoovs', [ListingController::class, 'index'])->name('listings.index');
+    Route::get('/duplicateListing/{id}', [ListingController::class, 'duplicate'])->name('duplicateListing');
+    Route::get('/confirmDelivery/{id}', [ListingController::class, 'confirmDelivery'])->name('confirmDelivery');
+    Route::post('/confirm', [ListingController::class, 'confirm'])->name('confirm');
+    Route::get('/Report-issue/{id}', [ListingController::class, 'reportIssue'])->name('Report-issue');
 
     // CarMove
     Route::get('/missions', [MissionController::class, 'index'])->name('missions');
-    Route::get('/booking/{id}', [MissionController::class, 'booking'])->name('booking');
+    Route::get('/missions/{id}', [MissionController::class, 'booking'])->name('booking');
     Route::post('/book-ride', [MissionController::class, 'bookRide'])->name('book-ride');
 
     Route::get('/balance', [WithdrawalController::class, 'index'])->name('balance');
@@ -141,6 +158,8 @@ Route::get('/get-csrf-token', function () {
 Route::group(['middleware' => 'Admin'], function () {
     // Admin-only routes here
     // Route::get('/alerts', [AlertController::class,'index'])->name('alerts')->middleware('CanAccess:Alertes');
+
+    Route::get('/admin_dashboard', [DashboardController::class,'adminDashboard'])->name('admin_dashboard');
 
         //Roles and Permissions
         Route::get('/roles-and-permissions', [RolesAndPermissionController::class,'index'])->name('roles.and.permissions');

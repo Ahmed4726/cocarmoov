@@ -34,8 +34,8 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>0</h3>
-                <p>Mouvements actuels</p>
+                <h3>{{ $ongoing_cars }}</h3>
+                <p>Carmoovs en cours</p>
               </div>
               <div class="icon">
               <i class="fas fa-arrow-circle-up"></i>
@@ -50,7 +50,7 @@
             <div class="small-box bg-success">
               <div class="inner">
                 <h3>0</h3>
-                <p>Emplois ce mois-ci</p>
+                <p>Voir mes Carmoovs</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -64,7 +64,7 @@
             <div class="small-box bg-warning">
               <div class="inner">
                 <h3>€0</h3>
-                <p>Payer en cours</p>
+                <p>Paiements en cours</p>
               </div>
               <div class="icon">
                 <i class="fas fa-database"></i>

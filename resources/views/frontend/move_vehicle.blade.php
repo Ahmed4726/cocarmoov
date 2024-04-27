@@ -315,66 +315,66 @@
             </form>
         </div>
 
-        <div class="col-md-6 col-sm-12">
-            <form method="POST" action="{{ route('register') }}">
+        {{-- <div class="col-md-6 col-sm-12">
+            <form method="POST" action="{{ route('register') }}"> --}}
                 @csrf
 
  <!-- Prénom (First Name) -->
-<div class="form-group">
+{{-- <div class="form-group">
     <label for="first_name">Prénom:</label>
     <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Entrez votre Prénom" autofocus>
     @error('first_name')
         <span class="text-danger">{{ $message }}</span>
     @enderror
-</div>
+</div> --}}
 
 <!-- Nom de famille (Last Name) -->
-<div class="form-group">
+{{-- <div class="form-group">
     <label class="form-label" for="last_name">Nom de famille:</label>
     <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Entrez votre Nom de famille">
     @error('last_name')
         <span class="text-danger">{{ $message }}</span>
     @enderror
-</div>
+</div> --}}
 
 <!-- Numéro de téléphone (Phone Number) -->
-<div class="form-group">
+{{-- <div class="form-group">
     <label for="phone_number">Numéro de téléphone:</label>
     <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Entrez votre Numéro de téléphone">
     @error('phone_number')
         <span class="text-danger">{{ $message }}</span>
     @enderror
-</div>
+</div> --}}
 
 <!-- Adresse e-mail (Email Address) -->
-<div class="form-group">
+{{-- <div class="form-group">
     <label for="email">Adresse e-mail:</label>
     <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre Adresse e-mail">
     @error('email')
         <span class="text-danger">{{ $message }}</span>
     @enderror
-</div>
+</div> --}}
 
 <!-- Mot de passe (Password) -->
-<div class="form-group">
+{{-- <div class="form-group">
     <label for="password">Mot de passe:</label>
     <input type="password" class="form-control" id="password" name="password" placeholder="Entrez votre Mot de passe">
     @error('password')
         <span class="text-danger">{{ $message }}</span>
     @enderror
-</div>
+</div> --}}
 
 <!-- Confirmez votre mot de passe (Confirm Password) -->
-<div class="form-group">
+{{-- <div class="form-group">
     <label for="password_confirmation">Confirmez votre Mot de passe:</label>
     <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirmez votre Mot de passe">
     @error('password_confirmation')
         <span class="text-danger">{{ $message }}</span>
     @enderror
-</div>
+</div> --}}
 
 <!-- Rôle (User Type) -->
-<div class="form-group">
+{{-- <div class="form-group">
     <label for="user_type">Rôle:</label>
     <select class="form-control" name="user_type" id="user_type">
         <option selected value="">Choisissez votre rôle</option>
@@ -385,23 +385,23 @@
     @error('user_type')
         <span class="text-danger">{{ $message }}</span>
     @enderror
-</div>
+</div> --}}
 
 <!-- Accepter les conditions -->
-<div class="form-group">
+{{-- <div class="form-group">
     <input type="checkbox" id="checkbox" name="checkbox_name"><label for="checkbox">Je ne souhaite pas recevoir d’informations, de bons plans et de cadeaux de CoCarmoov.</label>
     @error('checkbox_name')
         <span class="text-danger">{{ $message }}</span>
     @enderror
-</div>
+</div> --}}
 
-<i class="fas fa-check rounded p-1" style="background-color:#fdcd02; color:white"></i> En vous inscrivant, vous acceptez nos <a href="https://cocarmoov.fr/mentions-legales">Conditions Générales d’Utilisation</a> et notre <a href="https://cocarmoov.fr/politique-de-confidentialite">Politique de confidentialité</a>.
+{{-- <i class="fas fa-check rounded p-1" style="background-color:#fdcd02; color:white"></i> En vous inscrivant, vous acceptez nos <a href="https://cocarmoov.fr/mentions-legales">Conditions Générales d’Utilisation</a> et notre <a href="https://cocarmoov.fr/politique-de-confidentialite">Politique de confidentialité</a>. --}}
 
 
                 <!-- Sign Up button -->
-                <button type="submit" class="btn btn-warning" style="width:100%;">S'inscrire</button>
-            </form>
-        </div>
+                {{-- <button type="submit" class="btn btn-warning" style="width:100%;">S'inscrire</button>
+            </form> --}}
+        {{-- </div> --}}
     </div>
 
   </div>
