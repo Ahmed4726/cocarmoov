@@ -15,29 +15,30 @@ class ProposalController extends Controller
         if($user_type == '4' || $user_type == '5')
         {
             $proposals = Proposal::leftJoin('cars', 'cars.id', '=', 'proposals.car_id')
-                    ->where('proposals.owner_id', $user_id)
-                    ->select('cars.car_type as car_type',
-                             'cars.package_amount as actual_amount',
-                             'proposals.offer_amount as offer_amount',
-                             'proposals.pick_up_time as pick_up_time',
-                             'proposals.delivery_time as delivery_time',
-                             'proposals.status as status',
-                             'proposals.id as proposal_id',
-                             'proposals.car_id as car_id')
-                    ->get();
+                                    // ->where('proposals.status', '=', 'Pending')
+                                    ->where('proposals.owner_id', $user_id)
+                                    ->select('cars.car_type as car_type',
+                                            'cars.package_amount as actual_amount',
+                                            'proposals.offer_amount as offer_amount',
+                                            'proposals.pick_up_time as pick_up_time',
+                                            'proposals.delivery_time as delivery_time',
+                                            'proposals.status as status',
+                                            'proposals.id as proposal_id',
+                                            'proposals.car_id as car_id')
+                                    ->get();
             return view('admin.proposals_approvals',compact('proposals'));
         }
         $proposals = Proposal::leftJoin('cars', 'cars.id', '=', 'proposals.car_id')
-        ->where('proposals.driver_id', $user_id)
-        ->select('cars.car_type as car_type',
-                 'cars.package_amount as actual_amount',
-                 'proposals.offer_amount as offer_amount',
-                 'proposals.pick_up_time as pick_up_time',
-                 'proposals.delivery_time as delivery_time',
-                 'proposals.status as status',
-                 'proposals.id as proposal_id',
-                 'proposals.car_id as car_id')
-        ->get();
+                                ->where('proposals.driver_id', $user_id)
+                                ->select('cars.car_type as car_type',
+                                        'cars.package_amount as actual_amount',
+                                        'proposals.offer_amount as offer_amount',
+                                        'proposals.pick_up_time as pick_up_time',
+                                        'proposals.delivery_time as delivery_time',
+                                        'proposals.status as status',
+                                        'proposals.id as proposal_id',
+                                        'proposals.car_id as car_id')
+                                ->get();
         // $proposals = Proposal::where('driver_id',$user_id)->get();
         return view('admin.proposals',compact('proposals'));
     }
