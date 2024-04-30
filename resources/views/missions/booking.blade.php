@@ -28,6 +28,13 @@
 </div>
 </div> -->
 </div>
+@if(session('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
@@ -39,11 +46,11 @@
     <div class="row">
         <div class="col-md-6">
             <label class="form-label" for="pick_up_time">Pickup-Time</label>
-            <input class="form-control" type="datetime-local" name="pick_up_time" id="pick_up_time">
+            <input class="form-control" type="datetime-local" name="pick_up_time" id="pick_up_time" required>
         </div>
         <div class="col-md-6">
             <label class="form-label" for="delivery_time">Delivery-Time</label>
-            <input class="form-control" type="datetime-local" name="delivery_time" id="delivery_time">
+            <input class="form-control" type="datetime-local" name="delivery_time" id="delivery_time" required>
         </div>
     </div>
 
@@ -64,22 +71,18 @@
                 <h5 class="modal-title" id="offerModalLabel">Make an Offer</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            @if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
+
             <form action="/add-perposals" method="POST">
                 @csrf
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
                             <label class="form-label" for="pick_up_time">Pickup-Time</label>
-                            <input class="form-control" type="datetime-local" name="pick_up_time" id="pick_up_time">
+                            <input class="form-control" type="datetime-local" name="pick_up_time" id="pick_up_time" required>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label" for="delivery_time">Delivery-Time</label>
-                            <input class="form-control" type="datetime-local" name="delivery_time" id="delivery_time">
+                            <input class="form-control" type="datetime-local" name="delivery_time" id="delivery_time" required>
                         </div>
                     </div>
                     <br>
@@ -90,7 +93,7 @@
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="pick_up_time">Offer Amount</label>
-                        <input class="form-control" type="number" name="offer_amount" id="offer_amount">
+                        <input class="form-control" type="number" name="offer_amount" id="offer_amount" required>
                     </div>
                     <input type="hidden" name="car_id" id="car_id" value="{{ $mission['id'] }}">
                     <input type="hidden" name="owner_id" id="owner_id" value="{{ $mission['user_id'] }}">

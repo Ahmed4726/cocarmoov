@@ -855,8 +855,17 @@
     </ul>
 </li> --}}
 @if (check_persmission('Propositions'))
-<li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
+<li class="nav-item {{ Request::is('/perposals') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="/perposals" class="nav-link">
+        <i class="nav-icon fas fa-user"></i>
+        <p>
+            Propositions
+        </p>
+    </a>
+
+
+{{-- <li class="nav-item {{ Request::is('/perposals') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="/perposals" class="nav-link">
         <i class="nav-icon fas fa-user"></i>
         <p>
         Propositions
@@ -890,7 +899,7 @@
             </a>
         </li>
     </ul>
-    @endif
+    @endif --}}
     {{-- <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">

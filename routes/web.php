@@ -99,6 +99,8 @@ Route::middleware('auth')->group(function () {
     //Perposals
     Route::get('/perposals', [ProposalController::class,'index'])->name('Propositions')->middleware('CanAccess:Propositions');
     Route::post('/add-perposals',[ProposalController::class,'addProposals'])->name('add.new.Propositions')->middleware('CanAccess:Propositions');
+    Route::post('/update-offer', [ProposalController::class,'updateStatus'])->name('PropositionsStatus')->middleware('CanAccess:Propositions');
+
     // Route::get('/edit-perposals/{id}', [ProposalController::class,'edit'])->name('edit.Propositions')->middleware('CanAccess:Propositions','CanAccessRecord:Propositions');
     // Route::put('/update-perposals/{id}', [ProposalController::class,'update'])->name('update.Propositions')->middleware('CanAccess:Propositions');
     // Route::post('/delete-perposals/{id}',[ProposalController::class,'destroy'])->name('Propositions.delete')->middleware('CanAccess:Propositions');
