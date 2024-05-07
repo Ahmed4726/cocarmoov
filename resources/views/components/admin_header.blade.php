@@ -136,7 +136,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4" style='background-color:#333132'>
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img class="img-fluid" width="100%" height="100px" src="{{ asset('images/wallet/footer-2.png') }}" alt="Wallet" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img class="img-fluid" width="100%" height="100px" src="{{ asset('images/wallet/cocarmoov-fond-sombre.png') }}" alt="Wallet" class="brand-image img-circle elevation-3" style="opacity: .8">
       <!-- <span class="brand-text font-weight-light">CoCarmoov</span> -->
     </a>
 
