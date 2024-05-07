@@ -59,11 +59,11 @@
             <a href="#" class="nav-link">Rechercher un Co-convoyage</a>
         </li> --}}
         {{-- @endif --}}
-        @if (check_persmission('Tableau de bord'))
+        <!-- @if (check_persmission('Tableau de bord'))
         <li class="nav-item">
             <a href="{{ route('dashboard') }}" class="nav-link">Tableau de bord</a>
         </li>
-        @endif
+        @endif -->
         @if (check_persmission('Rechercher un Carmoov'))
         <li class="nav-item">
             <a href="{{ route('missions') }}" class="nav-link">Rechercher un Carmoov</a>
@@ -76,22 +76,22 @@
         @endif
         @if (check_persmission('Espace Co-convoyeur'))
             <li class="nav-item">
-                <a href="#" class="nav-link">Espace Co-convoyeur</a>
+                <a href="{{route('dashboard')}}" class="nav-link">Espace Co-convoyeur</a>
             </li>
         @endif
         @if (check_persmission('Espace Client'))
             <li class="nav-item">
-                <a href="#" class="nav-link">Espace Client</a>
+                <a href="{{route('dashboard')}}" class="nav-link">Espace Client</a>
             </li>
         @endif
         @if (check_persmission('Espace Convoyeur'))
             <li class="nav-item">
-                <a href="#" class="nav-link">Espace Convoyeur</a>
+                <a href="{{route('dashboard')}}" class="nav-link">Espace Convoyeur</a>
             </li>
         @endif
         @if (check_persmission('Espace Transporteur'))
             <li class="nav-item">
-                <a href="#" class="nav-link">Espace Transporteur</a>
+                <a href="{{route('dashboard')}}" class="nav-link">Espace Transporteur</a>
             </li>
         @endif
     </ul>
@@ -135,7 +135,7 @@
   <!-- /.navbar -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4" style='background-color:#333132'>
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="{{route('dashboard')}}" class="brand-link">
       <img class="img-fluid" width="100%" height="100px" src="{{ asset('images/wallet/cocarmoov-fond-sombre.png') }}" alt="Wallet" class="brand-image img-circle elevation-3" style="opacity: .8">
       <!-- <span class="brand-text font-weight-light">CoCarmoov</span> -->
     </a>
@@ -157,24 +157,16 @@
       <nav class="mt-2">
 
         <ul class="nav nav-pills nav-sidebar flex-column pb-3" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item {{ Request::is('main-dashboard') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
+        @if (check_persmission('Tableau de bord'))
+        <li class="nav-item {{ Request::is('main-dashboard') ? 'menu-open menu-is-opening' : '' }}">
+    <a href="{{ route('dashboard') }}" class="nav-link">
         <i class="nav-icon fas fa-tachometer-alt"></i>
         <p>
-        Tableau de bord
-            <i class="right fas fa-angle-left"></i>
+            Tableau de bord
         </p>
     </a>
-    @if (check_persmission('Tableau de bord'))
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('main-dashboard') ? 'active' : '' }} text-hover rounded">
-            <a href="{{route('dashboard')}}" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Tableau de bord</p>
-            </a>
-        </li>
-    </ul>
     @endif
+   
     {{-- <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
@@ -227,7 +219,7 @@
             </a>
         </li>
     </ul> --}}
-    @if (check_persmission('Paiements en cours'))
+    <!-- @if (check_persmission('Paiements en cours'))
     <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
@@ -237,8 +229,8 @@
             </a>
         </li>
     </ul>
-    @endif
-    @if (check_persmission('Paiements en cours'))
+    @endif -->
+    <!-- @if (check_persmission('Paiements en cours'))
     <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
@@ -259,18 +251,8 @@
             </a>
         </li>
     </ul>
-    @endif
-    @if (check_persmission('Profil'))
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="fas fa-money-bill-wave nav-icon text-light"></i>
-                <p class="text-light">     Voir mon profil
-</p>
-            </a>
-        </li>
-    </ul>
-    @endif
+    @endif -->
+
 
     {{-- <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
@@ -556,82 +538,16 @@
 </li>
 
 <!-- Private car owner permissions-->
-
+@if (check_persmission('Commandes'))
 <li class="nav-item {{ Request::is('carmoovs') ? 'menu-open menu-is-opening' : '' }}">
     <a href="/carmoovs" class="nav-link">
         <i class="nav-icon fas fa-car"></i>
         <p>
-            Carmoovs
-        </p>
-    </a>
-</li>
-@if (check_persmission('Commandes'))
-<li class="nav-item {{ Request::is('carmoovs') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-car"></i>
-        <p>
-            Commandes
+        Commandes
         </p>
     </a>
 </li>
 @endif
-@if (check_persmission('Profil'))
-<li class="nav-item {{ Request::is('show_profile') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-user"></i>
-        <p>
-        Profil
-            <i class="right fas fa-angle-left"></i>
-        </p>
-    </a>
-    {{-- <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('show_profile') ? 'active' : '' }} text-hover rounded">
-            <a href="{{route('profile.index')}}" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Mes informations</p>
-            </a>
-        </li>
-    </ul> --}}
-    @if (check_persmission('Profil'))
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Voir mon profil</p>
-            </a>
-        </li>
-    </ul>
-    @endif
-
-    <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">Notifications</p>
-            </a>
-        </li>
-    </ul>
-    {{-- <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light"> Inviter une connaissance</p>
-            </a>
-        </li>
-    </ul> --}}
-    <!-- private individual driver -->
-    {{-- <ul class="nav nav-treeview">
-        <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
-            <a href="#" class="nav-link">
-                <i class="far fa-circle nav-icon text-light"></i>
-                <p class="text-light">  Inviter un ami</p>
-            </a>
-        </li>
-    </ul> --}}
-
-</li>
-@endif
-
 {{-- <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-user"></i>
@@ -856,7 +772,7 @@
 </li> --}}
 @if (check_persmission('Propositions'))
 <li class="nav-item {{ Request::is('/perposals') ? 'menu-open menu-is-opening' : '' }}">
-    <a href="/perposals" class="nav-link">
+    <a href="{{route('Propositions')}}" class="nav-link">
         <i class="nav-icon fas fa-user"></i>
         <p>
             Propositions
@@ -1183,6 +1099,8 @@
             {{-- <i class="right fas fa-angle-left"></i> --}}
         </p>
     </a>
+    </li>
+@endif
     {{-- <ul class="nav nav-treeview">
         <li class="nav-item {{ Request::is('#') ? 'active' : '' }} text-hover rounded">
             <a href="#" class="nav-link">
@@ -1391,8 +1309,7 @@
             </a>
         </li>
     </ul> --}}
-</li>
-@endif
+
 
 {{-- @if (check_persmission('Propositions'))
 <li class="nav-item {{ Request::is('#') ? 'menu-open menu-is-opening' : '' }}">
@@ -1532,6 +1449,16 @@
     </a>
 </li>
 @endif
+<li class="nav-item {{ Request::is('show_profile') ? 'menu-open menu-is-opening' : '' }}">
+@if (check_persmission('Profil'))
+<a href="{{ route('profile.index') }}" class="nav-link">
+        <i class="nav-icon fas fa-user"></i>
+        <p>
+            Profil
+        </p>
+    </a>
+    @endif
+</li>
 {{-- <li class="nav-item">
     <a href="{{ route('alerts') }}" class="nav-link {{ Request::is('#') ? 'active' : '' }}">
         <i class="nav-icon fas fa-car"></i>
@@ -1557,7 +1484,7 @@
     </a>
 </li> -->
 
-<li class="nav-item {{ Request::is('roles-and-permissions','permissions','roles') ? 'menu-open menu-is-opening' : '' }}">
+<!-- <li class="nav-item {{ Request::is('roles-and-permissions','permissions','roles') ? 'menu-open menu-is-opening' : '' }}">
     <a href="#" class="nav-link">
         <i class="nav-icon fas fa-key"></i>
         <p>
@@ -1589,7 +1516,7 @@
             </a>
         </li>
     </ul>
-</li>
+</li> -->
 
 {{-- <li class="nav-item {{ Request::is('invoices') ? 'menu-open menu-is-opening' : '' }}">
 <a href="{{ route('invoice') }}" class="nav-link">
@@ -1606,7 +1533,7 @@
 </li> -->
 
 
-          <li class="nav-item menu-open">
+          <!-- <li class="nav-item menu-open">
             <ul class="nav nav-treeview rounded">
               <li class="nav-item">
                 <a href="{{route('certification')}}" class="nav-link">
@@ -1615,7 +1542,7 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
 
 
 {{-- <li>
