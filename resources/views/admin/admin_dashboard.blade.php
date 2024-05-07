@@ -34,7 +34,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>{{ $ongoing_cars }}</h3>
+                <h3>0</h3>
                 <p>Carmoovs en cours</p>
               </div>
               <div class="icon">

@@ -18,7 +18,7 @@ class DashboardController extends Controller
         else
         {
             $ongoing_cars = Car::where('status','On-Move')->where('user_id',auth()->user()->id)->count();
-            return view('admin.admin_dashboard', get_defined_vars()); // For end users.
+            return view('admin.admin_dashboard', compact('$ongoing_cars')); // For end users.
         }
     }
 
