@@ -50,7 +50,7 @@
     <ul class="navbar-nav">
         @if (check_persmission('Assistance'))
         <li class="nav-item">
-            <a href="{{ route('insurance') }}" class="nav-link">Assistance</a>
+            <a href="{{ route('faq') }}" class="nav-link">Assistance</a>
         </li>
         @endif
 

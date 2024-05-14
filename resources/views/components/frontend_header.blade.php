@@ -15,7 +15,7 @@
 			</button>
             </div>
 			<div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-				<ul class="navbar-nav mb-2" style="margin-left: -209px;" >
+				<ul class="navbar-nav mb-2" style="margin-left: -290px;" >
 					<!-- <li class="nav-item"> <a class="nav-link" href="{{ route('welcome') }}">Accueil</a>
 					</li> -->
 					<li class="nav-item dropdown">
@@ -25,7 +25,7 @@
         <li><a class="dropdown-item header-text-mobile fw-bold app-font-family" href="{{ route('welcome') }}">Particulier</a></li>
     </ul>
 </li>
-					<li class="nav-item"> <a class="nav-link header-text-mobile fw-bold app-font-family" href="http://127.0.0.1:8000/#move_car">Déplacer un véhicule</a>
+					<li class="nav-item"> <a class="nav-link header-text-mobile fw-bold app-font-family" href="/#move_car">Déplacer un véhicule</a>
 					</li>
 					<li class="nav-item"> <a class="nav-link header-text-mobile fw-bold app-font-family" href="{{ route('co-drive') }}">Co-convoyer</a>
 					</li>
@@ -39,12 +39,31 @@
           </li>
 				</ul>
                 @if(Auth::check())
-
+                @if (check_persmission('Espace Client'))
+                <a href="{{ route('dashboard') }}" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;">
+            <span class="text-dark fw-bold app-font-family">Espace Client</span>
+        </a>
+        @endif
+        @if (check_persmission('Espace Convoyeur'))
+                <a href="{{ route('dashboard') }}" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;">
+            <span class="text-dark fw-bold app-font-family">Espace Convoyeur</span>
+        </a>
+        @endif
+        @if (check_persmission('Espace Transporteur'))
+                <a href="{{ route('dashboard') }}" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;">
+            <span class="text-dark fw-bold app-font-family">Espace Transporteur</span>
+        </a>
+        @endif
+        @if (check_persmission('Espace Co-convoyeur'))
+                <a href="{{ route('dashboard') }}" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;">
+            <span class="text-dark fw-bold app-font-family">Espace Co-Convoyeur</span>
+        </a>
+        @endif
     <!-- Logout Button -->
     <form action="{{ route('logout') }}" method="post">
         @csrf
         <button type="submit" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;">
-            <span class="text-dark fw-bold app-font-family">Logout</span>
+            <span class="text-dark fw-bold app-font-family">Se déconnecter</span>
         </button>
     </form>
 @else
@@ -58,6 +77,16 @@
         <span class="text-dark fw-bold app-font-family">S'inscrire</span>
     </button>
 @endif
+<div class="dropdown" style="margin-left: 10px;">
+    <button class="btn btn-warning-outline login-button-header py-3 px-3 dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-language" style="color:black;"></i>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+        <li><a class="dropdown-item" href="#">English</a></li>
+        <li><a class="dropdown-item" href="#">French</a></li>
+        <!-- Add more language options as needed -->
+    </ul>
+</div>
 				<!-- <a href="#!" class="btn btn-primary ms-2 ms-lg-3">Sign Up</a> -->
 			</div>
 		</div>
