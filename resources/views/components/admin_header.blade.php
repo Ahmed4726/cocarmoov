@@ -541,7 +541,7 @@
 @if (check_persmission('Commandes'))
 <li class="nav-item {{ Request::is('carmoovs') ? 'menu-open menu-is-opening' : '' }}">
     <a href="/carmoovs" class="nav-link">
-        <i class="nav-icon fas fa-car"></i>
+    <i class="nav-icon fas fa-cart-plus"></i>
         <p>
         Commandes
         </p>
@@ -773,7 +773,7 @@
 @if (check_persmission('Propositions'))
 <li class="nav-item {{ Request::is('/perposals') ? 'menu-open menu-is-opening' : '' }}">
     <a href="{{route('Propositions')}}" class="nav-link">
-        <i class="nav-icon fas fa-user"></i>
+        <i class="nav-icon fas fa-envelope"></i>
         <p>
             Propositions
         </p>

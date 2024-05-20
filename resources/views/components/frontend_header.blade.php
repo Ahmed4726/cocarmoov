@@ -15,7 +15,7 @@
 			</button>
             </div>
 			<div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-				<ul class="navbar-nav mb-2" style="margin-left: -290px;" >
+				<ul class="navbar-nav mb-2" style="margin-left: -250px;" >
 					<!-- <li class="nav-item"> <a class="nav-link" href="{{ route('welcome') }}">Accueil</a>
 					</li> -->
 					<li class="nav-item dropdown">
@@ -41,22 +41,22 @@
                 @if(Auth::check())
                 @if (check_persmission('Espace Client'))
                 <a href="{{ route('dashboard') }}" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;">
-            <span class="text-dark fw-bold app-font-family">Espace Client</span>
+            <span class="text-dark fw-bold app-font-family">Mon Compte</span>
         </a>
         @endif
         @if (check_persmission('Espace Convoyeur'))
                 <a href="{{ route('dashboard') }}" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;">
-            <span class="text-dark fw-bold app-font-family">Espace Convoyeur</span>
+            <span class="text-dark fw-bold app-font-family">Mon Compte</span>
         </a>
         @endif
         @if (check_persmission('Espace Transporteur'))
                 <a href="{{ route('dashboard') }}" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;">
-            <span class="text-dark fw-bold app-font-family">Espace Transporteur</span>
+            <span class="text-dark fw-bold app-font-family">Mon Compte</span>
         </a>
         @endif
         @if (check_persmission('Espace Co-convoyeur'))
                 <a href="{{ route('dashboard') }}" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;">
-            <span class="text-dark fw-bold app-font-family">Espace Co-Convoyeur</span>
+            <span class="text-dark fw-bold app-font-family">Mon Compte</span>
         </a>
         @endif
     <!-- Logout Button -->
@@ -68,12 +68,12 @@
     </form>
 @else
     <!-- Login Button -->
-    <button class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;" data-toggle="modal" data-target="#loginModal">
+    <button class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 10px; cursor: pointer;" data-toggle="modal" data-target="#loginModal">
         <span class="text-dark fw-bold app-font-family">S'identifier</span>
     </button>
 
     <!-- Signup Button -->
-    <button class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;" data-toggle="modal" data-target="#signupModal">
+    <button class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 10px; cursor: pointer;" data-toggle="modal" data-target="#signupModal">
         <span class="text-dark fw-bold app-font-family">S'inscrire</span>
     </button>
 @endif
@@ -82,8 +82,8 @@
         <i class="fas fa-language" style="color:black;"></i>
     </button>
     <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-        <li><a class="dropdown-item" href="#">English</a></li>
-        <li><a class="dropdown-item" href="#">French</a></li>
+        <li><a class="dropdown-item" href="#"><img src="images/wallet/USA.png" style="width: 20px; height:20px;"/> English</a></li>
+        <li><a class="dropdown-item" href="#"><img src="images/wallet/france.png" style="width: 20px;height:20px;"/> French</a></li>
         <!-- Add more language options as needed -->
     </ul>
 </div>
