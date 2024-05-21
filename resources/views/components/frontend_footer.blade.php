@@ -25,7 +25,7 @@
       <div class="footer-widget">
 					<h5 class="mb-4 services-p font-secondary text-center">Services</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2 text-center footer-links"><a href="service-details.html">Déplacer un véhicule</a>
+						<li class="mb-2 text-center footer-links"><a href="/#move_car">Déplacer un véhicule</a>
 						</li>
 						<li class="mb-2 text-center footer-links"><a href="{{ route('co-drive') }}">Co-convoyer</a>
 						</li>
