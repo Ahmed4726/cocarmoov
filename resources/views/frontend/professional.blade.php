@@ -28,131 +28,44 @@
 			<div class="col-lg-6">   
 				<div class="section-title text-center">
                 <p class="services-p fw-bold mb-3"><b>Tarification sur demande</b></p>
-                <h2 class="app-font-family">Proposition de Tarif de Convoyage Personnalisé (HT) pour Votre Flotte</h2>
+                <h4 class="app-font-family">Proposition de Tarif de Convoyage Personnalisé (HT) pour Votre Flotte</h4>
 				</div>
 			</div>
 		</div>
-		<div class="row mt-0">
-			<div class="col-lg-3 mt-3 mb-4 pricing-mobile">
-				<h5 class="text-dark pricing-text mt-5"><i class="fas fa-car mx-2"></i>Véhicules de tourisme</h5>
-				<h5 class="text-dark pricing-text mt-4"><i class="fas fa-shuttle-van mx-2"></i> Utilitaires inférieurs à 13m3</h5>
-				<h5 class="text-dark pricing-text mt-4"><i class="fas fa-truck  mx-2"></i>Utilitaires supérieurs à 13m3</h5>
-			</div>
-			<div class="col-lg-3 col-md-12">
-    <div class="card rounded text-center mb-4" style="width: 90%;">
-      <div class="card-body">
-        <h4 class="card-title pricing-text">Pack Prestige</h4>
-        <p class="card-text mt-3">59-60 c€/km</p>
-        <p class="card-text">63-69 c€/km</p>
-        <p class="card-text">76-85 c€/km</p>
-	
-        <a href="#" class="btn btn-primary text-dark">Découvrez le Pack</a>
-		
-      </div>
-    </div>
-			</div>
-			<div class="col-lg-3 col-md-12">
-    <div class="card rounded text-center mb-4" style="width: 90%;">
-      <div class="card-body">
-        <h4 class="card-title pricing-text">Forfait logistique</h4>
-		<p class="card-text mt-3">53-54 c€/km</p>
-        <p class="card-text">57-62 c€/km</p>
-        <p class="card-text">68-77 c€/km</p>
-        <a href="#" class="btn btn-primary text-dark">Découvrez le Forfait</a>
-      </div>
-    </div>
-			</div>
-			<div class="col-lg-3 col-md-12">
-    <div class="card rounded text-center" style="width: 90%;">
-      <div class="card-body">
-        <h4 class="card-title pricing-text">Plan économique</h4>
-        <p class="card-text mt-3">47-48 c€/km</p>
-        <p class="card-text">50-55 c€/km</p>
-        <p class="card-text">61-68 c€/km</p>
-        <a href="#" class="btn btn-primary text-dark">Découvrez le Plan</a>
-      </div>
-    </div>
-			</div>
-		</div>
 		<div class="row">
-			<div class="col-lg-3 col-md-12">
-			<h5 class="pricing-text mt-5 text-center">Gestion de la Flotte</h5>
-			<p class="text-dark  text-pricing-p fw-medium"><i class="fas fa-infinity mx-1"></i>Nombre de véhicules à déplacer par mois<br> 
-			<i class="fas fa-calculator mx-1"></i>Base forfaitaire par véhicule<br>
-			<i class="fas fa-address-book mx-1"></i>Gestion carnet d’adresses
-</p>
-			</div>
-			<div class="col-lg-3 col-md-12">
-				<br>
-				<br>
-				<br>
-			<p class="text-dark text-center text-pricing-p fw-medium">À partir de 10<br> 
-			59€<br>
-<i class="fas fa-check"></i>
-</p>
-			</div>
-			<div class="col-lg-3 col-md-12">
-				<br>
-				<br>
-				<br>
-			<p class="text-dark text-center text-pricing-p fw-medium">À partir de 20<br> 
-			49€<br>
-<i class="fas fa-check"></i>
-</p>
-			</div>
-			<div class="col-lg-3 col-md-12">
-				<br>
-				<br>
-				<br>
-			<p class="text-dark text-center text-pricing-p fw-medium">À partir de 30<br> 
-			39€<br>
-<i class="fas fa-check"></i>
-</p>
+			<div class="col-md-12">
+			<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
 			</div>
 		</div>
-			<div class="row">
-			<div class="col-lg-3 col-md-12">
-			<h5 class="pricing-text text-center mt-5">Services et Sécurité</h5>
-			<p class="text-dark  text-pricing-p fw-medium">Confidentialité des données<br> 
-			Espace client sécurisé<br>
-			Documents digitalisés<br>
-			Téléchargement de factures<br>
-Suivi en temps réel<br>
-Suivi d’indicateurs (tableau de bord)
-Support e-mail & téléphonique
-
-</p>
-			</div>
-			<div class="col-lg-3 col-md-12">
-				<br>
-				<br>
-				<br>
-				
-			<p class="text-dark text-center text-pricing-p fw-medium"><i class="fas fa-check"></i><br> 
-			<i class="fas fa-check"></i><br>
-<i class="fas fa-check"></i>
-</p>
-			</div>
-			<div class="col-lg-3 col-md-12">
-				<br>
-				<br>
-				<br>
-				<p class="text-dark text-center text-pricing-p fw-medium"><i class="fas fa-check"></i><br> 
-			<i class="fas fa-check"></i><br>
-<i class="fas fa-check"></i>
-</p>
-			</div>
-			<div class="col-lg-3 col-md-12">
-				<br>
-				<br>
-				<br>
-				<p class="text-dark text-center text-pricing-p fw-medium"><i class="fas fa-check"></i><br> 
-			<i class="fas fa-check"></i><br>
-<i class="fas fa-check"></i>
-</p>
-			</div>
-		</div>
-    </div>
+	</div>
 </section>
 <section class="section mt-5">
 	<div class="container">
