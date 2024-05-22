@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\CarListed;
+use App\Mail\DriverDeliveryApprovedNotification;
 use App\Mail\RideCancellationNotification;
 use App\Models\Balance;
 use Illuminate\Http\Request;
@@ -186,6 +187,12 @@ class ListingController extends Controller
         $balance = Balance::where('car_id',$request->car_id)->first();
         $balance->status = 'Available';
         $balance->save();
+
+        $mission = Mission::find($request->car_id);
+        $driver = User::find($mission->user_id);
+        // Send email to driver his delivery is approved and funds are available for withdraw
+        Mail::to($driver->email)->send(new DriverDeliveryApprovedNotification($mission, $driver));
+
 
         return redirect()->route('listings.index')->with('success', 'Car Delivery Confirmed and completed successfully');
 

@@ -9,7 +9,7 @@
       <div class="container">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 font-monospace">Pick Up a Car</h1>
+            <h1 class="m-0 font-monospace">Confirm delivery</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -23,7 +23,7 @@
             <!-- Form for uploading photos -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Pick Up Car</h3>
+                <h3 class="card-title">Confirm delivery</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->

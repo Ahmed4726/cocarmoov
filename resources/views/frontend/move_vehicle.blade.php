@@ -202,9 +202,15 @@
                             <!-- Repeat the structure for the other two columns (Voie express and Voie premium) -->
                         </div>
                 </div>
+                @if($premium_package === null && $express_package === null && $economyPackage === null)
+                <div class="col-md-12 text-center">
+                    <a href="/" class="btn btn-primary text-dark">Go Back</a>
+                </div>
+                @else
                     <div class="col-md-12 text-center">
                         <button id="nextButton" type="button" class="btn btn-primary text-dark" onclick="handleNextStep({{ $isAuthenticated ? 'true' : 'false' }})">Suivant</button>
                     </div>
+                @endif
                 </div>
             </div>
 
@@ -541,6 +547,8 @@
 </form>
 </div>
 
+
+
 <script src="https://js.stripe.com/v3/"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
@@ -655,6 +663,7 @@ function submitPayment() {
 let selectedPackage = '';
 
 function selectPackage(packageType) {
+    // alert(packageType)
     // Reset styles for all package buttons
     $('.package-btn').removeClass('selected-package');
 
@@ -853,9 +862,10 @@ function authenticateUser() {
     });
 
     function updateTotalPrice() {
+        // alert('ok');
     var totalPremiumPrice = parseFloat('{{ $premium_package }}');
     var totalExpressPrice = parseFloat('{{ $express_package }}');
-
+        // alert(totalExpressPrice)
     checkboxes.forEach(checkbox => {
         if (checkbox.checked) {
             if (checkbox.name.includes('express_services')) {
@@ -865,9 +875,20 @@ function authenticateUser() {
             }
         }
     });
-
-    premiumPriceDisplay.textContent = `${totalPremiumPrice.toFixed(2)} € {{ $tax_notation }}`;
-    expressPriceDisplay.textContent = `${totalExpressPrice.toFixed(2)} € {{ $tax_notation }}`;
+    // alert(premiumPriceDisplay.textContent)
+    if (premiumPriceDisplay)
+    {
+        premiumPriceDisplay.textContent = `${totalPremiumPrice.toFixed(2)} € {{ $tax_notation }}`;
+    }
+    else if(expressPriceDisplay)
+    {
+        expressPriceDisplay.textContent = `${totalExpressPrice.toFixed(2)} € {{ $tax_notation }}`;
+    }
+    else
+    {
+        premiumPriceDisplay.textContent = `${totalPremiumPrice.toFixed(2)} € {{ $tax_notation }}`;
+        expressPriceDisplay.textContent = `${totalExpressPrice.toFixed(2)} € {{ $tax_notation }}`;
+    }
 // alert("ok")
     // Display selected package details in the next step
     $('#selectedPackageDetails').text(`Selected Package: ${selectedPackage}`);
@@ -884,7 +905,7 @@ if(selectedPackage === 'economy')
     } else if (selectedPackage === 'express') {
         selectedPackagePrice = totalExpressPrice;
     }
-// alert(selectedPackage)
+// alert(`{{ $tax_notation }}`)
     $('#selectedPackagePrice').text(`Selected Package Price: ${selectedPackagePrice.toFixed(2)} € {{ $tax_notation }}`);
 }
 
@@ -896,7 +917,7 @@ if(selectedPackage === 'economy')
     var car_owner = '{{ $car_owner }}';
     var priceElement = document.getElementById(packageType + 'PriceDisplay');
     var currentPrice = parseFloat(priceElement.innerText.replace('€', '').trim());
-    var step = 1;
+    var step = 10;
     var minPrice = 0;
     var maxPrice = 0;
 
@@ -1014,8 +1035,9 @@ if(selectedPackage === 'economy')
     });
 
         function updateNextButton() {
+            // alert('ok')
         var nextButton = document.getElementById('nextButton');
-        var isPackageSelected = selectedPackage !== undefined && selectedPackage !== '';
+        var isPackageSelected = selectedPackage !== undefined && selectedPackage !== null && selectedPackage !== '';
         nextButton.disabled = !isPackageSelected;
     }
 

@@ -2,6 +2,15 @@
 @section('content')
 <head>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVSFgcchmnjqE0GDdpwQjpmUKYH2k21gc&libraries=places"></script>
+    <style>
+        .form-input-border {
+            border: 1px solid #ced4da;
+        }
+        .professionall-button-register {
+            background-color: #ffc107;
+            color: #000;
+        }
+    </style>
 </head>
 
 <section class="banner position-relative overflow-hidden">
@@ -36,93 +45,88 @@
       <div class="card mt-4 rounded mx-auto card-register p-2" style="width:60%;">
             <div class="card-body">
               <h4 class="card-title text-center p-complete-info py-2">Indiquez vos adresses</h4>
-			  <form action="/calculate" method="POST">
+              <form action="/calculate" method="POST">
                 @csrf
-  <div class="row">
-    <div class="col-lg-6 col-md-12">
-        <input type="text" class="form-control form-input-border mt-0" id="pickup" placeholder="Adresse d’enlèvement">
-        <input type="hidden" id="pickup-lat" name="pickup_lat">
-        <input type="hidden" id="pickup-lng" name="pickup_lng">
-     </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <input type="text" class="form-control form-input-border mt-0" id="pickup" placeholder="Adresse d’enlèvement">
+                        <input type="hidden" id="pickup-lat" name="pickup_lat">
+                        <input type="hidden" id="pickup-lng" name="pickup_lng">
+                    </div>
 
-     <div class="col-lg-6 col-md-12">
-        <input type="text" class="form-control form-input-border mt-0" id="delivery" placeholder="Adresse de livraison">
-        <input type="hidden" id="delivery-lat" name="delivery_lat">
-        <input type="hidden" id="delivery-lng" name="delivery_lng">
-     </div>
-     <input type="text" id="pickupName" name="pickup_name" style="display: none;">
-     <input type="text" id="deliveryName" name="delivery_name" style="display: none;" >
-     <input type="hidden" id="distance" name="distance">
+                    <div class="col-lg-6 col-md-12">
+                        <input type="text" class="form-control form-input-border mt-0" id="delivery" placeholder="Adresse de livraison">
+                        <input type="hidden" id="delivery-lat" name="delivery_lat">
+                        <input type="hidden" id="delivery-lng" name="delivery_lng">
+                    </div>
 
+                    <input type="text" id="pickupName" name="pickup_name" style="display: none;">
+                    <input type="text" id="deliveryName" name="delivery_name" style="display: none;">
+                    <input type="hidden" id="distance" name="distance">
 
-
-  <h4 class="card-title text-center p-complete-info py-2">Spécifiez votre véhicule</h4>
-	<div class="col-lg-6 col-md-12">
-	<div class="input-group">
-			  <div class="select-container">
-          <select name="vehicle-type" id="vehicle-type"
-          class="form-control form-input-border  app-font-family">
-      <option value="" selected class="app-font-family">Type de véhicule</option>
-      <option value="Citadine" class="app-font-family">Citadine</option>
-      <option value="Berline" class="app-font-family">Berline</option>
-      <option value="Sportive" class="app-font-family">Sportive</option>
-	  <option value="Collection" class="app-font-family">Collection</option>
-      <option value="Monospace" class="app-font-family">Monospace</option>
-	  <option value="4×4" class="app-font-family">SUV ou 4×4</option>
-	  <option value="3m3" class="app-font-family">Utilitaire 3m3</option>
-	  <option value="6m3" class="app-font-family">Utilitaire 6m3</option>
-	  <option value="9m3" class="app-font-family">Utilitaire 9m3</option>
-	  <option value="12m3" class="app-font-family">Utilitaire 12m3</option>
-	  <option value="15m3" class="app-font-family">Utilitaire 15m3</option>
-	  <option value="20m3" class="app-font-family">Utilitaire 20m3</option>
-	  <option value="25m3" class="app-font-family">Utilitaire 25m3</option>
-	  <option value="30m3" class="app-font-family">Utilitaire 30m3</option>
-	  <option value="Camion-benne" class="app-font-family">Camion benne</option>
-	  <option value="Camping-car" class="app-font-family">Camping-car</option>
-	  <option value="Van-aménagé" class="app-font-family">Van-aménagé</option>
-
-    </select>
-    <i class="fas fa-caret-down fa-dropdown-icon"></i> <!-- Font Awesome dropdown icon -->
-  </div>
-  </div><br>
-	</div>
-  <div class="col-lg-6 col-md-12">
-	<div class="input-group">
-			  <div class="select-container">
-                <select name="vehicle-condition" id="vehicle-condition"
-                class="form-control form-input-border app-font-family">
-                <option value="" selected>Etat du véhicule</option>
-                <option value="En-état-de-marche" class="app-font-family">En état
-                    de marche</option>
-                <option value="En-panne" class="app-font-family">En panne</option>
-                <option value="Accidenté" class="app-font-family">Accidenté</option>
-            </select>
-    <i class="fas fa-caret-down fa-dropdown-icon"></i> <!-- Font Awesome dropdown icon -->
-  </div>
-  </div><br>
-	</div>
-  </div>
-  <div class="col-lg-12">
-  <h4 class="card-title text-center p-complete-info py-2">Spécifiez votre type de profil</h4>
-	<div class="col-lg-12 col-md-12">
-	<div class="input-group">
-			  <div class="select-container">
-          <select name="vehicle-mover" id="vehicle-mover"
-          class="form-control form-input-border app-font-family">
-          <option value="" selected class="app-font-family">Sélectionner le type de profil</option>
-      <option value="professional" class="app-font-family">Je suis professionnel</option>
-      <option value="private" class="app-font-family">Je suis un particulier</option>
-          </select>
-          <i class="fas fa-caret-down fa-dropdown-icon"></i>
-  </div>
-  </div>
-<div class="text-center">
-    <button type="submit"
-            class="btn professionall-button-register text-dark mt-3 mb-3">
-        <b>Calculer</b>
-    </button>
-</div>
-</form>
+                    <h4 class="card-title text-center p-complete-info py-2">Spécifiez votre véhicule</h4>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="input-group">
+                            <div class="select-container">
+                                <select name="vehicle-type" id="vehicle-type" class="form-control form-input-border app-font-family">
+                                    <option value="" selected class="app-font-family">Type de véhicule</option>
+                                    <option value="Citadine" class="app-font-family">Citadine</option>
+                                    <option value="Berline" class="app-font-family">Berline</option>
+                                    <option value="Sportive" class="app-font-family">Sportive</option>
+                                    <option value="Collection" class="app-font-family">Collection</option>
+                                    <option value="Monospace" class="app-font-family">Monospace</option>
+                                    <option value="4×4" class="app-font-family">SUV ou 4×4</option>
+                                    <option value="3m3" class="app-font-family">Utilitaire 3m3</option>
+                                    <option value="6m3" class="app-font-family">Utilitaire 6m3</option>
+                                    <option value="9m3" class="app-font-family">Utilitaire 9m3</option>
+                                    <option value="12m3" class="app-font-family">Utilitaire 12m3</option>
+                                    <option value="15m3" class="app-font-family">Utilitaire 15m3</option>
+                                    <option value="20m3" class="app-font-family">Utilitaire 20m3</option>
+                                    <option value="25m3" class="app-font-family">Utilitaire 25m3</option>
+                                    <option value="30m3" class="app-font-family">Utilitaire 30m3</option>
+                                    <option value="Camion-benne" class="app-font-family">Camion benne</option>
+                                    <option value="Camping-car" class="app-font-family">Camping-car</option>
+                                    <option value="Van-aménagé" class="app-font-family">Van aménagé</option>
+                                </select>
+                                <i class="fas fa-caret-down fa-dropdown-icon"></i> <!-- Font Awesome dropdown icon -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="input-group">
+                            <div class="select-container">
+                                <select name="vehicle-condition" id="vehicle-condition" class="form-control form-input-border app-font-family">
+                                    <option value="" selected>Etat du véhicule</option>
+                                    <option value="En-état-de-marche" class="app-font-family">En état de marche</option>
+                                    <option value="En-panne" class="app-font-family">En panne</option>
+                                    <option value="Accidenté" class="app-font-family">Accidenté</option>
+                                </select>
+                                <i class="fas fa-caret-down fa-dropdown-icon"></i> <!-- Font Awesome dropdown icon -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <h4 class="card-title text-center p-complete-info py-2">Spécifiez votre type de profil</h4>
+                    <div class="col-lg-12 col-md-12">
+                        <div class="input-group">
+                            <div class="select-container">
+                                <select name="vehicle-mover" id="vehicle-mover" class="form-control form-input-border app-font-family">
+                                    <option value="" selected class="app-font-family">Sélectionner le type de profil</option>
+                                    <option value="professional" class="app-font-family">Je suis professionnel</option>
+                                    <option value="private" class="app-font-family">Je suis un particulier</option>
+                                </select>
+                                <i class="fas fa-caret-down fa-dropdown-icon"></i> <!-- Font Awesome dropdown icon -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn professionall-button-register text-dark mt-3 mb-3" id="calculate-button" disabled>
+                        <b>Calculer</b>
+                    </button>
+                </div>
+            </form>
             </div>
           </div>
       </div>
@@ -1077,6 +1081,35 @@ Attention, quel que soit l'état du véhicule, celui-ci ne doit pas avoir de rou
 
 
 <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+        const pickup = document.getElementById('pickup');
+        const delivery = document.getElementById('delivery');
+        const vehicleType = document.getElementById('vehicle-type');
+        const vehicleCondition = document.getElementById('vehicle-condition');
+        const vehicleMover = document.getElementById('vehicle-mover');
+        const calculateButton = document.getElementById('calculate-button');
+
+        function checkFields() {
+            if (
+                pickup.value.trim() !== '' &&
+                delivery.value.trim() !== '' &&
+                vehicleType.value !== '' &&
+                vehicleCondition.value !== '' &&
+                vehicleMover.value !== ''
+            ) {
+                calculateButton.disabled = false;
+            } else {
+                calculateButton.disabled = true;
+            }
+        }
+
+        pickup.addEventListener('input', checkFields);
+        delivery.addEventListener('input', checkFields);
+        vehicleType.addEventListener('change', checkFields);
+        vehicleCondition.addEventListener('change', checkFields);
+        vehicleMover.addEventListener('change', checkFields);
+    });
 function initAutocomplete() {
     var pickupAutocomplete = new google.maps.places.Autocomplete(document.getElementById('pickup'));
     var deliveryAutocomplete = new google.maps.places.Autocomplete(document.getElementById('delivery'));
