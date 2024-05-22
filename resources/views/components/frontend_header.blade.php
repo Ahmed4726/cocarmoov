@@ -14,7 +14,7 @@
 			</button>
             </div>
 			<div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-				<ul class="navbar-nav mb-2" style="margin-left: -250px;" >
+				<ul class="navbar-nav mb-2" style="margin-left: -300px;" >
 					<!-- <li class="nav-item"> <a class="nav-link" href="{{ route('welcome') }}">Accueil</a>
 					</li> -->
 					<li class="nav-item dropdown">
@@ -62,7 +62,7 @@
     <form action="{{ route('logout') }}" method="post">
         @csrf
         <button type="submit" class="btn btn-warning-outline login-button-header py-3 px-3" style="margin-left: 24px; cursor: pointer;">
-            <span class="text-dark fw-bold app-font-family">Se déconnecter</span>
+            <span class="text-dark fw-bold app-font-family">Déconnexion</span>
         </button>
     </form>
 @else
@@ -77,15 +77,14 @@
     </button>
 @endif
 <div class="dropdown" style="margin-left: 10px;">
-    <button class="btn btn-warning-outline login-button-header py-3 px-3 dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="fas fa-language" style="color:black;"></i>
-    </button>
     <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-        <li><a class="dropdown-item" href="#"><img src="images/wallet/USA.png" style="width: 20px; height:20px;"/> English</a></li>
-        <li><a class="dropdown-item" href="#"><img src="images/wallet/france.png" style="width: 20px;height:20px;"/> French</a></li>
-        <!-- Add more language options as needed -->
+        <li><a class="dropdown-item" href="#"><img src="images/wallet/USA.png" alt="English" style="width: 20px; height:20px;"/> English</a></li>
+        <li><a class="dropdown-item" href="#"><img src="images/wallet/france.png" alt="French" style="width: 20px;height:20px;"/> French</a></li>
+   
     </ul>
 </div>
+
+
 				<!-- <a href="#!" class="btn btn-primary ms-2 ms-lg-3">Sign Up</a> -->
 			</div>
 		</div>
