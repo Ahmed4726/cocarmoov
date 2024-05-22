@@ -29,11 +29,13 @@ class AuthenticatedSessionController extends Controller
         // dd($request);
         if ($request->authenticate()) {
             // If authentication is successful
+            // dd('okaa');
             $request->session()->regenerate();
-            return response()->json(['url' => route('dashboard')], 200);
+            return response()->json(['url' => route('dashboard')], 401);
         } else {
+            // dd('noy olla');
             // If authentication fails
-            return response()->json(['error' => 'Login failed.'], 401);
+            return response()->json(['error' => 'Login failed.'], 200);
         }
     }
 

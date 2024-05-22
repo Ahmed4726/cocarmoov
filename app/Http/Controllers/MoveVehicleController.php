@@ -28,7 +28,7 @@ class MoveVehicleController extends Controller
         }
 
 
-        if (in_array($selectedVehicleType, ['Citadine', 'Berline', 'Sportive', 'Monospace', '4×4', '3m3', '6m3', '9m3', '12m3', '15m3', 'Camion-benne', 'Camping-car', 'Van-aménagé']) && in_array($selectedCondition, ['En-panne', 'Accidenté'])) {
+        if (in_array($selectedVehicleType, ['Citadine', 'Berline', 'Sportive', 'Monospace', '4×4', '3m3', '6m3', '9m3', '12m3', '15m3']) && in_array($selectedCondition, ['En-panne', 'Accidenté'])) {
             $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');
         } elseif ($selectedVehicleType === 'Collection') {
             $premium_package = number_format(1.49 * $distance + 149, 2, '.', '');

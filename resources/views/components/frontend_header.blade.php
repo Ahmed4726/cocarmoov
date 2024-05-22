@@ -104,7 +104,7 @@
             </div>
             <div class="modal-body">
                 <!-- Your Laravel login form -->
-                <form id="loginForm" method="POST" action="{{ route('login') }}">
+                <form id="loginForm" method="POST" action="/logged_in">
                     @csrf
                     <!-- Email Address -->
                     <div class="form-group">
@@ -315,7 +315,8 @@
             body: new URLSearchParams(new FormData(form)),
         })
         .then(response => {
-            if (response.status === 200) {
+            // alert(response.status)
+            if (response.status === 401) {
                 // If login is successful, show success message
                 Swal.fire({
                     icon: 'success',
@@ -326,7 +327,7 @@
                     // Redirect to the dashboard after user confirms
                     window.location.href = '{{ route("dashboard") }}';
                 });
-            } else if (response.status === 401) {
+            } else if (response.status === 200) {
                 // If login fails, show error message
                 Swal.fire({
                     icon: 'error',
