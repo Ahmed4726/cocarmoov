@@ -196,13 +196,13 @@
                                 </div>
                             </div>
         @endif
-                            @if($premium_package === null && $express_package === null && $economyPackage === null)
-                            <h3 class="text-center">Aucun forfait disponible</h3>
+        @if(($premium_package === null && $express_package === null && $economyPackage === null) || ($premium_package == 0 && $express_package == 0 && $economyPackage == 0))
+        <h3 class="text-center">Aucun forfait disponible</h3>
                         @endif
                             <!-- Repeat the structure for the other two columns (Voie express and Voie premium) -->
                         </div>
                 </div>
-                @if($premium_package === null && $express_package === null && $economyPackage === null)
+                @if(($premium_package === null && $express_package === null && $economyPackage === null) || ($premium_package == 0 && $express_package == 0 && $economyPackage == 0))
                 <div class="col-md-12 text-center">
                     <a href="/" class="btn btn-primary text-dark">Go Back</a>
                 </div>
