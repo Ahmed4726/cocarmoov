@@ -37,6 +37,9 @@ class MoveVehicleController extends Controller
             $economyPackage = number_format(0.10 * $distance + 49, 2, '.', '');
         } elseif (in_array($selectedVehicleType, ['20m3', '25m3', '30m3']) && in_array($selectedCondition, ['En-panne', 'Accidenté'])) {
             // Handle specific case if needed
+        } elseif ($selectedVehicleType === '20m3' && $selectedCondition === 'En-état-de-marche') {
+            $express_package = number_format(0.88 * $distance + 59, 2, '.', '');
+            $economyPackage = number_format(0.10 * $distance + 49, 2, '.', '');
         } elseif (in_array($selectedVehicleType, ['Citadine', 'Berline']) && $selectedCondition === 'En-état-de-marche') {
             $express_package = number_format(0.65 * $distance + 59, 2, '.', '');
             // dd($express_package);

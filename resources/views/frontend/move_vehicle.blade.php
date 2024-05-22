@@ -974,6 +974,16 @@ if(selectedPackage === 'economy')
     }
     else if(cartype == '12m3' && packageType == 'express')
     {
+        minPrice  = 0.69 * distance + 59;
+        maxPrice  = 0.83 * distance + 59;
+        if(car_owner == 'private')
+            {
+                maxPrice *= 1.2;
+                minPrice *= 1.2;
+            }
+    }
+    else if(cartype == '15m3' && packageType == 'express')
+    {
         minPrice  = 0.76 * distance + 59;
         maxPrice  = 0.91 * distance + 59;
         if(car_owner == 'private')
@@ -982,7 +992,8 @@ if(selectedPackage === 'economy')
                 minPrice *= 1.2;
             }
     }
-    else if(cartype == '15m3' && packageType == 'express')
+
+    else if(cartype == '20m3' && packageType == 'express')
     {
         minPrice  = 0.80 * distance + 59;
         maxPrice  = 0.96 * distance + 59;
@@ -992,6 +1003,7 @@ if(selectedPackage === 'economy')
                 minPrice *= 1.2;
             }
     }
+
     else if((cartype == '25m3' || cartype == '30m3' || cartype == 'Camion-benne' || cartype == 'Camping-car' || cartype == 'Van-aménagé') && packageType == 'express')
     {
         minPrice  = 0.85 * distance + 59;
