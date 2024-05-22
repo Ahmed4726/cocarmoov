@@ -89,7 +89,7 @@
         <section class="position-relative m-0">
             <div class="section container">
                 <div class="row justify-content-center">
-        @if (isset($economyPackage) && $economyPackage != null)
+        @if (isset($economyPackage) && $economyPackage != null && $economyPackage != 0)
                     <div class="container pb-5 m-0">
                         <div class="row align-items-center">
                             <div class="col-lg-4 differnce-section text-center mt-4">
@@ -116,7 +116,7 @@
                                 </div>
                     </div>
         @endif
-        @if (isset($express_package) && $express_package != null)
+        @if (isset($express_package) && $express_package != null && $express_package != 0)
                             <div class="col-lg-4 differnce-section text-center mt-4">
                                 <div class="card rounded">
                                 <img src="{{asset('images/wallet/exp.jpg')}}" class="rounded" alt=""/>
@@ -157,7 +157,7 @@
                                 </div>
                             </div>
         @endif
-        @if (isset($premium_package) && $premium_package != null)
+        @if (isset($premium_package) && $premium_package != null && $premium_package != 0)
                             <div class="col-lg-4 differnce-section text-center mt-4">
                                 <div class="card rounded">
                                     <img src="{{asset('images/wallet/pre.jpg')}}" class="card-img-top rounded" alt="Voie économique">
