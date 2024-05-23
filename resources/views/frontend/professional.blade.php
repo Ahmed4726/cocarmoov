@@ -34,35 +34,82 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-			<table class="table table-responsive">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+			<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col" class="text-center">Pack Prestige</th>
+                <th scope="col" class="text-center">Forfait logistique</th>
+                <th scope="col" class="text-center">Plan économique</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Véhicules de tourisme</th>
+                <td class="text-center">59-60 c€/km</td>
+                <td class="text-center">53-54 c€/km</td>
+                <td class="text-center">47-48 c€/km</td>
+				
+            </tr>
+			
+            <tr>
+                <th scope="row">Utilitaires inférieurs à 13m3</th>
+                <td class="text-center">63-69 c€/km</td>
+                <td class="text-center">57-62 c€/km</td>
+                <td class="text-center">50-55 c€/km</td>
+            </tr>
+			<tr>
+                <th scope="row">Utilitaires supérieurs à 13m3</th>
+                <td class="text-center">76-85 c€/km</td>
+                <td class="text-center">68-77 c€/km</td>
+                <td class="text-center">61-68 c€/km</td>
+				<!-- <td>Découvrez le Pack</td> -->
+            </tr>
+			<tr>
+                <th scope="row"> </th>
+                <td class="text-center"><a type="button" 
+            class="btn professionall-button-register p-2 text-dark" href="#">
+            Découvrez le Pack
+</a></td>               
+				<td class="text-center"><a type="button" 
+            class="btn professionall-button-register p-2 text-dark" href="#">
+            Découvrez le Forfait
+</a></td>
+				<td class="text-center">			<a type="button" 
+            class="btn professionall-button-register p-2 text-dark" href="#">
+            Découvrez le Plan
+</a></td>
+			</tr>
+			<tr>
+                <th scope="row">Gestion de la Flotte</th>
+              <td class="text-center">-</td>
+			  <td class="text-center">-</td>
+			  <td class="text-center">-</td>
+            </tr>
+			<tr>
+                <td scope="row">Nombre de véhicules à déplacer </td>
+              <td class="text-center">1 à 9 par mois</td>
+			  <td class="text-center">10 à 29 par mois</td>
+			  <td class="text-center">30 ou plus par mois</td>
+            </tr>
+			<tr>
+                <td scope="row">Base forfaitaire par véhicule</td>
+              <td class="text-center">59€</td>
+			  <td class="text-center">59€</td>
+			  <td class="text-center">49€</td>
+            </tr>
+			<tr>
+                <td scope="row">Gestion carnet d’adresses</td>
+              <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</div>
+
 			</div>
 		</div>
 	</div>
