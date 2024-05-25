@@ -39,14 +39,14 @@
         <thead>
             <tr>
                 <th scope="col"></th>
-                <th scope="col" class="text-center">Pack Prestige</th>
-                <th scope="col" class="text-center">Forfait logistique</th>
-                <th scope="col" class="text-center">Plan économique</th>
+                <th scope="col" class="text-center pricing-table-heading fw-bold">Pack Prestige</th>
+                <th scope="col" class="text-center pricing-table-heading fw-bold">Forfait logistique</th>
+                <th scope="col" class="text-center pricing-table-heading fw-bold">Plan économique</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th scope="row">Véhicules de tourisme</th>
+                <th scope="row" class="pricing-table-heading"><i class="fas fa-car"></i> Véhicules de tourisme</th>
                 <td class="text-center">59-60 c€/km</td>
                 <td class="text-center">53-54 c€/km</td>
                 <td class="text-center">47-48 c€/km</td>
@@ -54,13 +54,13 @@
             </tr>
 			
             <tr>
-                <th scope="row">Utilitaires inférieurs à 13m3</th>
+                <th scope="row" class="pricing-table-heading"><i class="fas fa-"></i>Utilitaires inférieurs à 13m3</th>
                 <td class="text-center">63-69 c€/km</td>
                 <td class="text-center">57-62 c€/km</td>
                 <td class="text-center">50-55 c€/km</td>
             </tr>
 			<tr>
-                <th scope="row">Utilitaires supérieurs à 13m3</th>
+                <th scope="row" class="pricing-table-heading">Utilitaires supérieurs à 13m3</th>
                 <td class="text-center">76-85 c€/km</td>
                 <td class="text-center">68-77 c€/km</td>
                 <td class="text-center">61-68 c€/km</td>
@@ -82,28 +82,275 @@
 </a></td>
 			</tr>
 			<tr>
-                <th scope="row">Gestion de la Flotte</th>
+                <th scope="row" class="pricing-table-heading">Gestion de la Flotte</th>
               <td class="text-center">-</td>
 			  <td class="text-center">-</td>
 			  <td class="text-center">-</td>
             </tr>
 			<tr>
-                <td scope="row">Nombre de véhicules à déplacer </td>
+                <td scope="row"><i class="fas fa-infinity"></i> Nombre de véhicules à déplacer </td>
               <td class="text-center">1 à 9 par mois</td>
 			  <td class="text-center">10 à 29 par mois</td>
 			  <td class="text-center">30 ou plus par mois</td>
             </tr>
 			<tr>
-                <td scope="row">Base forfaitaire par véhicule</td>
+                <td scope="row"><i class="fas fa-calculator"></i> Base forfaitaire par véhicule</td>
               <td class="text-center">59€</td>
 			  <td class="text-center">59€</td>
 			  <td class="text-center">49€</td>
             </tr>
 			<tr>
-                <td scope="row">Gestion carnet d’adresses</td>
+                <td scope="row"><i class="fas fa-address-book"></i> Gestion carnet d’adresses</td>
               <td class="text-center"><i class="fas fa-check"></i></td>
 			  <td class="text-center"><i class="fas fa-check"></i></td>
 			  <td class="text-center"><i class="fas fa-check"></i></td>
+            </tr>
+			<tr>
+                <th scope="row" class="pricing-table-heading">Services et Sécurité</th>
+              <td class="text-center">-</td>
+			  <td class="text-center">-</td>
+			  <td class="text-center">-</td>
+            </tr>
+			<tr>
+                <td scope="row"><i class="fas fa-lock"></i> Confidentialité des données </td>
+				<td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+            </tr>
+			<tr>
+                <td scope="row"><i class="fas fa-clipboard"></i> Espace client sécurisé</td>
+				<td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+            </tr>
+			<tr>
+                <td scope="row"><i class="fas fa-qrcode"></i> Documents digitalisés</td>
+              <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+            </tr>
+			<tr>
+                <td scope="row"><i class="fas fa-file-invoice"></i> Téléchargement de factures</td>
+              <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+            </tr>
+			<tr>
+                <td scope="row"><i class="fas fa-desktop"></i> Suivi en temps réel</td>
+              <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+            </tr>
+			<tr>
+                <td scope="row"><i class="fas fa-chart-line"></i> Suivi d’indicateurs (tableau de bord)</td>
+              <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+            </tr>
+			<tr>
+                <td scope="row"><i class="fas fa-question"></i> Support e-mail & téléphonique</td>
+              <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+            </tr>
+			<th scope="row" class="pricing-table-heading">Flexibilité de Commande</th>
+              <td class="text-center">-</td>
+			  <td class="text-center">-</td>
+			  <td class="text-center">-</td>
+            </tr>
+			<tr>
+                <td scope="row">Commander en lot ou à l’unité </td>
+				<td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+            </tr>
+			<tr>
+                <td scope="row"><i class="fas fa-slider"></i> Modification de commande</td>
+              <td class="text-center">Avant réservation</td>
+			  <td class="text-center">Avant réservation</td>
+			  <td class="text-center">Avant réservation</td>
+            </tr>
+			<tr>
+                <td scope="row">Annulation de commande avant réservation</td>
+				<td class="text-center">Gratuite</td>
+			  <td class="text-center">Gratuite</td>
+			  <td class="text-center">Gratuite</td>
+            </tr>
+			<tr>
+                <td scope="row">Annulation de commande après réservation</td>
+				<td class="text-center">Gratuite AV 72h du départ<br>35% si 24-72h du départ<br>70% si < 24h du départ</td>
+			  <td class="text-center">Gratuite AV 72h du départ<br>35% si 24-72h du départ<br>70% si < 24h du départ</td>
+			  <td class="text-center">Gratuite AV 72h du départ<br>35% si 24-72h du départ<br>70% si < 24h du départ</td>
+            </tr>
+			<th scope="row" class="pricing-table-heading">Compensation</th>
+              <td class="text-center">-</td>
+			  <td class="text-center">-</td>
+			  <td class="text-center">-</td>
+            </tr>
+			<tr>
+                <td scope="row">En cas de dépassement de kilomètres autorisés </td>
+				<td class="text-center">30 c€/km</td>
+			  <td class="text-center">30 c€/km</td>
+			  <td class="text-center">30 c€/km</td>
+            </tr>
+			<tr>
+                <td scope="row">En cas de retard de livraison </td>
+				<td class="text-center">6€/heure</td>
+			  <td class="text-center">6€/heure</td>
+			  <td class="text-center">6€/heure</td>
+            </tr>
+			<tr>
+                <td scope="row">En cas d'annulation par le convoyeur </td>
+				<td class="text-center">20€ si < 48h du départ</td>
+			  <td class="text-center">20€ si < 48h du départ</td>
+			  <td class="text-center">20€ si < 48h du départ</td>
+            </tr>
+			<tr>
+                <td scope="row">En cas d’absence du convoyeur </td>
+				<td class="text-center">40€</td>
+			  <td class="text-center">40€</td>
+			  <td class="text-center">40€</td>
+            </tr>
+			<th scope="row" class="pricing-table-heading">Protection et Assistance</th>
+              <td class="text-center">-</td>
+			  <td class="text-center">-</td>
+			  <td class="text-center">-</td>
+            </tr>
+			<tr>
+                <td scope="row">Assurance convoyage </td>
+				<td class="text-center">80.000€</td>
+			  <td class="text-center">80.000€</td>
+			  <td class="text-center">80.000€</td>
+            </tr>
+			<tr>
+                <td scope="row">Assistance routière </td>
+				<td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+            </tr>
+			<tr>
+                <td scope="row">Responsabilité civile professionnelle </td>
+				<td class="text-center">250.000€</td>
+			  <td class="text-center">250.000€</td>
+			  <td class="text-center">250.000€</td>
+            </tr>
+			<tr>
+                <td scope="row">Gestion des sinistres </td>
+				<td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+            </tr>
+			<th scope="row" class="pricing-table-heading">Services sans limite</th>
+              <td class="text-center">-</td>
+			  <td class="text-center">-</td>
+			  <td class="text-center">-</td>
+            </tr>
+			<tr>
+                <td scope="row">Convoyeur fiable </td>
+				<td class="text-center">Certifié</td>
+			  <td class="text-center">Certifié</td>
+			  <td class="text-center">Certifié</td>
+            </tr>
+			<tr>
+                <td scope="row">État des lieux / PV de livraison </td>
+				<td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+            </tr>
+			<tr>
+                <td scope="row">Péages et Carburant / Recharge </td>
+				<td class="text-center">Inclus</td>
+			  <td class="text-center">Inclus</td>
+			  <td class="text-center">Inclus</td>
+            </tr>
+			<tr>
+                <td scope="row">Délai de livraison</td>
+				<td class="text-center">24-72h</td>
+			  <td class="text-center">24-72h</td>
+			  <td class="text-center">24-72h</td>
+            </tr>
+			<tr>
+                <td scope="row">Livraison & Reprise </td>
+				<td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+            </tr>
+			<tr>
+                <td scope="row">Livraison avec démonstration </td>
+				<td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center">En option</td>
+            </tr>
+			<tr>
+                <td scope="row">Plaques W garage </td>
+				<td class="text-center"><i class="fas fa-check"></i></td>
+				<td class="text-center">En option</td>
+			  <td class="text-center">En option</td>
+            </tr>
+			<tr>
+                <td scope="row">Signature de contrat de location</td>
+				<td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+            </tr>
+			<tr>
+                <td scope="row">Signature de documents de vente </td>
+				<td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center">En option</td>
+            </tr>
+			<tr>
+                <td scope="row">Nettoyage extérieur de véhicules</td>
+				<td class="text-center"><i class="fas fa-check"></i></td>
+				<td class="text-center">10 gratuits/mois</td>
+			  <td class="text-center">En option</td>
+            </tr>
+			<tr>
+                <td scope="row">Nettoyage complet de véhicules</td>
+				<td class="text-center"><i class="fas fa-check"></i></td>
+				<td class="text-center">5 gratuits/mois</td>
+			  <td class="text-center">En option</td>
+            </tr>
+			<tr>
+                <td scope="row">Prestation vers/depuis des Pays voisins</td>
+				<td class="text-center"><i class="fas fa-check"></i></td>
+				<td class="text-center">En option</td>
+			  <td class="text-center">Non inclus</td>
+            </tr>
+			<tr>
+                <td scope="row">Prestation vers/depuis la Corse</td>
+				<td class="text-center">En option</td>
+				<td class="text-center">En option</td>
+			  <td class="text-center">Non inclus</td>
+            </tr>
+			<tr>
+                <td scope="row">Remise de carburant avant livraison</td>
+				<td class="text-center"><i class="fas fa-check"></i></td>
+				<td class="text-center">Frais réels</td>
+			  <td class="text-center">Frais réels</td>
+            </tr>
+			<th scope="row" class="pricing-table-heading">Modalités de paiement</th>
+              <td class="text-center">-</td>
+			  <td class="text-center">-</td>
+			  <td class="text-center">-</td>
+            </tr>
+			<tr>
+                <td scope="row">Prélèvement à la commande</td>
+				<td class="text-center">Non</td>
+			  <td class="text-center">Non</td>
+			  <td class="text-center">Non</td>
+            </tr>
+			<tr>
+                <td scope="row">Prélèvement à la réservation </td>
+				<td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+			  <td class="text-center"><i class="fas fa-check"></i></td>
+            </tr>
+			<tr>
+                <td scope="row">Prélèvement à la livraison</td>
+				<td class="text-center">Sur demande</td>
+			  <td class="text-center">Sur demande</td>
+			  <td class="text-center">Sur demande</td>
             </tr>
             <!-- Add more rows as needed -->
         </tbody>
