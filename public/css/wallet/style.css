@@ -3766,7 +3766,9 @@
     margin-left: -80px !important;
   }
 }
-
+.pricing-table-heading{
+  color: #FDCD02 !important;
+}
 .form-step {
   display: none;
 }
