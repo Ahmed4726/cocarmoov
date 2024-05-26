@@ -191,19 +191,28 @@
     <div class="card rounded mt-3">
         <div class="card-header"><h3 class="text-center">Penalties</h3></div>
         <div class="card-body">
+            @if($role == 7)
     <div class="row">
         <div class="col-md-12 text-center">
             <h4>For economic formula</h4>
       <p>Annulation du carmoov après réservation du carmooveur, moins de 72h avant le départ, une pénalité de 50%.</p>
         </div>
     </div>
+    @elseif ($role == 6)
     <div class="row">
         <div class="col-md-12 text-center">
-            <h4>For express/premium formula</h4>
+            <h4>For express formula</h4>
       <p>Annulation du carmoov après réservation du carmooveur, moins de 72h avant le départ, une pénalité de 50%.</p>
+    </div>
+    </div>
+    @else()
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h4>For premium formula</h4>
     <p>Annulation du carmoov après réservation du carmooveur, moins de 24h avant le départ, pénalité de 70%.</p>
     </div>
     </div>
+    @endif
         </div>
     </div>
     </div>

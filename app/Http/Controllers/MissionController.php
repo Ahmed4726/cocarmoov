@@ -30,10 +30,11 @@ class MissionController extends Controller
 
     public function booking($id)
     {
+        $role = auth()->user()->user_type;
         $mission = Car::where('id', $id)->first();
         // Assuming $pickup_date_time is available, adjust as per your logic
         $from_address = Car::where('from_address', $mission->from_address)->first();
-        return view('missions.booking', compact('mission', 'from_address'));
+        return view('missions.booking', compact('mission', 'from_address','role'));
     }
 
 
