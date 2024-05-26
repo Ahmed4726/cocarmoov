@@ -106,15 +106,24 @@
                         </div>
                     </div>
                 </div>
+                <!-- @if(Auth::check())
+                @php 
+                  $role = auth()->user()->user_type;
+                @endphp
+
+                @endif -->
+                <!-- <input type="hidden" id="selected-vehicle-mover" name="selected-vehicle-mover"> -->
+                <input type="hidden" id="selected-vehicle-mover" name="vehicle-mover">
+
                 <div class="col-lg-12">
                     <h4 class="card-title text-center p-complete-info py-2">Spécifiez votre type de profil</h4>
                     <div class="col-lg-12 col-md-12">
                         <div class="input-group">
                             <div class="select-container">
-                                <select name="vehicle-mover" id="vehicle-mover" class="form-control form-input-border app-font-family">
-                                    <option value="" selected class="app-font-family">Sélectionner le type de profil</option>
-                                    <option value="professional" class="app-font-family">Je suis professionnel</option>
-                                    <option value="private" class="app-font-family">Je suis un particulier</option>
+                                <select name="vehicle-mover" id="vehicle-mover" class="form-control form-input-border app-font-family" {{ Auth::check() ? 'disabled' : '' }}>
+                                    <option value="" class="app-font-family">Sélectionner le type de profil</option>
+                                    <option value="professional" class="app-font-family" {{ isset($role) && $role == 5 ? 'selected' : '' }}>Je suis professionnel</option>
+                                    <option value="private" class="app-font-family" {{ isset($role) && $role == 4 ? 'selected' : '' }}>Je suis un particulier</option>
                                 </select>
                                 <i class="fas fa-caret-down fa-dropdown-icon"></i> <!-- Font Awesome dropdown icon -->
                             </div>
@@ -1079,7 +1088,23 @@ Attention, quel que soit l'état du véhicule, celui-ci ne doit pas avoir de rou
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVSFgcchmnjqE0GDdpwQjpmUKYH2k21gc&libraries=places"></script>
 
+<script>
+    // JavaScript to update the hidden input field with the selected value of the dropdown
+    document.addEventListener('DOMContentLoaded', function () {
+        var vehicleMoverSelect = document.getElementById('vehicle-mover');
+        var selectedVehicleMoverInput = document.getElementById('selected-vehicle-mover');
 
+        // Add event listener to update hidden input field when dropdown value changes
+        vehicleMoverSelect.addEventListener('change', function () {
+            selectedVehicleMoverInput.value = this.value;
+        });
+        
+    });
+    vehicleMoverSelect.addEventListener('change', function () {
+    selectedVehicleMoverInput.value = this.value;
+    console.log('Selected Vehicle Mover:', this.value);
+});
+</script>
 <script>
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -1277,7 +1302,7 @@ function initAutocomplete() {
         {
           resultDiv.style.textAlign = 'center'; // Center the text
         resultDiv.style.color = 'red'; // Set text color to yellow
-          resultDiv.innerHTML = packages;
+    resultDiv.innerHTML = packages;
         }
     }
 </script>

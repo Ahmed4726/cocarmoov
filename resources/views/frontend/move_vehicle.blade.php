@@ -435,12 +435,12 @@
         <div class="row">
             <div class="col-lg-6">
                 <label for="collectionDate">Collection No Earlier Than</label>
-                <input class="form-control" type="datetime-local" name="collectionDate" id="collectionDate" value="yyyy-mm-dd">
+                <input class="form-control" type="datetime-local" name="collectionDate" id="collectionDate" value="{{ date('Y-m-d\TH:i',strtotime('+5 hours')) }}" min="{{ date('Y-m-d\TH:i',strtotime('+5 hours')) }}" step="1800">
                 {{-- <input class="form-control" type="time" name="collectiontime" id="collectiontime" value="hh:mm"> --}}
             </div>
             <div class="col-lg-6">
                 <label for="deliveryDate">Delivery No later Than</label>
-                <input class="form-control" type="datetime-local" name="deliveryDate" id="deliveryDate" placeholder="date...">
+                <input class="form-control" type="datetime-local" name="deliveryDate" id="collectionDate" value="{{ date('Y-m-d\TH:i', strtotime('+5 hours')) }}" min="{{ date('Y-m-d\TH:i', strtotime('+5 hours')) }}">
                 {{-- <input class="form-control" type="time" name="deliverytime" id="deliverytime" placeholder="hrs"> --}}
             </div>
         </div>
