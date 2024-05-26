@@ -24,8 +24,9 @@ class MissionController extends Controller
 {
     public function index()
     {
+        $role = auth()->user()->user_type;
         $missions = Car::where('status','Available')->get();
-        return view('missions.index',compact('missions'));
+        return view('missions.index',compact('missions','role'));
     }
 
     public function booking($id)

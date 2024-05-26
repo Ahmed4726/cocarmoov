@@ -15,8 +15,9 @@
 </div>
 {{-- <br> --}}
 @foreach ($missions as $mission)
-
-
+@if(($mission->selected_package == 'economy' && $role == 7) ||
+        ($mission->selected_package == 'express' && $role == 6) ||
+        ($mission->selected_package == 'premium' && $role == 8))
 <div class="container-fluid">
 <div class="card mt-4 rounded">
     <div class="card-body">
@@ -51,5 +52,6 @@
     </div>
 </div>
 </div>
+@endif
 @endforeach
 @endsection
