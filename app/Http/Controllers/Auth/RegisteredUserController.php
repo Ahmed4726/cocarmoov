@@ -14,9 +14,17 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Services\OtpService;
 
 class RegisteredUserController extends Controller
 {
+
+    protected $otpService;
+
+    public function __construct(OtpService $otpService)
+    {
+        $this->otpService = $otpService;
+    }
     /**
      * Display the registration view.
      */
@@ -38,6 +46,7 @@ class RegisteredUserController extends Controller
             'last_name' => ['required', 'string', 'max:255'],
             'family_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'phone_number' => ['required'],
             'password' => ['required', 'confirmed', 'min:8', Rules\Password::defaults()],
         ], [
             'last_name.required' => 'The last name field is required.',
@@ -65,6 +74,9 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         Auth::login($user);
+
+        // Send OTP
+        $this->otpService->generateOtp($request->phone_number);
 
         return redirect(RouteServiceProvider::HOME);
     }

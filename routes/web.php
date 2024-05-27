@@ -27,6 +27,7 @@ use App\Http\Controllers\MoveVehicleController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ListingController;
 use App\Http\Controllers\MissionController;
+use App\Http\Controllers\OtpController;
 use App\Http\Controllers\ProposalController;
 use App\Http\Controllers\RolesAndPermissionController;
 use App\Http\Controllers\WithdrawalController;
@@ -145,6 +146,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/book-ride', [MissionController::class, 'bookRide'])->name('book-ride');
 
     Route::get('/balance', [WithdrawalController::class, 'index'])->name('balance');
+    // Route::post('/verify-otp', [OtpController::class, 'verifyOtp'])->name('verify-otp');
     Route::post('/withdraw', [WithdrawalController::class, 'withdraw'])->name('withdraw');
 });
 //Social auth
@@ -154,7 +156,9 @@ Route::get('login/{provider}/callback',[SocialauthController::class, 'handleProv
 Route::get('/get-csrf-token', function () {
     return response()->json(['csrf_token' => csrf_token()]);
 });
-
+Route::post('send-otp', [OtpController::class, 'sendOtp']);
+Route::post('/verify-otp', [OtpController::class, 'verifyOtp'])->name('verify-otp');
+Route::post('resend-otp', [OtpController::class, 'verifyOtp'])->name('resend-otp');
 
 // Admin Routes
 Route::group(['middleware' => 'Admin'], function () {

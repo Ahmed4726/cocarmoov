@@ -8,7 +8,38 @@
       <div class="container-fluid">
         @php
         $user=auth()->user()->email_verified_at;
+        $phone = auth()->user()->phone_verification;
         @endphp
+        {{-- @if ($phone == false) --}}
+        <!-- Button to trigger the modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#verificationModal">
+            Phone Verification
+        </button>
+        {{-- @endif --}}
+<!-- Verification Modal -->
+<div class="modal fade" id="verificationModal" tabindex="-1" role="dialog" aria-labelledby="verificationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="verificationModalLabel">Enter Verification Code</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="verificationForm">
+                    <div class="form-group">
+                        <input type="hidden" name="phone_number" id="phone_number" value="{{ auth()->user()->phone_number }}">
+                        <label for="verificationCode">Verification Code:</label>
+                        <input type="text" class="form-control" id="verificationCode" maxlength="6" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Verify</button>
+                    <button type="button" class="btn btn-secondary" id="resendCode">Resend Code</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
        @if ($user == null)
        <form method="post" action="{{ route('verification.send') }}" class="d-flex align-items-center">
         <span class="bg-secondary">Your email address is not verified. Please verify your email</span>
@@ -242,4 +273,70 @@
     </section>
   </div>
 <!-- ./wrapper -->
+<!-- Custom JavaScript for modal functionality -->
+<script>
+    $(document).ready(function() {
+        // Handle form submission
+        $('#verificationForm').submit(function(event) {
+            event.preventDefault();
+
+            // Get verification code from input
+            var verificationCode = $('#verificationCode').val();
+
+            // AJAX request to verify-otp route
+            $.ajax({
+                url: "/verify-otp",
+                method: 'POST',
+                data: {
+                    verification_code: verificationCode
+                },
+                success: function(response) {
+                    // Handle success response
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Verification Successful!',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    $('#verificationModal').modal('hide');
+                },
+                error: function(xhr, status, error) {
+                    // Handle error response
+                    var errorMessage = xhr.responseJSON.error || 'Verification failed. Please try again.';
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Verification Failed',
+                        text: errorMessage,
+                    });
+                }
+            });
+        });
+
+        // Handle resend code button click
+        $('#resendCode').click(function() {
+            // AJAX request to resend-otp route
+            $.ajax({
+                url: "/send-otp",
+                method: 'POST',
+                success: function(response) {
+                    // Handle success response
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Code Resent!',
+                        text: 'A new verification code has been sent.',
+                    });
+                },
+                error: function(xhr, status, error) {
+                    // Handle error response
+                    var errorMessage = xhr.responseJSON.error || 'Failed to resend code. Please try again.';
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Resend Failed',
+                        text: errorMessage,
+                    });
+                }
+            });
+        });
+    });
+</script>
 @endsection
