@@ -7,7 +7,7 @@
     <form name="search_form" action="/check-missions" method="POST" style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
         <input class="form-control" type="text" name="city_of_collection" id="city_of_collection" placeholder="City of Collection" style="flex: 1;">
         <input class="form-control" type="text" name="city_of_delivery" id="city_of_delivery" placeholder="City of Delivery" style="flex: 1;">
-        <input class="form-control" type="datetime-local" name="datetime_of_collection" id="datetime_of_collection" style="flex: 1;">
+        <!-- <input class="form-control" type="datetime-local" name="datetime_of_collection" id="datetime_of_collection" style="flex: 1;"> -->
         <button class="btn btn-warning" type="submit" style="flex: 1;">Search</button>
     </form>
 </div>
@@ -29,7 +29,7 @@
                         <p><b> {{ $mission->from_address }} - {{ $mission->to_address }}</b></p>
                         <!-- <p>Delivery: </p> -->
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-4">
                                 <!-- <td>Departure Period:</td> -->
                                 <div class="text-muted">Valid till {{ $mission->car_move_departure_date_from }} - {{ $mission->car_move_departure_date_to }}</div>
                         </div>
@@ -37,10 +37,10 @@
                     <div class="col-md-2">
                         <img src="{{ asset('/dist/img/cars/3m3.png') }}" alt="test" class="img-fluid" width="100" height="100">
                     </div>
-                    <div class="col-md-2">
+                    <!-- <div class="col-md-2">
                                 <div>End's in: 5 Hours</div>
                                 
-                    </div>
+                    </div> -->
                     <div class="col-md-2">
                         <a href="{{ route('booking', ['id' => $mission->id]) }}" class="btn btn-warning">Book Now</a>
                     </div>

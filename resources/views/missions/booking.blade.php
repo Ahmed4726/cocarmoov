@@ -46,11 +46,12 @@
     <div class="row">
         <div class="col-md-6">
             <label class="form-label" for="pick_up_time">Pickup-Time</label>
-            <input class="form-control" type="datetime-local" name="pick_up_time" id="pick_up_time" required>
+            <input class="form-control" type="datetime-local" name="pick_up_time" id="collectionDate" value="{{ date('Y-m-d\TH:i',strtotime('+5 hours')) }}" min="{{ date('Y-m-d\TH:i',strtotime('+5 hours')) }}" step="1800" required>
         </div>
         <div class="col-md-6">
             <label class="form-label" for="delivery_time">Delivery-Time</label>
-            <input class="form-control" type="datetime-local" name="delivery_time" id="delivery_time" required>
+            <input class="form-control" type="datetime-local" name="delivery_time" id="delivery_time" value="{{ date('Y-m-d\TH:i',strtotime('+5 hours')) }}" min="{{ date('Y-m-d\TH:i',strtotime('+5 hours')) }}" step="1800" required>
+            <!-- <input class="form-control" type="datetime-local" name="delivery_time" id="delivery_time" required> -->
         </div>
     </div>
 
