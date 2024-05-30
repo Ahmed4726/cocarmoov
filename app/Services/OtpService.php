@@ -1,10 +1,11 @@
 <?php
 
+// app/Services/OtpService.php
+
 namespace App\Services;
 
-use App\Models\Otp;
-use Twilio\Rest\Client;
 use Twilio\Exceptions\TwilioException;
+use Twilio\Rest\Client;
 
 class OtpService
 {
@@ -43,6 +44,19 @@ class OtpService
             return $verificationCheck->status == 'approved';
         } catch (TwilioException $e) {
             throw new \Exception("Failed to verify OTP: " . $e->getMessage());
+        }
+    }
+
+    public function resendOtp($phoneNumber)
+    {
+        try {
+            $verification = $this->twilio->verify->v2->services($this->verifyServiceSid)
+                                      ->verifications
+                                      ->create($phoneNumber, "sms");
+
+            return $verification->sid;
+        } catch (TwilioException $e) {
+            throw new \Exception("Failed to resend OTP: " . $e->getMessage());
         }
     }
 }

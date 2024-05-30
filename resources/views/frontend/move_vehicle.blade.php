@@ -488,6 +488,11 @@
 
 <div id="step4" class="form-step">
     <h2>Step 4: Payment</h2>
+    <div class="text-center" style="display: flex; flex-direction: column; align-items: center;">
+        <label for="amount">Package Price</label>
+        <input type="number" class="form-control" name="PackageAmount" id="hiddenPackageAmount" placeholder="Package Amount" readonly style="width:400px;">
+    </div>
+    <br>
     <form id="paymentForm">
         <div id="card-element" class="form-control">
             <!-- A Stripe Element will be inserted here. -->
@@ -527,7 +532,7 @@
         <div class="card-body">
             <h5 class="card-title">Package Details</h5>
             <input type="text" class="form-control mb-2" name="SelectedPackage" id="hiddenSelectedPackage" placeholder="Selected Package" readonly>
-            <input type="text" class="form-control mb-2" name="PackageAmount" id="hiddenPackageAmount" placeholder="Package Amount" readonly>
+            <input type="hidden" class="form-control mb-2" name="PackageAmount" id="hiddenPackageAmount" placeholder="Package Amount" readonly>
             <input type="text" class="form-control mb-2" name="addon1" id="hiddenaddon1" placeholder="Addon 1" readonly>
             <input type="text" class="form-control mb-2" name="addon2" id="hiddenaddon2" placeholder="Addon 2" readonly>
         </div>
@@ -596,6 +601,7 @@ updateProgressBar(1,true);
             var Step = '';
             if(!hasStripeCustomerId) {
                 Step = 3;
+                storeHiddenValues();
             } else {
                 Step = 4;
                 storeHiddenValues();
@@ -1057,6 +1063,7 @@ if(selectedPackage === 'economy')
 
 
     function storeHiddenValues() {
+        var car_owner = '{{ $car_owner }}';
         // alert('ok')
     // Store values in the hidden form
     document.getElementById('hiddenFromAddress').value = document.getElementById('fromAddress').value;
@@ -1072,7 +1079,15 @@ if(selectedPackage === 'economy')
 
 
     document.getElementById('hiddenSelectedPackage').value = selectedPackage;
-    document.getElementById('hiddenPackageAmount').value = selectedPackagePrice;
+    if(car_owner == 'professional')
+    {
+        document.getElementById('hiddenPackageAmount').value = selectedPackagePrice * 1.2;
+    }
+    else
+    {
+        document.getElementById('hiddenPackageAmount').value = selectedPackagePrice;
+    }
+
 
     // // Add more lines to store values for additional addons in the selected package
     // document.getElementById('hiddenAddon1').value = "Addon1";

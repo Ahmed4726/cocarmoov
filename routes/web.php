@@ -156,9 +156,9 @@ Route::get('login/{provider}/callback',[SocialauthController::class, 'handleProv
 Route::get('/get-csrf-token', function () {
     return response()->json(['csrf_token' => csrf_token()]);
 });
-Route::post('send-otp', [OtpController::class, 'sendOtp']);
+Route::post('/send-otp', [OtpController::class, 'sendOtp'])->name('send-otp');
 Route::post('/verify-otp', [OtpController::class, 'verifyOtp'])->name('verify-otp');
-Route::post('resend-otp', [OtpController::class, 'verifyOtp'])->name('resend-otp');
+Route::post('/resend-otp', [OtpController::class, 'resendOtp'])->name('resend-otp');
 
 // Admin Routes
 Route::group(['middleware' => 'Admin'], function () {

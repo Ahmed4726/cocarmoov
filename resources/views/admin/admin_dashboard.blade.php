@@ -1,5 +1,12 @@
 @extends('admin.admin_layout')
 @section('content')
+<head>
+<!-- In your main layout or view file, typically in <head> section -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+</head>
+
+
 <div class="wrapper">
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -10,12 +17,12 @@
         $user=auth()->user()->email_verified_at;
         $phone = auth()->user()->phone_verification;
         @endphp
-        {{-- @if ($phone == false) --}}
+        @if ($phone === 'false')
         <!-- Button to trigger the modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#verificationModal">
             Phone Verification
         </button>
-        {{-- @endif --}}
+        @endif
 <!-- Verification Modal -->
 <div class="modal fade" id="verificationModal" tabindex="-1" role="dialog" aria-labelledby="verificationModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -28,13 +35,18 @@
             </div>
             <div class="modal-body">
                 <form id="verificationForm">
+                    @csrf
                     <div class="form-group">
-                        <input type="hidden" name="phone_number" id="phone_number" value="{{ auth()->user()->phone_number }}">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="text" class="form-control" value="{{ auth()->user()->phone_number }}" id="phoneNumber" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
                         <label for="verificationCode">Verification Code:</label>
                         <input type="text" class="form-control" id="verificationCode" maxlength="6" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Verify</button>
+                    <button type="button" class="btn btn-primary" id="sendOtp" style="display: none;">Send OTP</button>
                     <button type="button" class="btn btn-secondary" id="resendCode">Resend Code</button>
+                    <button type="submit" class="btn btn-primary" id="verifyOtp">Verify</button>
                 </form>
             </div>
         </div>
@@ -42,10 +54,10 @@
 </div>
        @if ($user == null)
        <form method="post" action="{{ route('verification.send') }}" class="d-flex align-items-center">
-        <span class="bg-secondary">Your email address is not verified. Please verify your email</span>
-        @csrf
-        <button type="submit" class="btn btn-link" style="color: #FDCD02 !important; margin-left: 5px;">Click here</button>
-    </form>
+            <span class="bg-secondary">Your email address is not verified. Please verify your email</span>
+            @csrf
+            <button type="submit" class="btn btn-link" style="color: #FDCD02 !important; margin-left: 5px;">Click here</button>
+        </form>
           @endif
       <div class="row mb-2">
           <div class="col-sm-6">
@@ -274,38 +286,44 @@
   </div>
 <!-- ./wrapper -->
 <!-- Custom JavaScript for modal functionality -->
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <script>
     $(document).ready(function() {
-        // Handle form submission
-        $('#verificationForm').submit(function(event) {
-            event.preventDefault();
+            // CSRF token setup for all AJAX requests
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+        // Handle send OTP button click
+        $('#sendOtp').click(function() {
+            var phoneNumber = $('#phoneNumber').val();
 
-            // Get verification code from input
-            var verificationCode = $('#verificationCode').val();
-
-            // AJAX request to verify-otp route
             $.ajax({
-                url: "/verify-otp",
+                url: "{{ route('send-otp') }}",
                 method: 'POST',
                 data: {
-                    verification_code: verificationCode
+                    phone_number: phoneNumber
                 },
                 success: function(response) {
-                    // Handle success response
                     Swal.fire({
-                        icon: 'success',
-                        title: 'Verification Successful!',
-                        showConfirmButton: false,
-                        timer: 1500
+                        icon: 'info',
+                        title: 'OTP Sent!',
+                        text: response.message,
                     });
-                    $('#verificationModal').modal('hide');
+                    $('#verifyOtp').show();
+                    $('#sendOtp').hide();
+                    $('#phoneNumber').prop('readonly', true);
                 },
                 error: function(xhr, status, error) {
-                    // Handle error response
-                    var errorMessage = xhr.responseJSON.error || 'Verification failed. Please try again.';
+                    var errorMessage = xhr.responseJSON.message || 'Failed to send OTP. Please try again.';
                     Swal.fire({
                         icon: 'error',
-                        title: 'Verification Failed',
+                        title: 'Send OTP Failed',
                         text: errorMessage,
                     });
                 }
@@ -314,24 +332,61 @@
 
         // Handle resend code button click
         $('#resendCode').click(function() {
-            // AJAX request to resend-otp route
+            var phoneNumber = $('#phoneNumber').val();
+
             $.ajax({
-                url: "/send-otp",
+                url: "{{ route('resend-otp') }}",
                 method: 'POST',
+                data: {
+                    phone_number: phoneNumber
+                },
                 success: function(response) {
-                    // Handle success response
                     Swal.fire({
                         icon: 'info',
                         title: 'Code Resent!',
-                        text: 'A new verification code has been sent.',
+                        text: response.message,
                     });
                 },
                 error: function(xhr, status, error) {
-                    // Handle error response
-                    var errorMessage = xhr.responseJSON.error || 'Failed to resend code. Please try again.';
+                    var errorMessage = xhr.responseJSON.message || 'Failed to resend OTP. Please try again.';
                     Swal.fire({
                         icon: 'error',
-                        title: 'Resend Failed',
+                        title: 'Resend OTP Failed',
+                        text: errorMessage,
+                    });
+                }
+            });
+        });
+
+        // Handle form submission for OTP verification
+        $('#verificationForm').submit(function(event) {
+            event.preventDefault();
+
+            var phoneNumber = $('#phoneNumber').val();
+            var verificationCode = $('#verificationCode').val();
+
+            $.ajax({
+                url: "{{ route('verify-otp') }}",
+                method: 'POST',
+                data: {
+                    phone_number: phoneNumber,
+                    otp: verificationCode
+                },
+                success: function(response) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Verification Successful!',
+                        text: response.message,
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    $('#verificationModal').modal('hide');
+                },
+                error: function(xhr, status, error) {
+                    var errorMessage = xhr.responseJSON.message || 'Verification failed. Please try again.';
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Verification Failed',
                         text: errorMessage,
                     });
                 }
@@ -339,4 +394,5 @@
         });
     });
 </script>
+
 @endsection
