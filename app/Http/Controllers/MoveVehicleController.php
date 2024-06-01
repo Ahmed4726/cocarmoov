@@ -23,7 +23,7 @@ class MoveVehicleController extends Controller
 
     public function index(Request $request)
     {
-        $roles = Role::get();
+        $roles = Role::get()->except(3);
         $car_move = $request->all();
         // dd($car_move);
         $selectedVehicleType = $car_move['vehicle-type'];

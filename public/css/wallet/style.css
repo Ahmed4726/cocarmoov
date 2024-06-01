@@ -3788,6 +3788,8 @@
   font-weight: bold;
   color: #fff;
 }
+
+
  .navbar-nav .nav-link {
    padding-right: 0;
    padding-left: 0;
@@ -10767,7 +10769,7 @@
    }
  }
  .bouncing-text {
-   font-size: 24px;
+
    opacity: 0; /* Initially, text is invisible */
    animation: fastBounce 1s linear infinite;
  }
