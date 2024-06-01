@@ -329,103 +329,103 @@
                 </div>
                 <br>
                 <button class="btn btn-warning" type="button" onclick="prevStep(2)">Previous</button>
-                <button class="btn btn-warning" type="button" onclick="authenticateUser()">S'identifier</button>
+                <button class="btn btn-warning" type="button" onclick="authenticateUser('login')">S'identifier</button>
             </form>
         </div>
 
-        {{-- <div class="col-md-6 col-sm-12">
-            <form method="POST" action="{{ route('register') }}"> --}}
-                @csrf
+        <div class="col-md-6 col-sm-12">
+            <form id="registrationForm">
+                {{-- @csrf --}}
+                <!-- Prénom (First Name) -->
+                <div class="form-group">
+                    <label for="first_name">Prénom:</label>
+                    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Entrez votre Prénom" autofocus>
+                    @error('first_name')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
 
- <!-- Prénom (First Name) -->
-{{-- <div class="form-group">
-    <label for="first_name">Prénom:</label>
-    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Entrez votre Prénom" autofocus>
-    @error('first_name')
-        <span class="text-danger">{{ $message }}</span>
-    @enderror
-</div> --}}
+                <!-- Nom de famille (Last Name) -->
+                <div class="form-group">
+                    <label class="form-label" for="last_name">Nom de famille:</label>
+                    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Entrez votre Nom de famille">
+                    @error('last_name')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
 
-<!-- Nom de famille (Last Name) -->
-{{-- <div class="form-group">
-    <label class="form-label" for="last_name">Nom de famille:</label>
-    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Entrez votre Nom de famille">
-    @error('last_name')
-        <span class="text-danger">{{ $message }}</span>
-    @enderror
-</div> --}}
+                <!-- Numéro de téléphone (Phone Number) -->
+                <div class="form-group">
+                    <label for="phone_number">Numéro de téléphone:</label>
+                    <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Entrez votre Numéro de téléphone">
+                    @error('phone_number')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
 
-<!-- Numéro de téléphone (Phone Number) -->
-{{-- <div class="form-group">
-    <label for="phone_number">Numéro de téléphone:</label>
-    <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Entrez votre Numéro de téléphone">
-    @error('phone_number')
-        <span class="text-danger">{{ $message }}</span>
-    @enderror
-</div> --}}
+                <!-- Adresse e-mail (Email Address) -->
+                <div class="form-group">
+                    <label for="email">Adresse e-mail:</label>
+                    <input type="email" class="form-control" id="emailr" name="emailr" placeholder="Entrez votre Adresse e-mail">
+                    @error('email')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
 
-<!-- Adresse e-mail (Email Address) -->
-{{-- <div class="form-group">
-    <label for="email">Adresse e-mail:</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre Adresse e-mail">
-    @error('email')
-        <span class="text-danger">{{ $message }}</span>
-    @enderror
-</div> --}}
+                <!-- Mot de passe (Password) -->
+                <div class="form-group">
+                    <label for="password">Mot de passe:</label>
+                    <input type="password" class="form-control" id="passwordr" name="passwordr" placeholder="Entrez votre Mot de passe">
+                    @error('password')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
 
-<!-- Mot de passe (Password) -->
-{{-- <div class="form-group">
-    <label for="password">Mot de passe:</label>
-    <input type="password" class="form-control" id="password" name="password" placeholder="Entrez votre Mot de passe">
-    @error('password')
-        <span class="text-danger">{{ $message }}</span>
-    @enderror
-</div> --}}
+                <!-- Confirmez votre mot de passe (Confirm Password) -->
+                <div class="form-group">
+                    <label for="password_confirmation">Confirmez votre Mot de passe:</label>
+                    <input type="password" class="form-control" id="password_confirmationr" name="password_confirmationr" placeholder="Confirmez votre Mot de passe">
+                    @error('password_confirmation')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
 
-<!-- Confirmez votre mot de passe (Confirm Password) -->
-{{-- <div class="form-group">
-    <label for="password_confirmation">Confirmez votre Mot de passe:</label>
-    <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirmez votre Mot de passe">
-    @error('password_confirmation')
-        <span class="text-danger">{{ $message }}</span>
-    @enderror
-</div> --}}
+                <!-- Rôle (User Type) -->
+                <div class="form-group">
+                    <label for="user_type">Rôle:</label>
+                    <select class="form-control" name="user_typer" id="user_typer">
+                        <option selected value="">Choisissez votre rôle</option>
+                        @foreach($roles as $role)
+                            <option value="{{ $role->id }}">{{ $role->name }}</option>
+                        @endforeach
+                    </select>
+                    @error('user_type')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
 
-<!-- Rôle (User Type) -->
-{{-- <div class="form-group">
-    <label for="user_type">Rôle:</label>
-    <select class="form-control" name="user_type" id="user_type">
-        <option selected value="">Choisissez votre rôle</option>
-        @foreach($roles as $role)
-            <option value="{{ $role->id }}">{{ $role->name }}</option>
-        @endforeach
-    </select>
-    @error('user_type')
-        <span class="text-danger">{{ $message }}</span>
-    @enderror
-</div> --}}
+                <!-- Accepter les conditions -->
+                <div class="form-group">
+                    <input type="checkbox" id="checkbox" name="checkbox_name">
+                    <label for="checkbox">Je ne souhaite pas recevoir d’informations, de bons plans et de cadeaux de CoCarmoov.</label>
+                    @error('checkbox_name')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
 
-<!-- Accepter les conditions -->
-{{-- <div class="form-group">
-    <input type="checkbox" id="checkbox" name="checkbox_name"><label for="checkbox">Je ne souhaite pas recevoir d’informations, de bons plans et de cadeaux de CoCarmoov.</label>
-    @error('checkbox_name')
-        <span class="text-danger">{{ $message }}</span>
-    @enderror
-</div> --}}
-
-{{-- <i class="fas fa-check rounded p-1" style="background-color:#fdcd02; color:white"></i> En vous inscrivant, vous acceptez nos <a href="https://cocarmoov.fr/mentions-legales">Conditions Générales d’Utilisation</a> et notre <a href="https://cocarmoov.fr/politique-de-confidentialite">Politique de confidentialité</a>. --}}
-
+                <i class="fas fa-check rounded p-1" style="background-color:#fdcd02; color:white"></i> En vous inscrivant, vous acceptez nos <a href="https://cocarmoov.fr/mentions-legales">Conditions Générales d’Utilisation</a> et notre <a href="https://cocarmoov.fr/politique-de-confidentialite">Politique de confidentialité</a>.
 
                 <!-- Sign Up button -->
-                {{-- <button type="submit" class="btn btn-warning" style="width:100%;">S'inscrire</button>
-            </form> --}}
-        {{-- </div> --}}
+                <button type="button" class="btn btn-warning" style="width:100%;" onclick="authenticateUser('register')">S'inscrire</button>
+            </form>
+        </div>
     </div>
 
   </div>
 
 
 <div id="step3" class="form-step">
+    <div class="container">
     {{-- sas --}}
     <h2>Step 3: Packages</h2>
     <form id="packagesForm">
@@ -496,6 +496,7 @@
             <button class="btn btn-warning" type="button" onclick="prevStep(3)">Previous</button>
             <button class="btn btn-warning" type="button" onclick="handleStep({{ $stripe_customer_id != null ? 'true' : 'false' }})">Next</button>
         </form>
+    </div>
 </div>
 
 <div id="step4" class="form-step">
@@ -790,37 +791,48 @@ function updateProgressBar(currentStep, isCompleted) {
 
 
 // Function to authenticate user
-function authenticateUser() {
-    fetchCsrfToken(function (csrfToken) {
-        var email = $('#email1').val();
-        var password = $('#password1').val();
+function authenticateUser(auth) {
+    fetchCsrfToken(function(csrfToken) {
+        var data = {};
+        var url;
+
+        if (auth === 'login') {
+            data.email = $('#email1').val();
+            data.password = $('#password1').val();
+            url = '/login-step';
+        } else if (auth === 'register') {
+            // Get all values from the registration form
+            data.first_name = $('#first_name').val();
+            data.last_name = $('#last_name').val();
+            data.phone_number = $('#phone_number').val();
+            data.email = $('#emailr').val();
+            data.password = $('#passwordr').val();
+            data.password_confirmation = $('#password_confirmationr').val();
+            data.user_type = $('#user_typer').val();
+            data.checkbox_name = $('#checkbox').is(':checked');
+            url = '/register-step';
+        }
 
         $.ajax({
-            url: '/login-step',
+            url: url,
             type: 'POST',
             headers: {
                 'X-CSRF-TOKEN': csrfToken,
             },
-            data: {
-                email: email,
-                password: password,
-            },
-            success: function (response) {
+            data: data,
+            success: function(response) {
                 if (response.success) {
-                    // If authentication is successful, proceed to the next step
                     nextStep(2);  // You need to define the nextStep function
                 } else if (response.fail) {
-                    // If authentication fails, display an error message with SweetAlert
                     Swal.fire({
                         icon: 'error',
                         title: 'Authentication Failed',
-                        text: 'Email and password do not match or are incorrect. Please try again.',
+                        text: response.message || 'Email and password do not match or are incorrect. Please try again.',
                     });
                 }
             },
-            error: function (jqXHR, textStatus, errorThrown) {
+            error: function(jqXHR, textStatus, errorThrown) {
                 console.error('Error:', errorThrown);
-                // Handle the error, e.g., display an error message
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',

@@ -2,14 +2,28 @@
 
 namespace App\Http\Controllers;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Models\Role;
+use App\Models\User;
+use App\Services\OtpService;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Validation\Rules;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
 
 class MoveVehicleController extends Controller
 {
+    protected $otpService;
+
+    public function __construct(OtpService $otpService)
+    {
+        $this->otpService = $otpService;
+    }
+
     public function index(Request $request)
     {
+        $roles = Role::get();
         $car_move = $request->all();
         // dd($car_move);
         $selectedVehicleType = $car_move['vehicle-type'];
@@ -90,7 +104,7 @@ class MoveVehicleController extends Controller
         }
         $isAuthenticated = Auth::check();
 
-        return view('frontend.move_vehicle', compact('car_move', 'express_package', 'economyPackage', 'premium_package', 'tax_notation', 'selectedVehicleType', 'distance', 'car_owner','isAuthenticated','stripe_customer_id'));
+        return view('frontend.move_vehicle', compact('car_move', 'express_package', 'economyPackage', 'premium_package', 'tax_notation', 'selectedVehicleType', 'distance', 'car_owner','isAuthenticated','stripe_customer_id','roles'));
     }
 
 
@@ -108,8 +122,51 @@ class MoveVehicleController extends Controller
 
         return response()->json(['fail' => true], 401);
     }
-    // public function store(LoginRequest $request): RedirectResponse
-    // {
 
-    // }
+     public function store(Request $request)
+    {
+        try {
+            // Validate the request
+            $request->validate([
+                'first_name' => ['required', 'string', 'max:255'],
+                'last_name' => ['required', 'string', 'max:255'],
+                'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:users'],
+                'phone_number' => ['required'],
+                'password' => ['required', 'confirmed', 'min:8', Rules\Password::defaults()],
+            ], [
+                'first_name.required' => 'The first name field is required.',
+                'last_name.required' => 'The last name field is required.',
+                'email.required' => 'The email field is required.',
+                'email.email' => 'Please enter a valid email address.',
+                'email.unique' => 'This email address is already in use.',
+                'password.required' => 'The password field is required.',
+                'password.confirmed' => 'The password confirmation does not match.',
+                'password.min' => 'The password must be at least :min characters.',
+            ]);
+
+            // Create the user
+            $user = User::create([
+                'family_name' => $request->first_name,
+                'last_name' => $request->last_name,
+                'phone_number' => $request->phone_number,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'user_type' => $request->user_type,
+                'note' => 'Submit all documents to complete your profile',
+            ]);
+
+            // Trigger the Registered event
+            event(new Registered($user));
+
+            // Log in the user
+            Auth::login($user);
+
+            // Send OTP (assuming $this->otpService is properly defined and injected)
+            $this->otpService->generateOtp($request->phone_number);
+
+            return response()->json(['success' => true], 200);
+        } catch (ValidationException $e) {
+            return response()->json(['fail' => true, 'errors' => $e->errors()], 401);
+        }
+    }
 }
