@@ -194,6 +194,7 @@ Route::group(['middleware' => 'Admin'], function () {
 
 
 Route::post('/login-step',[MoveVehicleController::class,'login'])->name('login.step');
+Route::post('/register-step', [MoveVehicleController::class, 'store'])->name('register.step');
 //test route
 
 Route::get('/test', function () {
