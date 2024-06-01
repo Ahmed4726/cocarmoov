@@ -217,27 +217,33 @@
         </section>
         <div id="premium_services_section" style="display: none;">
             <div class="form-group">
-                <input type="checkbox" id="premium_trailer_checkbox" name="premium_services" value="{{ $premium_package * 0.5 }}"><span for="premium_trailer_checkbox">Required enclosed car transporter trailer (price calculated ×0.5) [Closed trailer]</span>
+                <input type="checkbox" id="premium_trailer_checkbox" name="premium_services" value="{{ $premium_package * 0.5 }}"><span for="premium_trailer_checkbox">Required enclosed car transporter trailer</span>
+                {{-- (price calculated ×0.5) [Closed trailer] --}}
             </div>
 
             <div class="form-group">
-                <input type="checkbox" id="premium_cleaning_checkbox" name="premium_services" value="20"><span for="premium_cleaning_checkbox">Vehicle exterior cleaning (20€ excl. VAT) [Exterior cleaning]</span>
+                <input type="checkbox" id="premium_cleaning_checkbox" name="premium_services" value="20"><span for="premium_cleaning_checkbox">Vehicle exterior cleaning</span>
+                {{-- (20€ excl. VAT) [Exterior cleaning] --}}
             </div>
 
             <div class="form-group">
-                <input type="checkbox" id="premium_demonstration_checkbox" name="premium_services" value="20"><span for="premium_demonstration_checkbox">Demonstration (20€ excl. VAT) [Demonstration] </span>
+                <input type="checkbox" id="premium_demonstration_checkbox" name="premium_services" value="20"><span for="premium_demonstration_checkbox">Demonstration  </span>
+                {{-- (20€ excl. VAT) [Demonstration] --}}
             </div>
 
             <div class="form-group">
-                <input type="checkbox" id="premium_contract_signature_checkbox" name="premium_services" value="20"><span for="premium_contract_signature_checkbox">Rental contract signature (20€ excl. VAT) [Rental contract signature]</span>
+                <input type="checkbox" id="premium_contract_signature_checkbox" name="premium_services" value="20"><span for="premium_contract_signature_checkbox">Rental contract signature</span>
+                {{-- (20€ excl. VAT) [Rental contract signature] --}}
             </div>
 
             <div class="form-group">
-                <input type="checkbox" id="premium_sale_certificate_checkbox" name="premium_services" value="30"><span for="premium_sale_certificate_checkbox">Sales & assignment certificate signature (30€ excl. VAT) [Sale contract signature]</span>
+                <input type="checkbox" id="premium_sale_certificate_checkbox" name="premium_services" value="30"><span for="premium_sale_certificate_checkbox">Sales & assignment certificate signature</span>
+                {{-- (30€ excl. VAT) [Sale contract signature] --}}
             </div>
 
             <div class="form-group">
-                <input type="checkbox" id="premium_vehicle_return_checkbox" name="premium_services"><span for="premium_vehicle_return_checkbox">Return another vehicle after delivering the first (price calculated × 1) ! 3 * [Vehicle return]</span>
+                <input type="checkbox" id="premium_vehicle_return_checkbox" name="premium_services"><span for="premium_vehicle_return_checkbox">Return another vehicle after delivering the first</span>
+                {{-- (price calculated × 1) ! 3 * [Vehicle return] --}}
             </div>
 
             <div class="form-group">
@@ -251,28 +257,34 @@
 
         <div id="express_services_section" style="display: none;">
             <div class="form-group">
-                <input type="checkbox" id="express_plates_checkbox" name="express_services" value="20"><span for="express_plates_checkbox">Required W Garage plates (20€ excl. VAT) ! 1 [W Garage plates]</span>
+                <input type="checkbox" id="express_plates_checkbox" name="express_services" value="20"><span for="express_plates_checkbox">Required W Garage plates</span>
+                 {{-- (20€ excl. VAT) ! 1 [W Garage plates] --}}
             </div>
 
             <div class="form-group">
-                <input type="checkbox" id="express_cleaning_checkbox" name="express_services" value="20"><span for="express_cleaning_checkbox">Vehicle exterior cleaning (20€ excl. VAT) [Exterior cleaning]</span>
+                <input type="checkbox" id="express_cleaning_checkbox" name="express_services" value="20"><span for="express_cleaning_checkbox">Vehicle exterior cleaning</span>
+                {{-- (20€ excl. VAT) [Exterior cleaning] --}}
             </div>
 
             <div class="form-group">
-                <input type="checkbox" id="express_refueling_checkbox" name="express_services" value="{{ 2 * ($distance * 0.99) }}"><span for="express_refueling_checkbox">Restore the same fuel level ! 2 (Distance ×0.09€ excl. VAT) [Refueling]</span>
+                <input type="checkbox" id="express_refueling_checkbox" name="express_services" value="{{ 2 * ($distance * 0.99) }}"><span for="express_refueling_checkbox">Restore the same fuel level ! </span>
+                {{-- 2 (Distance ×0.09€ excl. VAT) [Refueling] --}}
             </div>
 
             <div class="form-group">
-                <input type="checkbox" id="express_full_cleaning_checkbox" name="express_services" value="30"><span for="express_full_cleaning_checkbox">Vehicle interior & exterior cleaning (30€ excl. VAT) [Full cleaning]</span>
+                <input type="checkbox" id="express_full_cleaning_checkbox" name="express_services" value="30"><span for="express_full_cleaning_checkbox">Vehicle interior & exterior cleaning </span>
+                {{-- (30€ excl. VAT) [Full cleaning] --}}
             </div>
 
             <div class="form-group">
-                <input type="checkbox" id="express_demonstration_checkbox" name="express_services" value="20"><span for="express_demonstration_checkbox">Demonstration (20€ excl. VAT) [Demonstration]</span>
+                <input type="checkbox" id="express_demonstration_checkbox" name="express_services" value="20"><span for="express_demonstration_checkbox">Demonstration</span>
+                {{-- (20€ excl. VAT) [Demonstration] --}}
             </div>
 
             <div class="form-group">
                 <input type="checkbox" id="express_extra_checkbox" name="express_services">
-                <span for="express_extra_checkbox">Extra **: specify the service and the budget for € excl. VAT [Extra]</span>
+                <span for="express_extra_checkbox"></span>
+                {{-- Extra **: specify the service and the budget for € excl. VAT [Extra] --}}
             </div>
 
             <div id="express_extra_fields" style="display:none;">
@@ -557,6 +569,23 @@
 <script src="https://js.stripe.com/v3/"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+// const checkboxes = document.querySelectorAll('#express_services_section input[type="checkbox"]');
+// const priceDisplay = document.getElementById('expressPriceDisplay');
+// function calculatePrice() {
+//             let totalPrice = 0;
+
+//             checkboxes.forEach(checkbox => {
+//                 if (checkbox.checked) {
+//                         totalPrice += parseFloat(checkbox.value);
+//                 }
+//             });
+
+//             priceDisplay.textContent = `${totalPrice.toFixed(2)} € excl. VAT`;
+//         }
+
+//         checkboxes.forEach(checkbox => {
+//             checkbox.addEventListener('change', calculatePrice);
+//         });
 
 // Function to fetch CSRF token
 function fetchCsrfToken(callback) {
@@ -603,7 +632,7 @@ updateProgressBar(1,true);
                 Step = 3;
                 storeHiddenValues();
             } else {
-                Step = 4;
+                Step = 3;
                 storeHiddenValues();
             }
 
@@ -855,6 +884,7 @@ function authenticateUser() {
     addMoreButton.addEventListener('click', addMoreFields);
 
     function toggleExtraFields() {
+        // alert('ok')
         expressExtraFields.style.display = expressExtraCheckbox.checked ? 'block' : 'none';
         updateTotalPrice();
     }
@@ -868,12 +898,13 @@ function authenticateUser() {
     });
 
     function updateTotalPrice() {
-        // alert('ok');
+
     var totalPremiumPrice = parseFloat('{{ $premium_package }}');
     var totalExpressPrice = parseFloat('{{ $express_package }}');
         // alert(totalExpressPrice)
     checkboxes.forEach(checkbox => {
         if (checkbox.checked) {
+
             if (checkbox.name.includes('express_services')) {
                 totalExpressPrice += parseFloat(checkbox.value);
             } else if (checkbox.name.includes('premium_services')) {
@@ -881,19 +912,20 @@ function authenticateUser() {
             }
         }
     });
-    // alert(premiumPriceDisplay.textContent)
-    if (premiumPriceDisplay)
+
+    if (premiumPriceDisplay && expressPriceDisplay)
     {
         premiumPriceDisplay.textContent = `${totalPremiumPrice.toFixed(2)} € {{ $tax_notation }}`;
+        expressPriceDisplay.textContent = `${totalExpressPrice.toFixed(2)} € {{ $tax_notation }}`;
     }
     else if(expressPriceDisplay)
     {
         expressPriceDisplay.textContent = `${totalExpressPrice.toFixed(2)} € {{ $tax_notation }}`;
     }
-    else
+    else if (premiumPriceDisplay)
     {
         premiumPriceDisplay.textContent = `${totalPremiumPrice.toFixed(2)} € {{ $tax_notation }}`;
-        expressPriceDisplay.textContent = `${totalExpressPrice.toFixed(2)} € {{ $tax_notation }}`;
+
     }
 // alert("ok")
     // Display selected package details in the next step
@@ -1133,6 +1165,10 @@ if(selectedPackage === 'economy')
         });
     });
     }
+
+
+
+
 </script>
 
 
