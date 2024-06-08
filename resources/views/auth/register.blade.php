@@ -46,25 +46,38 @@
 </div>
                     <div class="card mx-auto rounded mb-5">
                         <div class="card-body">
+                    <h5 class="text-center" id="signupModalLabel">Créez un compte avec votre e-mail</h5>
                         <form method="POST" action="{{ route('register') }}">
                     @csrf
+                    <div class="form-group">
+                        <!-- <label for="user_type">Choisissez votre rôle</label> -->
+                        <select class="form-control" name="user_type" id="user_type">
+                            <option selected value="">Définissez votre profil</option>
+                            @foreach($roles as $role)
+                                <option value="{{ $role->id }}">{{ $role->name }}</option>
+                            @endforeach
+                        </select>
+                        @error('user_type')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
                     <!-- Name -->
                     <div class="form-group">
-                        <input type="text" class="form-control" id="name" name="last_name" placeholder="Entrez votre Prénom"  autofocus>
+                        <input type="text" class="form-control" id="name" name="last_name" placeholder="Prénom (du représentant légal si professionnel)"  autofocus>
                         @error('last_name')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="name" name="family_name" placeholder="Entrez votre Nom" >
+                        <input type="text" class="form-control" id="name" name="family_name" placeholder="Nom (du représentant légal si professionnel)" >
                         @error('family_name')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="name" name="phone_number" placeholder="Entrez votre Numéro de téléphone" >
+                        <input type="text" class="form-control" id="name" name="phone_number" placeholder="Numéro de téléphone" >
                         @error('phone_number')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
@@ -72,7 +85,7 @@
 
                     <!-- Email Address -->
                     <div class="form-group">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre Adresse e-mail" >
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Adresse e-mail" >
                         @error('email')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
@@ -84,7 +97,7 @@
 
                     <!-- Password -->
                     <div class="form-group">
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Entrez votre Mot de passe">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe">
                         @error('password')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
@@ -94,19 +107,6 @@
                     <div class="form-group">
                         <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirmez votre Mot de passe" >
                         @error('password_confirmation')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                    </div>
-
-                    <div class="form-group">
-                        <label for="user_type">Choisissez votre rôle</label>
-                        <select class="form-control" name="user_type" id="user_type">
-                            <option selected value="">Choisissez votre rôle</option>
-                            @foreach($roles as $role)
-                                <option value="{{ $role->id }}">{{ $role->name }}</option>
-                            @endforeach
-                        </select>
-                        @error('user_type')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>

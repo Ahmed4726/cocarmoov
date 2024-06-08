@@ -96,7 +96,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="loginModalLabel">S'identifier</h5>
+                <h5 class="modal-title" id="loginModalLabel">Connectez-vous avec votre e-mail</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -108,12 +108,12 @@
                     <!-- Email Address -->
                     <div class="form-group">
                         <!-- <label for="email">Adresse e-mail</label> -->
-                        <input type="email" class="form-control" id="email" name="email" placeholder="entrez votre Adresse e-mail"  required autofocus>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Adresse e-mail"  required autofocus>
                     </div>
                     <!-- Password -->
                     <div class="form-group">
                         <!-- <label for="password">Mot de passe</label> -->
-                        <input type="password" class="form-control" id="password" name="password" placeholder="entrez votre Mot de passe"  required>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe"  required>
                     </div>
 
                     <!-- Remember Me -->
@@ -132,7 +132,7 @@
 </div>
                     </div>
                     <!-- Login button -->
-                    <button type="submit" class="btn btn-warning" style="width:100%;">Connexion</button>
+                    <button type="submit" class="btn btn-warning" style="width:100%;">S'identifier</button>
                 </form>
                 <div class="container">
                 <div class="row justify-content-center">
@@ -159,7 +159,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-md-6 text-center">
-            <a href="{{ route('register') }}" class="text-muted">Pas de compte ?<span style="color:#fdcd02"> S’inscrire</span></a>
+            <a href="{{ route('register') }}" class="text-muted">Pas de compte ?<span style="color:#fdcd02"> S'inscrire</span></a>
         </div>
     </div>
 
@@ -174,7 +174,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="signupModalLabel">S'inscrire</h5>
+                <h5 class="modal-title" id="signupModalLabel">Créez un compte avec votre e-mail</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -184,23 +184,41 @@
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
 
+                    @php
+
+                    use App\Models\Role;
+
+                    $roles = Role::where('name', '!=', 'Admin')->get();
+
+                    @endphp
+                    <div class="form-group">
+                        <select class="form-control" name="user_type" id="user_type">
+                            <option selected value="">Définissez votre profil</option>
+                            @foreach($roles as $role)
+                                <option value="{{ $role->id }}">{{ $role->name }}</option>
+                            @endforeach
+                        </select>
+                        @error('user_type')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                    </div>
                     <!-- Name -->
                     <div class="form-group">
-                        <input type="text" class="form-control" id="name" name="last_name" placeholder="Entrez votre Prénom"  autofocus>
+                        <input type="text" class="form-control" id="name" name="last_name" placeholder="Prénom (du représentant légal si professionnel)"  autofocus>
                         @error('last_name')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="name" name="family_name" placeholder="Entrez votre Nom" >
+                        <input type="text" class="form-control" id="name" name="family_name" placeholder="Nom (du représentant légal si professionnel)" >
                         @error('family_name')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="name" name="phone_number" placeholder="Entrez votre Numéro de téléphone" >
+                        <input type="text" class="form-control" id="name" name="phone_number" placeholder="Numéro de téléphone" >
                         @error('phone_number')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
@@ -208,7 +226,7 @@
 
                     <!-- Email Address -->
                     <div class="form-group">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre Adresse e-mail" >
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Adresse e-mail" >
                         @error('email')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
@@ -220,7 +238,7 @@
 
                     <!-- Password -->
                     <div class="form-group">
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Entrez votre Mot de passe">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe">
                         @error('password')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
@@ -228,30 +246,13 @@
 
                     <!-- Confirm Password -->
                     <div class="form-group">
-                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirmez votre Mot de passe" >
+                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirmez le mot de passe" >
                         @error('password_confirmation')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
 
-                    @php
-
-                    use App\Models\Role;
-
-                    $roles = Role::where('name', '!=', 'Admin')->get();
-
-                    @endphp
-                    <div class="form-group">
-                        <select class="form-control" name="user_type" id="user_type">
-                            <option selected value="">Choisissez votre rôle</option>
-                            @foreach($roles as $role)
-                                <option value="{{ $role->id }}">{{ $role->name }}</option>
-                            @endforeach
-                        </select>
-                        @error('user_type')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                    </div>
+            
 
                     <i class="fas fa-check rounded p-1" style="background-color:#fdcd02; color:white"></i> En vous inscrivant, vous acceptez nos <a href="https://cocarmoov.fr/mentions-legales">Conditions Générales d’Utilisation</a> et notre <a href="https://cocarmoov.fr/politique-de-confidentialite">Politique de confidentialité</a>.</li>
                     <div class="form-group">

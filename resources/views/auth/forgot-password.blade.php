@@ -46,13 +46,14 @@
 </div>
                     <div class="card mx-auto rounded">
                         <div class="card-body">
+                            <h5 class="text-center">Mot de passe oublié</h5>
                             <p class="app-font-family">Saisissez l’e-mail associé à votre compte. Nous vous enverrons un lien de réinitialisation du mot de passe.</p>
                             <form id="loginForm" method="POST" action="{{ route('password.email') }}">
                                 @csrf
                                 <!-- Email Address -->
                                 <div class="form-group">
                                     <!-- <label for="email">Adresse e-mail</label> -->
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="entrez votre Adresse e-mail" required autofocus>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Adresse e-mail" required autofocus>
                                 </div>
                                 <!-- Password -->
                                 <!-- Remember Me -->

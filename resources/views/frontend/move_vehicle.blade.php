@@ -320,12 +320,12 @@
         <div class="col-md-6 col-sm-12">
             <form id="authenticationForm">
                 <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input class="form-control" type="email" id="email1" required>
+                    <!-- <label for="email">Email:</label> -->
+                    <input class="form-control" type="email" placeholder="Adresse e-mail" id="email1" required>
                 </div>
                 <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input class="form-control" type="password" id="password1" required>
+                    <!-- <label for="password">Password:</label> -->
+                    <input class="form-control" type="password" placeholder="Mot de passe" id="password1" required>
                 </div>
                 <br>
                 <button class="btn btn-warning" type="button" onclick="prevStep(2)">Previous</button>
@@ -336,65 +336,11 @@
         <div class="col-md-6 col-sm-12">
             <form id="registrationForm">
                 {{-- @csrf --}}
-                <!-- Prénom (First Name) -->
-                <div class="form-group">
-                    <label for="first_name">Prénom:</label>
-                    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Entrez votre Prénom" autofocus>
-                    @error('first_name')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                </div>
-
-                <!-- Nom de famille (Last Name) -->
-                <div class="form-group">
-                    <label class="form-label" for="last_name">Nom de famille:</label>
-                    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Entrez votre Nom de famille">
-                    @error('last_name')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                </div>
-
-                <!-- Numéro de téléphone (Phone Number) -->
-                <div class="form-group">
-                    <label for="phone_number">Numéro de téléphone:</label>
-                    <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Entrez votre Numéro de téléphone">
-                    @error('phone_number')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                </div>
-
-                <!-- Adresse e-mail (Email Address) -->
-                <div class="form-group">
-                    <label for="email">Adresse e-mail:</label>
-                    <input type="email" class="form-control" id="emailr" name="emailr" placeholder="Entrez votre Adresse e-mail">
-                    @error('email')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                </div>
-
-                <!-- Mot de passe (Password) -->
-                <div class="form-group">
-                    <label for="password">Mot de passe:</label>
-                    <input type="password" class="form-control" id="passwordr" name="passwordr" placeholder="Entrez votre Mot de passe">
-                    @error('password')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                </div>
-
-                <!-- Confirmez votre mot de passe (Confirm Password) -->
-                <div class="form-group">
-                    <label for="password_confirmation">Confirmez votre Mot de passe:</label>
-                    <input type="password" class="form-control" id="password_confirmationr" name="password_confirmationr" placeholder="Confirmez votre Mot de passe">
-                    @error('password_confirmation')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                </div>
-
-                <!-- Rôle (User Type) -->
-                <div class="form-group">
-                    <label for="user_type">Rôle:</label>
+                 <!-- Rôle (User Type) -->
+                 <div class="form-group">
+                    <!-- <label for="user_type">Rôle:</label> -->
                     <select class="form-control" name="user_typer" id="user_typer">
-                        <option selected value="">Choisissez votre rôle</option>
+                        <option selected value="">Définissez votre profil</option>
                         @foreach($roles as $role)
                             <option value="{{ $role->id }}">{{ $role->name }}</option>
                         @endforeach
@@ -403,6 +349,61 @@
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
+                <!-- Prénom (First Name) -->
+                <div class="form-group">
+                    <!-- <label for="first_name">Prénom (du représentant légal si professionnel)</label> -->
+                    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Prénom (du représentant légal si professionnel)" autofocus>
+                    @error('first_name')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <!-- Nom de famille (Last Name) -->
+                <div class="form-group">
+                    <!-- <label class="form-label" for="last_name">Nom (du représentant légal si professionnel)</label> -->
+                    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Nom (du représentant légal si professionnel)">
+                    @error('last_name')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <!-- Numéro de téléphone (Phone Number) -->
+                <div class="form-group">
+                    <!-- <label for="phone_number">Numéro de téléphone:</label> -->
+                    <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="Numéro de téléphone">
+                    @error('phone_number')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <!-- Adresse e-mail (Email Address) -->
+                <div class="form-group">
+                    <!-- <label for="email">Adresse e-mail:</label> -->
+                    <input type="email" class="form-control" id="emailr" name="emailr" placeholder="Adresse e-mail">
+                    @error('email')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <!-- Mot de passe (Password) -->
+                <div class="form-group">
+                    <!-- <label for="password">Mot de passe:</label> -->
+                    <input type="password" class="form-control" id="passwordr" name="passwordr" placeholder="Mot de passe">
+                    @error('password')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <!-- Confirmez votre mot de passe (Confirm Password) -->
+                <div class="form-group">
+                    <!-- <label for="password_confirmation">Confirmez votre Mot de passe:</label> -->
+                    <input type="password" class="form-control" id="password_confirmationr" name="password_confirmationr" placeholder="Confirmez votre Mot de passe">
+                    @error('password_confirmation')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+               
 
                 <!-- Accepter les conditions -->
                 <div class="form-group">
@@ -427,52 +428,102 @@
 <div id="step3" class="form-step">
     <div class="container">
     {{-- sas --}}
-    <h2>Step 3: Packages</h2>
+    <h2>Step 3: Details</h2>
     <form id="packagesForm">
-        <label>Selected Package:</label>
+        <!-- <label>Selected Package:</label>
                     <p id="selectedPackageDetails"></p>
-                    <p id="selectedPackagePrice"></p>
+                    <p id="selectedPackagePrice"></p> -->
         {{-- price show here in this step of the package and name too --}}
-        <h2>Availability Details</h2>
+        <h2>Collection details</h2>
         <div class="row">
-            <div class="col-md-3 mb-3">
-                <label for="fromAddress" class="form-label">From Address:</label>
-                <input type="text" class="form-control" id="fromAddress" value="{{ $car_move['pickup_name'] }}" readonly>
-            </div>
-            <div class="col-md-3 mb-3">
-                <label for="toAddress" class="form-label">To Address:</label>
-                <input type="text" class="form-control" id="toAddress" value="{{ $car_move['delivery_name'] }}" readonly>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <label for="collectionDate">Collection No Earlier Than</label>
+            <div class="col-md-4 mb-3">
+                <label for="collectionDate"></label>
                 <input class="form-control" type="datetime-local" name="collectionDate" id="collectionDate" value="yyyy-mm-dd">
                 {{-- <input class="form-control" type="time" name="collectiontime" id="collectiontime" value="hh:mm"> --}}
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-4">
+    <label for="placeType" class="form-label mb-0"></label>
+    <select class="form-control" name="GearBox" id="GearBox" placeholder="Nature du lieu">
+        <option value="" disabled selected hidden>Select an option</option>
+        <option value="Manual">Résidence</option>
+        <option value="Automatic">Agence</option>
+        <option value="Automatic">Concession</option>
+        <option value="Automatic">Garage</option>
+        <option value="Automatic">Parc automobile</option>
+        <option value="Automatic">Magasin</option>
+        <option value="Automatic">Société</option>
+    </select>
+</div>
+
+            <div class="col-md-4">
+                <label for="placeName" class="form-label mb-0"></label>
+                <input type="text" class="form-control" id="make_and_model" name="make_and_model" placeholder="Son Nom">
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-md-6 mb-3">
+                <!-- <label for="fromAddress" class="form-label">From Address:</label> -->
+                <input type="text" class="form-control" id="fromAddress" value="{{ $car_move['pickup_name'] }}" readonly>
+            </div>
+        <div class="col-md-6">
+                <!-- <label for="placeType" class="form-label mb-0">Besoin de temps pour préparer le véhicule :</label> -->
+                <select class="form-control mb-3" name="GearBox" id="GearBox" placeholder="Besoin de temps pour préparer le véhicule :">
+                    <option value="Manual">Non  </option>
+                    <option value="Automatic">3 heures </option>
+                    <option value="Automatic">6 heures  </option>
+                    <option value="Automatic">12 heures  </option>
+                    <option value="Automatic">24 heures</option>
+                    <option value="Automatic">48 heures </option>
+                </select>
+        </div>
+        </div>
+        <h2>Delivery details</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
                 <label for="deliveryDate">Delivery No later Than</label>
                 <input class="form-control" type="datetime-local" name="deliveryDate" id="deliveryDate" placeholder="date...">
                 {{-- <input class="form-control" type="time" name="deliverytime" id="deliverytime" placeholder="hrs"> --}}
             </div>
+            <div class="col-md-4">
+                <label for="placeType" class="form-label mb-0"></label>
+                <select class="form-control" name="GearBox" id="GearBox" placeholder="Nature du lieu">
+                    <option value="Manual">Résidence </option>
+                    <option value="Automatic">Agence </option>
+                    <option value="Automatic">Concession  </option>
+                    <option value="Automatic">Garage  </option>
+                    <option value="Automatic">Parc automobile</option>
+                    <option value="Automatic">Magasin </option>
+                    <option value="Automatic">Société</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="placeName" class="form-label mb-0"></label>
+                <input type="text" class="form-control" id="make_and_model" name="make_and_model" placeholder="Son Nom">
+            </div>
         </div>
-        <h2>Vehicle Details</h2>
+        <div class="row">
+        <div class="col-md-6">
+                <!-- <label for="toAddress" class="form-label">To Address:</label> -->
+                <input type="text" class="form-control" id="toAddress" value="{{ $car_move['delivery_name'] }}" readonly>
+            </div>
+        </div>
+        <h2>Characterstics of vehicle</h2>
         <div class="row">
             <div class="col-md-2 mb-2">
-                <label for="carType" class="form-label">Car Type:</label>
+                <!-- <label for="carType" class="form-label">Car Type:</label> -->
                 <input type="text" class="form-control" id="carType" value="{{ $car_move['vehicle-type'] }}" readonly>
             </div>
             <div class="col-md-4 mb-3">
-                <label for="carType" class="form-label">Make and Model</label>
-                <input type="text" class="form-control" id="make_and_model" name="make_and_model">
+                <!-- <label for="carType" class="form-label">Make and Model</label> -->
+                <input type="text" class="form-control" id="make_and_model" name="make_and_model" placeholder="Make and Model">
             </div>
             <div class="col-md-4 mb-3">
-                <label for="carType" class="form-label">Number Plate</label>
-                <input type="text" class="form-control" id="number_plate" name="number_plate" placeholder="AA99 AAA">
+                <!-- <label for="carType" class="form-label">Number Plate</label> -->
+                <input type="text" class="form-control" id="number_plate" name="number_plate" placeholder="Number Plate">
             </div>
             <div class="col-md-4 mb-3">
-                <label for="carType" class="form-label">Seating Capacity</label>
-                <select class="form-control" name="seating_capacity" id="seating_capacity">
+                <!-- <label for="carType" class="form-label">Nombre de places</label> -->
+                <select class="form-control" name="seating_capacity" id="seating_capacity" placeholder="Nombre de places">
                     <option value="">Choose</option>
                     <option value="2">2 seats</option>
                     <option value="3">3 seats</option>
@@ -485,18 +536,24 @@
                 </select>
             </div>
             <div class="col-md-4 mb-3">
-                <label for="carType" class="form-label">GearBox</label>
-                <select class="form-control" name="GearBox" id="GearBox">
+                <!-- <label for="carType" class="form-label">Moteur</label> -->
+                <select class="form-control" name="GearBox" id="GearBox" placeholder="Moteur">
                     <option value="">Transmission</option>
-                    <option value="Manual">Manual</option>
-                    <option value="Automatic">Automatic</option>
+                    <option value="Manual">Boîte manuelle</option>
+                    <option value="Automatic">Boîte automatique</option>
+                    <option value="Automatic">Hybride </option>
+                    <option value="Automatic">Électrique </option>
+                    <option value="Automatic">Hydrogène</option>
                 </select>
             </div>
         </div>
+        <h2>Remarks</h2>
+        <textarea class="form-control mb-3"></textarea>
             <button class="btn btn-warning" type="button" onclick="prevStep(3)">Previous</button>
             <button class="btn btn-warning" type="button" onclick="handleStep({{ $stripe_customer_id != null ? 'true' : 'false' }})">Next</button>
         </form>
     </div>
+
 </div>
 
 <div id="step4" class="form-step">

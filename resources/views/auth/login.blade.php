@@ -46,17 +46,19 @@
 </div>
                     <div class="card mx-auto rounded">
                         <div class="card-body">
+                    <h5 class="text-center" id="signupModalLabel">Connectez-vous avec votre e-mail</h5>
+
                             <form id="loginForm" method="POST" action="{{ route('logoin') }}">
                                 @csrf
                                 <!-- Email Address -->
                                 <div class="form-group">
                                     <!-- <label for="email">Adresse e-mail</label> -->
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="entrez votre Adresse e-mail" required autofocus>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Adresse e-mail" required autofocus>
                                 </div>
                                 <!-- Password -->
                                 <div class="form-group">
                                     <!-- <label for="password">Mot de passe</label> -->
-                                    <input type="password" class="form-control" id="password" name="password" placeholder="entrez votre Mot de passe" required>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" required>
                                 </div>
 
                                 <!-- Remember Me -->
@@ -78,7 +80,7 @@
 
                                 </div>
                                 <!-- Login button -->
-                                <button type="submit" class="btn btn-warning" style="width:100%;">Connexion</button>
+                                <button type="submit" class="btn btn-warning" style="width:100%;">S'identifier</button>
                             </form>
                             <div class="container">
                             <div class="row justify-content-center">
@@ -105,7 +107,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-md-6 text-center">
-            <a href="{{ route('register') }}" class="text-muted">Pas de compte ?<span style="color:#fdcd02"> S’inscrire</span></a>
+            <a href="{{ route('register') }}" class="text-muted">Pas de compte ?<span style="color:#fdcd02"> S'inscrire</span></a>
         </div>
     </div>
 
