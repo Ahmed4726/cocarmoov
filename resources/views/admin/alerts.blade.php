@@ -90,11 +90,11 @@
                                         <th scope='col'>Action</th>
                                         </thead>
                                         <tbody>
-                                        @foreach($alerts as $alert)
+                                            @foreach($alerts as $alert)
                                             <tr>
                                                 <td>{{ $alert->city_of_collection }}</td>
                                                 <td>{{ $alert->city_of_delivery }}</td>
-                                                <td></td>
+                                                <td><a href="{{ route('missions.show', ['alertId' => $alert->id]) }}">{{ $trips[$alert->id] }}</a></td>
                                                 <td>
                                                     <button class="btn btn-primary btn-sm editButton"
                                                             data-role-id="{{ $alert->id }}" data-target="#roleModal">Modifier
@@ -116,6 +116,8 @@
             </div>
         </section>
         <!-- Add these to the head section of your HTML -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlNsN-oe1DZYJudjA315dDh9iuAxBk0zM&libraries=places"></script>
+
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/css/select2.min.css" rel="stylesheet"/>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/js/select2.min.js"></script>
@@ -237,7 +239,7 @@
                         });
                 }
         </script>
-        {{-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places"></script> --}}
-    </div>
+{{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVSFgcchmnjqE0GDdpwQjpmUKYH2k21gc&libraries=places"></script> --}}
+</div>
 </div>
 @endsection

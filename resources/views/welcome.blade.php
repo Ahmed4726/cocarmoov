@@ -1,7 +1,7 @@
 @extends('frontend.frontend_main_layout')
 @section('content')
 <head>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVSFgcchmnjqE0GDdpwQjpmUKYH2k21gc&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlNsN-oe1DZYJudjA315dDh9iuAxBk0zM&libraries=places"></script>
     <style>
         .form-input-border {
             border: 1px solid #ced4da;
@@ -1077,7 +1077,7 @@ Attention, quel que soit l'état du véhicule, celui-ci ne doit pas avoir de rou
 </div>
 </section>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVSFgcchmnjqE0GDdpwQjpmUKYH2k21gc&libraries=places"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlNsN-oe1DZYJudjA315dDh9iuAxBk0zM&libraries=places"></script>
 
 
 <script>

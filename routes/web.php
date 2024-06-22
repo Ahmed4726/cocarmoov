@@ -90,11 +90,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/my-account', [AccountController::class,'index'])->name('account');
 
     //Alerts
-    Route::get('/alerts', [AlertController::class,'index'])->name('alerts')->middleware('CanAccess:Alertes');
+    Route::get('/alerts', [AlertController::class,'index'])->name('alerts');
     Route::post('/add-alert',[AlertController::class,'addNew'])->name('add.new.alert')->middleware('CanAccess:Alertes');
     Route::get('/edit-alert/{id}', [AlertController::class,'edit'])->name('edit.alert')->middleware('CanAccess:Alertes','CanAccessRecord:alert');
     Route::put('/update-alert/{id}', [AlertController::class,'update'])->name('update.alert')->middleware('CanAccess:Alertes');
     Route::post('/delete-alert/{id}',[AlertController::class,'destroy'])->name('alert.delete')->middleware('CanAccess:Alertes');
+    Route::get('/alert/{alertId}', [AlertController::class, 'showMissions'])->name('missions.show');
+
+
 
 
     //Perposals
@@ -144,6 +147,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/missions', [MissionController::class, 'index'])->name('missions');
     Route::get('/missions/{id}', [MissionController::class, 'booking'])->name('booking');
     Route::post('/book-ride', [MissionController::class, 'bookRide'])->name('book-ride');
+    Route::post('/check-missions', [MissionController::class, 'checkMissions'])->name('check-missions');
 
     Route::get('/balance', [WithdrawalController::class, 'index'])->name('balance');
     // Route::post('/verify-otp', [OtpController::class, 'verifyOtp'])->name('verify-otp');

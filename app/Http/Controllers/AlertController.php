@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Alert;
+use App\Models\Car;
 use Illuminate\Http\Request;
 
 class AlertController extends Controller
@@ -10,17 +11,38 @@ class AlertController extends Controller
     public function index()
     {
         $user_id = auth()->user()->id;
-        $alert = null;
-        if($user_id == 1)
-        {
-            $alerts = Alert::simplepaginate(10);
+        $alerts = null;
+        $trips = [];
+
+        if ($user_id == 1) {
+            // Admin user fetches all alerts with pagination
+            $alerts = Alert::paginate(10);
+        } else {
+            // Regular user fetches their own alerts with pagination
+            $alerts = Alert::where('user_id', $user_id)->paginate(10);
         }
-        else
-        {
-            $alerts = Alert::where('user_id',$user_id)->paginate(10);
+
+        // Fetch trips based on each alert's details
+        foreach ($alerts as $alert) {
+            if ($alert->city_of_collection && $alert->city_of_delivery) {
+                $trips[$alert->id] = Car::where('status', 'Available')
+                                        ->where('from_address', $alert->city_of_collection)
+                                        ->where('to_address', $alert->city_of_delivery)
+                                        ->count();
+            } else {
+                $trips[$alert->id] = Car::where('status', 'Available')
+                                        ->where('from_address', $alert->city_of_collection)
+                                        ->orWhere('to_address', $alert->city_of_delivery)
+                                        ->count();
+            }
         }
-        return view('admin.alerts',compact('alerts'));
+
+        return view('admin.alerts', compact('alerts', 'trips'));
     }
+
+
+
+
 
     public function addNew(Request $request)
     {
@@ -85,4 +107,32 @@ class AlertController extends Controller
         // Return a success message or a JSON response
         return response()->json(['message' => 'Permission deleted successfully']);
     }
+
+    public function showMissions($alertId)
+    {
+        $alert = Alert::find($alertId);
+        if (!$alert) {
+            return redirect()->back()->with('error', 'Alert not found');
+        }
+
+        $missionsQuery = Car::where('status', 'Available');
+
+        if ($alert->city_of_collection && $alert->city_of_delivery) {
+            $missionsQuery->where('from_address', $alert->city_of_collection)
+                          ->where('to_address', $alert->city_of_delivery);
+        } else {
+            if ($alert->city_of_collection) {
+                $missionsQuery->where('from_address', $alert->city_of_collection);
+            }
+            if ($alert->city_of_delivery) {
+                $missionsQuery->orWhere('to_address', $alert->city_of_delivery);
+            }
+        }
+
+        $missions = $missionsQuery->get();
+
+        return view('missions.missions', compact('missions'));
+    }
+
+
 }

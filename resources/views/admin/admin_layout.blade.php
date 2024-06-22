@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="{{ asset('plugins/adminlte/daterangepicker/daterangepicker.css') }}">
   <!-- summernote -->
   <link rel="stylesheet" href="{{ asset('plugins/adminlte/summernote/summernote-bs4.min.css') }}">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVSFgcchmnjqE0GDdpwQjpmUKYH2k21gc&libraries=places"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlNsN-oe1DZYJudjA315dDh9iuAxBk0zM&libraries=places"></script>
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">

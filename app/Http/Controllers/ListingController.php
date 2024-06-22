@@ -26,6 +26,7 @@ class ListingController extends Controller
     }
     public function createListing(Request $request)
     {
+        // dd($request);
         $listing = new Car();
         $listing->user_id = auth()->user()->id;
         $listing->from_address = $request->FromAddress;
@@ -41,6 +42,14 @@ class ListingController extends Controller
         $listing->car_move_departure_date_from = $request->CarMoveDepartureDateFrom;
         $listing->car_move_departure_date_to = $request->CarMoveDepartureDateTo;
         $listing->status = 'Available';
+        $listing->son_nom = $request->son_nom;
+        $listing->heures = $request->heures;
+        $listing->residence_delivery = $request->residence_delivery;
+        $listing->son_nom_delivery = $request->son_nom_delivery;
+        $listing->remarks = $request->remarks;
+        $listing->distance = $request->distance;
+        $listing->selectedServices = $request->selectedServices;
+        $listing->residence_pick_up = $request->residence_pick_up;
 
         $listing->save();
 
@@ -56,13 +65,13 @@ class ListingController extends Controller
 
 
         $pdf = new Dompdf();
-        $pdf->loadHtml(view('pdf.invoice', compact('invoice')));
+        $pdf->loadHtml(view('pdf.invoice', compact('invoice','listing')));
         $pdf->setPaper('A4', 'portrait');
         $pdf->render();
         $pdfContent = $pdf->output();
 
 
-        Mail::to(auth()->user()->email)->send(new CarListed($listing, $pdfContent));
+        // Mail::to(auth()->user()->email)->send(new CarListed($listing, $pdfContent));
 
         return response()->json(['success' => true, 'message' => 'Listing created successfully']);
     }
@@ -89,7 +98,15 @@ class ListingController extends Controller
         $listing->car_move_departure_date_from = $request->CarMoveDepartureDateFrom;
         $listing->car_move_departure_date_to = $request->CarMoveDepartureDateTo;
         $listing->status = $request->status;
-
+        $listing->son_nom = $request->son_nom;
+        $listing->heures = $request->heures;
+        $listing->residence_delivery = $request->residence_delivery;
+        $listing->son_nom_delivery = $request->son_nom_delivery;
+        $listing->remarks = $request->remarks;
+        $listing->distance = $request->distance;
+        $listing->selectedServices = $request->selectedServices;
+        $listing->residence_pick_up = $request->residence_pick_up;
+        
         $listing->save();
 
         return redirect()->route('listings.index')->with('success','Listing Updated Successfully');
@@ -126,27 +143,35 @@ class ListingController extends Controller
         $originalListing = Car::findOrFail($id);
 
         // Create a new listing and copy all details
-        $newListing = new Car();
-        $newListing->user_id = auth()->user()->id;
-        $newListing->from_address = $originalListing->from_address;
-        $newListing->to_address = $originalListing->to_address;
-        $newListing->car_type = $originalListing->car_type;
-        $newListing->car_condition = $originalListing->car_condition;
-        $newListing->make_and_model = $originalListing->make_and_model;
-        $newListing->number_plate = $request->number_plate; // Change the number plate
-        $newListing->seating_capacity = $originalListing->seating_capacity;
-        $newListing->gear_box = $originalListing->gear_box;
-        $newListing->selected_package = $originalListing->selected_package;
-        $newListing->package_amount = $originalListing->package_amount;
-        $newListing->car_move_departure_date_from = $originalListing->car_move_departure_date_from;
-        $newListing->car_move_departure_date_to = $originalListing->car_move_departure_date_to;
-        $newListing->status = 'Available'; // Change the status
+        $listing = new Car();
+        $listing->user_id = auth()->user()->id;
+        $listing->from_address = $originalListing->from_address;
+        $listing->to_address = $originalListing->to_address;
+        $listing->car_type = $originalListing->car_type;
+        $listing->car_condition = $originalListing->car_condition;
+        $listing->make_and_model = $originalListing->make_and_model;
+        $listing->number_plate = $request->number_plate; // Change the number plate
+        $listing->seating_capacity = $originalListing->seating_capacity;
+        $listing->gear_box = $originalListing->gear_box;
+        $listing->selected_package = $originalListing->selected_package;
+        $listing->package_amount = $originalListing->package_amount;
+        $listing->car_move_departure_date_from = $originalListing->car_move_departure_date_from;
+        $listing->car_move_departure_date_to = $originalListing->car_move_departure_date_to;
+        $listing->status = 'Available'; // Change the status
+        $listing->son_nom = $request->son_nom;
+        $listing->heures = $request->heures;
+        $listing->residence_delivery = $request->residence_delivery;
+        $listing->son_nom_delivery = $request->son_nom_delivery;
+        $listing->remarks = $request->remarks;
+        $listing->distance = $originalListing->distance;
+        $listing->selectedServices = $originalListing->selectedServices;
+        $listing->residence_pick_up = $request->residence_pick_up;
 
-        $newListing->save();
+        $listing->save();
 
         $invoice = new Invoice();
         $invoice->user_id = auth()->user()->id;
-        $invoice->car_id = $newListing->id;
+        $invoice->car_id = $listing->id;
         $invoice->pickup_address = $originalListing->FromAddress;
         $invoice->package = $originalListing->SelectedPackage;
         $invoice->amount = $originalListing->PackageAmount;
@@ -156,13 +181,13 @@ class ListingController extends Controller
 
 
         $pdf = new Dompdf();
-        $pdf->loadHtml(view('pdf.invoice', compact('invoice')));
+        $pdf->loadHtml(view('pdf.invoice', compact('invoice','listing')));
         $pdf->setPaper('A4', 'portrait');
         $pdf->render();
         $pdfContent = $pdf->output();
 
 
-        Mail::to(auth()->user()->email)->send(new CarListed($newListing, $pdfContent));
+        Mail::to(auth()->user()->email)->send(new CarListed($listing, $pdfContent));
 
         return redirect()->route('listings.index')->with('success', 'Listing duplicated successfully');
 

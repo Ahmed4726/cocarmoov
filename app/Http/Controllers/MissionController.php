@@ -107,4 +107,60 @@ class MissionController extends Controller
 
         return redirect()->route('missions');
     }
+
+    public function checkMissions(Request $request)
+    {
+        $role = auth()->user()->user_type;
+        $cityOfCollection = $request->input('city_of_collection');
+        $cityOfDelivery = $request->input('city_of_delivery');
+
+        $missions = Car::where('status', 'Available')
+                        ->when($cityOfCollection, function ($query, $cityOfCollection) {
+                            return $query->where('from_address', 'like', "%$cityOfCollection%");
+                        })
+                        ->when($cityOfDelivery, function ($query, $cityOfDelivery) {
+                            return $query->where('to_address', 'like', "%$cityOfDelivery%");
+                        })
+                        ->get();
+
+        $html = '';
+
+        foreach ($missions as $mission) {
+            if(($mission->selected_package == 'economy' && $role == 7) ||
+                ($mission->selected_package == 'express' && $role == 6) ||
+                ($mission->selected_package == 'premium' && $role == 8)) {
+                $html .= '
+                <div class="container-fluid">
+                    <div class="card mt-4 rounded">
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row mt-3">
+                                            <div class="col-md-2">
+                                                <p><b>' . $mission->from_address . ' - ' . $mission->to_address . '</b></p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="text-muted">Valid till ' . $mission->car_move_departure_date_from . ' - ' . $mission->car_move_departure_date_to . '</div>
+                                            </div>
+                                            <div class="col-md-2">Distance: 890 km</div>
+                                            <div class="col-md-2">
+                                                <img src="' . asset('/dist/img/cars/3m3.png') . '" alt="test" class="img-fluid" width="100" height="100">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <a href="' . route('booking', ['id' => $mission->id]) . '" class="btn btn-warning">Book Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>';
+            }
+        }
+
+        return $html;
+    }
+    
 }

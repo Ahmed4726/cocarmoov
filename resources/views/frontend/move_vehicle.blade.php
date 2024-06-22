@@ -403,7 +403,7 @@
                     @enderror
                 </div>
 
-               
+
 
                 <!-- Accepter les conditions -->
                 <div class="form-group">
@@ -442,22 +442,22 @@
                 {{-- <input class="form-control" type="time" name="collectiontime" id="collectiontime" value="hh:mm"> --}}
             </div>
             <div class="col-md-4">
-    <label for="placeType" class="form-label mb-0"></label>
-    <select class="form-control" name="GearBox" id="GearBox" placeholder="Nature du lieu">
-        <option value="" disabled selected hidden>Select an option</option>
-        <option value="Manual">Résidence</option>
-        <option value="Automatic">Agence</option>
-        <option value="Automatic">Concession</option>
-        <option value="Automatic">Garage</option>
-        <option value="Automatic">Parc automobile</option>
-        <option value="Automatic">Magasin</option>
-        <option value="Automatic">Société</option>
-    </select>
-</div>
+            <label for="placeType" class="form-label mb-0"></label>
+            <select class="form-control" name="residence_pick_up" id="residence_pick_up" placeholder="Nature du lieu">
+                <option value="" disabled selected hidden>Select an option</option>
+                <option value="Résidence">Résidence</option>
+                <option value="Agence">Agence</option>
+                <option value="Concession">Concession</option>
+                <option value="Garage">Garage</option>
+                <option value="Parc automobile">Parc automobile</option>
+                <option value="Magasin">Magasin</option>
+                <option value="Société">Société</option>
+            </select>
+        </div>
 
             <div class="col-md-4">
                 <label for="placeName" class="form-label mb-0"></label>
-                <input type="text" class="form-control" id="make_and_model" name="make_and_model" placeholder="Son Nom">
+                <input type="text" class="form-control" id="son_nom" name="son_nom" placeholder="Son Nom">
             </div>
         </div>
         <div class="row">
@@ -467,13 +467,13 @@
             </div>
         <div class="col-md-6">
                 <!-- <label for="placeType" class="form-label mb-0">Besoin de temps pour préparer le véhicule :</label> -->
-                <select class="form-control mb-3" name="GearBox" id="GearBox" placeholder="Besoin de temps pour préparer le véhicule :">
-                    <option value="Manual">Non  </option>
-                    <option value="Automatic">3 heures </option>
-                    <option value="Automatic">6 heures  </option>
-                    <option value="Automatic">12 heures  </option>
-                    <option value="Automatic">24 heures</option>
-                    <option value="Automatic">48 heures </option>
+                <select class="form-control mb-3" name="heures" id="heures" placeholder="Besoin de temps pour préparer le véhicule :">
+                    <option value="">Non  </option>
+                    <option value="3 heures">3 heures </option>
+                    <option value="6 heures">6 heures  </option>
+                    <option value="12 heures">12 heures  </option>
+                    <option value="24 heures">24 heures </option>
+                    <option value="48 heures">48 heures </option>
                 </select>
         </div>
         </div>
@@ -486,19 +486,20 @@
             </div>
             <div class="col-md-4">
                 <label for="placeType" class="form-label mb-0"></label>
-                <select class="form-control" name="GearBox" id="GearBox" placeholder="Nature du lieu">
-                    <option value="Manual">Résidence </option>
-                    <option value="Automatic">Agence </option>
-                    <option value="Automatic">Concession  </option>
-                    <option value="Automatic">Garage  </option>
-                    <option value="Automatic">Parc automobile</option>
-                    <option value="Automatic">Magasin </option>
-                    <option value="Automatic">Société</option>
+                <select class="form-control" name="residence_delivery" id="residence_delivery" placeholder="Nature du lieu">
+                    <option value="" disabled selected hidden>Select an option</option>
+                    <option value="Résidence">Résidence</option>
+                    <option value="Agence">Agence</option>
+                    <option value="Concession">Concession</option>
+                    <option value="Garage">Garage</option>
+                    <option value="Parc automobile">Parc automobile</option>
+                    <option value="Magasin">Magasin</option>
+                    <option value="Société">Société</option>
                 </select>
             </div>
             <div class="col-md-4">
                 <label for="placeName" class="form-label mb-0"></label>
-                <input type="text" class="form-control" id="make_and_model" name="make_and_model" placeholder="Son Nom">
+                <input type="text" class="form-control" id="son_nom_delivery" name="son_nom_delivery" placeholder="Son Nom">
             </div>
         </div>
         <div class="row">
@@ -541,14 +542,14 @@
                     <option value="">Transmission</option>
                     <option value="Manual">Boîte manuelle</option>
                     <option value="Automatic">Boîte automatique</option>
-                    <option value="Automatic">Hybride </option>
-                    <option value="Automatic">Électrique </option>
-                    <option value="Automatic">Hydrogène</option>
+                    <option value="hybride">Hybride </option>
+                    <option value="electric">Électrique </option>
+                    <option value="hydrogen">Hydrogène</option>
                 </select>
             </div>
         </div>
         <h2>Remarks</h2>
-        <textarea class="form-control mb-3"></textarea>
+        <textarea name="remarks" id="remarks" class="form-control mb-3"></textarea>
             <button class="btn btn-warning" type="button" onclick="prevStep(3)">Previous</button>
             <button class="btn btn-warning" type="button" onclick="handleStep({{ $stripe_customer_id != null ? 'true' : 'false' }})">Next</button>
         </form>
@@ -583,6 +584,13 @@
             <h5 class="card-title">Address Details</h5>
             <input type="text" class="form-control mb-2" name="FromAddress" id="hiddenFromAddress" placeholder="From Address" readonly>
             <input type="text" class="form-control mb-2" name="ToAddress" id="hiddenToAddress" placeholder="To Address" readonly>
+            <input type="text" class="form-control mb-2" name="residence_pick_up" id="hiddenresidence_pick_up" placeholder="pick up" readonly>
+            <input type="text" class="form-control mb-2" name="son_nom" id="hiddenson_nom" placeholder="son nom" readonly>
+            <input type="text" class="form-control mb-2" name="heures" id="hiddenheures" placeholder="Heures" readonly>
+            <input type="text" class="form-control mb-2" name="residence_delivery" id="hiddenresidence_delivery" placeholder="Residence Delivery" readonly>
+            <input type="text" class="form-control mb-2" name="son_nom_delivery" id="hiddenson_nom_delivery" placeholder="Son Nom Delivery" readonly>
+            <input type="text" class="form-control mb-2" name="remarks" id="hiddenremarks" placeholder="Remarks" readonly>
+            <input type="hidden" name="distance" id="distance" value="{{ $distance }}">
         </div>
     </div>
 
@@ -602,9 +610,17 @@
         <div class="card-body">
             <h5 class="card-title">Package Details</h5>
             <input type="text" class="form-control mb-2" name="SelectedPackage" id="hiddenSelectedPackage" placeholder="Selected Package" readonly>
-            <input type="hidden" class="form-control mb-2" name="PackageAmount" id="hiddenPackageAmount" placeholder="Package Amount" readonly>
-            <input type="text" class="form-control mb-2" name="addon1" id="hiddenaddon1" placeholder="Addon 1" readonly>
-            <input type="text" class="form-control mb-2" name="addon2" id="hiddenaddon2" placeholder="Addon 2" readonly>
+            <input type="text" class="form-control mb-2" name="PackageAmount" id="hiddenPackageAmount1" placeholder="Package Amount" readonly>
+            {{-- <input type="text" class="form-control mb-2" name="addon1" id="hiddenaddon1" placeholder="Addon 1" readonly>
+            <input type="text" class="form-control mb-2" name="addon2" id="hiddenaddon2" placeholder="Addon 2" readonly> --}}
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">Selected Services</h5>
+            {{-- <input type="text" class="form-control mb-2" name="selectedPremiumServices[]" id="hiddenSelectedemiumServices"> --}}
+            <input type="text" class="form-control mb-2" name="selectedServices" id="hiddenSelectedServices">
         </div>
     </div>
 
@@ -689,9 +705,11 @@ updateProgressBar(1,true);
             if(!hasStripeCustomerId) {
                 Step = 3;
                 storeHiddenValues();
+                updateSelectedServices();
             } else {
                 Step = 3;
                 storeHiddenValues();
+                updateSelectedServices();
             }
 
             nextStep(Step);
@@ -727,6 +745,7 @@ function submitPayment() {
                             alert('Payment successful! Payment Intent ID: ' + response.paymentIntentId);
                             // Redirect or show a success message
                             storeHiddenValues();
+                            updateSelectedServices();
                             // sendAllFormData();
                             nextStep(4);
                         } else {
@@ -1160,17 +1179,49 @@ if(selectedPackage === 'economy')
         nextButton.disabled = !isPackageSelected;
     }
 
+    function updateSelectedServices()
+    {
+        var selectedPremiumServices = [];
+        var premiumCheckboxes = document.querySelectorAll('#premium_services_section input[type="checkbox"]:checked');
+        premiumCheckboxes.forEach(function(checkbox) {
+            selectedPremiumServices.push(checkbox.nextElementSibling.textContent.trim());
+        });
+        document.getElementById('hiddenSelectedServices').value = JSON.stringify(selectedPremiumServices);
+
+        var selectedExpressServices = [];
+        var expressCheckboxes = document.querySelectorAll('#express_services_section input[type="checkbox"]:checked');
+        expressCheckboxes.forEach(function(checkbox) {
+            selectedExpressServices.push(checkbox.nextElementSibling.textContent.trim());
+        });
+        var test = document.getElementById('hiddenSelectedServices').value = JSON.stringify(selectedExpressServices);
+}
+
+// Attach event listeners to checkboxes
+var premiumCheckboxes = document.querySelectorAll('#premium_services_section input[type="checkbox"]');
+premiumCheckboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('change', updateSelectedServices);
+});
+
+var expressCheckboxes = document.querySelectorAll('#express_services_section input[type="checkbox"]');
+expressCheckboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('change', updateSelectedServices);
+});
 
 
+function storeHiddenValues() {
+    var car_owner = '{{ $car_owner }}';
 
-    function storeHiddenValues() {
-        var car_owner = '{{ $car_owner }}';
-        // alert('ok')
     // Store values in the hidden form
     document.getElementById('hiddenFromAddress').value = document.getElementById('fromAddress').value;
     document.getElementById('hiddenToAddress').value = document.getElementById('toAddress').value;
     document.getElementById('hiddenCarType').value = document.getElementById('carType').value;
     document.getElementById('hiddenCarCondition').value = document.getElementById('carCondition').value;
+    document.getElementById('hiddenheures').value = document.getElementById('heures').value;
+    document.getElementById('hiddenresidence_delivery').value = document.getElementById('residence_delivery').value;
+    document.getElementById('hiddenson_nom').value = document.getElementById('son_nom').value;
+    document.getElementById('hiddenresidence_pick_up').value = document.getElementById('residence_pick_up').value;
+    document.getElementById('hiddenson_nom_delivery').value = document.getElementById('son_nom_delivery').value;
+    document.getElementById('hiddenremarks').value = document.getElementById('remarks').value;
 
     // Store values from the additional form fields
     document.getElementById('hidden_make_and_model').value = document.getElementById('make_and_model').value;
@@ -1178,29 +1229,27 @@ if(selectedPackage === 'economy')
     document.getElementById('hidden_seating_capacity').value = document.getElementById('seating_capacity').value;
     document.getElementById('hiddenGearBox').value = document.getElementById('GearBox').value;
 
-
     document.getElementById('hiddenSelectedPackage').value = selectedPackage;
-    if(car_owner == 'professional')
-    {
+    if(car_owner == 'professional') {
         document.getElementById('hiddenPackageAmount').value = selectedPackagePrice * 1.2;
-    }
-    else
-    {
+        document.getElementById('hiddenPackageAmount1').value = selectedPackagePrice * 1.2;
+    } else {
         document.getElementById('hiddenPackageAmount').value = selectedPackagePrice;
+        document.getElementById('hiddenPackageAmount1').value = selectedPackagePrice;
     }
-
-
-    // // Add more lines to store values for additional addons in the selected package
-    // document.getElementById('hiddenAddon1').value = "Addon1";
-    // document.getElementById('hiddenAddon2').value = "Addon2";
 
     document.getElementById('hiddenCarMoveDepartureDateFrom').value = document.getElementById('collectionDate').value;
     document.getElementById('hiddenCarMoveDepartureDateTo').value = document.getElementById('deliveryDate').value;
-    }
+
+}
+
+
+
 
 
     function sendAllFormData() {
         storeHiddenValues();
+        updateSelectedServices();
         // Ajax call to send all form data to Laravel controller
         sendDataToController('/listing', 'POST', new FormData(document.getElementById('hiddenValuesForm')));
     }

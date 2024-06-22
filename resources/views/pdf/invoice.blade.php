@@ -60,10 +60,7 @@
     			<div class="col-md-6">
     				<address class="text-right">
         			<strong>Shipped To:</strong><br>
-    					Jane Smith<br>
-    					1234 Main<br>
-    					Apt. 4B<br>
-    					Springfield, ST 54321
+                        {{ $listing->to_address }}
     				</address>
     			</div>
     		</div>
@@ -71,14 +68,13 @@
     			<div class="col-md-6">
     				<address>
     					<strong>Payment Method:</strong><br>
-    					Visa ending **** 4242<br>
-    					jsmith@email.com
+    					    Credit Card
     				</address>
     			</div>
     			<div class="col-md-6 ">
     				<address class="text-right">
     					<strong>Order Date:</strong><br>
-    					March 7, 2014<br><br>
+    					{{ $listing->created_at }}<br><br>
     				</address>
     			</div>
     		</div>
@@ -97,7 +93,7 @@
     						<thead>
                                 <tr>
         							<td><strong>Item</strong></td>
-        							<td class="text-center"><strong>Price</strong></td>
+        							<td class="text-center"><strong>Price </strong></td>
         							<td class="text-center"><strong>Quantity</strong></td>
         							<td class="text-right"><strong>Totals</strong></td>
                                 </tr>
@@ -105,40 +101,10 @@
     						<tbody>
     							<!-- foreach ($order->lineItems as $line) or some such thing here -->
     							<tr>
-    								<td>BS-200</td>
-    								<td class="text-center">$10.99</td>
+    								<td>{{ $listing->id }}</td>
+    								<td class="text-center">{{ $listing->package_amount }}</td>
     								<td class="text-center">1</td>
-    								<td class="text-right">$10.99</td>
-    							</tr>
-                                <tr>
-        							<td>BS-400</td>
-    								<td class="text-center">$20.00</td>
-    								<td class="text-center">3</td>
-    								<td class="text-right">$60.00</td>
-    							</tr>
-                                <tr>
-            						<td>BS-1000</td>
-    								<td class="text-center">$600.00</td>
-    								<td class="text-center">1</td>
-    								<td class="text-right">$600.00</td>
-    							</tr>
-    							<tr>
-    								<td class="thick-line"></td>
-    								<td class="thick-line"></td>
-    								<td class="thick-line text-center"><strong>Subtotal</strong></td>
-    								<td class="thick-line text-right">$670.99</td>
-    							</tr>
-    							<tr>
-    								<td class="no-line"></td>
-    								<td class="no-line"></td>
-    								<td class="no-line text-center"><strong>Shipping</strong></td>
-    								<td class="no-line text-right">$15</td>
-    							</tr>
-    							<tr>
-    								<td class="no-line"></td>
-    								<td class="no-line"></td>
-    								<td class="no-line text-center"><strong>Total</strong></td>
-    								<td class="no-line text-right">$685.99</td>
+    								<td class="text-right">{{ $listing->package_amount }}</td>
     							</tr>
     						</tbody>
     					</table>
