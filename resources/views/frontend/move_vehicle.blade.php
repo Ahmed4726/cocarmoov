@@ -488,7 +488,7 @@
         <div class="col-md-6">
                 <!-- <label for="placeType" class="form-label mb-0">Besoin de temps pour préparer le véhicule :</label> -->
                 <input type="time" class="form-control" id="hoursInput" name="hoursInput">
-
+                <div class="note" style="font-size:smaller;">Please select opening hours</div>
 
         </div>
         <div class="form-group">
@@ -528,7 +528,7 @@
         <div class="col-md-6">
                 <!-- <label for="placeType" class="form-label mb-0">Besoin de temps pour préparer le véhicule :</label> -->
                 <input type="time" class="form-control" id="hoursInput" name="hoursInput">
-
+                <div class="note" style="font-size:smaller;">Please select opening hours</div>
 
         </div>
         <div class="col-md-6 d-none">
