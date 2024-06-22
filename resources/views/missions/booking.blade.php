@@ -78,23 +78,27 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <label class="form-label" for="pick_up_time">Pickup-Time</label>
+                            <label class="form-label" for="pick_up_time"></label>
                             <input class="form-control" type="datetime-local" name="pick_up_time" id="pick_up_time" required>
                         </div>
                         <div class="col-md-6">
-                            <label class="form-label" for="delivery_time">Delivery-Time</label>
+                            <label class="form-label" for="delivery_time"></label>
                             <input class="form-control" type="datetime-local" name="delivery_time" id="delivery_time" required>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                     <div class="col-md-6">
-                        <label class="form-label" for="pick_up_time">Actual Amount</label>
+                        <label class="form-label" for="pick_up_time"></label>
                         <input class="form-control" name="amount" id="amount" value="{{ $mission['package_amount'] }}" disabled>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label" for="pick_up_time">Offer Amount</label>
-                        <input class="form-control" type="number" name="offer_amount" id="offer_amount" required>
+                        <label class="form-label" for="pick_up_time"></label>
+                        <input type="number" class="form-control" name="extra_milage" id="extra_milage" placeholder="Enter Extra Millage">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-label" for="pick_up_time"></label>
+                        <input class="form-control" type="number" name="offer_amount" id="offer_amount" placeholder="Enter Offer Amount" required>
                     </div>
                     <input type="hidden" name="car_id" id="car_id" value="{{ $mission['id'] }}">
                     <input type="hidden" name="owner_id" id="owner_id" value="{{ $mission['user_id'] }}">

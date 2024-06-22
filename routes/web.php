@@ -135,7 +135,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/duplicateListing/{id}', [ListingController::class, 'duplicate'])->name('duplicateListing');
     Route::post('/duplicateListingCar/{id}', [ListingController::class, 'duplicateCar'])->name('duplicateListingCar');
     Route::post('/updateListing/{id}', [ListingController::class, 'update'])->name('updateListing');
-    Route::get('/cancelListing/{id}', [ListingController::class, 'cancel'])->name('cancelListing');
+    Route::post('/cancelListing/{id}', [ListingController::class, 'cancel'])->name('cancelListing');
     Route::get('/deleteListing/{id}', [ListingController::class, 'delete'])->name('deleteListing');
     Route::get('/carmoovs', [ListingController::class, 'index'])->name('listings.index');
     Route::get('/duplicateListing/{id}', [ListingController::class, 'duplicate'])->name('duplicateListing');

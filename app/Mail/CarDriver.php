@@ -16,11 +16,13 @@ class CarDriver extends Mailable
     public $car_owner;
     public $mission;
 
-
     /**
      * Create a new message instance.
      *
-     * @return void
+     * @param Car $listing
+     * @param mixed $pdfContent
+     * @param mixed $car_owner
+     * @param mixed $mission
      */
     public function __construct(Car $listing, $pdfContent, $car_owner, $mission)
     {
@@ -38,8 +40,7 @@ class CarDriver extends Mailable
      */
     public function build()
     {
-        return $this->subject('Your Successfully Book a car')->view('emails.car_driver')
-            ->attachData($this->pdfContent, 'invoice.pdf');
+        return $this->subject('You Successfully Book a Car')->view('emails.car_driver')
+            ->attachData($this->pdfContent.$this->listing, 'invoice.pdf');
     }
-
 }

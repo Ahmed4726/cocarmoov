@@ -2,12 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\CarBooked;
+use App\Mail\CarDriver;
 use App\Mail\OfferAcceptedMail;
+use App\Models\Balance;
 use App\Models\Car;
+use App\Models\Invoice;
+use App\Models\Mission;
 use App\Models\Proposal;
 use App\Models\User;
+use Dompdf\Dompdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Stripe\Customer;
+use Stripe\PaymentIntent;
+use Stripe\PaymentMethod;
+use Stripe\Stripe;
+use Stripe\StripeClient;
 
 class ProposalController extends Controller
 {
@@ -61,6 +72,7 @@ class ProposalController extends Controller
         $proposals->car_id = $request->car_id;
         $proposals->offer_amount = $request->offer_amount;
         $proposals->driver_id = auth()->user()->id;
+        $proposals->extra_milage = $request->extra_milage;
         $proposals->pick_up_time = $request->pick_up_time;
         $proposals->delivery_time = $request->delivery_time;
         $proposals->status = 'Pending';
@@ -90,6 +102,9 @@ class ProposalController extends Controller
     {
         if($request->status == 'Accept')
         {
+            Stripe::setApiKey(config('services.stripe.secret'));
+            $stripe = new StripeClient(config('services.stripe.secret'));
+
             $car = Car::find($request->car_id);
             $car->status = 'Booked';
             $car->save();
@@ -98,6 +113,64 @@ class ProposalController extends Controller
             $proposal = Proposal::find($request->proposal_id);
             $driver = User::find($proposal->driver_id);
             Mail::to($driver->email)->send(new OfferAcceptedMail($proposal, $car, $driver));
+
+
+            $mission = new Mission();
+            $mission->user_id = auth()->user()->id;
+            $mission->car_id = $request->car_id;
+            $mission->pickup_date_time = $request->pickup;
+            $mission->delivery_date_time = $request->delivery;
+            $mission->amount = $request->offeramount;
+
+            $mission->save();
+
+            // Payment
+        $car_owner = User::where('id', auth()->user()->id)->first();
+        $customer = Customer::retrieve($car_owner->stripe_customer_id);
+
+        $paymentMethod = PaymentMethod::all(['customer' => $car_owner->stripe_customer_id, 'type' => 'card']);
+
+            $paymentMethodId = $paymentMethod->data['0']['id'];
+            $paymentIntent = PaymentIntent::create([
+                'amount' => $request->offeramount * 100,
+                'currency' => 'usd',
+                'payment_method' => $paymentMethodId, // Use the correct Payment Method ID here
+                'customer' => $car_owner->stripe_customer_id,
+                'confirm' => true, // This is required to confirm the PaymentIntent
+                'return_url' => route('welcome'),
+            ]);
+
+
+        // Invoice Status
+        $invoice = Invoice::where('car_id', $request->car_id)->first();
+        // dd($invoice->status);
+        $invoice->status = 'Paid';
+        $invoice->save();
+
+        $listing = Car::where('id', $request->car_id)->first();
+
+        $pdf = new Dompdf();
+        $pdf->loadHtml(view('pdf.invoice', compact('invoice','listing')));
+        $pdf->setPaper('A4', 'portrait');
+        $pdf->render();
+        $pdfContent = $pdf->output();
+
+        // $car_owner = User::where('id', $request->owner_id)->first();
+
+
+
+        // $driver = User::where('id', auth()->user()->id)->first();
+
+        Mail::to($car_owner->email)->send(new CarBooked($listing, $pdfContent, $driver, $mission));
+
+        Mail::to($driver->email)->send(new CarDriver($listing, $pdfContent, $car_owner, $mission));
+
+            $balance = new Balance();
+            $balance->user_id = auth()->user()->id;
+            $balance->amount = $request->offeramount - ($request->amount * 20 / 100);
+            $balance->status = 'Pending';
+            $balance->car_id = $request->car_id;
+            $balance->save();
         }
 
         $proposal = Proposal::find($request->proposal_id);

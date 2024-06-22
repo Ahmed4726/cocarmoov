@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Car;
 use App\Models\Invoice;
 use PDF;
 use Illuminate\Http\Request;
@@ -33,9 +34,11 @@ class InvoiceController extends Controller
     {
         $invoice = Invoice::leftJoin('users', 'users.id', '=', 'invoices.user_id')
                             ->leftJoin('cars','cars.id','=','invoices.car_id')
-                            ->select('invoices.id','invoices.pickup_address','users.last_name','users.family_name','invoices.amount','invoices.status','cars.to_address')
+                            ->select('invoices.id as id','invoices.car_id as car_id','invoices.pickup_address','users.last_name','users.family_name','invoices.amount','invoices.status','cars.to_address')
                             ->where('invoices.id', $id)
                             ->first();
+
+        $listing = Car::where('id', $invoice->car_id)->first();
 
         // Check if the invoice exists
         if (!$invoice) {
@@ -43,7 +46,8 @@ class InvoiceController extends Controller
         }
 
         // Generate PDF content using Laravel DomPDF with a Blade view
-        $pdfContent = PDF::loadView('pdf.invoice', ['invoice' => $invoice])->output();
+        $pdfContent = PDF::loadView('pdf.invoice', ['invoice' => $invoice,
+                                                    'listing' => $listing])->output();
 
         // Set headers for PDF file
         $headers = [

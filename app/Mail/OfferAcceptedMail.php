@@ -27,6 +27,7 @@ class OfferAcceptedMail extends Mailable
     public function build()
     {
         return $this->view('emails.offerAccepted')
+                    ->subject('Your Offer Has Been Accepted')
                     ->with([
                         'proposal' => $this->proposal,
                         'car' => $this->car,

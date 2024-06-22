@@ -60,7 +60,7 @@
     			<div class="col-md-6">
     				<address class="text-right">
         			<strong>Shipped To:</strong><br>
-                        {{ $listing->to_address }}
+                        {{-- {{ isset($listing->to_address) ? $listing->to_address }} --}}
     				</address>
     			</div>
     		</div>
@@ -74,7 +74,7 @@
     			<div class="col-md-6 ">
     				<address class="text-right">
     					<strong>Order Date:</strong><br>
-    					{{ $listing->created_at }}<br><br>
+    					{{ $invoice->created_at }}<br><br>
     				</address>
     			</div>
     		</div>
@@ -101,10 +101,10 @@
     						<tbody>
     							<!-- foreach ($order->lineItems as $line) or some such thing here -->
     							<tr>
-    								<td>{{ $listing->id }}</td>
+    								{{-- <td>{{ $listing->id }}</td>
     								<td class="text-center">{{ $listing->package_amount }}</td>
     								<td class="text-center">1</td>
-    								<td class="text-right">{{ $listing->package_amount }}</td>
+    								<td class="text-right">{{ $listing->package_amount }}</td> --}}
     							</tr>
     						</tbody>
     					</table>

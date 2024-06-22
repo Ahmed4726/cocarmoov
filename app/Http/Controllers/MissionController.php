@@ -81,16 +81,17 @@ class MissionController extends Controller
         $invoice->status = 'Paid';
         $invoice->save();
 
+        $listing = Car::where('id', $request->car_id)->first();
 
         $pdf = new Dompdf();
-        $pdf->loadHtml(view('pdf.invoice', compact('invoice')));
+        $pdf->loadHtml(view('pdf.invoice', compact('invoice','listing')));
         $pdf->setPaper('A4', 'portrait');
         $pdf->render();
         $pdfContent = $pdf->output();
 
         // $car_owner = User::where('id', $request->owner_id)->first();
 
-        $listing = Car::where('id', $request->car_id)->first();
+
 
         $driver = User::where('id', auth()->user()->id)->first();
 
@@ -162,5 +163,5 @@ class MissionController extends Controller
 
         return $html;
     }
-    
+
 }

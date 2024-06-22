@@ -57,8 +57,14 @@
                             @elseif ($listing->status == 'Completed')
                                 <a href="{{ route('duplicateListing', ['id' => $listing->id]) }}" class="btn btn-danger">Duplicate</a>
                             @else
-                                <a href="#" class="btn btn-danger cancelButton" data-listing-id="{{ $listing->id }}">Cancel</a>
+                            <div style="display: flex; gap: 5px;">
+                                <form method="POST" action="{{ route('cancelListing', ['id' => $listing->id]) }}">
+                                    @csrf
+                                    <button type="submit" class="btn btn-danger">Cancel</button>
+                                </form>
                                 <a href="{{ route('duplicateListing', ['id' => $listing->id]) }}" class="btn btn-warning">Duplicate</a>
+                            </div>
+
                             @endif
 
                         </div>

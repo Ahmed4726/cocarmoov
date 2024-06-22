@@ -35,6 +35,8 @@
 <div class="wrapper">
   <x-admin_header />
   @yield("content")
+  <br>
+  <br>
 <!-- Control Sidebar -->
 <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->

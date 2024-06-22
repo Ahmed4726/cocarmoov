@@ -71,7 +71,7 @@ class ListingController extends Controller
         $pdfContent = $pdf->output();
 
 
-        // Mail::to(auth()->user()->email)->send(new CarListed($listing, $pdfContent));
+        Mail::to(auth()->user()->email)->send(new CarListed($listing, $pdfContent));
 
         return response()->json(['success' => true, 'message' => 'Listing created successfully']);
     }
@@ -106,7 +106,7 @@ class ListingController extends Controller
         $listing->distance = $request->distance;
         $listing->selectedServices = $request->selectedServices;
         $listing->residence_pick_up = $request->residence_pick_up;
-        
+
         $listing->save();
 
         return redirect()->route('listings.index')->with('success','Listing Updated Successfully');
@@ -114,9 +114,11 @@ class ListingController extends Controller
 
     public function cancel($id)
     {
+        // dd($id);;
         $currentDate = now();
         $listing = Car::findOrFail($id);
         $mission = Mission::where('car_id', $id)->first();
+        dd($mission);
         $driver = User::findOrFail($mission->user_id);
 
         if ($listing->car_move_departure_date_from < $currentDate) {

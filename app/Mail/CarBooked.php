@@ -37,7 +37,7 @@ class CarBooked extends Mailable
     public function build()
     {
         return $this->subject('Your car has been successfully booked for move')->view('emails.car_booked')
-            ->attachData($this->pdfContent, 'invoice.pdf');
+            ->attachData($this->pdfContent.$this->listing , 'invoice.pdf');
     }
 
 }

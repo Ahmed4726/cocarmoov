@@ -60,7 +60,8 @@
                                                             <td>{{ $booking->id }}</td>
                                                             <td>{{ $booking->pick_up_address }}</td>
                                                             <td>{{ $booking->drop_location }}</td>
-                                                            <td>{{ $booking->status }}</td>
+                                                            <td>{{ $booking->status == 'On-Move' ? 'Picked-Up' : $booking->status }}</td>
+
                                                             <td>
                                                                 @if ($booking->status == 'Booked')
                                                                 <a href="{{ url('/pick-up-car/' . $booking->car_id) }}"class="btn btn-primary">Pick Up</a>

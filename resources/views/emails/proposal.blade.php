@@ -14,12 +14,12 @@
             <td bgcolor="#ffffff" style="padding: 20px;">
                 <h2>Almost ready to go!</h2>
                 <p>You receive an offer.</p>
-                <p>here are the Details:</p>
+                <p>Here are the Details:</p>
                 <ul>
-                    <li>Driver: {{ $driver }}</li>
-                    <li>Offer Amount: {{ $offer_amount }}</li>
-                    <li>Pick-Up Time: {{ $pick_up_time }}</li>
-                    <li>Delivery Time: {{ $delivery_time }}</li>
+                    <li><strong>Driver: {{ $driver }}</strong></li>
+                    <li><strong>Offer Amount: {{ $offer_amount }}</strong></li>
+                    <li><strong>Pick-Up Time: {{ $pick_up_time }}</strong></li>
+                    <li><strong>Delivery Time: {{ $delivery_time }}</strong></li>
                 </ul>
 
                 <p>Thank you for using our service.</p>

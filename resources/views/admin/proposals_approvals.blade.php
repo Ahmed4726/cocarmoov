@@ -52,7 +52,19 @@
                                                     <td>{{ $proposal->offer_amount }}</td>
                                                     @if ($proposal->status == 'Pending')
                                                     <td>
-                                                        <button class="btn btn-primary btn-sm" data-proposal-id="{{ $proposal->proposal_id }}" data-car-id="{{ $proposal->car_id }}" data-status="Accept" data-action="/update-offer">Accept</button>
+                                                        {{-- <button class="btn btn-primary btn-sm" data-offer-amount="{{$proposal->offer_amount}}" data-delivery-time="{{ $proposal->delivery_time }}" data-pick-up-time="{{ $proposal->pick_up_time }}" data-proposal-id="{{ $proposal->proposal_id }}" data-car-id="{{ $proposal->car_id }}" data-status="Accept" data-action="/update-offer">Accept</button> --}}
+                                                        <button class="btn btn-primary btn-sm"
+                                                        data-offer-amount="{{ $proposal->offer_amount ?? '' }}"
+                                                        data-delivery-time="{{ $proposal->delivery_time ?? '' }}"
+                                                        data-pick-up-time="{{ $proposal->pick_up_time ?? '' }}"
+                                                        data-proposal-id="{{ $proposal->proposal_id ?? '' }}"
+                                                        data-car-id="{{ $proposal->car_id ?? '' }}"
+                                                        data-status="Accept"
+                                                        data-action="/update-offer">
+                                                    Accept
+                                                </button>
+
+
                                                         <button class="btn btn-danger btn-sm" data-proposal-id="{{ $proposal->proposal_id }}" data-car-id="{{ $proposal->car_id }}" data-status="Decline" data-action="/update-offer">Decline</button>
                                                     </td>
                                                     @else
@@ -78,6 +90,9 @@
  document.querySelectorAll('.btn-sm').forEach(button => {
     button.addEventListener('click', function() {
         const proposalId = this.getAttribute('data-proposal-id');
+        const offeramount = this.getAttribute('data-offer-amount');
+        const delivery = this.getAttribute('data-delivery-time');
+        const pickup = this.getAttribute('data-pick-up-time');
         const carId = this.getAttribute('data-car-id');
         const status = this.getAttribute('data-status');
         const action = this.getAttribute('data-action');
@@ -92,7 +107,10 @@
             body: JSON.stringify({
                 proposal_id: proposalId,
                 car_id: carId,
-                status: status
+                status: status,
+                offeramount: offeramount,
+                delivery: delivery,
+                pickup: pickup
             })
         })
         .then(response => {
