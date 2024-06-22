@@ -428,23 +428,19 @@
 <div id="step3" class="form-step">
     <div class="container">
     {{-- sas --}}
-    <h2>Step 3: Details</h2>
+    <h2>Etape 3: Détails</h2>
     <form id="packagesForm">
         <!-- <label>Selected Package:</label>
                     <p id="selectedPackageDetails"></p>
                     <p id="selectedPackagePrice"></p> -->
         {{-- price show here in this step of the package and name too --}}
-        <h2>Collection details</h2>
+        <h3>Adresse d’enlèvement</h3>
         <div class="row">
-            <div class="col-md-4 mb-3">
-                <label for="collectionDate"></label>
-                <input class="form-control" type="datetime-local" name="collectionDate" id="collectionDate" value="yyyy-mm-dd">
-                {{-- <input class="form-control" type="time" name="collectiontime" id="collectiontime" value="hh:mm"> --}}
-            </div>
-            <div class="col-md-4">
+        <div class="col-md-4 mb-3">
+            <div class="select-container">
             <label for="placeType" class="form-label mb-0"></label>
             <select class="form-control" name="residence_pick_up" id="residence_pick_up" placeholder="Nature du lieu">
-                <option value="" disabled selected hidden>Select an option</option>
+                <option value="" disabled selected hidden>Nature du lieu</option>
                 <option value="Résidence">Résidence</option>
                 <option value="Agence">Agence</option>
                 <option value="Concession">Concession</option>
@@ -453,41 +449,60 @@
                 <option value="Magasin">Magasin</option>
                 <option value="Société">Société</option>
             </select>
+            <i class="fas fa-caret-down fa-dropdown-icon mt-2"></i>
+            </div>
         </div>
-
-            <div class="col-md-4">
+        <div class="col-md-4">
                 <label for="placeName" class="form-label mb-0"></label>
                 <input type="text" class="form-control" id="son_nom" name="son_nom" placeholder="Son Nom">
             </div>
+            <div class="col-md-4 mb-3">
+                <label for="collectionDate"></label>
+                <input class="form-control" type="datetime-local" name="collectionDate" id="collectionDate" placeholder="Select collection date and time">
+                {{-- <input class="form-control" type="time" name="collectiontime" id="collectiontime" value="hh:mm"> --}}
+            </div>
         </div>
         <div class="row">
-        <div class="col-md-6 mb-3">
+        <div class="col-md-4 mb-3 d-none">
+                <!-- <label for="fromAddress" class="form-label">From Address:</label> -->
+                <input type="text" class="form-control" id="fromAddress" value="{{ $car_move['pickup_name'] }}" readonly>
+            </div>
+            <div class="col-md-4 mb-3 d-none">
                 <!-- <label for="fromAddress" class="form-label">From Address:</label> -->
                 <input type="text" class="form-control" id="fromAddress" value="{{ $car_move['pickup_name'] }}" readonly>
             </div>
         <div class="col-md-6">
                 <!-- <label for="placeType" class="form-label mb-0">Besoin de temps pour préparer le véhicule :</label> -->
-                <select class="form-control mb-3" name="heures" id="heures" placeholder="Besoin de temps pour préparer le véhicule :">
-                    <option value="">Non  </option>
+                <div class="select-container">
+                <select class="form-control mb-2" name="heures" id="heures" placeholder="Besoin de temps pour préparer le véhicule :">
+                    <option value="">Besoin de temps pour préparer le véhicule</option>
                     <option value="3 heures">3 heures </option>
                     <option value="6 heures">6 heures  </option>
                     <option value="12 heures">12 heures  </option>
                     <option value="24 heures">24 heures </option>
                     <option value="48 heures">48 heures </option>
                 </select>
+                <i class="fas fa-caret-down fa-dropdown-icon"></i>
+                </div>
         </div>
+        <div class="col-md-6">
+                <!-- <label for="placeType" class="form-label mb-0">Besoin de temps pour préparer le véhicule :</label> -->
+                <input type="time" class="form-control" id="hoursInput" name="hoursInput">
+
+
         </div>
-        <h2>Delivery details</h2>
+        <div class="form-group">
+                        <input type="checkbox" id="checkbox" name="checkbox_name" required><span>Récupérer le conducteur à la gare la plus proche
+                        </span>
+                    </div>
+        </div>
+        <h3>Adresse de livraison/restitution</h3>
         <div class="row">
-            <div class="col-md-4 mb-3">
-                <label for="deliveryDate">Delivery No later Than</label>
-                <input class="form-control" type="datetime-local" name="deliveryDate" id="deliveryDate" placeholder="date...">
-                {{-- <input class="form-control" type="time" name="deliverytime" id="deliverytime" placeholder="hrs"> --}}
-            </div>
-            <div class="col-md-4">
+        <div class="col-md-4">
                 <label for="placeType" class="form-label mb-0"></label>
+                <div class="select-container">
                 <select class="form-control" name="residence_delivery" id="residence_delivery" placeholder="Nature du lieu">
-                    <option value="" disabled selected hidden>Select an option</option>
+                    <option value="" disabled selected hidden>Nature du lieu</option>
                     <option value="Résidence">Résidence</option>
                     <option value="Agence">Agence</option>
                     <option value="Concession">Concession</option>
@@ -496,36 +511,58 @@
                     <option value="Magasin">Magasin</option>
                     <option value="Société">Société</option>
                 </select>
+                <i class="fas fa-caret-down fa-dropdown-icon"></i>
+                </div>
             </div>
             <div class="col-md-4">
                 <label for="placeName" class="form-label mb-0"></label>
                 <input type="text" class="form-control" id="son_nom_delivery" name="son_nom_delivery" placeholder="Son Nom">
             </div>
+            <div class="col-md-4 mb-3">
+                <label for="deliveryDate"></label>
+                <input class="form-control" type="datetime-local" name="deliveryDate" id="deliveryDate" placeholder="date...">
+                {{-- <input class="form-control" type="time" name="deliverytime" id="deliverytime" placeholder="hrs"> --}}
+            </div>
         </div>
         <div class="row">
         <div class="col-md-6">
+                <!-- <label for="placeType" class="form-label mb-0">Besoin de temps pour préparer le véhicule :</label> -->
+                <input type="time" class="form-control" id="hoursInput" name="hoursInput">
+
+
+        </div>
+        <div class="col-md-6 d-none">
                 <!-- <label for="toAddress" class="form-label">To Address:</label> -->
                 <input type="text" class="form-control" id="toAddress" value="{{ $car_move['delivery_name'] }}" readonly>
             </div>
         </div>
-        <h2>Characterstics of vehicle</h2>
+        <div class="form-group">
+                        <input type="checkbox" id="checkbox" name="checkbox_name" required><onl>Déposer le conducteur à la gare la plus proche
+                        </onl>
+                       
+                    </div>
+        <h3>Caractéristiques du véhicule</h3>
         <div class="row">
-            <div class="col-md-2 mb-2">
+            <div class="col-md-2 mb-2 d-none">
                 <!-- <label for="carType" class="form-label">Car Type:</label> -->
                 <input type="text" class="form-control" id="carType" value="{{ $car_move['vehicle-type'] }}" readonly>
             </div>
             <div class="col-md-4 mb-3">
                 <!-- <label for="carType" class="form-label">Make and Model</label> -->
-                <input type="text" class="form-control" id="make_and_model" name="make_and_model" placeholder="Make and Model">
+                 <div class="select-container">
+                <input type="text" class="form-control" id="make_and_model" name="make_and_model" placeholder="Marque et Modèle"> 
+                <i class="fas fa-search fa-dropdown-icon"></i>
+                </div>
             </div>
             <div class="col-md-4 mb-3">
                 <!-- <label for="carType" class="form-label">Number Plate</label> -->
-                <input type="text" class="form-control" id="number_plate" name="number_plate" placeholder="Number Plate">
+                <input type="text" class="form-control" id="number_plate" name="number_plate" placeholder="Immatriculation">
             </div>
             <div class="col-md-4 mb-3">
                 <!-- <label for="carType" class="form-label">Nombre de places</label> -->
+                <div class="select-container">
                 <select class="form-control" name="seating_capacity" id="seating_capacity" placeholder="Nombre de places">
-                    <option value="">Choose</option>
+                    <option value="">Nombre de places</option>
                     <option value="2">2 seats</option>
                     <option value="3">3 seats</option>
                     <option value="4">4 seats</option>
@@ -535,20 +572,25 @@
                     <option value="8">8 seats</option>
                     <option value="9">9 seats</option>
                 </select>
+                <i class="fas fa-caret-down fa-dropdown-icon"></i>
+                </div>
             </div>
             <div class="col-md-4 mb-3">
                 <!-- <label for="carType" class="form-label">Moteur</label> -->
+                 <div class="select-container">
                 <select class="form-control" name="GearBox" id="GearBox" placeholder="Moteur">
-                    <option value="">Transmission</option>
+                    <option value="">Moteur</option>
                     <option value="Manual">Boîte manuelle</option>
                     <option value="Automatic">Boîte automatique</option>
                     <option value="hybride">Hybride </option>
                     <option value="electric">Électrique </option>
                     <option value="hydrogen">Hydrogène</option>
                 </select>
+                <i class="fas fa-caret-down fa-dropdown-icon"></i>
+                </div>
             </div>
         </div>
-        <h2>Remarks</h2>
+        <h3>Remarques spécifiques</h3>
         <textarea name="remarks" id="remarks" class="form-control mb-3"></textarea>
             <button class="btn btn-warning" type="button" onclick="prevStep(3)">Previous</button>
             <button class="btn btn-warning" type="button" onclick="handleStep({{ $stripe_customer_id != null ? 'true' : 'false' }})">Next</button>
@@ -1288,7 +1330,6 @@ function storeHiddenValues() {
 
 
 </script>
-
 
 
 @endsection
