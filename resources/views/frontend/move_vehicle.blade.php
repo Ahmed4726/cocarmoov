@@ -43,6 +43,51 @@
 }
 
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
 </style>
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -251,7 +296,7 @@
             </div>
 
             <div class="form-group">
-                <input type="checkbox" id="premium_extra_checkbox" name="premium_services"><span for="premium_extra_checkbox">Extra **: specify the service and the budget for € excl. VAT [Extra]</span>
+                <input type="checkbox" class="d-none" id="premium_extra_checkbox" name="premium_services"><span for="premium_extra_checkbox">Extra **: specify the service and the budget for € excl. VAT [Extra]</span>
             </div>
         </div>
 
@@ -282,7 +327,7 @@
             </div>
 
             <div class="form-group">
-                <input type="checkbox" id="express_extra_checkbox" name="express_services">
+                <input type="checkbox" class="d-none" id="express_extra_checkbox" name="express_services">
                 <span for="express_extra_checkbox"></span>
                 {{-- Extra **: specify the service and the budget for € excl. VAT [Extra] --}}
             </div>
@@ -485,12 +530,18 @@
                 <i class="fas fa-caret-down fa-dropdown-icon"></i>
                 </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-3">
                 <!-- <label for="placeType" class="form-label mb-0">Besoin de temps pour préparer le véhicule :</label> -->
                 <input type="time" class="form-control" id="hoursInputdriver" name="hoursInputdriver">
-                <div class="note" style="font-size:smaller;">Please select opening hours</div>
+                <div class="note" style="font-size:smaller;">Please select start opening hours</div>
 
         </div>
+        <div class="col-md-3">
+            <!-- <label for="placeType" class="form-label mb-0">Besoin de temps pour préparer le véhicule :</label> -->
+            <input type="time" class="form-control" id="hoursInputdriver1" name="hoursInputdriver1">
+            <div class="note" style="font-size:smaller;">Please select end opening hours</div>
+
+    </div>
         <div class="form-group">
                         <input type="checkbox" id="hoursInputdrivercheckbox" name="hoursInputdriver_checkbox_name" required><span>Récupérer le conducteur à la gare la plus proche
                         </span>
@@ -525,12 +576,18 @@
             </div>
         </div>
         <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
                 <!-- <label for="placeType" class="form-label mb-0">Besoin de temps pour préparer le véhicule :</label> -->
                 <input type="time" class="form-control" id="hoursInputowner" name="hoursInputowner">
-                <div class="note" style="font-size:smaller;">Please select opening hours</div>
+                <div class="note" style="font-size:smaller;">Please select start opening hours</div>
 
         </div>
+        <div class="col-md-3">
+            <!-- <label for="placeType" class="form-label mb-0">Besoin de temps pour préparer le véhicule :</label> -->
+            <input type="time" class="form-control" id="hoursInputowner1" name="hoursInputowner1">
+            <div class="note" style="font-size:smaller;">Please select end opening hours</div>
+
+    </div>
         <div class="col-md-6 d-none">
                 <!-- <label for="toAddress" class="form-label">To Address:</label> -->
                 <input type="text" class="form-control" id="toAddress" value="{{ $car_move['delivery_name'] }}" readonly>
@@ -601,11 +658,58 @@
 <div id="step4" class="form-step">
     <h2>Etape 4: Payment</h2>
     <h3>Options de réservation</h3>
-    <div class="text-center" style="display: flex; flex-direction: column; align-items: center;">
-        <label for="amount">Package Price</label>
-        <input type="number" class="form-control" name="PackageAmount" id="hiddenPackageAmount" placeholder="Package Amount" readonly style="width:400px;">
+    <div class="" style="display: flex; flex-direction: column;  margin-top: 20px;">
+        <label for="toggleButton1">Réservation instantanée du carmooveur        </label>
+        <label class="switch">
+            <input type="checkbox" id="toggleButton1">
+            <span class="slider round"></span>
+        </label>
     </div>
-    <br>
+    <div class="" style="display: flex; flex-direction: column; margin-top: 10px;">
+        <label for="toggleButton2">Réservation après votre approbation
+        </label>
+        <label class="switch">
+            <input type="checkbox" id="toggleButton2">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <p>Cochez les propositions que vous acceptez de recevoir par les carmooveurs
+    </p>
+    <div class="form-group">
+        <input type="checkbox" id="payment_checkbox_1" name="payment_checkbox_1" required><span>Si votre prix est négociable
+
+        </span>
+    </div>
+    <div class="form-group">
+        <input type="checkbox" id="payment_checkbox_2" name="payment_checkbox_2" required><span>Si les disponibilités du véhicule sont discutables
+
+        </span>
+    </div>
+    <div class="form-group">
+        <input type="checkbox" id="payment_checkbox_3" name="payment_checkbox_3" required><span>Si la durée maximale de transport est discutable
+
+        </span>
+    </div>
+    <div class="form-group">
+        <input type="checkbox" id="payment_checkbox_4" name="payment_checkbox_4" required><span>Si la distance maximale à parcourir est discutable
+        </span>
+    </div>
+    <h5>Pré-autorisation bancaire
+    </h5>
+    <div class="row mb-3">
+        <div class="col-md-6">
+    <div class="" style="display: flex; flex-direction: column; align-items: center;">
+        {{-- <label for="amount">Package Price</label> --}}
+       <input type="number" class="form-control" name="PackageAmount" id="hiddenPackageAmount" placeholder="Package Amount" readonly style="width:400px;">
+    </div>
+</div>
+<div class="col-md-6">
+<p>vous seront débités une fois votre véhicule réservé.
+</p>
+</div>
+</div>
+<p>Annulation du Carmoov après réservation du carmooveur, moins de 72h avant le départ, une pénalité de 50%.
+</p>
     <form id="paymentForm">
         <div id="card-element" class="form-control">
             <!-- A Stripe Element will be inserted here. -->
@@ -630,8 +734,10 @@
             <input type="text" class="form-control mb-2" name="son_nom" id="hiddenson_nom" placeholder="son nom" readonly>
             <input type="text" class="form-control mb-2" name="heures" id="hiddenheures" placeholder="Heures" readonly>
             <input type="text" class="form-control mb-2" name="hoursInputdriver" id="hiddenhoursInputdriver" placeholder="Heures" readonly>
+            <input type="text" class="form-control mb-2" name="hoursInputdriver1" id="hiddenhoursInputdriver1" placeholder="Heures" readonly>
             <input type="hidden" class="form-control mb-2" name="hoursInputdrivercheckbox" id="hiddenhoursInputdrivercheckbox" placeholder="Heures" readonly>
             <input type="text" class="form-control mb-2" name="hoursInputowner" id="hiddenhoursInputowner" placeholder="Heures" readonly>
+            <input type="text" class="form-control mb-2" name="hoursInputowner1" id="hiddenhoursInputowner1" placeholder="Heures" readonly>
             <input type="hidden" class="form-control mb-2" name="hoursInputownercheckbox" id="hiddenhoursInputownercheckbox" placeholder="Heures" readonly>
 
 
@@ -703,6 +809,7 @@
 </div>
 
 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 <script src="https://js.stripe.com/v3/"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -784,12 +891,27 @@ updateProgressBar(1,true);
 
 // Function to submit payment
 function submitPayment() {
-    // alert('ok')
+    var button = document.querySelector('.btn-warning');
+    button.disabled = true; // Disable the button to prevent multiple submissions
+
+    // Show loader
+    var loader = document.createElement('span');
+    loader.classList.add('spinner-border', 'spinner-border-sm');
+    loader.setAttribute('role', 'status');
+    loader.setAttribute('aria-hidden', 'true');
+    button.innerHTML = 'Processing...';
+    button.appendChild(loader);
+
     fetchCsrfToken(function (csrfToken) {
         stripe.createPaymentMethod({
             type: 'card',
             card: card,
         }).then(function (result) {
+            // Remove loader and enable button
+            button.removeChild(loader);
+            button.innerHTML = 'Submit Payment';
+            button.disabled = false;
+
             if (result.error) {
                 var errorElement = document.getElementById('card-errors');
                 errorElement.textContent = result.error.message;
@@ -804,7 +926,18 @@ function submitPayment() {
                     data: {
                         paymentMethodId: paymentMethodId,
                     },
+                    beforeSend: function() {
+                        // Show loader again before sending request
+                        button.disabled = true;
+                        button.innerHTML = 'Processing...';
+                        button.appendChild(loader);
+                    },
                     success: function (response) {
+                        // Remove loader and enable button after response
+                        button.removeChild(loader);
+                        button.innerHTML = 'Submit Payment';
+                        button.disabled = false;
+
                         if (response.success) {
                             alert('Payment successful! Payment Intent ID: ' + response.paymentIntentId);
                             // Redirect or show a success message
@@ -818,6 +951,11 @@ function submitPayment() {
                         }
                     },
                     error: function (error) {
+                        // Remove loader and enable button on error
+                        button.removeChild(loader);
+                        button.innerHTML = 'Submit Payment';
+                        button.disabled = false;
+
                         console.error('Error:', error);
                         alert('An error occurred during payment. Please try again.');
                         // Handle payment error
@@ -1286,8 +1424,10 @@ function storeHiddenValues() {
     document.getElementById('hiddenresidence_pick_up').value = document.getElementById('residence_pick_up').value;
     document.getElementById('hiddenson_nom_delivery').value = document.getElementById('son_nom_delivery').value;
     document.getElementById('hiddenhoursInputdriver').value = document.getElementById('hoursInputdriver').value;
+    document.getElementById('hiddenhoursInputdriver1').value = document.getElementById('hoursInputdriver1').value;
     document.getElementById('hiddenhoursInputdrivercheckbox').value = document.getElementById('hoursInputdrivercheckbox').value;
     document.getElementById('hiddenhoursInputowner').value = document.getElementById('hoursInputowner').value;
+    document.getElementById('hiddenhoursInputowner1').value = document.getElementById('hoursInputowner1').value;
     document.getElementById('hiddenhoursInputownercheckbox').value = document.getElementById('hoursInputownercheckbox').value;
     document.getElementById('hiddenremarks').value = document.getElementById('remarks').value;
 
@@ -1351,10 +1491,6 @@ function storeHiddenValues() {
         });
     });
     }
-
-
-
-
 </script>
 
 

@@ -56,6 +56,8 @@ class ListingController extends Controller
         $listing->hoursInputownercheckbox = $request->hoursInputownercheckbox;
         $listing->validation_check_box = $request->validation_check_box;
         $listing->validator_checkbox = $request->validator_checkbox;
+        $listing->hoursInputdriver1 = $request->hoursInputdriver1;
+        $listing->hoursInputowner1 = $request->hoursInputowner1;
 
         $listing->save();
 
@@ -77,7 +79,7 @@ class ListingController extends Controller
         $pdfContent = $pdf->output();
 
 
-        // Mail::to(auth()->user()->email)->send(new CarListed($listing, $pdfContent));
+        Mail::to(auth()->user()->email)->send(new CarListed($listing, $pdfContent));
 
         return response()->json(['success' => true, 'message' => 'Listing created successfully']);
     }

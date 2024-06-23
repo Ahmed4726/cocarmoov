@@ -1111,8 +1111,8 @@ document.addEventListener('DOMContentLoaded', function () {
         vehicleMover.addEventListener('change', checkFields);
     });
 function initAutocomplete() {
-    var pickupAutocomplete = new google.maps.places.Autocomplete(document.getElementById('pickup'));
-    var deliveryAutocomplete = new google.maps.places.Autocomplete(document.getElementById('delivery'));
+    var pickupAutocomplete = new google.maps.places.Autocomplete(document.getElementById('pickup'),{ types: ['address'] });
+    var deliveryAutocomplete = new google.maps.places.Autocomplete(document.getElementById('delivery'),{ types: ['address'] });
 
     pickupAutocomplete.addListener('place_changed', function () {
         updatePlaceInfo('pickup', 'pickup-lat', 'pickup-lng');
@@ -1146,8 +1146,16 @@ function initAutocomplete() {
             document.getElementById(latId).value = place.geometry.location.lat();
             document.getElementById(lngId).value = place.geometry.location.lng();
 
-            // Update name hidden field
-            document.getElementById(`${placeType}Name`).value = place.name;
+            // Extract and update the street address hidden field
+            var streetAddress = '';
+            for (var i = 0; i < place.address_components.length; i++) {
+                var component = place.address_components[i];
+                if (component.types.includes('street_number') || component.types.includes('route')) {
+                    streetAddress += component.long_name + ' ';
+                }
+            }
+            streetAddress = streetAddress.trim();
+            document.getElementById(`${placeType}Name`).value = streetAddress;
         }
     }
 
