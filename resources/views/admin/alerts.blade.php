@@ -125,10 +125,10 @@
             // script.js
             $(document).ready(function () {
                 var cityOfCollectionInput = document.getElementById('city_of_collection');
-                var cityOfCollectionAutocomplete = new google.maps.places.Autocomplete(cityOfCollectionInput);
+                var cityOfCollectionAutocomplete = new google.maps.places.Autocomplete(cityOfCollectionInput,{ types: ['address'] });
 
                 var cityOfDeliveryInput = document.getElementById('city_of_delivery');
-                var cityOfDeliveryAutocomplete = new google.maps.places.Autocomplete(cityOfDeliveryInput);
+                var cityOfDeliveryAutocomplete = new google.maps.places.Autocomplete(cityOfDeliveryInput,{ types: ['address'] });
 
                 $('#saveAlertBtn').click(function () {
                     var cityOfCollection = cityOfCollectionInput.value;
