@@ -487,12 +487,12 @@
         </div>
         <div class="col-md-6">
                 <!-- <label for="placeType" class="form-label mb-0">Besoin de temps pour préparer le véhicule :</label> -->
-                <input type="time" class="form-control" id="hoursInput" name="hoursInput">
+                <input type="time" class="form-control" id="hoursInputdriver" name="hoursInputdriver">
                 <div class="note" style="font-size:smaller;">Please select opening hours</div>
 
         </div>
         <div class="form-group">
-                        <input type="checkbox" id="checkbox" name="checkbox_name" required><span>Récupérer le conducteur à la gare la plus proche
+                        <input type="checkbox" id="hoursInputdrivercheckbox" name="hoursInputdriver_checkbox_name" required><span>Récupérer le conducteur à la gare la plus proche
                         </span>
                     </div>
         </div>
@@ -527,7 +527,7 @@
         <div class="row">
         <div class="col-md-6">
                 <!-- <label for="placeType" class="form-label mb-0">Besoin de temps pour préparer le véhicule :</label> -->
-                <input type="time" class="form-control" id="hoursInput" name="hoursInput">
+                <input type="time" class="form-control" id="hoursInputowner" name="hoursInputowner">
                 <div class="note" style="font-size:smaller;">Please select opening hours</div>
 
         </div>
@@ -537,9 +537,8 @@
             </div>
         </div>
         <div class="form-group">
-                        <input type="checkbox" id="checkbox" name="checkbox_name" required><onl>Déposer le conducteur à la gare la plus proche
-                        </onl>
-                       
+                        <input type="checkbox" id="hoursInputownercheckbox" name="hoursInputowner_checkbox_name" required><span>Déposer le conducteur à la gare la plus proche</span>
+
                     </div>
         <h3>Caractéristiques du véhicule</h3>
         <div class="row">
@@ -550,7 +549,7 @@
             <div class="col-md-4 mb-3">
                 <!-- <label for="carType" class="form-label">Make and Model</label> -->
                  <div class="select-container">
-                <input type="text" class="form-control" id="make_and_model" name="make_and_model" placeholder="Marque et Modèle"> 
+                <input type="text" class="form-control" id="make_and_model" name="make_and_model" placeholder="Marque et Modèle">
                 <i class="fas fa-search fa-dropdown-icon"></i>
                 </div>
             </div>
@@ -600,7 +599,8 @@
 </div>
 
 <div id="step4" class="form-step">
-    <h2>Step 4: Payment</h2>
+    <h2>Etape 4: Payment</h2>
+    <h3>Options de réservation</h3>
     <div class="text-center" style="display: flex; flex-direction: column; align-items: center;">
         <label for="amount">Package Price</label>
         <input type="number" class="form-control" name="PackageAmount" id="hiddenPackageAmount" placeholder="Package Amount" readonly style="width:400px;">
@@ -618,37 +618,59 @@
 </div>
 
 <div id="step5" class="form-step">
-    <h2>Step 5: Validation</h2>
+    <h2>Etape 5: Validation</h2>
 <form id="hiddenValuesForm">
 
-    <div class="card">
+    <div class="card d-none">
         <div class="card-body">
-            <h5 class="card-title">Address Details</h5>
+            <h5 class="card-title d-none">Address Details</h5>
             <input type="text" class="form-control mb-2" name="FromAddress" id="hiddenFromAddress" placeholder="From Address" readonly>
             <input type="text" class="form-control mb-2" name="ToAddress" id="hiddenToAddress" placeholder="To Address" readonly>
             <input type="text" class="form-control mb-2" name="residence_pick_up" id="hiddenresidence_pick_up" placeholder="pick up" readonly>
             <input type="text" class="form-control mb-2" name="son_nom" id="hiddenson_nom" placeholder="son nom" readonly>
             <input type="text" class="form-control mb-2" name="heures" id="hiddenheures" placeholder="Heures" readonly>
+            <input type="text" class="form-control mb-2" name="hoursInputdriver" id="hiddenhoursInputdriver" placeholder="Heures" readonly>
+            <input type="hidden" class="form-control mb-2" name="hoursInputdrivercheckbox" id="hiddenhoursInputdrivercheckbox" placeholder="Heures" readonly>
+            <input type="text" class="form-control mb-2" name="hoursInputowner" id="hiddenhoursInputowner" placeholder="Heures" readonly>
+            <input type="hidden" class="form-control mb-2" name="hoursInputownercheckbox" id="hiddenhoursInputownercheckbox" placeholder="Heures" readonly>
+
+
             <input type="text" class="form-control mb-2" name="residence_delivery" id="hiddenresidence_delivery" placeholder="Residence Delivery" readonly>
             <input type="text" class="form-control mb-2" name="son_nom_delivery" id="hiddenson_nom_delivery" placeholder="Son Nom Delivery" readonly>
             <input type="text" class="form-control mb-2" name="remarks" id="hiddenremarks" placeholder="Remarks" readonly>
             <input type="hidden" name="distance" id="distance" value="{{ $distance }}">
         </div>
     </div>
-
+    <h3>Clauses Principles</h3>
     <div class="card mt-3">
         <div class="card-body">
-            <h5 class="card-title">Vehicle Details</h5>
-            <input type="text" class="form-control mb-2" name="CarType" id="hiddenCarType" placeholder="Car Type" readonly>
-            <input type="text" class="form-control mb-2" name="CarCondition" id="hiddenCarCondition" placeholder="Car Condition" readonly>
-            <input type="text" class="form-control mb-2" name="make_and_model" id="hidden_make_and_model" placeholder="Make and Model" readonly>
-            <input type="text" class="form-control mb-2" name="number_plate" id="hidden_number_plate" placeholder="Number Plate" readonly>
-            <input type="text" class="form-control mb-2" name="seating_capacity" id="hidden_seating_capacity" placeholder="Seating Capacity" readonly>
-            <input type="text" class="form-control mb-2" name="GearBox" id="hiddenGearBox" placeholder="GearBox" readonly>
+            <input type="text" class="form-control mb-2 d-none" name="CarType" id="hiddenCarType" placeholder="Car Type" readonly>
+            <input type="text" class="form-control mb-2 d-none" name="CarCondition" id="hiddenCarCondition" placeholder="Car Condition" readonly>
+            <input type="text" class="form-control mb-2 d-none" name="make_and_model" id="hidden_make_and_model" placeholder="Make and Model" readonly>
+            <input type="text" class="form-control mb-2 d-none" name="number_plate" id="hidden_number_plate" placeholder="Number Plate" readonly>
+            <input type="text" class="form-control mb-2 d-none" name="seating_capacity" id="hidden_seating_capacity" placeholder="Seating Capacity" readonly>
+            <input type="text" class="form-control mb-2 d-none" name="GearBox" id="hiddenGearBox" placeholder="GearBox" readonly>
+            <p>Lors de la réservation de votre Carmoov, vous serez informé(e) par e-mail des dates exactes.</p>
+
+              <p>  Les contacts au départ et à l'arrivée seront responsables de la remise et de la récupération des clés ainsi que d'une copie de la carte grise du véhicule. Ils devront être en possession de leur carte d'identité.</p>
+
+             <p>   Par mesure de sécurité, nous vous prions de ne rien laisser dans le véhicule.</p>
+
+               <p> Lors de la validation de votre demande de Carmoov, veuillez noter qu'en particulier pendant la saison hivernale, votre véhicule doit être équipé de pneus ou d'équipements appropriés pour assurer une conduite sûre.
+                </p>
         </div>
     </div>
+    <div class="form-group">
+        <input type="checkbox" id="validation_check_box" name="validation_check_box" required><span>Je certifie être propriétaire du véhicule ou avoir un mandat du propriétaire pour planifier cette demande de carmoov, que le véhicule est assuré et correspond à la description ci-dessus.
 
-    <div class="card mt-3">
+        </span>
+    </div>
+    <div class="form-group">
+        <input type="checkbox" id="validator_checkbox" name="validator_checkbox" required><span>Je déclare sur l'honneur que les informations fournies sont exactes, et j'accepte les <a href="#">Conditions Générales de Vente</a></span>
+        </span>
+    </div>
+
+    <div class="card mt-3 d-none">
         <div class="card-body">
             <h5 class="card-title">Package Details</h5>
             <input type="text" class="form-control mb-2" name="SelectedPackage" id="hiddenSelectedPackage" placeholder="Selected Package" readonly>
@@ -658,7 +680,7 @@
         </div>
     </div>
 
-    <div class="card mt-3">
+    <div class="card mt-3 d-none">
         <div class="card-body">
             <h5 class="card-title">Selected Services</h5>
             {{-- <input type="text" class="form-control mb-2" name="selectedPremiumServices[]" id="hiddenSelectedemiumServices"> --}}
@@ -666,7 +688,7 @@
         </div>
     </div>
 
-    <div class="card mt-3">
+    <div class="card mt-3 d-none">
         <div class="card-body">
             <h5 class="card-title">Move Dates</h5>
             <input type="datetime-local" class="form-control mb-2" name="CarMoveDepartureDateFrom" id="hiddenCarMoveDepartureDateFrom" placeholder="Departure Date From" readonly>
@@ -1263,6 +1285,10 @@ function storeHiddenValues() {
     document.getElementById('hiddenson_nom').value = document.getElementById('son_nom').value;
     document.getElementById('hiddenresidence_pick_up').value = document.getElementById('residence_pick_up').value;
     document.getElementById('hiddenson_nom_delivery').value = document.getElementById('son_nom_delivery').value;
+    document.getElementById('hiddenhoursInputdriver').value = document.getElementById('hoursInputdriver').value;
+    document.getElementById('hiddenhoursInputdrivercheckbox').value = document.getElementById('hoursInputdrivercheckbox').value;
+    document.getElementById('hiddenhoursInputowner').value = document.getElementById('hoursInputowner').value;
+    document.getElementById('hiddenhoursInputownercheckbox').value = document.getElementById('hoursInputownercheckbox').value;
     document.getElementById('hiddenremarks').value = document.getElementById('remarks').value;
 
     // Store values from the additional form fields

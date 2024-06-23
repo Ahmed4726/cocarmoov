@@ -125,10 +125,10 @@ class ProposalController extends Controller
             $mission->save();
 
             // Payment
-        $car_owner = User::where('id', auth()->user()->id)->first();
-        $customer = Customer::retrieve($car_owner->stripe_customer_id);
+            $car_owner = User::where('id', auth()->user()->id)->first();
+            $customer = Customer::retrieve($car_owner->stripe_customer_id);
 
-        $paymentMethod = PaymentMethod::all(['customer' => $car_owner->stripe_customer_id, 'type' => 'card']);
+            $paymentMethod = PaymentMethod::all(['customer' => $car_owner->stripe_customer_id, 'type' => 'card']);
 
             $paymentMethodId = $paymentMethod->data['0']['id'];
             $paymentIntent = PaymentIntent::create([
@@ -141,29 +141,23 @@ class ProposalController extends Controller
             ]);
 
 
-        // Invoice Status
-        $invoice = Invoice::where('car_id', $request->car_id)->first();
-        // dd($invoice->status);
-        $invoice->status = 'Paid';
-        $invoice->save();
+            // Invoice Status
+            $invoice = Invoice::where('car_id', $request->car_id)->first();
+            // dd($invoice->status);
+            $invoice->status = 'Paid';
+            $invoice->save();
 
-        $listing = Car::where('id', $request->car_id)->first();
+            $listing = Car::where('id', $request->car_id)->first();
 
-        $pdf = new Dompdf();
-        $pdf->loadHtml(view('pdf.invoice', compact('invoice','listing')));
-        $pdf->setPaper('A4', 'portrait');
-        $pdf->render();
-        $pdfContent = $pdf->output();
+            $pdf = new Dompdf();
+            $pdf->loadHtml(view('pdf.invoice', compact('invoice','listing')));
+            $pdf->setPaper('A4', 'portrait');
+            $pdf->render();
+            $pdfContent = $pdf->output();
 
-        // $car_owner = User::where('id', $request->owner_id)->first();
+            Mail::to($car_owner->email)->send(new CarBooked($listing, $pdfContent, $driver, $mission));
 
-
-
-        // $driver = User::where('id', auth()->user()->id)->first();
-
-        Mail::to($car_owner->email)->send(new CarBooked($listing, $pdfContent, $driver, $mission));
-
-        Mail::to($driver->email)->send(new CarDriver($listing, $pdfContent, $car_owner, $mission));
+            Mail::to($driver->email)->send(new CarDriver($listing, $pdfContent, $car_owner, $mission));
 
             $balance = new Balance();
             $balance->user_id = auth()->user()->id;

@@ -1,6 +1,8 @@
 @extends('admin.admin_layout')
 @section('content')
-
+@php
+    $role = auth()->user()->user_type;
+@endphp
 <div class="wrapper">
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -51,7 +53,7 @@
                                                         <th>Pick Up Address</th>
                                                         <th>Drop Location</th>
                                                         <th>Status</th>
-                                                        <th>Actions</th>
+                                                        @if ($role == '6' || $role == '7' || $role == '8') <th>Actions</th>@endif
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -63,12 +65,18 @@
                                                             <td>{{ $booking->status == 'On-Move' ? 'Picked-Up' : $booking->status }}</td>
 
                                                             <td>
-                                                                @if ($booking->status == 'Booked')
-                                                                <a href="{{ url('/pick-up-car/' . $booking->car_id) }}"class="btn btn-primary">Pick Up</a>
-                                                                    @else
-                                                                    <a href="{{ url('/deliver-a-car/' . $booking->car_id) }}"
-                                                                        class="btn btn-primary">Deliver</a>
-                                                                @endif
+
+                                                                    @if ($role == '6' || $role == '7' || $role == '8') {
+                                                                        @if ($booking->status == 'Booked')
+                                                                        <a href="{{ url('/pick-up-car/' . $booking->car_id) }}"class="btn btn-primary">Pick Up</a>
+                                                                            @else
+                                                                            <a href="{{ url('/deliver-a-car/' . $booking->car_id) }}"
+                                                                                class="btn btn-primary">Deliver</a>
+                                                                                @endif
+                                                                    }
+                                                                    @endif
+
+
 
                                                             </td>
                                                         </tr>

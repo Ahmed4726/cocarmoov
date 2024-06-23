@@ -27,11 +27,12 @@
                         <p class="text-dark">Profil</p>
                     </a>
                 </li>
-                <li class="nav-item {{ Request::is('password-update') ? 'active' : '' }}rounded">
-                    <a href="{{ route('password.update') }}" class="nav-link py-0">
+                <li class="nav-item {{ Request::is('password-update') ? 'active' : '' }} rounded">
+                    <a href="{{ route('password.form') }}" class="nav-link py-0">
                         <p class="text-dark">Password</p>
                     </a>
                 </li>
+
               </ul>
               </div><!-- /.card-header -->
               <div class="card-body">

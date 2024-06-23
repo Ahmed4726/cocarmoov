@@ -50,6 +50,12 @@ class ListingController extends Controller
         $listing->distance = $request->distance;
         $listing->selectedServices = $request->selectedServices;
         $listing->residence_pick_up = $request->residence_pick_up;
+        $listing->hoursInputdriver = $request->hoursInputdriver;
+        $listing->hoursInputdrivercheckbox = $request->hoursInputdrivercheckbox;
+        $listing->hoursInputowner = $request->hoursInputowner;
+        $listing->hoursInputownercheckbox = $request->hoursInputownercheckbox;
+        $listing->validation_check_box = $request->validation_check_box;
+        $listing->validator_checkbox = $request->validator_checkbox;
 
         $listing->save();
 
@@ -71,7 +77,7 @@ class ListingController extends Controller
         $pdfContent = $pdf->output();
 
 
-        Mail::to(auth()->user()->email)->send(new CarListed($listing, $pdfContent));
+        // Mail::to(auth()->user()->email)->send(new CarListed($listing, $pdfContent));
 
         return response()->json(['success' => true, 'message' => 'Listing created successfully']);
     }
@@ -104,7 +110,6 @@ class ListingController extends Controller
         $listing->son_nom_delivery = $request->son_nom_delivery;
         $listing->remarks = $request->remarks;
         $listing->distance = $request->distance;
-        $listing->selectedServices = $request->selectedServices;
         $listing->residence_pick_up = $request->residence_pick_up;
 
         $listing->save();
@@ -114,11 +119,9 @@ class ListingController extends Controller
 
     public function cancel($id)
     {
-        // dd($id);;
         $currentDate = now();
         $listing = Car::findOrFail($id);
         $mission = Mission::where('car_id', $id)->first();
-        dd($mission);
         $driver = User::findOrFail($mission->user_id);
 
         if ($listing->car_move_departure_date_from < $currentDate) {
@@ -168,6 +171,12 @@ class ListingController extends Controller
         $listing->distance = $originalListing->distance;
         $listing->selectedServices = $originalListing->selectedServices;
         $listing->residence_pick_up = $request->residence_pick_up;
+        $listing->hoursInputdriver = $originalListing->hoursInputdriver;
+        $listing->hoursInputdrivercheckbox = $originalListing->hoursInputdrivercheckbox;
+        $listing->hoursInputowner = $originalListing->hoursInputowner;
+        $listing->hoursInputownercheckbox = $originalListing->hoursInputownercheckbox;
+        $listing->validation_check_box = $originalListing->validation_check_box;
+        $listing->validator_checkbox = $originalListing->validator_checkbox;
 
         $listing->save();
 
